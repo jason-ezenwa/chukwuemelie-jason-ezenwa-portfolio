@@ -8,11 +8,11 @@ const Footer = ({className}: {className?: string}) => {
     <footer
       className={`bottom-0 flex flex-col items-center
         text-[#62646A]
-      w-full px-6 py-6 lg:px-32 ${className || ""}`}>
+      w-full px-6 sm:px-12 py-6 lg:px-32 ${className || ""}`}>
       <div
-        className="w-full flex flex-row justify-between"
+        className="w-full flex flex-col sm:flex-row justify-between"
       >
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 mb-4">
          Copyright © 2024 — Chukwuemelie Jason Obumse
         </div>
         <div className="flex">
