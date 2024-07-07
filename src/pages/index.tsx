@@ -6,6 +6,7 @@ import { DM_Sans, Reenie_Beanie } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 const reenieBeanie = Reenie_Beanie({ weight: "400", subsets: ["latin"] });
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
@@ -206,6 +207,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer section */}
+      <Footer/>
 
       <StickyBottomRight>
         <StickyDiv
