@@ -4,27 +4,18 @@ import Marquee from "react-fast-marquee";
 
 const LogosComponent: React.FC = () => {
   const logos = [
-    '/images/typescript-logo.png',
-    '/images/javascript-logo.png',
-    '/images/python-logo.png',
-    '/images/react-logo.png',
-    '/images/next-js-logo.png',
-    '/images/node-js-logo.png',
-    '/images/graphql-logo.png',
-    '/images/express-js-logo.png',
-    '/images/mongo-db-logo.png',
-    '/images/mysql-logo.png',
+    '/images/grouped-core-skills.PNG'
   ];
 
 
   return (
     <div className="w-[98vw]">
       <Marquee>
-        <div className="flex space-x-12 pr-12">
+        <div className="flex space-x-8">
           {logos.map((logo, index) => (
             <div
             key={index}
-              className="relative w-[80px] lg:w-[120px]  h-[50px] lg:h-[70px]"
+              className="relative w-[530px] sm:w-[700px] lg:w-[1250px]  h-[65px] lg:h-[100px]"
             >
               <Image
                 src={logo}
