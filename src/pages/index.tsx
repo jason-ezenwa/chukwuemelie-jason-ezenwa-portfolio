@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main className="space-y-14 mb-12 text-black">
       {/* Hero section */}
-      <section className="pt-16 flex flex-col items-center">
+      <section className="pt-16 px-6 flex flex-col items-center">
         <div className="pace-y-1 py-14 flex flex-col">
           <motion.div
             variants={fadeIn("up", 0.1)}
