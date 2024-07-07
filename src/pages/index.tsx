@@ -83,7 +83,7 @@ export default function Home() {
                   "This web application displays and elaborates on the services provided by Wynk Nigeria, from ride hailing to payment and lifestyle services, as well as the opportunities in store for partners and potential partners.",
                   "Built with: React, TailwindCSS, Material UI"
                 ]}
-              image="/images/wynk-landing-page.png"
+              image="/images/wynk-landing-page.PNG"
               githubLink=""
               seeLiveLink="https://wynk.ng/"
             />
@@ -95,7 +95,7 @@ export default function Home() {
                   "The Vibes Tailor is a music recommender I created for music enthusiasts who are looking for new music to listen to.",
                   "Built with: React, Node JS, Express JS, TailwindCSS, Material UI"
                 ]}
-              image="/images/vibes-tailor-recommendations.png"
+              image="/images/vibes-tailor-recommendations.PNG"
               githubLink="https://github.com/jason-ezenwa/Flair_Vibes_Tailor_V2"
               seeLiveLink="https://vibes-tailor.vercel.app/"
             />
@@ -106,7 +106,7 @@ export default function Home() {
                   "Flair-Commerce is the server-side of an e-commerce web application with user creation and authentication, products management and order management features.",
                   "Built with: Node JS, Express JS, MongoDB"
                 ]}
-              image="/images/trolly.png"
+              image="/images/trolly.PNG"
               githubLink="https://github.com/jason-ezenwa/flair-commerce/tree/main/backend"
               seeLiveLink=""
             />
@@ -117,7 +117,7 @@ export default function Home() {
                   "A clone of the docuhelp.ai landing page that makes a compelling case of why you should use docuhelp to write business documents.",
                   "Built with: React, TailwindCSS, Material UI"
                 ]}
-              image="/images/docuhelp-landing-page.png"
+              image="/images/docuhelp-landing-page.PNG"
               githubLink="https://github.com/jason-ezenwa/docuhelp-landing-page"
               seeLiveLink="https://docuhelp-landing-page.vercel.app/"
             />
@@ -128,7 +128,7 @@ export default function Home() {
                   "The the Flairbox Admin Dashboard, a comprehensive movie administration hub. It displays an array of views, from upcoming premieres to trending films, and access a complete database of all available movies.",
                   "Built with: React, CSS, Material UI"
                 ]}
-              image="/images/flairbox-admin.png"
+              image="/images/flairbox-admin.PNG"
               githubLink="https://github.com/jason-ezenwa/movie-admin-dashboard"
               seeLiveLink="https://flairbox-admin-2.vercel.app/"
             />
@@ -177,7 +177,7 @@ export default function Home() {
                   "This is a guide that explains what 'props' are, and how they work. Taking you on a journey to transform your components from static to dynamic.",
                   "In this blog post, I explain: How to pass data between components using props as well as integration with databases."
                 ]}
-              image="/images/understanding-props.png"
+              image="/images/understanding-props.PNG"
               link=""
             />
             <BlogCard
@@ -197,7 +197,7 @@ export default function Home() {
                   "This blog post, walks through the various steps involved in loading the webpage you see when you try to use google.",
                   "In this blog post, I explain: The DNS process, what it is and how it occurs as well as web servers, applicagtion servers and load balancers."
                 ]}
-              image="/images/web-application-architecture.png"
+              image="/images/web-application-architecture.PNG"
               link=""
             />
           </motion.div>
@@ -209,13 +209,13 @@ export default function Home() {
           text="Have a look at my resume 🗎"
           textColor="text-white"
           bgColor="bg-[#171717]"
-          link="/https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk"
+          link="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk"
         />
         <StickyDiv
           text="Connect with me on LinkedIn 🚀"
           textColor="text-white"
           bgColor="bg-[#171717]"
-          link="/https://linkedin.com/in/chukwuemelie-obumse"
+          link="https://linkedin.com/in/chukwuemelie-obumse"
         />
       </StickyBottomRight>  
     </main>
