@@ -44,15 +44,15 @@ export default function Home() {
             whileInView={"show"}
             viewport={{once: true, amount: 0.3}}
             className="bg-white border-dotted border-l-[1px] border-black pl-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
-            <p className="text-[18px]">{`I am a Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management. I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am alsokilled in integrating data analytics tools to support informed business decisions.`}</p>
-            <p className="text-[18px]">{`I have successfully delivered high-quality software solutions utilized by thousands of individuals across the blue collar, fintech, lifestyle and transportation industries while working at LaborHack, Wynk Nigeria and TruckDispatch.`}</p>
+            <p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management. I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am alsokilled in integrating data analytics tools to support informed business decisions.`}</p>
+            <p className="text-[16px] sm:text-[18px]">{`I have successfully delivered high-quality software solutions utilized by thousands of individuals across the blue collar, fintech, lifestyle and transportation industries while working at LaborHack, Wynk Nigeria and TruckDispatch.`}</p>
           </motion.div>
           <div className="mt-[40px]">
             <Link href="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk">
               <button
                 className="w-[156px] h-[48px] bg-[#171717] text-white rounded-md hover:shadow-lg"
               >
-                View Resume
+                View my resume
               </button>
             </Link>
           </div>
