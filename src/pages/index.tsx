@@ -199,7 +199,7 @@ export default function Home() {
               descriptionParagraphs={
                 [
                   "This blog post, walks through the various steps involved in loading the webpage you see when you try to use google.",
-                  "In this blog post, I explain: The DNS process, what it is and how it occurs as well as web servers, applicagtion servers and load balancers."
+                  "In this blog post, I explain: The DNS process, what it is and how it occurs as well as web servers, application servers and load balancers."
                 ]}
               image="/images/web-application-architecture.PNG"
               link="https://medium.com/@emelieobumse100/what-happens-when-you-type-https-www-google-com-into-your-browser-and-press-enter-bc0b0d8c7d08"
