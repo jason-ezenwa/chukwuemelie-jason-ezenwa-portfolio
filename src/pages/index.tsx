@@ -16,17 +16,20 @@ export default function Home() {
     <main className="space-y-14 mb-12 text-black">
       {/* Hero section */}
       <section className="pt-16 flex flex-col items-center">
-        <div className="text-center space-y-1 py-14 flex flex-col items-center">
+        <div className="pace-y-1 py-14 flex flex-col">
           <motion.div
             variants={fadeIn("up", 0.1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{once: true, amount: 0.3}}
             className={dmSans.className}>
-            <h1 className="font-extrabold text-[25px] lg:text-[60px]">
-              {`Hi, I'm`} <span className="text-[#6b6c6b]">Chukwuemelie Obumse</span>
+            <h1 className="font-extrabold text-[30px] lg:text-[60px]">
+              {`Hi, my name is`}
             </h1>
-            <h2 className="font-extrabold text-[22px] lg:text-[50px]">{`I'm a Full Stack Software Engineer`}</h2>
+            <h1 className="font-extrabold text-[25px] lg:text-[60px] text-[#6b6c6b]">
+              Chukwuemelie Jason Obumse
+            </h1>
+            <h2 className="font-extrabold text-[22px] lg:text-[50px]">{`I'm a Full Stack Software Engineer.`}</h2>
           </motion.div>
         </div>
       </section>
@@ -73,7 +76,7 @@ export default function Home() {
             variants={fadeIn("right", 0.1)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true, amount: 0.15}}
+            viewport={{once: true, amount: 0.1}}
             className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
             <ProjectCard
               title="WYNK.NG"
@@ -158,7 +161,7 @@ export default function Home() {
             variants={fadeIn("left", 0.1)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true, amount: 0.1}}
+            viewport={{once: true, amount: 0.15}}
             className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
             <BlogCard
               title="Authentication and Authorization with JSON Web Tokens"
@@ -168,7 +171,7 @@ export default function Home() {
                   "In this blog post, I explain: What JWTs are and how they work, from token issuance to server verification."
                 ]}
               image="/images/jwt-guide.jpg"
-              link=""
+              link="https://medium.com/stackademic/the-definitive-guide-to-authentication-and-authorization-with-json-web-tokens-everything-you-need-5bc7795cb668"
             />
             <BlogCard
               title="Getting Familiar with Props in React"
@@ -178,7 +181,7 @@ export default function Home() {
                   "In this blog post, I explain: How to pass data between components using props as well as integration with databases."
                 ]}
               image="/images/understanding-props.PNG"
-              link=""
+              link="https://medium.com/@emelieobumse100/getting-familiar-with-props-in-react-5abdcaae8b04"
             />
             <BlogCard
               title="Implementing an Escrow-like State in Node.js: Building Trust and Security in Online Transactions"
@@ -188,7 +191,7 @@ export default function Home() {
                   "In this blog post, I go through: What escrows are and their importance as well as a step by step implementation in Node.js."
                 ]}
               image="/images/escrow-handshake.jpg"
-              link=""
+              link="https://medium.com/@emelieobumse100/building-flair-vibes-tailor-a-personalised-music-recommender-c3a0f042faa2"
             />
             <BlogCard
               title="What Happens When You Type “https://www.google.com” Into Your Browser and Press 'Enter'"
@@ -198,7 +201,7 @@ export default function Home() {
                   "In this blog post, I explain: The DNS process, what it is and how it occurs as well as web servers, applicagtion servers and load balancers."
                 ]}
               image="/images/web-application-architecture.PNG"
-              link=""
+              link="https://medium.com/@emelieobumse100/what-happens-when-you-type-https-www-google-com-into-your-browser-and-press-enter-bc0b0d8c7d08"
             />
           </motion.div>
         </div>
