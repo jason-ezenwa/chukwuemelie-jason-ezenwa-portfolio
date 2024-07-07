@@ -18,7 +18,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className="mb-12 border-[1px] w-full border-[#E4E5E7] backdrop-blur-sm
-     flex flex-col items-start rounded-2xl hover:shadow-lg min-h-[437px] sm:min-h-[507px] lg:min-h-[540px] max-h-[507px] sm:max-h-[507px] lg:max-h-[540px] 2xl:min-h-[587px] relative">
+     flex flex-col items-start rounded-2xl hover:shadow-lg min-h-[457px] sm:min-h-[507px] lg:min-h-[540px] max-h-[507px] sm:max-h-[507px] lg:max-h-[540px] 2xl:min-h-[587px] relative">
       <div className="py-3 px-3 lg:py-4 sm:px-6 w-full space-y-3">
         <div>
           <h3 className="text-ppmblack text-lg font-bold">{title}</h3>
