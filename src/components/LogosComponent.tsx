@@ -29,7 +29,7 @@ const LogosComponent: React.FC = () => {
               <Image
                 src={logo}
                 alt={`Logo ${index + 1}`}
-                layout="fill"
+                fill
                 sizes="100vw"
               />
             </div>

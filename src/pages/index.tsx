@@ -23,10 +23,10 @@ export default function Home() {
             whileInView={"show"}
             viewport={{once: true, amount: 0.3}}
             className={dmSans.className}>
-            <h1 className="font-extrabold text-[30px] lg:text-[60px]">
+            <h1 className="font-extrabold text-[25px] lg:text-[60px]">
               {`Hi, I'm`} <span className="text-[#6b6c6b]">Chukwuemelie Obumse</span>
             </h1>
-            <h2 className="font-extrabold text-[25px] lg:text-[50px]">{`I'm a Full Stack Software Engineer`}</h2>
+            <h2 className="font-extrabold text-[22px] lg:text-[50px]">{`I'm a Full Stack Software Engineer`}</h2>
           </motion.div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function Home() {
             <p className="text-[18px]">{`I have successfully delivered high-quality software solutions utilized by thousands of individuals across the blue collar, fintech, lifestyle and transportation industries while working at LaborHack, Wynk Nigeria and TruckDispatch.`}</p>
           </motion.div>
           <div className="mt-[40px]">
-            <Link href="/https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk">
+            <Link href="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk">
               <button
                 className="w-[156px] h-[48px] bg-[#171717] text-white rounded-md hover:shadow-lg"
               >

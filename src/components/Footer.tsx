@@ -15,7 +15,7 @@ const Footer = ({className}: {className?: string}) => {
             <Image
               src='/images/ppm-footer-logo.svg'
               alt="Peppermint logo"
-              layout="fill"
+              fill
             />
           </div>
         </div>
@@ -26,7 +26,7 @@ const Footer = ({className}: {className?: string}) => {
                 <Image
                   src='/images/email-icon.svg'
                   alt="linkedin-icon"
-                  layout="fill"
+                  fill
                 />
               </div>
             </Link>
@@ -35,7 +35,7 @@ const Footer = ({className}: {className?: string}) => {
                 <Image
                   src='/images/linkedin-icon.svg'
                   alt="linkedin-icon"
-                  layout="fill"
+                  fill
                 />
               </div>
             </Link>
@@ -45,7 +45,7 @@ const Footer = ({className}: {className?: string}) => {
               <Image
                 src='/images/globe-icon.svg'
                 alt="globe-icon"
-                layout="fill"
+                fill
               />
             </div>
             <div>
