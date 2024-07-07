@@ -156,7 +156,7 @@ export default function Home() {
       <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden space-y-4 bg-[#f6f6f4]">
         <div>
           <div className={reenieBeanie.className}>
-            <p className="font-medium text-[36px]">My Blogs</p>
+            <p className="font-medium text-[36px]">My Blog Posts</p>
           </div>
           <motion.div
             variants={fadeIn("left", 0.1)}
