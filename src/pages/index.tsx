@@ -49,9 +49,10 @@ export default function Home() {
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true, amount: 0.3}}
+            viewport={{once: true, amount: 0.1}}
             className="bg-white border-dotted border-l-[1px] border-black pl-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
-            <p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management. I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am also skilled in integrating data analytics tools to support informed business decisions.`}</p>
+              <p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management.`}</p>
+              <p className="text-[16px] sm:text-[18px]">{`I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am also skilled in integrating data analytics tools to support informed business decisions.`}</p>
             <p className="text-[16px] sm:text-[18px]">{`I have successfully delivered high-quality software solutions utilized by thousands of individuals across the blue collar, fintech, lifestyle and transportation industries while working at LaborHack, Wynk Nigeria and TruckDispatch.`}</p>
           </motion.div>
           <div className="mt-[40px]">
@@ -77,10 +78,10 @@ export default function Home() {
             <p className="font-medium text-[36px]">Projects</p>
           </div>
           <motion.div
-            variants={fadeIn("right", 0.1)}
+            variants={fadeIn("right", 0.05)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true, amount: 0.05}}
+            viewport={{once: true, amount: 0.02}}
             className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
             <ProjectCard
               title="WYNK.NG"
@@ -162,10 +163,10 @@ export default function Home() {
             <p className="font-medium text-[36px]">My Blog Posts</p>
           </div>
           <motion.div
-            variants={fadeIn("left", 0.1)}
+            variants={fadeIn("left", 0.05)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once: true, amount: 0.05}}
+            viewport={{once: true, amount: 0.02}}
             className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
             <BlogCard
               title="Authentication and Authorization with JSON Web Tokens"
