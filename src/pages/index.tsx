@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import Helmet from "@/components/Helmet";
 
 const reenieBeanie = Reenie_Beanie({ weight: "400", subsets: ["latin"] });
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
@@ -14,6 +15,8 @@ const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
   return (
+    <>
+    <Helmet/>
     <main className="space-y-14 mb-12 text-black">
       {/* Hero section */}
       <section className="pt-16 px-6 flex flex-col items-center">
@@ -208,9 +211,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer section */}
-      <Footer/>
-
       <StickyBottomRight>
         <StickyDiv
           text="Have a look at my resume 🗎"
@@ -226,5 +226,8 @@ export default function Home() {
         />
       </StickyBottomRight>  
     </main>
+    {/* Footer section */}
+    <Footer/>
+    </>
   );
 }
