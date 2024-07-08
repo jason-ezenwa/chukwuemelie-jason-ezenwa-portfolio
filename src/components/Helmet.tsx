@@ -5,7 +5,7 @@ export default function Helmet() {
     <Head>
       <title>Chukwuemelie Obumse | Software Engineer</title>
       <meta name="keywords" content="jason-ezenwa, Chukwuemelie Obumse, Full Stack developer, React developer, Node.js developer, Python developer, backend engineer" />
-      <meta name="description" content="Chukwuemelie Obumse | Full Stack Software Engineer with over one year experience in software development, specialized in backend development. Experienced in frontend development, system administration, devops and database management. Adept at crafting clean, testable code to develop efficient, secure, & scalable server-side applications and user interface systems." />
+      <meta name="description" content="Chukwuemelie Obumse | Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management. Adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. Skilled in integrating data analytics tools to support informed business decisions." />
       <link rel="icon" type="image/png" href="/assets/DevFolio.PNG" />
       <meta name="theme-color" content="#36d1dc" />
 
