@@ -15,7 +15,7 @@ const LogosComponent: React.FC = () => {
           {logos.map((logo, index) => (
             <div
             key={index}
-              className="relative w-[600px] sm:w-[740px] lg:w-[1350px]  h-[55px] sm:h-[65px] lg:h-[110px]"
+              className="relative w-[1000px] lg:w-[1350px]  h-[85px] sm:h-[85px] lg:h-[110px]"
             >
               <Image
                 src={logo}
