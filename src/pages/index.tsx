@@ -1,9 +1,8 @@
 import {BlogCard, ProjectCard} from "@/components/Cards";
 import LogosComponent from "@/components/LogosComponent";
-import StickyBottomRight, { StickyDiv } from "@/components/StickyWidgets";
+import  {StickyBottomRight, StickyDiv } from "@/components/StickyWidgets";
 import { fadeIn } from "@/utils/fadeInAnimation";
 import { DM_Sans, Reenie_Beanie } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
@@ -17,31 +16,31 @@ export default function Home() {
   return (
     <>
       <Helmet/>
-      <main className="space-y-14 mb-12 text-black">
+      <main className=" mb-12 text-black">
         {/* Hero section */}
         <section className="pt-16 px-6 flex flex-col items-center">
-          <div className="pace-y-1 py-14 flex flex-col">
+          <div className="py-20 flex flex-col">
             <motion.div
               variants={fadeIn("up", 0.1)}
               initial="hidden"
               whileInView={"show"}
               viewport={{once: true, amount: 0.3}}
               className={dmSans.className}>
-              <h1 className="font-extrabold text-[30px] lg:text-[60px]">
+              <h1 className="font-extrabold text-[30px] sm:text-[40px] lg:text-[60px]">
                 {`Hi, my name is`}
               </h1>
-              <h1 className="font-extrabold text-[25px] lg:text-[60px] text-[#6b6c6b]">
+              <h1 className="font-extrabold text-[25px] sm:text-[35px] lg:text-[60px] text-[#6b6c6b]">
                 Chukwuemelie Jason Obumse
               </h1>
-              <h2 className="font-extrabold text-[22px] lg:text-[50px]">{`I'm a Full Stack Software Engineer.`}</h2>
+              <h2 className="font-extrabold text-[22px] sm:text-[30px] lg:text-[50px]">{`I'm a Full Stack Software Engineer.`}</h2>
             </motion.div>
           </div>
         </section>
 
         {/* About me section */}
         <section
-          className="px-6 sm:px-12 lg:px-32 py-8 lg:py-12 w-full overflow-hidden space-y-8 bg-[#F5F6F4]">
-          <div>
+          className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4]">
+          <div className="space-y-8">
             <div className={reenieBeanie.className}>
               <p className="font-medium text-[36px]">About Me</p>
             </div>
@@ -60,22 +59,26 @@ export default function Home() {
                 target="_blank"
                 href="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk">
                 <button
-                  className="w-[156px] h-[48px] bg-[#171717] text-white rounded-md hover:shadow-lg"
+                  className="w-[156px] h-[48px] bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px]"
                 >
                   View my resume
                 </button>
               </Link>
             </div>
           </div>
-          <div className="flex flex-col  items-center space-y-4">
-            <p className="text-ppmblack text-lg lg:text-xl font-medium">Core Skills</p>
-            <LogosComponent />
+        </section>
+
+        {/* Skills section */}
+        <section className="space-y-4 py-2">
+          <div className={`${reenieBeanie.className} px-6 sm:px-12 lg:px-32`}>
+            <p className="font-medium text-[36px]">Technical Skills</p>
           </div>
+          <LogosComponent />
         </section>
 
         {/* Projects section */}
-        <section className="px-6 sm:px-12 lg:px-32 w-full overflow-hidden space-y-4">
-          <div>
+        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20  w-full overflow-hidden bg-[#ededec]">
+          <div className="space-y-8">
             <div className={reenieBeanie.className}>
               <p className="font-medium text-[36px]">Projects</p>
             </div>
@@ -159,8 +162,8 @@ export default function Home() {
         </section>
 
         {/* Blogs section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden space-y-4 bg-[#f6f6f4]">
-          <div>
+        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4]">
+          <div className="space-y-8">
             <div className={reenieBeanie.className}>
               <p className="font-medium text-[36px]">My Blog Posts</p>
             </div>

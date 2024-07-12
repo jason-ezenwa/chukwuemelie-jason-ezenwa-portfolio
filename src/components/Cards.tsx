@@ -17,7 +17,7 @@ export const ProjectCard = ({
   seeLiveLink
 }: ProjectCardProps) => {
   return (
-    <div className="mb-12 border-[1px] w-full border-[#E4E5E7] backdrop-blur-sm
+    <div className="mb-12 border-[1px] w-full border-[#E4E5E7] backdrop-blur-sm bg-white
      flex flex-col items-start rounded-2xl shadow-md hover:shadow-lg min-h-[487px] sm:min-h-[507px] lg:min-h-[540px] max-h-[527px] sm:max-h-[507px] lg:max-h-[540px] 2xl:min-h-[587px] relative">
       <div className="py-3 px-3 lg:py-4 sm:px-6 w-full space-y-3">
         <div>
@@ -67,7 +67,7 @@ export const ProjectCard = ({
           </Link>
         )}
       </div>
-      <div className="absolute bottom-0 w-full h-[200px] sm:h-[300px] 2xl:h-[355px]">
+      <div className="absolute bottom-0 w-full h-[200px] sm:h-[300px] 2xl:h-[355px] border-t-[1px] border-t-gray-100">
         <Image
           src={image}
           alt={title}
