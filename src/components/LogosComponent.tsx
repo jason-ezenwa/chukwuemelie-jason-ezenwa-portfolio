@@ -20,11 +20,11 @@ const LogosComponent: React.FC = () => {
   return (
     <div className="w-[98vw]">
       <Marquee>
-        <div className="flex space-x-6 md:space-x-16 pr-5">
+        <div className="flex space-x-5 md:space-x-16 pr-5">
           {logos.map((logo, index) => (
             <div
             key={index}
-              className="relative w-[50px] sm:w-[60px] lg:w-[70px] h-[40px] sm:h-[50px] lg:h-[50px]"
+              className="relative w-[47px] sm:w-[60px] lg:w-[70px] h-[40px] sm:h-[50px] lg:h-[50px]"
             >
               <Image
                 src={logo}
