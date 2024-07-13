@@ -69,7 +69,7 @@ export default function Home() {
         </section>
 
         {/* Skills section */}
-        <section className="space-y-4 py-2">
+        <section className="space-y-1 py-2">
           <div className={`${reenieBeanie.className} px-6 sm:px-12 lg:px-32`}>
             <p className="font-medium text-[36px]">Technical Skills</p>
           </div>
