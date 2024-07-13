@@ -20,7 +20,7 @@ const LogosComponent: React.FC = () => {
   return (
     <div className="w-[98vw]">
       <Marquee>
-        <div className="flex space-x-8 md:space-x-16 pr-4">
+        <div className="flex space-x-6 md:space-x-16 pr-5">
           {logos.map((logo, index) => (
             <div
             key={index}
