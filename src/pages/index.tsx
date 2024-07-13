@@ -48,7 +48,7 @@ export default function Home() {
               variants={fadeIn("left", 0.3)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{once: true, amount: 0.1}}
+              viewport={{once: true, amount: 0.005}}
               className="bg-white border-dotted border-l-[1px] border-black pl-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
                 <p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management.`}</p>
                 <p className="text-[16px] sm:text-[18px]">{`I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am also skilled in integrating data analytics tools to support informed business decisions.`}</p>
@@ -86,7 +86,7 @@ export default function Home() {
               variants={fadeIn("right", 0.05)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{once: true, amount: 0.01}}
+              viewport={{once: true, amount: 0.005}}
               className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
               <ProjectCard
                 title="WYNK.NG"
@@ -171,7 +171,7 @@ export default function Home() {
               variants={fadeIn("left", 0.05)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{once: true, amount: 0.01}}
+              viewport={{once: true, amount: 0.005}}
               className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
               <BlogCard
                 title="Authentication and Authorization with JSON Web Tokens"
