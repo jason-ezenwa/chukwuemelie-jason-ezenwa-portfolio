@@ -86,7 +86,7 @@ export default function Home() {
               variants={fadeIn("right", 0.05)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{once: true, amount: 0.02}}
+              viewport={{once: true, amount: 0.01}}
               className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
               <ProjectCard
                 title="WYNK.NG"
@@ -171,7 +171,7 @@ export default function Home() {
               variants={fadeIn("left", 0.05)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{once: true, amount: 0.02}}
+              viewport={{once: true, amount: 0.01}}
               className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
               <BlogCard
                 title="Authentication and Authorization with JSON Web Tokens"
