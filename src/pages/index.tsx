@@ -71,7 +71,7 @@ export default function Home() {
         {/* Skills section */}
         <section className="space-y-1 py-2">
           <div className={`${reenieBeanie.className} px-6 sm:px-12 lg:px-32`}>
-            <p className="font-medium text-[36px]">Technical Skills</p>
+            <p className="font-medium text-[36px]">Core Skills</p>
           </div>
           <LogosComponent />
         </section>
