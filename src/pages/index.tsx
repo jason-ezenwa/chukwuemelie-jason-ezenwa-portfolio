@@ -174,6 +174,16 @@ export default function Home() {
               viewport={{once: true, amount: 0.005}}
               className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
               <BlogCard
+                title="The Priceless Influence of Senior Software Engineers on Junior Engineers"
+                descriptionParagraphs={
+                  [
+                    "An article that highlights the multifacetted benefits of working with senior software engineers.",
+                    "In this piece, I explore how the mentorship and guidance from experienced engineers can dramatically accelerate the growth and expertise of junior engineers."
+                  ]}
+                image="/images/senior-and-junior-engineers.jpg"
+                link="https://blog.stackademic.com/the-priceless-influence-of-senior-software-engineers-on-junior-engineers-c7c7cac89747"
+              />
+              <BlogCard
                 title="Authentication and Authorization with JSON Web Tokens"
                 descriptionParagraphs={
                   [
