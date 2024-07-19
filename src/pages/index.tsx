@@ -49,7 +49,7 @@ export default function Home() {
               initial="hidden"
               whileInView={"show"}
               viewport={{once: true, amount: 0.005}}
-              className="bg-white border-dotted border-l-[1px] border-black pl-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
+              className="w-full 2xl:w-[90%]  bg-white border-dotted border-l-[1px] border-black px-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
                 <p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management.`}</p>
                 <p className="text-[16px] sm:text-[18px]">{`I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am also skilled in integrating data analytics tools to support informed business decisions.`}</p>
               <p className="text-[16px] sm:text-[18px]">{`I have successfully delivered high-quality software solutions utilized by thousands of individuals across the blue collar, fintech, lifestyle and transportation industries while working at LaborHack, Wynk Nigeria and TruckDispatch.`}</p>
@@ -177,7 +177,7 @@ export default function Home() {
                 title="The Priceless Influence of Senior Software Engineers on Junior Engineers"
                 descriptionParagraphs={
                   [
-                    "An article that highlights the multifacetted benefits of working with senior software engineers.",
+                    "An article that highlights the multifaceted benefits of working with senior software engineers.",
                     "In this piece, I explore how the mentorship and guidance from experienced engineers can dramatically accelerate the growth and expertise of junior engineers."
                   ]}
                 image="/images/senior-and-junior-engineers.jpg"
@@ -229,7 +229,7 @@ export default function Home() {
 
         <StickyBottomRight>
           <StickyDiv
-            text="Have a look at my resume 🗎"
+            text="Have a look at my resume 📄"
             textColor="text-white"
             bgColor="bg-[#171717]"
             link="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk"
