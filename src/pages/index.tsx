@@ -57,7 +57,7 @@ export default function Home() {
             <div className="mt-[40px]">
               <Link
                 target="_blank"
-                href="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk">
+                href="https://drive.google.com/file/d/1peG82Zz_4tG_4zPGzs7MJPBtta9sf42h/view?usp=sharing">
                 <button
                   className="w-[156px] h-[48px] bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px]"
                 >
