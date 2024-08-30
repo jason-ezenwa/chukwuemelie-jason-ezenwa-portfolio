@@ -57,7 +57,7 @@ export default function Home() {
             <div className="mt-[40px]">
               <Link
                 target="_blank"
-                href="https://drive.google.com/file/d/1peG82Zz_4tG_4zPGzs7MJPBtta9sf42h/view?usp=sharing">
+                href="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing">
                 <button
                   className="w-[156px] h-[48px] bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px]"
                 >
@@ -232,7 +232,7 @@ export default function Home() {
             text="Have a look at my resume 📄"
             textColor="text-white"
             bgColor="bg-[#171717]"
-            link="https://drive.google.com/file/d/1peG82Zz_4tG_4zPGzs7MJPBtta9sf42h/view?usp=sharing"
+            link="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing"
           />
           <StickyDiv
             text="Connect with me on LinkedIn 🚀"
