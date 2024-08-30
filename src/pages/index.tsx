@@ -143,7 +143,7 @@ export default function Home() {
                   ]}
                 image="/images/flairbox-admin.PNG"
                 githubLink="https://github.com/jason-ezenwa/movie-admin-dashboard"
-                seeLiveLink="https://flairbox-admin-2.vercel.app/"
+                seeLiveLink="https://flairbox-admin.vercel.app/"
               />
               <ProjectCard
                 title="Files Manager API"
