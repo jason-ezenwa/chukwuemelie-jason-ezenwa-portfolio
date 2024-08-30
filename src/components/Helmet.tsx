@@ -4,8 +4,8 @@ export default function Helmet() {
   return (
     <Head>
       <title>Chukwuemelie Obumse | Software Engineer</title>
-      <meta name="keywords" content="jason-ezenwa, Chukwuemelie Obumse, Full Stack developer, React developer, Node.js developer, Python developer, backend engineer" />
-      <meta name="description" content="Chukwuemelie Obumse | Full Stack Software Engineer with two years of experience in software development, specialized in backend development and frontend development, experienced in DevOps and database management. Adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. Skilled in integrating data analytics tools to support informed business decisions." />
+      <meta name="keywords" content="jason-ezenwa, Chukwuemelie Obumse, Software Engineer, Full Stack developer, React developer, Node.js developer, Python developer, backend engineer" />
+      <meta name="description" content="Chukwuemelie Obumse | Full Stack Software Engineer with over two years of experience. Specialized in backend development and frontend development, experienced in system design, DevOps and database management. Adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. Skilled in integrating data analytics tools to support informed business decisions." />
       <link rel="icon" type="image/ico" href="/favicon.ico" />
       <meta name="theme-color" content="#F5F6F4" />
 

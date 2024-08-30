@@ -5,34 +5,22 @@ import type { AppProps } from "next/app";
 export const metadata: Metadata = {
 	title: 'Chukwuemelie Obumse | Software Engineer',
 	description:
-		'Chukwuemelie Obumse | Full Stack Software Engineer with over one year experience in software development, specialized in backend development. Experienced in frontend development, system administration, devops and database management. Adept at crafting clean, testable code to develop efficient, secure, & scalable server-side applications and user interface systems.',
+		'Chukwuemelie Jason Obumse | Full Stack Software Engineer with over two years of experience. Specialized in backend development and frontend development, experienced in system design, DevOps and database management. Adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. Skilled in integrating data analytics tools to support informed business decisions.',
 	keywords:
-		'jason-ezenwa, Chukwuemelie Obumse, Full Stack developer, React developer, Node.js developer, Python developer, backend engineer',
+		'jason-ezenwa, Chukwuemelie Obumse, Software Engineer, Full Stack developer, React developer, Node.js developer, Python developer, backend engineer',
 	themeColor: '#36d1dc',
 	openGraph: {
 		type: 'website',
-		url: 'https://flair-portfolio.vercel.app/',
+		url: 'https://jason-ezenwa.vercel.app/',
 		title: 'Chukwuemelie Obumse | Full Stack Software Engineer',
 		description:
 			'Portfolio website for Chukwuemelie Obumse | Full Stack Software Engineer'
-		// images: [
-		// 	{
-		// 		url: 'https://flair-portfolio.vercel.app/assets/DevFolio.PNG',
-		// 		alt: "Chukwuemelie Obumse's Portfolio Thumbnail"
-		// 	}
-		// ]
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: 'Chukwuemelie Obumse | Full Stack Software Engineer',
 		description:
 			'Portfolio website for Chukwuemelie Obumse | Full Stack Software Engineer'
-		// images: [
-		// 	{
-		// 		url: 'https://flair-portfolio.vercel.app/assets/DevFolio.PNG',
-		// 		alt: "Chukwuemelie Obumse's Portfolio Thumbnail"
-		// 	}
-		// ]
 	}
 };
 export default function App({ Component, pageProps }: AppProps) {
