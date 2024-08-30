@@ -232,7 +232,7 @@ export default function Home() {
             text="Have a look at my resume 📄"
             textColor="text-white"
             bgColor="bg-[#171717]"
-            link="https://drive.google.com/file/d/1v7kS616Zg8uiIM1oxIIrSSuPbJKC-2uS/view?usp=drivesdk"
+            link="https://drive.google.com/file/d/1peG82Zz_4tG_4zPGzs7MJPBtta9sf42h/view?usp=sharing"
           />
           <StickyDiv
             text="Connect with me on LinkedIn 🚀"
