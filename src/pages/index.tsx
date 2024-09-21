@@ -176,7 +176,7 @@ export default function Home() {
 									"In this piece, I talk about how engineers work across disciplines to build smarter, more impactful solutions over time.",
 								]}
 								image="/images/software_engineer_doing_a_presentation.jpeg"
-								link="https://blog.stackademic.com/the-priceless-influence-of-senior-software-engineers-on-junior-engineers-c7c7cac89747"
+								link="https://medium.com/@emelieobumse/beyond-silos-the-cross-disciplinary-role-of-the-modern-software-engineer-23305b55389b"
 							/>
 							<BlogCard
 								title="The Priceless Influence of Senior Software Engineers on Junior Engineers"
