@@ -108,7 +108,7 @@ export default function Home() {
 								]}
 								image="/images/pay-online-illustration.jpeg"
 								githubLink="https://github.com/jason-ezenwa/zen-api"
-								seeLiveLink="https://docuhelp-landing-page.vercel.app/"
+								seeLiveLink="https://zen-api-68zd.onrender.com"
 							/>
 							<ProjectCard
 								title="Vibes Tailor"
