@@ -101,6 +101,16 @@ export default function Home() {
 								seeLiveLink="https://wynk.ng/"
 							/>
 							<ProjectCard
+								title="Zen"
+								descriptionParagraphs={[
+									"This is an API designed for fintech applications. It provides a endpoints that allow users to have multicurrency wallets, exchange currencies and generate virtual cards. It integrates Maplerad's sandbox environment.",
+									"Built with: TypeScript, Node JS, Express JS, MongoDB",
+								]}
+								image="/images/pay-online-illustration.jpeg"
+								githubLink="https://github.com/jason-ezenwa/zen-api"
+								seeLiveLink="https://docuhelp-landing-page.vercel.app/"
+							/>
+							<ProjectCard
 								title="Vibes Tailor"
 								descriptionParagraphs={[
 									"A web application that gives you music recommendations that match your taste.",
@@ -112,26 +122,6 @@ export default function Home() {
 								seeLiveLink="https://vibes-tailor.vercel.app/"
 							/>
 							<ProjectCard
-								title="Flair-Commerce"
-								descriptionParagraphs={[
-									"Flair-Commerce is the server-side of an e-commerce web application with user creation and authentication, products management and order management features.",
-									"Built with: Node JS, Express JS, MongoDB",
-								]}
-								image="/images/trolly.PNG"
-								githubLink="https://github.com/jason-ezenwa/flair-commerce/tree/main/backend"
-								seeLiveLink=""
-							/>
-							<ProjectCard
-								title="DocuHelp Landing Page Clone"
-								descriptionParagraphs={[
-									"A clone of the docuhelp.ai landing page that makes a compelling case of why you should use docuhelp to write business documents.",
-									"Built with: React, TailwindCSS, Material UI",
-								]}
-								image="/images/docuhelp-landing-page.PNG"
-								githubLink="https://github.com/jason-ezenwa/docuhelp-landing-page"
-								seeLiveLink="https://docuhelp-landing-page.vercel.app/"
-							/>
-							<ProjectCard
 								title="Flairbox Admin Dashboard"
 								descriptionParagraphs={[
 									"The the Flairbox Admin Dashboard, a comprehensive movie administration hub. It displays an array of views, from upcoming premieres to trending films, and access a complete database of all available movies.",
@@ -140,17 +130,6 @@ export default function Home() {
 								image="/images/flairbox-admin.PNG"
 								githubLink="https://github.com/jason-ezenwa/movie-admin-dashboard"
 								seeLiveLink="https://flairbox-admin.vercel.app/"
-							/>
-							<ProjectCard
-								title="Files Manager API"
-								descriptionParagraphs={[
-									"This collaborative project was developed by Chukwuemelie Obumse and Afeez Abu.",
-									"The Files Manager API is a RESTful API with user authentication as well as temporary and persistent storage features.",
-									"Built with: Node JS, Express JS, MongoDB",
-								]}
-								image="/images/files-manager.jpeg"
-								githubLink="https://github.com/jason-ezenwa/alx-files_manager"
-								seeLiveLink=""
 							/>
 						</motion.div>
 					</div>
