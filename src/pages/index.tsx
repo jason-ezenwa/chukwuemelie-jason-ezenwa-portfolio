@@ -103,7 +103,7 @@ export default function Home() {
 							<ProjectCard
 								title="Zen"
 								descriptionParagraphs={[
-									"This is an API designed for fintech applications. It provides a endpoints that allow users to have multicurrency wallets, exchange currencies and generate virtual cards. It integrates Maplerad's sandbox environment.",
+									"This is an API designed for fintech applications. It provides features that allow users to have multicurrency wallets, exchange currencies and generate virtual cards. It integrates Maplerad's sandbox environment.",
 									"Built with: TypeScript, Node JS, Express JS, MongoDB",
 								]}
 								image="/images/pay-online-illustration.jpeg"
