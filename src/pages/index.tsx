@@ -52,7 +52,7 @@ export default function Home() {
 							className="w-full 2xl:w-[90%]  bg-white border-dotted border-l-[1px] border-black px-4 py-4 text-[#344054] shadow-sm hover:shadow-md"
 						>
 							<p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with over two years of experience. Specialized in backend development and frontend development, experienced in system design, DevOps and database management.`}</p>
-							<p className="text-[16px] sm:text-[18px]">{`I have a track record of architecting, developing and deploying highly efficient software, enhancing data visualization, and elevating online visibility through effective SEO. My work has delivered high-quality B2B and B2C software solutions used by thousands across the blue collar, fintech, lifestyle, and transportation sectors while working at LaborHack, Wynk Nigeria and TruckDispatch.`}</p>
+							<p className="text-[16px] sm:text-[18px]">{`I have a track record of architecting, developing and deploying highly efficient software, enhancing data visualization, and elevating online visibility through effective SEO. My work has delivered high-quality B2B and B2C software solutions used by thousands across the blue collar, fintech, lifestyle, and transportation sectors while working at LaborHack, Wynk Limited and TruckDispatch.`}</p>
 							<p className="text-[16px] sm:text-[18px]">{`I am adept at crafting clean and testable code, to develop and seamlessly integrate secure RESTful and GraphQL API paradigms, with frontend mobile and web applications. I am also skilled in integrating data analytics tools to support informed business decisions.`}</p>
 						</motion.div>
 						<div className="mt-[40px]">
@@ -92,8 +92,8 @@ export default function Home() {
 							<ProjectCard
 								title="WYNK.NG"
 								descriptionParagraphs={[
-									"I rebuilt Wynk's web application while working as an intern at Wynk Nigeria.",
-									"This web application displays and elaborates on the services provided by Wynk Nigeria, from ride hailing to payment and lifestyle services, as well as the opportunities in store for partners and potential partners.",
+									"I rebuilt Wynk's web application while working as an intern at Wynk Limited.",
+									"This web application displays and elaborates on the services provided by Wynk, from ride hailing to payment and lifestyle services, as well as the opportunities in store for partners and potential partners.",
 									"Built with: React, TailwindCSS, Material UI",
 								]}
 								image="/images/wynk-landing-page.PNG"
