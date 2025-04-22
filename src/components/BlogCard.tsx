@@ -32,8 +32,8 @@ const BlogCard = ({ title, descriptionParagraphs, link }: BlogCardProps) => {
           href={link}
           target="_blank"
           className="flex items-center space-x-2 text-[#171717] transition-colors hover:underline">
-          <FaBookOpen className="text-xs sm:text-sm" />
           <span className="text-sm sm:text-base font-medium">Read article</span>
+          <FaBookOpen className="text-xs sm:text-sm" />
         </Link>
       </div>
     </div>

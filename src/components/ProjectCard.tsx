@@ -42,8 +42,8 @@ const ProjectCard = ({
             href={githubLink}
             target="_blank"
             className="flex items-center space-x-2 text-[#171717] transition-colors hover:underline">
-            <FaGithub className="text-base sm:text-lg" />
             <span className="text-sm sm:text-base font-medium">Github</span>
+            <FaGithub className="text-base sm:text-lg" />
           </Link>
         )}
 
@@ -52,8 +52,8 @@ const ProjectCard = ({
             href={seeLiveLink}
             target="_blank"
             className="flex items-center space-x-2 text-[#171717] transition-colors hover:underline">
+            <span className="text-sm sm:text-base font-medium">See live</span>
             <FaExternalLinkAlt className="text-xs sm:text-sm" />
-            <span className="text-sm sm:text-base font-medium">Live URL</span>
           </Link>
         )}
       </div>
