@@ -1,4 +1,6 @@
-import { BlogCard, ProjectCard } from '@/components/Cards';
+import BlogCard from '@/components/BlogCard';
+import ProjectCard from '@/components/ProjectCard';
+import ImpactStoryCard from '@/components/ImpactStoryCard';
 import LogosComponent from '@/components/LogosComponent';
 import { StickyBottomRight, StickyDiv } from '@/components/StickyWidgets';
 import { fadeIn } from '@/utils/fadeInAnimation';
@@ -15,9 +17,34 @@ export default function Home() {
   return (
     <>
       <Helmet />
-      <main className=" mb-12 text-black">
+      <main className="mb-12 text-black">
+        {/* Header / Navigation */}
+        <header className="fixed top-0 left-0 right-0 h-16 bg-white z-50 shadow-sm flex items-center px-6 sm:px-12 lg:px-32">
+          <div className="flex justify-between items-center w-full">
+            <div className="text-lg font-bold text-[#171717]">CJO</div>
+            <nav>
+              <ul className="flex space-x-8">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-[#171717] hover:text-gray-600 font-medium">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/impact-stories"
+                    className="text-[#171717] hover:text-gray-600 font-medium">
+                    Impact Stories
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
         {/* Hero section */}
-        <section className="pt-16 px-6 flex flex-col items-center">
+        <section className="pt-16 px-6 flex flex-col items-center transition-colors duration-300">
           <div className="py-20 flex flex-col">
             <motion.div
               variants={fadeIn('up', 0.1)}
@@ -25,22 +52,22 @@ export default function Home() {
               whileInView={'show'}
               viewport={{ once: true, amount: 0.3 }}
               className={dmSans.className}>
-              <h1 className="font-extrabold text-[30px] sm:text-[40px] lg:text-[60px]">
+              <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl">
                 {`Hi, my name is`}
               </h1>
-              <h1 className="font-extrabold text-[25px] sm:text-[35px] lg:text-[60px] text-[#6b6c6b]">
+              <h1 className="font-extrabold text-4xl lg:text-6xl text-[#6b6c6b]">
                 Chukwuemelie Jason Obumse
               </h1>
-              <h2 className="font-extrabold text-[22px] sm:text-[30px] lg:text-[50px]">{`I'm a Full Stack Software Engineer.`}</h2>
+              <h2 className="font-extrabold text-3xl lg:text-5xl">{`I'm a Full Stack Software Engineer.`}</h2>
             </motion.div>
           </div>
         </section>
 
         {/* About me section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4]">
+        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
           <div className="space-y-8">
             <div className={reenieBeanie.className}>
-              <p className="font-medium text-[36px]">About Me</p>
+              <p className="font-medium text-[28px] md:text-[36px]">About Me</p>
             </div>
             <motion.div
               variants={fadeIn('left', 0.3)}
@@ -48,8 +75,8 @@ export default function Home() {
               whileInView={'show'}
               viewport={{ once: true, amount: 0.005 }}
               className="w-full 2xl:w-[90%]  bg-white border-dotted border-l-[1px] border-black px-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
-              <p className="text-[16px] sm:text-[18px]">{`I am a Full Stack Software Engineer with three years of experience. Specialized in backend development and frontend development, experienced in system design, DevOps and database management.`}</p>
-              <p className="text-[16px] sm:text-[18px]">{`I have a track record of architecting, developing and deploying highly efficient software, enhancing data visualization, and elevating online visibility through effective SEO. My work has delivered high-quality B2B and B2C software solutions used by thousands across the blue collar, fintech, data and lifestyle sectors while working at companies like LaborHack, Wynk Limited and Peppermint.`}</p>
+              <p className="text-base lg:text-lg text-[#344054]">{`I am a Full-Stack Software Engineer with 3+ years of experience delivering scalable and maintainable solutions across B2B and B2C domains. I specialize in backend and frontend engineering, with additional strengths in system design, DevOps, and database management.`}</p>
+              <p className="text-base lg:text-lg text-[#344054]">{`My professional experience spans startups and high-impact teams at LaborHack, Wynk Limited, and Peppermint Group, where I've transformed complex business needs into reliable, user-focused software used by thousands in the fintech, blue-collar, data, and lifestyle sectors.`}</p>
             </motion.div>
             <div className="mt-[40px]">
               <Link
@@ -64,18 +91,83 @@ export default function Home() {
         </section>
 
         {/* Skills section */}
-        <section className="space-y-1 py-2">
+        <section className="space-y-1 py-2 transition-colors duration-300">
           <div className={`${reenieBeanie.className} px-6 sm:px-12 lg:px-32`}>
-            <p className="font-medium text-[36px]">Core Skills</p>
+            <p className="font-medium text-[28px] md:text-[36px]">
+              Core Skills
+            </p>
           </div>
           <LogosComponent />
         </section>
 
-        {/* Projects section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20  w-full overflow-hidden bg-[#ededec]">
+        {/* Impact Stories section */}
+        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
           <div className="space-y-8">
             <div className={reenieBeanie.className}>
-              <p className="font-medium text-[36px]">Projects</p>
+              <p className="font-medium text-[28px] md:text-[36px]">
+                Impact Stories
+              </p>
+            </div>
+            <motion.div
+              variants={fadeIn('up', 0.05)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: true, amount: 0.005 }}
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <ImpactStoryCard
+                title="Building Scalable Infrastructure for Blue-Collar Empowerment"
+                role="Software Engineer"
+                techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
+                duration="Jan 2024 - Present"
+                keyContributions={[
+                  'Built systems for artisan recruitment, home maintenance, and AI-driven portfolios',
+                  'Provided data-driven insights that guided product improvements and optimized funnels.',
+                  'Improved platform SEO and organic traffic by 28%',
+                ]}
+                link="/impact-stories#blue-collar-empowerment"
+              />
+              <ImpactStoryCard
+                title="Product Feedback & Scaling Operations"
+                role="Frontend Engineer (Founding Engineer)"
+                techStack="Next.js, TypeScript"
+                duration="Apr 2024 - Apr 2025"
+                keyContributions={[
+                  'Built an application that onboarded 10,000+ testers in a month',
+                  'Developed product feedback application for better data-driven decisions',
+                  'Led technical assessment of new engineering hires',
+                ]}
+                link="/impact-stories#product-feedback"
+              />
+              <ImpactStoryCard
+                title="Laying the Foundation for Secure Gold Investment"
+                role="Software Engineer (Founding Engineer)"
+                techStack="Next.js, Node.js, TypeScript, PostgreSQL, Docker"
+                duration="Aug 2024 - Present"
+                keyContributions={[
+                  'Leading development of a gold sourcing and purchase platform',
+                  'Building secure wallet and authentication systems',
+                  'Shaping secure, scalable infrastructure for gold investment platform',
+                ]}
+                link="/impact-stories#gold-investment"
+              />
+            </motion.div>
+            <div className="flex justify-center mt-8">
+              <Link href="/impact-stories">
+                <button className="px-6 py-3 bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px] !text-sm lg:!text-lg">
+                  View All Impact Stories
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Other Projects section */}
+        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden transition-colors duration-300">
+          <div className="space-y-8">
+            <div className={reenieBeanie.className}>
+              <p className="font-medium text-[28px] md:text-[36px]">
+                Other Projects
+              </p>
             </div>
             <motion.div
               variants={fadeIn('right', 0.05)}
@@ -88,7 +180,7 @@ export default function Home() {
                 descriptionParagraphs={[
                   "I rebuilt Wynk's web application while working as an intern at Wynk Limited.",
                   'This web application displays and elaborates on the services provided by Wynk, from ride hailing to payment and lifestyle services, as well as the opportunities in store for partners and potential partners.',
-                  'Built with: React, TailwindCSS, Material UI',
+                  'Built with: React, Tailwind CSS, Material UI',
                 ]}
                 image="/images/wynk-landing-page.PNG"
                 githubLink=""
@@ -104,36 +196,17 @@ export default function Home() {
                 githubLink="https://github.com/jason-ezenwa/zen-api"
                 seeLiveLink="https://zen-api-68zd.onrender.com"
               />
-              <ProjectCard
-                title="Vibes Tailor"
-                descriptionParagraphs={[
-                  'A web application that gives you music recommendations that match your taste.',
-                  'The Vibes Tailor is a music recommender I created for music enthusiasts who are looking for new music to listen to.',
-                  'Built with: React, Node JS, Express JS, TailwindCSS, Material UI',
-                ]}
-                image="/images/vibes-tailor-recommendations.PNG"
-                githubLink="https://github.com/jason-ezenwa/Flair_Vibes_Tailor_V2"
-                seeLiveLink="https://vibes-tailor.vercel.app/"
-              />
-              <ProjectCard
-                title="Flairbox Admin Dashboard"
-                descriptionParagraphs={[
-                  'The the Flairbox Admin Dashboard, a comprehensive movie administration hub. It displays an array of views, from upcoming premieres to trending films, and access a complete database of all available movies.',
-                  'Built with: React, CSS, Material UI',
-                ]}
-                image="/images/flairbox-admin.PNG"
-                githubLink="https://github.com/jason-ezenwa/movie-admin-dashboard"
-                seeLiveLink="https://flairbox-admin.vercel.app/"
-              />
             </motion.div>
           </div>
         </section>
 
         {/* Blogs section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4]">
+        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
           <div className="space-y-8">
             <div className={reenieBeanie.className}>
-              <p className="font-medium text-[36px]">My Blog Posts</p>
+              <p className="font-medium text-[28px] md:text-[36px]">
+                My Blog Posts
+              </p>
             </div>
             <motion.div
               variants={fadeIn('left', 0.05)}
@@ -147,16 +220,14 @@ export default function Home() {
                   'An article about the exposure of software engineers to different fields while working with experts in those fields.',
                   'In this piece, I talk about how engineers work across disciplines to build smarter, more impactful solutions over time.',
                 ]}
-                image="/images/software_engineer_doing_a_presentation.jpeg"
                 link="https://blog.stackademic.com/beyond-silos-the-cross-disciplinary-role-of-the-modern-software-engineer-23305b55389b"
               />
               <BlogCard
                 title="The Priceless Influence of Senior Software Engineers on Junior Engineers"
                 descriptionParagraphs={[
                   'An article that highlights the multifaceted benefits of working with senior software engineers.',
-                  'In this piece, I explore how the mentorship and guidance from experienced engineers can dramatically accelerate the growth and expertise of junior engineers.',
+                  'In this piece, I explore how the mentorship and guidance from experienced engineers can dramatically accelerate the growth and expertise of junior engineers.',
                 ]}
-                image="/images/senior-and-junior-engineers.jpg"
                 link="https://blog.stackademic.com/the-priceless-influence-of-senior-software-engineers-on-junior-engineers-c7c7cac89747"
               />
               <BlogCard
@@ -165,7 +236,6 @@ export default function Home() {
                   "This blog dives deep into the world of JSON Web Tokens (JWTs), shedding light on how they're used in authentication and authorization processes.",
                   'In this blog post, I explain: What JWTs are and how they work, from token issuance to server verification.',
                 ]}
-                image="/images/jwt-guide.jpg"
                 link="https://medium.com/stackademic/the-definitive-guide-to-authentication-and-authorization-with-json-web-tokens-everything-you-need-5bc7795cb668"
               />
               <BlogCard
@@ -174,7 +244,6 @@ export default function Home() {
                   "This is a guide that explains what 'props' are, and how they work. Taking you on a journey to transform your components from static to dynamic.",
                   'In this blog post, I explain: How to pass data between components using props as well as integration with databases.',
                 ]}
-                image="/images/understanding-props.PNG"
                 link="https://medium.com/@emelieobumse100/getting-familiar-with-props-in-react-5abdcaae8b04"
               />
               <BlogCard
@@ -183,16 +252,14 @@ export default function Home() {
                   'Explains the concept of escrows and a nodejs implementation',
                   'In this blog post, I go through: What escrows are and their importance as well as a step by step implementation in Node.js.',
                 ]}
-                image="/images/escrow-handshake.jpg"
                 link="https://medium.com/@emelieobumse100/building-flair-vibes-tailor-a-personalised-music-recommender-c3a0f042faa2"
               />
               <BlogCard
-                title="What Happens When You Type “https://www.google.com” Into Your Browser and Press 'Enter'"
+                title='What Happens When You Type "https://www.google.com" Into Your Browser and Press Enter'
                 descriptionParagraphs={[
                   'This blog post, walks through the various steps involved in loading the webpage you see when you try to use google.',
                   'In this blog post, I explain: The DNS process, what it is and how it occurs as well as web servers, application servers and load balancers.',
                 ]}
-                image="/images/web-application-architecture.PNG"
                 link="https://medium.com/@emelieobumse100/what-happens-when-you-type-https-www-google-com-into-your-browser-and-press-enter-bc0b0d8c7d08"
               />
             </motion.div>
