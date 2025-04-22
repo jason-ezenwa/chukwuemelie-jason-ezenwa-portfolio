@@ -27,10 +27,10 @@ const ImpactStoryCard = ({
   return (
     <div
       className="mb-6 border-[1px] w-full border-[#E4E5E7] bg-white
-     flex flex-col justify-between items-start rounded-2xl shadow-md hover:shadow-lg p-6 h-full">
+     flex flex-col justify-between items-start rounded-md lg:rounded-lg shadow-md hover:shadow-lg p-6 h-full">
       <div className="w-full space-y-4">
         <div className="flex items-center gap-2 text-[#171717]">
-          <h3 className="text-base lg:text-lg font-bold">{title}</h3>
+          <h3 className="text-base md:text-lg font-bold">{title}</h3>
         </div>
 
         <div className="flex flex-col space-y-2">
@@ -68,7 +68,7 @@ const ImpactStoryCard = ({
         <Link
           href={link}
           className="inline-flex items-center gap-2 text-[#171717] font-medium hover:underline">
-          <span>Read Full Impact Story</span>
+          <span>Read in full</span>
           <FaArrowRight className="text-sm" />
         </Link>
       </div>

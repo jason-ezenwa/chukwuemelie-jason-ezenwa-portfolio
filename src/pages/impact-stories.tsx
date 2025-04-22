@@ -26,7 +26,7 @@ const ImpactStories = () => {
         <section className="pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12 px-4 sm:px-8 md:px-12 lg:px-32 bg-gradient-to-b from-[#F5F6F4] to-white">
           <div className="">
             <div className={dmSans.className}>
-              <h1 className="font-extrabold text-[26px] sm:text-[30px] md:text-[40px] lg:text-[50px] text-[#171717]">
+              <h1 className="font-extrabold text-[30px] md:text-[40px] lg:text-[50px] text-[#171717]">
                 Impact Stories
               </h1>
               <p className="text-[#6b6c6b] text-base sm:text-lg mt-2">
@@ -71,7 +71,7 @@ const ImpactStories = () => {
         <section className="px-4 sm:px-8 md:px-12 lg:px-32">
           <div
             id="blue-collar-empowerment"
-            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
               <div className="w-fit">
                 <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />
@@ -331,7 +331,7 @@ const ImpactStories = () => {
           {/* Impact Story 2 */}
           <div
             id="product-feedback"
-            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
               <div className="w-fit">
                 <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />
@@ -518,7 +518,7 @@ const ImpactStories = () => {
           {/* Impact Story 3 */}
           <div
             id="gold-investment"
-            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
               <div className="w-fit">
                 <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />

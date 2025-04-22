@@ -10,7 +10,6 @@ import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Helmet from '@/components/Helmet';
 
-const reenieBeanie = Reenie_Beanie({ weight: '400', subsets: ['latin'] });
 const dmSans = DM_Sans({ weight: '400', subsets: ['latin'] });
 
 export default function Home() {
@@ -45,29 +44,29 @@ export default function Home() {
 
         {/* Hero section */}
         <section className="pt-16 px-6 flex flex-col items-center transition-colors duration-300">
-          <div className="py-20 flex flex-col">
-            <motion.div
-              variants={fadeIn('up', 0.1)}
-              initial="hidden"
-              whileInView={'show'}
-              viewport={{ once: true, amount: 0.3 }}
-              className={dmSans.className}>
-              <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl">
-                {`Hi, my name is`}
-              </h1>
-              <h1 className="font-extrabold text-4xl lg:text-6xl text-[#6b6c6b]">
-                Chukwuemelie Jason Obumse
-              </h1>
-              <h2 className="font-extrabold text-3xl lg:text-5xl">{`I'm a Full Stack Software Engineer.`}</h2>
-            </motion.div>
-          </div>
+          <motion.div
+            variants={fadeIn('up', 0.1)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.3 }}
+            className={`${dmSans.className} py-20 flex flex-col gap-4 lg:gap-8`}>
+            <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl">
+              {`Hi, my name is`}
+            </h1>
+            <h1 className="font-extrabold text-4xl lg:text-6xl text-[#6b6c6b]">
+              Chukwuemelie Jason Obumse
+            </h1>
+            <h2 className="font-extrabold text-3xl lg:text-5xl">{`I'm a Full Stack Software Engineer.`}</h2>
+          </motion.div>
         </section>
 
         {/* About me section */}
         <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
           <div className="space-y-8">
-            <div className={reenieBeanie.className}>
-              <p className="font-medium text-[28px] md:text-[36px]">About Me</p>
+            <div className={dmSans.className}>
+              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
+                About Me
+              </p>
             </div>
             <motion.div
               variants={fadeIn('left', 0.3)}
@@ -82,7 +81,7 @@ export default function Home() {
               <Link
                 target="_blank"
                 href="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing">
-                <button className="w-[156px] h-[48px] bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px]">
+                <button className="w-[156px] h-[48px] bg-[#171717] hover:bg-[#6b6c6b] text-white !text-sm lg:!text-lg rounded-[2px]">
                   View my resume
                 </button>
               </Link>
@@ -91,9 +90,9 @@ export default function Home() {
         </section>
 
         {/* Skills section */}
-        <section className="space-y-1 py-2 transition-colors duration-300">
-          <div className={`${reenieBeanie.className} px-6 sm:px-12 lg:px-32`}>
-            <p className="font-medium text-[28px] md:text-[36px]">
+        <section className="space-y-6 lg:space-y-8 py-2 transition-colors duration-300">
+          <div className={`${dmSans.className} px-6 sm:px-12 lg:px-32`}>
+            <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
               Core Skills
             </p>
           </div>
@@ -102,9 +101,9 @@ export default function Home() {
 
         {/* Impact Stories section */}
         <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
-          <div className="space-y-8">
-            <div className={reenieBeanie.className}>
-              <p className="font-medium text-[28px] md:text-[36px]">
+          <div className="space-y-6 lg:space-y-8">
+            <div className={dmSans.className}>
+              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
                 Impact Stories
               </p>
             </div>
@@ -113,7 +112,7 @@ export default function Home() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: true, amount: 0.005 }}
-              className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               <ImpactStoryCard
                 title="Building Scalable Infrastructure for Blue-Collar Empowerment"
                 role="Software Engineer"
@@ -154,7 +153,7 @@ export default function Home() {
             <div className="flex justify-center mt-8">
               <Link href="/impact-stories">
                 <button className="px-6 py-3 bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px] !text-sm lg:!text-lg">
-                  View All Impact Stories
+                  View impact stories
                 </button>
               </Link>
             </div>
@@ -163,9 +162,9 @@ export default function Home() {
 
         {/* Other Projects section */}
         <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden transition-colors duration-300">
-          <div className="space-y-8">
-            <div className={reenieBeanie.className}>
-              <p className="font-medium text-[28px] md:text-[36px]">
+          <div className="space-y-6 lg:space-y-8">
+            <div className={dmSans.className}>
+              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
                 Other Projects
               </p>
             </div>
@@ -174,7 +173,7 @@ export default function Home() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <ProjectCard
                 title="WYNK.NG"
                 descriptionParagraphs={[
@@ -196,15 +195,26 @@ export default function Home() {
                 githubLink="https://github.com/jason-ezenwa/zen-api"
                 seeLiveLink="https://zen-api-68zd.onrender.com"
               />
+              {/* <ProjectCard
+                title="Vibes Tailor"
+                descriptionParagraphs={[
+                  'A web application that gives you music recommendations that match your taste.',
+                  'The Vibes Tailor is a music recommender I created for music enthusiasts who are looking for new music to listen to.',
+                  'Built with: React, Node JS, Express JS, TailwindCSS, Material UI',
+                ]}
+                image="/images/vibes-tailor-recommendations.PNG"
+                githubLink="https://github.com/jason-ezenwa/Flair_Vibes_Tailor_V2"
+                seeLiveLink="https://vibes-tailor.vercel.app/"
+              /> */}
             </motion.div>
           </div>
         </section>
 
         {/* Blogs section */}
         <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
-          <div className="space-y-8">
-            <div className={reenieBeanie.className}>
-              <p className="font-medium text-[28px] md:text-[36px]">
+          <div className="space-y-6 lg:space-y-8">
+            <div className={dmSans.className}>
+              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
                 My Blog Posts
               </p>
             </div>
@@ -213,7 +223,7 @@ export default function Home() {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               <BlogCard
                 title="Beyond Silos: The Cross-Disciplinary Role of the Modern Software Engineer"
                 descriptionParagraphs={[

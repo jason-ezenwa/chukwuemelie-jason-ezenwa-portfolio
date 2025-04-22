@@ -19,19 +19,17 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className="mb-12 border-[1px] w-full border-[#E4E5E7] bg-white
-     flex flex-col items-start rounded-2xl shadow-md hover:shadow-lg overflow-hidden">
+      className="border-[1px] w-full border-[#E4E5E7] bg-white
+     flex flex-col items-start rounded-md lg:rounded-lg shadow-md hover:shadow-lg overflow-hidden">
       <div className="py-4 px-4 sm:px-6 w-full space-y-3">
         <div>
-          <h3 className="text-[#171717] text-base sm:text-lg md:text-xl font-bold">
+          <h3 className="text-[#171717] text-base md:text-lg font-bold">
             {title}
           </h3>
         </div>
         <div>
           {descriptionParagraphs.map((paragraph, index) => (
-            <p
-              key={index}
-              className="text-sm md:text-base w-[95%] text-gray-600 mt-2">
+            <p key={index} className="text-sm w-[95%] text-gray-600 mt-2">
               {paragraph}
             </p>
           ))}
@@ -43,7 +41,7 @@ const ProjectCard = ({
           <Link
             href={githubLink}
             target="_blank"
-            className="flex items-center space-x-2 text-[#171717] hover:text-gray-700 transition-colors">
+            className="flex items-center space-x-2 text-[#171717] transition-colors hover:underline">
             <FaGithub className="text-base sm:text-lg" />
             <span className="text-sm sm:text-base font-medium">Github</span>
           </Link>
@@ -53,9 +51,9 @@ const ProjectCard = ({
           <Link
             href={seeLiveLink}
             target="_blank"
-            className="flex items-center space-x-2 text-[#171717] hover:text-gray-700 transition-colors">
+            className="flex items-center space-x-2 text-[#171717] transition-colors hover:underline">
             <FaExternalLinkAlt className="text-xs sm:text-sm" />
-            <span className="text-sm sm:text-base font-medium">Live Site</span>
+            <span className="text-sm sm:text-base font-medium">Live URL</span>
           </Link>
         )}
       </div>
