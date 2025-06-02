@@ -176,20 +176,20 @@ const ImpactStories = () => {
                       </h4>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      Collaborated cross-functionally to build two product
-                      lines:
+                      Collaborated cross-functionally to build and launch three
+                      product lines:
                     </p>
                     <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-1 sm:space-y-2">
                       <li>
                         <p>
-                          An artisan recruitment system for businesses,
-                          accelerating onboarding and increasing partner
-                          satisfaction.{' '}
+                          Artisan recruitment system, as well as a community
+                          management tool for businesses, accelerating
+                          onboarding and increasing partner satisfaction.{" "}
                           <Link
                             href="https://www.laborhack.com/businesses"
                             target="_blank">
                             <span className="flex items-center gap-1">
-                              View{' '}
+                              View{" "}
                               <FaExternalLinkAlt className="text-gray-700 text-sm sm:text-base" />
                             </span>
                           </Link>
@@ -203,7 +203,7 @@ const ImpactStories = () => {
                           href="https://www.laborhack.com/homeowners"
                           target="_blank">
                           <span className="flex items-center gap-1">
-                            View{' '}
+                            View{" "}
                             <FaExternalLinkAlt className="text-gray-700 text-sm sm:text-base" />
                           </span>
                         </Link>
@@ -224,7 +224,7 @@ const ImpactStories = () => {
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
                       Contributed to the design and engineering of a portfolio
-                      builder that leverages AI to help 3,000+ artisans present
+                      builder that leverages AI to help 4,000+ artisans present
                       their experience, skills, and past work.
                     </p>
                     <p className="text-gray-700 text-sm sm:text-base mt-2 sm:mt-3">
@@ -290,8 +290,8 @@ const ImpactStories = () => {
                       SEO & Visibility
                     </h4>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      Implemented SEO strategies like sitemap generation and
-                      on-page optimization.
+                      {`Enhanced the company's online visibility through
+                      collaborative SEO strategies with the marketing team.`}
                     </p>
                     <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-1 sm:space-y-2">
                       <li>
@@ -353,7 +353,7 @@ const ImpactStories = () => {
                     </p>
                     <div className="flex items-center gap-2">
                       <p className="font-medium text-sm sm:text-base text-gray-800">
-                        Peppermint Group Inc
+                        Peppermint Group
                       </p>
                       <Link
                         href="https://www.runpeppermint.com/"
@@ -370,7 +370,7 @@ const ImpactStories = () => {
                   <div>
                     <p className="text-[10px] sm:text-xs text-gray-500">ROLE</p>
                     <p className="font-medium text-sm sm:text-base text-gray-800">
-                      Frontend Engineer (Founding Engineer)
+                      Frontend Engineer
                     </p>
                   </div>
                 </div>
@@ -436,6 +436,26 @@ const ImpactStories = () => {
                   <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
                       <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
+                        Product Feedback Application
+                      </h4>
+                      <Link
+                        href="https://www.runpeppermint.com/"
+                        target="_blank">
+                        <FaExternalLinkAlt className="text-gray-700 text-sm sm:text-base" />
+                      </Link>
+                    </div>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      {`I contributed to the creation of a product feedback
+                      application that allowed clients (e.g Kuda) to gather, organize, and
+                      analyze detailed feedback from testers. This tool is the core
+                      part of Peppermint's offerings, enabling more
+                      informed product development decisions.`}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                      <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
                         {`Testers' Application Development`}
                       </h4>
                       <Link
@@ -450,26 +470,6 @@ const ImpactStories = () => {
                       platform was designed for ease of use, and its intuitive
                       interface helped drive high adoption rates among new
                       testers.`}
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                      <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
-                        Product Feedback Application
-                      </h4>
-                      <Link
-                        href="https://www.runpeppermint.com/"
-                        target="_blank">
-                        <FaExternalLinkAlt className="text-gray-700 text-sm sm:text-base" />
-                      </Link>
-                    </div>
-                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      {`I contributed to the creation of a product feedback
-                      application that allowed clients to gather, organize, and
-                      analyze detailed feedback from testers. This tool became a
-                      crucial part of Peppermint's offering, enabling more
-                      informed product development decisions.`}
                     </p>
                   </div>
 
@@ -497,13 +497,13 @@ const ImpactStories = () => {
                 </div>
                 <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-3">
                   <li>
-                    Onboarded 10,000+ testers quickly and efficiently,
-                    contributing to a robust testing ecosystem for our clients.
-                  </li>
-                  <li>
                     Enhanced the frontend user experience to support seamless
                     feedback collection and analysis, aiding in data-driven
                     decision-making for product teams.
+                  </li>
+                  <li>
+                    Onboarded 10,000+ testers quickly and efficiently,
+                    contributing to a robust testing ecosystem for our clients.
                   </li>
                   <li>
                     {`Helped scale Peppermint's operations and drive its product
@@ -555,7 +555,7 @@ const ImpactStories = () => {
                   <div>
                     <p className="text-[10px] sm:text-xs text-gray-500">ROLE</p>
                     <p className="font-medium text-sm sm:text-base text-gray-800">
-                      Software Engineer (Founding Engineer)
+                      Software Engineer
                     </p>
                   </div>
                 </div>
@@ -568,7 +568,7 @@ const ImpactStories = () => {
                       DURATION
                     </p>
                     <p className="font-medium text-sm sm:text-base text-gray-800">
-                      Aug 2024 - Present
+                      Aug 2024 - Jun 2025
                     </p>
                   </div>
                 </div>
@@ -600,9 +600,9 @@ const ImpactStories = () => {
                 </div>
                 <p className="text-gray-700 text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
                   {`Lume Gold is a platform designed to democratize access to gold
-                  investment. As a founding engineer, I'm focused on building
+                  investment. As a founding engineer, I focused on building
                   the core infrastructure for a secure, scalable platform. The
-                  goal is to provide a seamless experience for users to buy,
+                  goal was to provide a seamless experience for users to buy,
                   track, and trade gold in a secure digital environment.`}
                 </p>
               </div>
@@ -621,7 +621,7 @@ const ImpactStories = () => {
                       Gold Trading Dashboard
                     </h4>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      {`I'm leading the development of a real-time gold trading
+                      {`I led the development of a real-time gold trading
                       dashboard that allows users to track their investments and
                       execute orders with ease. The dashboard is designed to be
                       both intuitive and feature-rich, providing users with the
@@ -669,9 +669,9 @@ const ImpactStories = () => {
                     for individuals interested in gold trading.
                   </li>
                   <li>
-                    My contributions are laying the foundation for a secure,
-                    scalable platform that will support real-time trading and
-                    secure transactions.
+                    My contributions laid the foundation for a secure, scalable
+                    platform that will support real-time trading and secure
+                    transactions.
                   </li>
                 </ul>
               </div>

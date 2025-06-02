@@ -4,13 +4,13 @@ import ImpactStoryCard from '@/components/ImpactStoryCard';
 import LogosComponent from '@/components/LogosComponent';
 import { StickyBottomRight, StickyDiv } from '@/components/StickyWidgets';
 import { fadeIn } from '@/utils/fadeInAnimation';
-import { DM_Sans, Reenie_Beanie } from 'next/font/google';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Footer from '@/components/Footer';
-import Helmet from '@/components/Helmet';
+import { DM_Sans } from "next/font/google";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
+import Helmet from "@/components/Helmet";
 
-const dmSans = DM_Sans({ weight: '400', subsets: ['latin'] });
+const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -74,7 +74,7 @@ export default function Home() {
               whileInView={"show"}
               viewport={{ once: true, amount: 0.005 }}
               className="w-full 2xl:w-[90%]  bg-white border-dotted border-l-[1px] border-black px-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
-              <p className="text-base lg:text-lg text-[#344054]">{`I am a Full-Stack Software Engineer with 3+ years of experience delivering scalable and maintainable solutions across B2B and B2C domains. I specialize in backend and frontend engineering, with additional strengths in system design, DevOps, and database management.`}</p>
+              <p className="text-base lg:text-lg text-[#344054]">{`I am a Full Stack Engineer with 3+ years of experience delivering scalable and maintainable solutions across B2B and B2C domains. I specialize in backend and frontend engineering, with additional strengths in system design and DevOps.`}</p>
               <p className="text-base lg:text-lg text-[#344054]">{`My professional experience spans startups and high-impact teams at LaborHack, Wynk Limited, and Peppermint Group, where I've transformed complex business needs into reliable, user-focused software used by thousands in the fintech, blue-collar, data, and lifestyle sectors.`}</p>
             </motion.div>
             <div className="mt-[40px]">
@@ -127,25 +127,25 @@ export default function Home() {
               />
               <ImpactStoryCard
                 title="Product Feedback & Scaling Operations"
-                role="Frontend Engineer (Founding Engineer)"
+                role="Frontend Engineer"
                 techStack="Next.js, TypeScript"
                 duration="Apr 2024 - Apr 2025"
                 keyContributions={[
+                  "Launched a product feedback application used by companies like Kuda",
                   "Built an application that onboarded 10,000+ testers in a month",
-                  "Developed product feedback application for better data-driven decisions",
                   "Led technical assessment of new engineering hires",
                 ]}
                 link="/impact-stories#product-feedback"
               />
               <ImpactStoryCard
                 title="Laying the Foundation for Secure Gold Investment"
-                role="Software Engineer (Founding Engineer)"
+                role="Software Engineer"
                 techStack="Next.js, Node.js, TypeScript, PostgreSQL, Docker"
-                duration="Aug 2024 - Present"
+                duration="Aug 2024 - Jun 2025"
                 keyContributions={[
-                  "Leading development of a gold sourcing and purchase platform",
-                  "Building secure wallet and authentication systems",
-                  "Shaping secure, scalable infrastructure for gold investment platform",
+                  "Led the development of a gold sourcing and purchase platform",
+                  "Built secure wallet and authentication systems",
+                  "Shaped secure, scalable infrastructure for the gold investment platform",
                 ]}
                 link="/impact-stories#gold-investment"
               />
