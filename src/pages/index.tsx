@@ -173,17 +173,31 @@ export default function Home() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               <ProjectCard
                 title="Zen"
                 descriptionParagraphs={[
-                  "Zen Finance is a modern fintech application that allows users to manage multi-currency wallets, exchange currencies, and access virtual card services such as creation, funding, and transaction tracking. It integrates with Maplerad and Paystack.",
+                  "Zen Finance is a modern fintech application that allows users to manage multi-currency wallets, exchange currencies, and access virtual card services such as creation, funding, and transaction tracking.",
+                  "It integrates with Maplerad and Paystack.",
                   "Built with: TypeScript, Next.js, Node.js, MongoDB",
                 ]}
                 image="/images/pay-online-illustration.jpeg"
                 githubLink="https://github.com/jason-ezenwa/zen-finance"
                 seeLiveLink="https://try-zen-finance.vercel.app/"
               />
+
+              <ProjectCard
+                title="Hunt Assistant"
+                descriptionParagraphs={[
+                  "This is an AI powered tool that gives you insights on how you fit for a job based on your qualifications & the job's requirements and helps you write a cover letter you can download, tailored to the job.",
+                  "If you're like me and you hate writing cover letters, this is for you.",
+                  "Built with: TypeScript, Next.js, Node.js, AI",
+                ]}
+                image="/images/hunt-assistant.jpg"
+                githubLink="https://github.com/jason-ezenwa/hunt-assistant"
+                seeLiveLink="https://hunt-assistant.vercel.app/"
+              />
+
               <ProjectCard
                 title="WYNK.NG"
                 descriptionParagraphs={[
@@ -195,18 +209,6 @@ export default function Home() {
                 githubLink=""
                 seeLiveLink="https://wynk.ng/"
               />
-
-              {/* <ProjectCard
-                title="Vibes Tailor"
-                descriptionParagraphs={[
-                  'A web application that gives you music recommendations that match your taste.',
-                  'The Vibes Tailor is a music recommender I created for music enthusiasts who are looking for new music to listen to.',
-                  'Built with: React, Node JS, Express JS, TailwindCSS, Material UI',
-                ]}
-                image="/images/vibes-tailor-recommendations.PNG"
-                githubLink="https://github.com/jason-ezenwa/Flair_Vibes_Tailor_V2"
-                seeLiveLink="https://vibes-tailor.vercel.app/"
-              /> */}
             </motion.div>
           </div>
         </section>
