@@ -199,15 +199,15 @@ export default function Home() {
               />
 
               <ProjectCard
-                title="WYNK.NG"
+                title="Prospera AI Dashboard"
                 descriptionParagraphs={[
-                  "I rebuilt Wynk's web application while working as an intern at Wynk Limited.",
-                  "This web application displays and elaborates on the services provided by Wynk, from ride hailing to payment and lifestyle services, as well as the opportunities in store for partners and potential partners.",
-                  "Built with: React, Tailwind CSS, Material UI",
+                  "This is a dashboard mockup created for Prospera AI, a company that helps increase lead conversion rates with AI-generated personalised Lead Magnets and Agentic Follow ups.",
+                  "Features a user interface with analytics and metrics for intent signal tracking, AI-powered personalized content generation, and automated lead magnet insights.",
+                  "Built with: Next.js, Tailwind CSS, Shadcn UI",
                 ]}
-                image="/images/wynk-landing-page.PNG"
-                githubLink=""
-                seeLiveLink="https://wynk.ng/"
+                image="/images/prospera-ai-dashboard.png"
+                githubLink="https://github.com/jason-ezenwa/prospera-ai-dashboard"
+                seeLiveLink="https://prospera-ai-dashboard-one.vercel.app/"
               />
             </motion.div>
           </div>
