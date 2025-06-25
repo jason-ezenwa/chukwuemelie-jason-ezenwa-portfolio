@@ -127,8 +127,8 @@ export default function Home() {
               />
               <ImpactStoryCard
                 title="Product Feedback & Scaling Operations"
-                role="Frontend Engineer"
-                techStack="Next.js, TypeScript"
+                role="Software Engineer"
+                techStack="Next.js, NestJS, TypeScript"
                 duration="Apr 2024 - Apr 2025"
                 keyContributions={[
                   "Launched a product feedback application used by companies like Kuda",

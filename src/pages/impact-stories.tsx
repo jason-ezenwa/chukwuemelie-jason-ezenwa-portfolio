@@ -370,7 +370,7 @@ const ImpactStories = () => {
                   <div>
                     <p className="text-[10px] sm:text-xs text-gray-500">ROLE</p>
                     <p className="font-medium text-sm sm:text-base text-gray-800">
-                      Frontend Engineer
+                      Software Engineer
                     </p>
                   </div>
                 </div>
@@ -398,7 +398,7 @@ const ImpactStories = () => {
                       TECH STACK
                     </p>
                     <p className="font-medium text-sm sm:text-base text-gray-800 leading-relaxed">
-                      Next.js, TypeScript
+                      Next.js, NestJS, TypeScript
                     </p>
                   </div>
                 </div>
@@ -470,6 +470,16 @@ const ImpactStories = () => {
                       platform was designed for ease of use, and its intuitive
                       interface helped drive high adoption rates among new
                       testers.`}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
+                      Performance Optimization & Scaling
+                    </h4>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      I led the efforts that made data intensive operations 50x
+                      faster through query optimizations and caching.
                     </p>
                   </div>
 
