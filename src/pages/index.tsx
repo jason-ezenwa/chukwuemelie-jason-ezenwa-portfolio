@@ -228,6 +228,22 @@ export default function Home() {
               viewport={{ once: true, amount: 0.005 }}
               className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               <BlogCard
+                title="MVPs and the Engineering Trap: Building What Actually Matters"
+                descriptionParagraphs={[
+                  "Many startups fail not because they can't build, but because they build the wrong things — perfectly.",
+                  "Here, I explore how clarity beats code in early-stage startups, and why your MVP should be a learning engine focused on understanding user needs rather than perfect architecture.",
+                ]}
+                link="https://blog.stackademic.com/mvps-and-the-engineering-trap-building-what-actually-matters-6c253bb5b3cd"
+              />
+              <BlogCard
+                title="The Irreplaceable Software Engineer: Thriving in the Age of AI"
+                descriptionParagraphs={[
+                  "The rapid advancement of AI has raised the question: Will AI replace software engineers? The reality is that some engineers will remain indispensable.",
+                  "In this article, I discuss how adaptability, cross-disciplinary thinking, and effectively leveraging AI are the keys to staying irreplaceable in an AI-powered world.",
+                ]}
+                link="https://blog.stackademic.com/the-irreplaceable-software-engineer-thriving-in-the-age-of-ai-569525593922"
+              />
+              <BlogCard
                 title="Beyond Silos: The Cross-Disciplinary Role of the Modern Software Engineer"
                 descriptionParagraphs={[
                   "An article about the exposure of software engineers to different fields while working with experts in those fields.",
@@ -244,36 +260,20 @@ export default function Home() {
                 link="https://blog.stackademic.com/the-priceless-influence-of-senior-software-engineers-on-junior-engineers-c7c7cac89747"
               />
               <BlogCard
+                title="Implementing an Escrow-like State in Node.js: Building Trust and Security in Online Transactions"
+                descriptionParagraphs={[
+                  "Explains the concept of escrows and a nodejs implementation",
+                  "In this blog post, I go through: What escrows are and their importance as well as a step by step implementation in Node.js.",
+                ]}
+                link="https://blog.stackademic.com/implementing-an-escrow-like-state-in-node-js-building-trust-and-security-in-online-transactions-a8058144c005"
+              />
+              <BlogCard
                 title="Authentication and Authorization with JSON Web Tokens"
                 descriptionParagraphs={[
                   "This blog dives deep into the world of JSON Web Tokens (JWTs), shedding light on how they're used in authentication and authorization processes.",
                   "In this blog post, I explain: What JWTs are and how they work, from token issuance to server verification.",
                 ]}
                 link="https://medium.com/stackademic/the-definitive-guide-to-authentication-and-authorization-with-json-web-tokens-everything-you-need-5bc7795cb668"
-              />
-              <BlogCard
-                title="Getting Familiar with Props in React"
-                descriptionParagraphs={[
-                  "This is a guide that explains what 'props' are, and how they work. Taking you on a journey to transform your components from static to dynamic.",
-                  "In this blog post, I explain: How to pass data between components using props as well as integration with databases.",
-                ]}
-                link="https://medium.com/@emelieobumse100/getting-familiar-with-props-in-react-5abdcaae8b04"
-              />
-              <BlogCard
-                title="Implementing an Escrow-like State in Node.js: Building Trust and Security in Online Transactions"
-                descriptionParagraphs={[
-                  "Explains the concept of escrows and a nodejs implementation",
-                  "In this blog post, I go through: What escrows are and their importance as well as a step by step implementation in Node.js.",
-                ]}
-                link="https://medium.com/@emelieobumse100/building-flair-vibes-tailor-a-personalised-music-recommender-c3a0f042faa2"
-              />
-              <BlogCard
-                title='What Happens When You Type "https://www.google.com" Into Your Browser and Press Enter'
-                descriptionParagraphs={[
-                  "This blog post, walks through the various steps involved in loading the webpage you see when you try to use google.",
-                  "In this blog post, I explain: The DNS process, what it is and how it occurs as well as web servers, application servers and load balancers.",
-                ]}
-                link="https://medium.com/@emelieobumse100/what-happens-when-you-type-https-www-google-com-into-your-browser-and-press-enter-bc0b0d8c7d08"
               />
             </motion.div>
           </div>
