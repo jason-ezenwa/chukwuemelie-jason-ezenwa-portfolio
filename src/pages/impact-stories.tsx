@@ -370,7 +370,7 @@ const ImpactStories = () => {
                   <div>
                     <p className="text-[10px] sm:text-xs text-gray-500">ROLE</p>
                     <p className="font-medium text-sm sm:text-base text-gray-800">
-                      Software Engineer
+                      Lead Software Engineer
                     </p>
                   </div>
                 </div>

@@ -127,7 +127,7 @@ export default function Home() {
               />
               <ImpactStoryCard
                 title="Product Feedback & Scaling Operations"
-                role="Software Engineer"
+                role="Lead Software Engineer"
                 techStack="Next.js, NestJS, TypeScript"
                 duration="Apr 2024 - Apr 2025"
                 keyContributions={[
