@@ -1,14 +1,14 @@
-import BlogCard from '@/components/BlogCard';
-import ProjectCard from '@/components/ProjectCard';
-import ImpactStoryCard from '@/components/ImpactStoryCard';
-import LogosComponent from '@/components/LogosComponent';
-import { StickyBottomRight, StickyDiv } from '@/components/StickyWidgets';
-import { fadeIn } from '@/utils/fadeInAnimation';
+import BlogCard from "@/components/blog-card";
+import ProjectCard from "@/components/project-card";
+import ImpactStoryCard from "@/components/impact-story-card";
+import LogosComponent from "@/components/logos-component";
+import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
+import { fadeIn } from "@/utils/fadeInAnimation";
 import { DM_Sans } from "next/font/google";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Footer from "@/components/Footer";
-import Helmet from "@/components/Helmet";
+import Footer from "@/components/footer";
+import Helmet from "@/components/helmet";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -112,7 +112,7 @@ export default function Home() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.005 }}
-              className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+              className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
               <ImpactStoryCard
                 title="Building Scalable Infrastructure for Blue-Collar Empowerment"
                 role="Software Engineer"
@@ -120,7 +120,7 @@ export default function Home() {
                 duration="Jan 2024 - Present"
                 keyContributions={[
                   "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios",
-                  "Provided data-driven insights that guided product improvements and optimized funnels.",
+                  "Provided data-driven insights that guided product improvements and optimized funnels",
                   "Improved platform SEO and organic traffic by 28%",
                 ]}
                 link="/impact-stories#blue-collar-empowerment"
@@ -137,7 +137,7 @@ export default function Home() {
                 ]}
                 link="/impact-stories#product-feedback"
               />
-              <ImpactStoryCard
+              {/* <ImpactStoryCard
                 title="Laying the Foundation for Secure Gold Investment"
                 role="Software Engineer"
                 techStack="Next.js, Node.js, TypeScript, PostgreSQL, Docker"
@@ -148,6 +148,18 @@ export default function Home() {
                   "Shaped secure, scalable infrastructure for the gold investment platform",
                 ]}
                 link="/impact-stories#gold-investment"
+              /> */}
+              <ImpactStoryCard
+                title="Building a Lifestyle Super App and Web Platform"
+                role="Full Stack Developer"
+                techStack="JavaScript, Node.js, Express, React"
+                duration="Sep 2023 - Apr 2024"
+                keyContributions={[
+                  "Contributed to a lifestyle super app, focusing on financial services",
+                  "Rebuilt the company web application in React, increasing retention by 55%",
+                  "Led technical and culture-fit assessment of new hires",
+                ]}
+                link="/impact-stories#wynk-limited"
               />
             </motion.div>
             <div className="flex justify-center mt-8">
@@ -173,7 +185,7 @@ export default function Home() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
               <ProjectCard
                 title="Zen"
                 descriptionParagraphs={[
@@ -226,7 +238,7 @@ export default function Home() {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
               <BlogCard
                 title="MVPs and the Engineering Trap: Building What Actually Matters"
                 descriptionParagraphs={[

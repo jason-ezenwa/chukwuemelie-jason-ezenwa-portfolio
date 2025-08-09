@@ -11,12 +11,12 @@ import {
   FaAngleDoubleDown,
   FaExternalLinkAlt,
 } from 'react-icons/fa';
-import Footer from '@/components/Footer';
-import Helmet from '@/components/Helmet';
-import Link from 'next/link';
-import { StickyBottomRight, StickyDiv } from '@/components/StickyWidgets';
+import Footer from "@/components/footer";
+import Helmet from "@/components/helmet";
+import Link from "next/link";
+import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
 
-const dmSans = DM_Sans({ weight: '400', subsets: ['latin'] });
+const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
 const ImpactStories = () => {
   return (
@@ -60,10 +60,15 @@ const ImpactStories = () => {
                 Product Feedback
               </a>
               <a
+                href="#wynk-limited"
+                className="px-2 sm:px-3 py-2 bg-[#171717] hover:bg-[#333] text-white rounded-md transition-colors text-xs sm:text-sm whitespace-nowrap">
+                Lifestyle Super App
+              </a>
+              {/* <a
                 href="#gold-investment"
                 className="px-2 sm:px-3 py-2 bg-[#171717] hover:bg-[#333] text-white rounded-md transition-colors text-xs sm:text-sm whitespace-nowrap">
                 Gold Investment
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
@@ -525,8 +530,179 @@ const ImpactStories = () => {
             </div>
           </div>
 
-          {/* Impact Story 3 */}
+          {/* Impact Story 3: Wynk Limited */}
           <div
+            id="wynk-limited"
+            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
+              <div className="w-fit">
+                <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />
+              </div>
+              <h2 className="font-bold text-xl sm:text-2xl md:text-3xl text-[#171717] leading-tight">
+                Building a Lifestyle Super App and Web Platform
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 border-b border-gray-300 pb-6">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="rounded-md">
+                    <FaBuilding className="text-gray-600 text-sm sm:text-base" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] sm:text-xs text-gray-500">
+                      COMPANY
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="font-medium text-sm sm:text-base text-gray-800">
+                        Wynk Limited
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-md">
+                    <FaUser className="text-gray-600 text-sm sm:text-base" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] sm:text-xs text-gray-500">ROLE</p>
+                    <p className="font-medium text-sm sm:text-base text-gray-800">
+                      Full Stack Developer
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-md">
+                    <FaClock className="text-gray-600 text-sm sm:text-base" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] sm:text-xs text-gray-500">
+                      DURATION
+                    </p>
+                    <p className="font-medium text-sm sm:text-base text-gray-800">
+                      Sep 2023 - Apr 2024
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-start gap-3 h-full">
+                  <div className="rounded-md mt-1">
+                    <FaCode className="text-gray-600 text-sm sm:text-base" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] sm:text-xs text-gray-500">
+                      TECH STACK
+                    </p>
+                    <p className="font-medium text-sm sm:text-base text-gray-800 leading-relaxed">
+                      JavaScript, Node.js, Express, React
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6 sm:space-y-8">
+              <div className="border-b border-gray-300 pb-6">
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <FaListUl className="text-[#171717] text-sm sm:text-base" />
+                  <h3 className="font-bold text-lg sm:text-xl text-[#171717]">
+                    Overview
+                  </h3>
+                </div>
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
+                  {`At Wynk Limited, I worked within a cross-functional team on the Wynk Super App, focusing on financial services modules.
+                  I rebuilt the company's web application with React, which increased retention by 55%. I also contributed to team growth by evaluating candidates and documenting systems comprehensively.`}
+                </p>
+              </div>
+
+              <div className="border-b border-gray-300 pb-6">
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <FaBullseye className="text-[#171717] text-sm sm:text-base" />
+                  <h3 className="font-bold text-lg sm:text-xl text-[#171717]">
+                    Key Contributions
+                  </h3>
+                </div>
+
+                <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
+                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                      <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
+                        Wynk Super App – Financial Services
+                      </h4>
+                      <div>
+                        <Link
+                          href="https://play.google.com/store/apps/details?id=ng.wynk.wynksupappsupapp&pli=1"
+                          target="_blank">
+                          <FaExternalLinkAlt className="text-gray-700 text-sm sm:text-base" />
+                        </Link>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      {`Collaborated with product, design, and QA to build and iterate on financial services features using Node.js and Express.`}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                      <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
+                        Web Application Rebuild
+                      </h4>
+                      <Link href="https://wynk.ng/" target="_blank">
+                        <FaExternalLinkAlt className="text-gray-700 text-sm sm:text-base" />
+                      </Link>
+                    </div>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      {`Rebuilt the company's web application with React, resulting in a 55% increase in retention.`}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
+                      Hiring & Team Scaling
+                    </h4>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      {`Assessed technical and cultural fit of candidates, leading to the hiring of 3 software developers and 1 product designer who accelerated delivery.`}
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
+                      Documentation
+                    </h4>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      {`Authored thorough documentation across Wynk-related software to improve onboarding and maintenance.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <FaChartLine className="text-[#171717] text-sm sm:text-base" />
+                  <h3 className="font-bold text-lg sm:text-xl text-[#171717]">
+                    Impact Summary
+                  </h3>
+                </div>
+                <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-3">
+                  <li>
+                    Increased user retention by 55% following the React rebuild
+                  </li>
+                  <li>
+                    Accelerated delivery velocity through effective hiring and
+                    onboarding
+                  </li>
+                  <li>
+                    Improved team efficiency and knowledge transfer via
+                    comprehensive documentation
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Impact Story 3 */}
+          {/* <div
             id="gold-investment"
             className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
@@ -686,7 +862,7 @@ const ImpactStories = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         <div className="flex justify-center my-6 sm:my-10">
