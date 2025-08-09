@@ -317,17 +317,14 @@ const ImpactStories = () => {
                 </div>
                 <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-3">
                   <li>
-                    Enabled a platform that serves 3,000+ artisans and 1,000+
-                    clients
+                    Built systems for artisan recruitment, home maintenance, and
+                    AI-driven portfolios
                   </li>
                   <li>
-                    Delivered core features across recruitment, payments,
-                    portfolio building, analytics, and marketing
+                    Provided data-driven insights that guided product
+                    improvements and optimized funnels
                   </li>
-                  <li>
-                    Supported a mission-driven product while working in a
-                    fast-paced, remote environment
-                  </li>
+                  <li>Improved platform SEO and organic traffic by 28%</li>
                 </ul>
               </div>
             </div>
@@ -512,19 +509,14 @@ const ImpactStories = () => {
                 </div>
                 <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-3">
                   <li>
-                    Enhanced the frontend user experience to support seamless
-                    feedback collection and analysis, aiding in data-driven
-                    decision-making for product teams.
+                    Launched a product feedback application used by companies
+                    like Kuda
                   </li>
                   <li>
-                    Onboarded 10,000+ testers quickly and efficiently,
-                    contributing to a robust testing ecosystem for our clients.
+                    Built an application that onboarded 10,000+ testers in a
+                    month
                   </li>
-                  <li>
-                    {`Helped scale Peppermint's operations and drive its product
-                    strategy by developing core features that improved tester
-                    engagement and feedback accuracy.`}
-                  </li>
+                  <li>Led technical assessment of new engineering hires</li>
                 </ul>
               </div>
             </div>
@@ -639,7 +631,7 @@ const ImpactStories = () => {
                       </div>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      {`Collaborated with product, design, and QA to build and iterate on financial services features using Node.js and Express.`}
+                      {`Collaborated with product, design, and QA to build a lifestyle super app and my main focus was to implement the server side for the application's financial services using Node.js and Express.`}
                     </p>
                   </div>
 
@@ -653,7 +645,7 @@ const ImpactStories = () => {
                       </Link>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      {`Rebuilt the company's web application with React, resulting in a 55% increase in retention.`}
+                      {`I rebuilt the company's web application with React, improving visual appeal, user experience and making actionable items clearer. This resulted in a 55% increase in retention.`}
                     </p>
                   </div>
 
@@ -686,16 +678,14 @@ const ImpactStories = () => {
                 </div>
                 <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-3">
                   <li>
-                    Increased user retention by 55% following the React rebuild
+                    Contributed to a lifestyle super app, focusing on financial
+                    services
                   </li>
                   <li>
-                    Accelerated delivery velocity through effective hiring and
-                    onboarding
+                    Rebuilt the company web application in React, increasing
+                    retention by 55%
                   </li>
-                  <li>
-                    Improved team efficiency and knowledge transfer via
-                    comprehensive documentation
-                  </li>
+                  <li>Led technical and culture-fit assessment of new hires</li>
                 </ul>
               </div>
             </div>
