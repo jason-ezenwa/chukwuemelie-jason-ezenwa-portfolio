@@ -23,8 +23,8 @@ const LogosComponent: React.FC = () => {
     { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
     { icon: SiReact, name: "React", color: "#61DAFB" },
     { icon: SiNextdotjs, name: "Next.js", color: "#000000" },
-    { icon: SiExpress, name: "Express", color: "#000000" },
-    { icon: SiNestjs, name: "Nest.js", color: "#E0234E" },
+    { icon: SiExpress, name: "Express.js", color: "#000000" },
+    { icon: SiNestjs, name: "NestJS", color: "#E0234E" },
     { icon: SiGraphql, name: "GraphQL", color: "#E10098" },
     { icon: SiMysql, name: "MySQL", color: "#4479A1" },
     { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
@@ -43,12 +43,18 @@ const LogosComponent: React.FC = () => {
             {logos.map((logo, index) => {
               const IconComponent = logo.icon;
               return (
-                <div key={index} className="relative flex-shrink-0 group">
+                <div
+                  key={index}
+                  className="group relative flex-shrink-0 group flex flex-col items-center gap-1">
                   <IconComponent
                     color={logo.color}
                     className="w-8 h-8 lg:w-12 lg:h-12 filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
                     title={logo.name}
                   />
+                  <span
+                    className={`text-xs lg:text-sm text-gray-500 group-hover:text-gray-900 transition-colors duration-300`}>
+                    {logo.name}
+                  </span>
                 </div>
               );
             })}
