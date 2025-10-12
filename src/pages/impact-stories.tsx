@@ -14,7 +14,9 @@ import {
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
+import router from "next/router";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -22,58 +24,102 @@ const ImpactStories = () => {
   return (
     <>
       <Helmet />
-      <main className="mb-12 text-black">
-        <section className="pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-10 md:pb-12 px-4 sm:px-8 md:px-12 lg:px-32 bg-gradient-to-b from-[#F5F6F4] to-white">
-          <div className="">
+      <main className="min-h-screen text-black pb-24 md:pb-0">
+        {/* Header / Navigation */}
+        <header className="fixed top-0 left-0 right-0 h-20 bg-white/60 backdrop-blur-lg z-50 border-b border-gray-100/50 transition-all duration-300 flex items-center container-spacing">
+          <div className="flex justify-between items-center w-full">
+            <div className="text-2xl font-bold text-[#171717] tracking-tight hover:scale-105 transition-transform duration-300">
+              CJO
+            </div>
+            <nav>
+              <ul className="flex space-x-10">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
+                    Home
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/impact-stories"
+                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
+                    Impact Stories
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <section className="pt-24 pb-16 container-spacing bg-gradient-to-b from-[#F5F6F4] to-white">
+          <div className="max-w-4xl mx-auto text-center">
             <div className={dmSans.className}>
-              <h1 className="font-extrabold text-[30px] md:text-[40px] lg:text-[50px] text-[#171717]">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-hero text-gray-900 mb-6">
                 Impact Stories
-              </h1>
-              <p className="text-[#6b6c6b] text-base sm:text-lg mt-2">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-body-large text-gray-600 max-w-2xl mx-auto leading-relaxed">
                 Detailed analysis of my most impactful projects and
                 contributions
-              </p>
+              </motion.p>
             </div>
           </div>
 
-          <div className="mt-6 sm:mt-8 mb-4 sm:mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-8 mb-8">
             <Link
               href="/"
-              className="text-[#171717] hover:underline flex items-center gap-2 text-sm sm:text-base">
-              <span className="transform rotate-90 inline-block">
-                <FaAngleDoubleDown className="text-xs sm:text-sm" />
+              className="inline-flex items-center gap-3 text-gray-900 hover:text-gray-600 font-medium transition-colors duration-300 group">
+              <span className="transform rotate-90 group-hover:rotate-180 transition-transform duration-300">
+                <FaAngleDoubleDown className="text-sm" />
               </span>
               Back to Home
             </Link>
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center mt-8 sm:mt-12 overflow-x-auto">
-            <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:space-x-3 px-2">
+          <div className="flex justify-center mt-8 sm:mt-12">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
               <a
                 href="#blue-collar-empowerment"
-                className="px-2 sm:px-3 py-2 bg-[#171717] hover:bg-[#333] text-white rounded-md transition-colors text-xs sm:text-sm whitespace-nowrap">
-                Blue-Collar Empowerment
+                className="px-4 md:px-6 py-2 md:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-all duration-300 text-xs md:text-sm font-medium shadow-sm hover:shadow-md whitespace-nowrap border border-gray-800 hover:border-gray-700 relative group">
+                <span className="relative">
+                  Blue-Collar Empowerment
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </a>
               <a
                 href="#product-feedback"
-                className="px-2 sm:px-3 py-2 bg-[#171717] hover:bg-[#333] text-white rounded-md transition-colors text-xs sm:text-sm whitespace-nowrap">
-                Product Feedback
+                className="px-4 md:px-6 py-2 md:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-all duration-300 text-xs md:text-sm font-medium shadow-sm hover:shadow-md whitespace-nowrap border border-gray-800 hover:border-gray-700 relative group">
+                <span className="relative">
+                  Product Feedback
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </a>
               <a
                 href="#wynk-limited"
-                className="px-2 sm:px-3 py-2 bg-[#171717] hover:bg-[#333] text-white rounded-md transition-colors text-xs sm:text-sm whitespace-nowrap">
-                Lifestyle Super App
+                className="px-4 md:px-6 py-2 md:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-all duration-300 text-xs md:text-sm font-medium shadow-sm hover:shadow-md whitespace-nowrap border border-gray-800 hover:border-gray-700 relative group">
+                <span className="relative">
+                  Lifestyle Super App
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </a>
-              {/* <a
-                href="#gold-investment"
-                className="px-2 sm:px-3 py-2 bg-[#171717] hover:bg-[#333] text-white rounded-md transition-colors text-xs sm:text-sm whitespace-nowrap">
-                Gold Investment
-              </a> */}
             </div>
           </div>
         </section>
 
-        <section className="px-4 sm:px-8 md:px-12 lg:px-32">
+        <section className="container-spacing space-y-16 md:space-y-20">
           <div
             id="blue-collar-empowerment"
             className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
@@ -182,12 +228,12 @@ const ImpactStories = () => {
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
                       Collaborated cross-functionally to build and launch three
-                      product lines:
+                      product lines that generated over ₦25m in revenue:
                     </p>
                     <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-700 space-y-1 sm:space-y-2">
                       <li>
                         <p>
-                          Artisan recruitment system, as well as a community
+                          Artisan recruitment products, as well as a community
                           management tool for businesses, accelerating
                           onboarding and increasing partner satisfaction.{" "}
                           <Link
@@ -400,7 +446,7 @@ const ImpactStories = () => {
                       TECH STACK
                     </p>
                     <p className="font-medium text-sm sm:text-base text-gray-800 leading-relaxed">
-                      Next.js, NestJS, TypeScript
+                      Next.js, NestJS, TypeScript, MongoDB, AWS
                     </p>
                   </div>
                 </div>
@@ -447,7 +493,7 @@ const ImpactStories = () => {
                       </Link>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
-                      {`I contributed to the creation of a product feedback
+                      {`Directed engineering efforts to create an AI-powered product feedback
                       application that allowed clients (e.g Kuda) to gather, organize, and
                       analyze detailed feedback from testers. This tool is the core
                       part of Peppermint's offerings, enabling more
@@ -494,7 +540,8 @@ const ImpactStories = () => {
                       ensuring the team continued to grow with skilled
                       developers. My leadership in recruitment helped maintain
                       the quality and velocity of the engineering team as we
-                      expanded.
+                      expanded, leading to the successful release of Peppermint
+                      V1, following the MVP.
                     </p>
                   </div>
                 </div>
@@ -855,18 +902,25 @@ const ImpactStories = () => {
           </div> */}
         </section>
 
-        <div className="flex justify-center my-6 sm:my-10">
-          <Link
-            href="/"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#171717] hover:bg-[#333] text-white text-sm sm:text-base rounded-md transition-colors">
-            Back to Home
-          </Link>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center py-12">
+          <button
+            className="btn-primary relative group"
+            onClick={() => router.push("/")}>
+            <span className="relative">
+              Back to Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+            </span>
+          </button>
+        </motion.div>
         <StickyBottomRight>
           <StickyDiv
-            text="Connect with me on LinkedIn 🚀"
+            text="Connect with me on LinkedIn"
             textColor="text-white"
-            bgColor="bg-[#171717]"
+            bgColor="bg-gray-900"
             link="https://linkedin.com/in/chukwuemelie-obumse"
           />
         </StickyBottomRight>

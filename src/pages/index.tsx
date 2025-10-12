@@ -9,6 +9,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
+import router from "next/router";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -16,25 +17,29 @@ export default function Home() {
   return (
     <>
       <Helmet />
-      <main className="mb-12 text-black">
+      <main className="min-h-screen text-black pb-24 md:pb-0">
         {/* Header / Navigation */}
-        <header className="fixed top-0 left-0 right-0 h-16 bg-white z-50 shadow-sm flex items-center px-6 sm:px-12 lg:px-32">
+        <header className="fixed top-0 left-0 right-0 h-20 bg-white/30 backdrop-blur-md z-50 border-b border-gray-100/50 transition-all duration-300 flex items-center container-spacing">
           <div className="flex justify-between items-center w-full">
-            <div className="text-lg font-bold text-[#171717]">CJO</div>
+            <div className="text-2xl font-bold text-[#171717] tracking-tight hover:scale-105 transition-transform duration-300">
+              CJO
+            </div>
             <nav>
-              <ul className="flex space-x-8">
+              <ul className="flex space-x-10">
                 <li>
                   <Link
                     href="/"
-                    className="text-[#171717] hover:text-gray-600 font-medium">
+                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
                     Home
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/impact-stories"
-                    className="text-[#171717] hover:text-gray-600 font-medium">
+                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
                     Impact Stories
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               </ul>
@@ -43,83 +48,126 @@ export default function Home() {
         </header>
 
         {/* Hero section */}
-        <section className="pt-16 px-6 flex flex-col items-center transition-colors duration-300">
+        <section className="pt-32 pb-32 container-spacing flex flex-col items-center transition-colors duration-300">
           <motion.div
-            variants={fadeIn("up", 0.1)}
             initial="hidden"
-            whileInView={"show"}
+            whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className={`${dmSans.className} py-20 flex flex-col gap-4 lg:gap-8`}>
-            <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl">
+            className={`${dmSans.className} flex flex-col gap-6 lg:gap-10 text-center max-w-5xl`}>
+            <motion.h1
+              variants={fadeIn("up", 0.1)}
+              className="text-hero text-gray-800">
               {`Hi, my name is`}
-            </h1>
-            <h1 className="font-extrabold text-4xl lg:text-6xl text-[#6b6c6b]">
+            </motion.h1>
+            <motion.h1
+              variants={fadeIn("up", 0.2)}
+              className="text-hero text-[#6b6c6b] bg-clip-text font-extrabold tracking-tight">
               Chukwuemelie Jason Obumse
-            </h1>
-            <h2 className="font-extrabold text-3xl lg:text-5xl">{`I'm a Full Stack Software Engineer.`}</h2>
+            </motion.h1>
+            <motion.h2
+              variants={fadeIn("up", 0.3)}
+              className="text-section text-gray-700">
+              {`I'm a Full Stack Software Engineer.`}
+            </motion.h2>
           </motion.div>
         </section>
 
         {/* About me section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
-          <div className="space-y-8">
+        <section className="container-spacing section-spacing bg-[#F5F6F4] transition-colors duration-300">
+          <div className="max-w-6xl mx-auto">
             <div className={dmSans.className}>
-              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-section text-gray-900 mb-12">
                 About Me
-              </p>
+              </motion.h2>
             </div>
+
             <motion.div
-              variants={fadeIn("left", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.005 }}
-              className="w-full 2xl:w-[90%]  bg-white border-dotted border-l-[1px] border-black px-4 py-4 text-[#344054] shadow-sm hover:shadow-md">
-              <p className="text-base lg:text-lg text-[#344054]">{`I am a Full Stack Engineer with 3+ years of experience delivering scalable and maintainable solutions across B2B and B2C domains. I specialize in backend and frontend engineering, with additional strengths in system design and DevOps.`}</p>
-              <p className="text-base lg:text-lg text-[#344054]">{`My professional experience spans startups and high-impact teams at LaborHack, Wynk Limited, and Peppermint Group, where I've transformed complex business needs into reliable, user-focused software used by thousands in the fintech, blue-collar, data, and lifestyle sectors.`}</p>
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative">
+              <div className="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-300 rounded-full"></div>
+              <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 p-5 lg:p-8 md:p-12 ml-5 lg:ml-8 border border-gray-100/50">
+                <div className="space-y-6">
+                  <p className="text-body-large text-gray-700 leading-relaxed">
+                    {`I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.`}
+                  </p>
+                  <p className="text-body-large text-gray-700 leading-relaxed">
+                    {`I've helped companies like LaborHack, Peppermint and Wynk Limited turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
+                  </p>
+                </div>
+              </div>
             </motion.div>
-            <div className="mt-[40px]">
-              <Link
-                target="_blank"
-                href="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing">
-                <button className="w-[156px] h-[48px] bg-[#171717] hover:bg-[#6b6c6b] text-white !text-sm lg:!text-lg rounded-[2px]">
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-12 flex justify-start">
+              <button
+                className="btn-primary relative group"
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing",
+                    "_blank"
+                  )
+                }>
+                <span className="relative">
                   View my resume
-                </button>
-              </Link>
-            </div>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
+              </button>
+            </motion.div>
           </div>
         </section>
 
         {/* Skills section */}
-        <section className="space-y-6 lg:space-y-8 py-2 transition-colors duration-300">
-          <div className={`${dmSans.className} px-6 sm:px-12 lg:px-32`}>
-            <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
+        <section className="section-spacing transition-colors duration-300">
+          <div className={`${dmSans.className} container-spacing text-center`}>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-section text-gray-900 mb-12">
               Core Skills
-            </p>
+            </motion.h2>
           </div>
           <LogosComponent />
         </section>
 
         {/* Impact Stories section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
-          <div className="space-y-6 lg:space-y-8">
-            <div className={dmSans.className}>
-              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
+        <section className="container-spacing section-spacing bg-[#F5F6F4] transition-colors duration-300">
+          <div className="max-w-7xl mx-auto">
+            <div className={`${dmSans.className} text-center mb-12`}>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-section text-gray-900 mb-4">
                 Impact Stories
-              </p>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-body-large text-gray-600 max-w-2xl mx-auto">
+                Detailed analysis of my most impactful projects and
+                contributions
+              </motion.p>
             </div>
-            <motion.div
-              variants={fadeIn("up", 0.05)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.005 }}
-              className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <ImpactStoryCard
                 title="Building Scalable Infrastructure for Blue-Collar Empowerment"
                 role="Software Engineer"
                 techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
                 duration="Jan 2024 - Present"
                 keyContributions={[
-                  "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios",
+                  "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦25m in revenue",
                   "Provided data-driven insights that guided product improvements and optimized funnels",
                   "Improved platform SEO and organic traffic by 28%",
                 ]}
@@ -128,10 +176,10 @@ export default function Home() {
               <ImpactStoryCard
                 title="Product Feedback & Scaling Operations"
                 role="Lead Software Engineer"
-                techStack="Next.js, NestJS, TypeScript"
+                techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
                 duration="Apr 2024 - Apr 2025"
                 keyContributions={[
-                  "Launched a product feedback application used by companies like Kuda",
+                  "Launched an AI-powered product feedback application used by companies like Kuda",
                   "Built an application that onboarded 10,000+ testers in a month",
                   "Led technical assessment of new engineering hires",
                 ]}
@@ -161,31 +209,46 @@ export default function Home() {
                 ]}
                 link="/impact-stories#wynk-limited"
               />
-            </motion.div>
-            <div className="flex justify-center mt-8">
-              <Link href="/impact-stories">
-                <button className="px-6 py-3 bg-[#171717] hover:bg-[#6b6c6b] text-white rounded-[2px] !text-sm lg:!text-lg">
-                  View impact stories
-                </button>
-              </Link>
             </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex justify-center mt-12">
+              <button
+                className="btn-primary relative group"
+                onClick={() => router.push("/impact-stories")}>
+                <span className="relative">
+                  View impact stories
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
+              </button>
+            </motion.div>
           </div>
         </section>
 
         {/* Other Projects section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden transition-colors duration-300">
-          <div className="space-y-6 lg:space-y-8">
-            <div className={dmSans.className}>
-              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
+        <section className="container-spacing section-spacing transition-colors duration-300">
+          <div className="max-w-7xl mx-auto">
+            <div className={`${dmSans.className} text-center mb-12`}>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-section text-gray-900 mb-4">
                 Other Projects
-              </p>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-body-large text-gray-600 max-w-2xl mx-auto">
+                Personal projects showcasing various technologies and
+                problem-solving approaches
+              </motion.p>
             </div>
-            <motion.div
-              variants={fadeIn("right", 0.05)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <ProjectCard
                 title="Zen"
                 descriptionParagraphs={[
@@ -221,24 +284,32 @@ export default function Home() {
                 githubLink="https://github.com/jason-ezenwa/prospera-ai-dashboard"
                 seeLiveLink="https://prospera-ai-dashboard-one.vercel.app/"
               />
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Blogs section */}
-        <section className="px-6 sm:px-12 lg:px-32 py-14 sm:py-20 w-full overflow-hidden bg-[#F5F6F4] transition-colors duration-300">
-          <div className="space-y-6 lg:space-y-8">
-            <div className={dmSans.className}>
-              <p className="font-semibold lg:font-bold text-[23px] md:text-[36px]">
+        <section className="container-spacing section-spacing bg-[#F5F6F4] transition-colors duration-300">
+          <div className="max-w-7xl mx-auto">
+            <div className={`${dmSans.className} text-center mb-12`}>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-section text-gray-900 mb-4">
                 My Blog Posts
-              </p>
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-body-large text-gray-600 max-w-2xl mx-auto">
+                Thoughts on software engineering, technology trends, and
+                industry insights
+              </motion.p>
             </div>
-            <motion.div
-              variants={fadeIn("left", 0.05)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.005 }}
-              className="bg-center lg:bg-right-bottom bg-no-repeat mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <BlogCard
                 title="MVPs and the Engineering Trap: Building What Actually Matters"
                 descriptionParagraphs={[
@@ -287,21 +358,21 @@ export default function Home() {
                 ]}
                 link="https://medium.com/stackademic/the-definitive-guide-to-authentication-and-authorization-with-json-web-tokens-everything-you-need-5bc7795cb668"
               />
-            </motion.div>
+            </div>
           </div>
         </section>
 
         <StickyBottomRight>
           <StickyDiv
-            text="Have a look at my resume 📄"
+            text="Have a look at my resume"
             textColor="text-white"
-            bgColor="bg-[#171717]"
+            bgColor="bg-gray-900"
             link="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing"
           />
           <StickyDiv
-            text="Connect with me on LinkedIn 🚀"
+            text="Connect with me on LinkedIn"
             textColor="text-white"
-            bgColor="bg-[#171717]"
+            bgColor="bg-gray-900"
             link="https://linkedin.com/in/chukwuemelie-obumse"
           />
         </StickyBottomRight>
