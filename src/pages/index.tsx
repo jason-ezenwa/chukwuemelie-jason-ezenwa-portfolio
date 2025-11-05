@@ -250,6 +250,18 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
               <ProjectCard
+                title="Hunt Assistant"
+                descriptionParagraphs={[
+                  "A comprehensive AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and helps you track all your applications in one place.",
+                  "Features include user authentication, persistent application tracking and AI-powered insights.",
+                  "Built with: TypeScript, Next.js, MongoDB, AI",
+                ]}
+                image="/images/hunt-assistant.jpeg"
+                githubLink="https://github.com/jason-ezenwa/hunt-assistant"
+                seeLiveLink="https://hunt-assistant.vercel.app/"
+              />
+
+              <ProjectCard
                 title="Zen"
                 descriptionParagraphs={[
                   "Zen Finance is a modern fintech application that allows users to manage multi-currency wallets, exchange currencies, and access virtual card services such as creation, funding, and transaction tracking.",
@@ -259,18 +271,6 @@ export default function Home() {
                 image="/images/pay-online-illustration.jpeg"
                 githubLink="https://github.com/jason-ezenwa/zen-finance"
                 seeLiveLink="https://try-zen-finance.vercel.app/"
-              />
-
-              <ProjectCard
-                title="Hunt Assistant"
-                descriptionParagraphs={[
-                  "This is an AI powered tool that gives you insights on how you fit for a job based on your qualifications & the job's requirements and helps you write a cover letter you can download, tailored to the job.",
-                  "If you're like me and you hate writing cover letters, this is for you.",
-                  "Built with: TypeScript, Next.js, Node.js, AI",
-                ]}
-                image="/images/hunt-assistant.jpg"
-                githubLink="https://github.com/jason-ezenwa/hunt-assistant"
-                seeLiveLink="https://hunt-assistant.vercel.app/"
               />
 
               <ProjectCard
