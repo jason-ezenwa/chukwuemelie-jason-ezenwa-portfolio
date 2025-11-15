@@ -364,13 +364,16 @@ const ImpactStories = () => {
                 <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-gray-700 space-y-1.5 sm:space-y-3">
                   <li>
                     Built systems for artisan recruitment, home maintenance, and
-                    AI-driven portfolios
+                    AI-driven portfolios, generating over ₦25m in revenue
                   </li>
                   <li>
                     Provided data-driven insights that guided product
                     improvements and optimized funnels
                   </li>
-                  <li>Improved platform SEO and organic traffic by 28%</li>
+                  <li>
+                    Improved the flexibility and reliability of software
+                    deployments ensuring 99.9% uptime
+                  </li>
                 </ul>
               </div>
             </div>
@@ -499,6 +502,9 @@ const ImpactStories = () => {
                       part of Peppermint's offerings, enabling more
                       informed product development decisions.`}
                     </p>
+                    <p className="text-gray-700 text-sm sm:text-base mb-2 sm:mb-3">
+                      {`Enabled the company to organically generate $1,000+ in revenue within 3 months by architecting in-app usability tests and surveys, validating early product-market fit.`}
+                    </p>
                   </div>
 
                   <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -560,10 +566,13 @@ const ImpactStories = () => {
                     like Kuda
                   </li>
                   <li>
-                    Built an application that onboarded 10,000+ testers in a
-                    month
+                    Architected in-app usability tests and surveys which
+                    generated over $1,000 within 3 months
                   </li>
-                  <li>Led technical assessment of new engineering hires</li>
+                  <li>
+                    Built the testers' application that onboarded 10,000+
+                    testers in a month
+                  </li>
                 </ul>
               </div>
             </div>

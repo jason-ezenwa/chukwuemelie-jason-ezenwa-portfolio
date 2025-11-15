@@ -13,6 +13,8 @@ import {
   SiMysql,
   SiMongodb,
   SiPostgresql,
+  SiAmazonwebservices,
+  SiDocker,
 } from "react-icons/si";
 
 const LogosComponent: React.FC = () => {
@@ -29,6 +31,8 @@ const LogosComponent: React.FC = () => {
     { icon: SiMysql, name: "MySQL", color: "#4479A1" },
     { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
     { icon: SiPostgresql, name: "PostgreSQL", color: "#31648C" },
+    { icon: SiAmazonwebservices, name: "AWS", color: "#FF9900" },
+    { icon: SiDocker, name: "Docker", color: "#0DB7EA" },
   ];
 
   return (

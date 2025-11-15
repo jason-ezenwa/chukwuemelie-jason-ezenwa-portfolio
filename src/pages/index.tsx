@@ -169,7 +169,7 @@ export default function Home() {
                 keyContributions={[
                   "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦25m in revenue",
                   "Provided data-driven insights that guided product improvements and optimized funnels",
-                  "Improved platform SEO and organic traffic by 28%",
+                  "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
                 ]}
                 link="/impact-stories#blue-collar-empowerment"
               />
@@ -180,8 +180,8 @@ export default function Home() {
                 duration="Apr 2024 - Apr 2025"
                 keyContributions={[
                   "Launched an AI-powered product feedback application used by companies like Kuda",
-                  "Built an application that onboarded 10,000+ testers in a month",
-                  "Led technical assessment of new engineering hires",
+                  "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
+                  "Built the testers' application that onboarded 10,000+ testers in a month",
                 ]}
                 link="/impact-stories#product-feedback"
               />

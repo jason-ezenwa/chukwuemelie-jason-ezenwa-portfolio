@@ -30,7 +30,7 @@ const ImpactStoryCard = ({
       <div className="p-6 md:p-8 flex flex-col h-full">
         <div className="flex items-start gap-3 mb-4 md:mb-6">
           <div className="flex-1">
-            <h3 className="text-base md:text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-300 mb-1">
+            <h3 className="lg:w-[80%] text-base md:text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-300 mb-1">
               {title}
             </h3>
           </div>
