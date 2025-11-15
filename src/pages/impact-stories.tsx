@@ -570,8 +570,8 @@ const ImpactStories = () => {
                     generated over $1,000 within 3 months
                   </li>
                   <li>
-                    Built the testers' application that onboarded 10,000+
-                    testers in a month
+                    {`Built the testers' application that onboarded 10,000+
+                    testers in a month`}
                   </li>
                 </ul>
               </div>
