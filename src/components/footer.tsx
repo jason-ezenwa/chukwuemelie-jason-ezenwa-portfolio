@@ -8,11 +8,11 @@ const Footer = ({className}: {className?: string}) => {
     <footer
       className={`bottom-0 flex flex-col items-center
         text-[#62646A]
-      w-full px-6 sm:px-12 py-6 lg:px-32 ${className || ''}`}>
+      w-full px-6 sm:px-12 py-6 lg:px-32 ${className || ""}`}>
       <div className="w-full flex flex-col sm:flex-row justify-between">
         <div className="flex mb-4">
           <div className="flex space-x-5  items-center mr-8">
-            <Link href="mailto:emelieobumse100@gmail.com">
+            <Link href="mailto:chukwuemelie.ezenwa@gmail.com">
               <MdEmail className="size-6 lg:size-7" />
             </Link>
             <Link href="https://github.com/jason-ezenwa">
