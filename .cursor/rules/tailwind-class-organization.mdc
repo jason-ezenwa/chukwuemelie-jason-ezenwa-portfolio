@@ -1,0 +1,30 @@
+---
+description: Tailwind class organization and grouping conventions
+globs: ["**/*.tsx", "**/*.jsx", "**/*.ts", "**/*.js"]
+alwaysApply: true
+---
+When writing Tailwind classes in React components or html/jsx tags, always use `cn()` from `lib/utils` for combining classes and organize them into logical groups with comments in this order:
+
+1. **Size and spacing** - Dimensions (width, height, min/max) and spacing (padding, margin, gap) - often combined for form controls
+2. **Text** - Font, color, text alignment, decoration
+3. **Border** - Border styles, radius, outline
+4. **Background** - Background colors, gradients, images
+5. **Layout** - Position, display, flex/grid properties
+6. **Effects and interactive states** - Visual effects (shadows, transitions, transforms) combined with interaction states (hover, focus, disabled)
+
+Example:
+className={cn(
+  // Size and spacing
+  "h-9 w-full min-w-0 px-3 py-2 pr-9",
+  // Text
+  "text-sm text-[#FEFEFE] placeholder:text-muted-foreground",
+  // Layout
+  "relative",
+  // Border
+  "border border-input outline-none rounded-md",
+  // Background
+  "bg-transparent dark:bg-input/30 dark:hover:bg-input/50 selection:bg-primary",
+  // Effects and interactive states
+  "appearance-none shadow-xs transition-[color,box-shadow] disabled:pointer-events-none disabled:cursor-not-allowed"
+)}
+Each group should be separated by a line with a comment specifying the group (e.g // Text), and classes within each group should be ordered logically (e.g., base styles first, then variants like hover/focus states).

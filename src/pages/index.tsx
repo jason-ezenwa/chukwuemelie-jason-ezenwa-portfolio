@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
 import router from "next/router";
+import { cn } from "@/lib/utils";
+import Header from "@/components/header";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -17,38 +19,18 @@ export default function Home() {
   return (
     <>
       <Helmet />
+      <Header />
       <main className="min-h-screen text-black pb-24 md:pb-0">
-        {/* Header / Navigation */}
-        <header className="fixed top-0 left-0 right-0 h-20 bg-white/30 backdrop-blur-md z-50 border-b border-gray-100/50 transition-all duration-300 flex items-center container-spacing">
-          <div className="flex justify-between items-center w-full">
-            <div className="text-2xl font-bold text-[#171717] tracking-tight hover:scale-105 transition-transform duration-300">
-              CJO
-            </div>
-            <nav>
-              <ul className="flex space-x-10">
-                <li>
-                  <Link
-                    href="/"
-                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
-                    Home
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/impact-stories"
-                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
-                    Impact Stories
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-
         {/* Hero section */}
-        <section className="pt-32 pb-32 container-spacing flex flex-col items-center transition-colors duration-300">
+        <section
+          className={cn(
+            // Size and spacing
+            "pt-32 pb-32 container-spacing",
+            // Layout
+            "flex flex-col items-center",
+            // Effects and interactive states
+            "transition-colors duration-300"
+          )}>
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -73,7 +55,15 @@ export default function Home() {
         </section>
 
         {/* About me section */}
-        <section className="container-spacing section-spacing bg-[#F5F6F4] transition-colors duration-300">
+        <section
+          className={cn(
+            // Size and spacing
+            "container-spacing section-spacing",
+            // Background
+            "bg-[#F5F6F4]",
+            // Effects and interactive states
+            "transition-colors duration-300"
+          )}>
           <div className="max-w-6xl mx-auto">
             <div className={dmSans.className}>
               <motion.h2
@@ -90,8 +80,28 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative">
-              <div className="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-300 rounded-full"></div>
-              <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 p-5 lg:p-8 md:p-12 ml-5 lg:ml-8 border border-gray-100/50">
+              <div
+                className={cn(
+                  // Size and spacing
+                  "w-1 top-6 bottom-6",
+                  // Layout
+                  "absolute left-0",
+                  // Background
+                  "bg-gradient-to-b from-gray-300 via-gray-400 to-gray-300",
+                  // Border
+                  "rounded-full"
+                )}></div>
+              <div
+                className={cn(
+                  // Size and spacing
+                  "p-5 lg:p-8 md:p-12 ml-5 lg:ml-8",
+                  // Border
+                  "border border-gray-100/50 rounded-2xl",
+                  // Background
+                  "bg-white",
+                  // Effects and interactive states
+                  "shadow-sm hover:shadow-lg transition-all duration-300"
+                )}>
                 <div className="space-y-6">
                   <p className="text-body-large text-gray-700 leading-relaxed">
                     {`I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.`}
@@ -118,7 +128,17 @@ export default function Home() {
                 }>
                 <span className="relative">
                   View my resume
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full"
+                    )}></span>
                 </span>
               </button>
             </motion.div>
@@ -140,7 +160,15 @@ export default function Home() {
         </section>
 
         {/* Impact Stories section */}
-        <section className="container-spacing section-spacing bg-[#F5F6F4] transition-colors duration-300">
+        <section
+          className={cn(
+            // Size and spacing
+            "container-spacing section-spacing",
+            // Background
+            "bg-[#F5F6F4]",
+            // Effects and interactive states
+            "transition-colors duration-300"
+          )}>
           <div className="max-w-7xl mx-auto">
             <div className={`${dmSans.className} text-center mb-12`}>
               <motion.h2
@@ -220,7 +248,17 @@ export default function Home() {
                 onClick={() => router.push("/impact-stories")}>
                 <span className="relative">
                   View impact stories
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full"
+                    )}></span>
                 </span>
               </button>
             </motion.div>
@@ -228,7 +266,13 @@ export default function Home() {
         </section>
 
         {/* Other Projects section */}
-        <section className="container-spacing section-spacing transition-colors duration-300">
+        <section
+          className={cn(
+            // Size and spacing
+            "container-spacing section-spacing",
+            // Effects and interactive states
+            "transition-colors duration-300"
+          )}>
           <div className="max-w-7xl mx-auto">
             <div className={`${dmSans.className} text-center mb-12`}>
               <motion.h2
@@ -289,7 +333,15 @@ export default function Home() {
         </section>
 
         {/* Blogs section */}
-        <section className="container-spacing section-spacing bg-[#F5F6F4] transition-colors duration-300">
+        <section
+          className={cn(
+            // Size and spacing
+            "container-spacing section-spacing",
+            // Background
+            "bg-[#F5F6F4]",
+            // Effects and interactive states
+            "transition-colors duration-300"
+          )}>
           <div className="max-w-7xl mx-auto">
             <div className={`${dmSans.className} text-center mb-12`}>
               <motion.h2

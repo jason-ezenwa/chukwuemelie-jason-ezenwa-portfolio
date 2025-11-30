@@ -17,6 +17,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
 import router from "next/router";
+import { cn } from "@/lib/utils";
+import Header from "@/components/header";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -24,37 +26,15 @@ const ImpactStories = () => {
   return (
     <>
       <Helmet />
+      <Header />
       <main className="min-h-screen text-black pb-24 md:pb-0">
-        {/* Header / Navigation */}
-        <header className="fixed top-0 left-0 right-0 h-20 bg-white/60 backdrop-blur-lg z-50 border-b border-gray-100/50 transition-all duration-300 flex items-center container-spacing">
-          <div className="flex justify-between items-center w-full">
-            <div className="text-2xl font-bold text-[#171717] tracking-tight hover:scale-105 transition-transform duration-300">
-              CJO
-            </div>
-            <nav>
-              <ul className="flex space-x-10">
-                <li>
-                  <Link
-                    href="/"
-                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
-                    Home
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/impact-stories"
-                    className="text-[#171717] hover:text-gray-600 font-medium relative group transition-colors duration-300">
-                    Impact Stories
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-
-        <section className="pt-24 pb-16 container-spacing bg-gradient-to-b from-[#F5F6F4] to-white">
+        <section
+          className={cn(
+            // Size and spacing
+            "pt-24 pb-16 container-spacing",
+            // Background
+            "bg-gradient-to-b from-[#F5F6F4] to-white"
+          )}>
           <div className="max-w-4xl mx-auto text-center">
             <div className={dmSans.className}>
               <motion.h1
@@ -81,8 +61,19 @@ const ImpactStories = () => {
             className="mt-8 mb-8">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 text-gray-900 hover:text-gray-600 font-medium transition-colors duration-300 group">
-              <span className="transform rotate-90 group-hover:rotate-180 transition-transform duration-300">
+              className={cn(
+                // Layout
+                "inline-flex items-center gap-3",
+                // Text
+                "text-gray-900 font-medium",
+                // Effects and interactive states
+                "hover:text-gray-600 transition-colors duration-300 group"
+              )}>
+              <span
+                className={cn(
+                  // Effects and interactive states
+                  "transform rotate-90 group-hover:rotate-180 transition-transform duration-300"
+                )}>
                 <FaAngleDoubleDown className="text-sm" />
               </span>
               Back to Home
@@ -93,26 +84,107 @@ const ImpactStories = () => {
             <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
               <a
                 href="#blue-collar-empowerment"
-                className="px-4 md:px-6 py-2 md:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-all duration-300 text-xs md:text-sm font-medium shadow-sm hover:shadow-md whitespace-nowrap border border-gray-800 hover:border-gray-700 relative group">
-                <span className="relative">
+                className={cn(
+                  // Size and spacing
+                  "px-4 md:px-6 py-2 md:py-3",
+                  // Text
+                  "text-white text-xs md:text-sm font-medium",
+                  // Layout
+                  "whitespace-nowrap relative group",
+                  // Border
+                  "border border-gray-800 hover:border-gray-700 rounded-full",
+                  // Background
+                  "bg-gray-900 hover:bg-gray-800",
+                  // Effects and interactive states
+                  "shadow-sm hover:shadow-md transition-all duration-300"
+                )}>
+                <span
+                  className={cn(
+                    // Layout
+                    "relative"
+                  )}>
                   Blue-Collar Empowerment
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full"
+                    )}></span>
                 </span>
               </a>
               <a
                 href="#product-feedback"
-                className="px-4 md:px-6 py-2 md:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-all duration-300 text-xs md:text-sm font-medium shadow-sm hover:shadow-md whitespace-nowrap border border-gray-800 hover:border-gray-700 relative group">
-                <span className="relative">
+                className={cn(
+                  // Size and spacing
+                  "px-4 md:px-6 py-2 md:py-3",
+                  // Text
+                  "text-white text-xs md:text-sm font-medium",
+                  // Layout
+                  "whitespace-nowrap relative group",
+                  // Border
+                  "border border-gray-800 hover:border-gray-700 rounded-full",
+                  // Background
+                  "bg-gray-900 hover:bg-gray-800",
+                  // Effects and interactive states
+                  "shadow-sm hover:shadow-md transition-all duration-300"
+                )}>
+                <span
+                  className={cn(
+                    // Layout
+                    "relative"
+                  )}>
                   Product Feedback
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full"
+                    )}></span>
                 </span>
               </a>
               <a
                 href="#wynk-limited"
-                className="px-4 md:px-6 py-2 md:py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full transition-all duration-300 text-xs md:text-sm font-medium shadow-sm hover:shadow-md whitespace-nowrap border border-gray-800 hover:border-gray-700 relative group">
-                <span className="relative">
+                className={cn(
+                  // Size and spacing
+                  "px-4 md:px-6 py-2 md:py-3",
+                  // Text
+                  "text-white text-xs md:text-sm font-medium",
+                  // Layout
+                  "whitespace-nowrap relative group",
+                  // Border
+                  "border border-gray-800 hover:border-gray-700 rounded-full",
+                  // Background
+                  "bg-gray-900 hover:bg-gray-800",
+                  // Effects and interactive states
+                  "shadow-sm hover:shadow-md transition-all duration-300"
+                )}>
+                <span
+                  className={cn(
+                    // Layout
+                    "relative"
+                  )}>
                   Lifestyle Super App
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full"
+                    )}></span>
                 </span>
               </a>
             </div>
@@ -122,7 +194,14 @@ const ImpactStories = () => {
         <section className="container-spacing space-y-16 md:space-y-20">
           <div
             id="blue-collar-empowerment"
-            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            className={cn(
+              // Size and spacing
+              "mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 max-w-6xl mx-auto",
+              // Border
+              "border border-gray-300 rounded-xl sm:rounded-md lg:rounded-lg",
+              // Effects and interactive states
+              "shadow-lg"
+            )}>
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
               <div className="w-fit">
                 <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />
@@ -132,7 +211,15 @@ const ImpactStories = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 border-b border-gray-300 pb-6">
+            <div
+              className={cn(
+                // Layout
+                "grid grid-cols-1 md:grid-cols-2",
+                // Size and spacing
+                "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
+                // Border
+                "border-b border-gray-300"
+              )}>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="rounded-md">
@@ -220,7 +307,17 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <div className="flex items-center gap-2">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                         Artisan Recruitment & Home Maintenance Tools
@@ -262,7 +359,17 @@ const ImpactStories = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
                       <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
                         AI-Driven Artisan Portfolio System
@@ -283,7 +390,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Semi-Automated Payout System
                     </h4>
@@ -300,7 +417,17 @@ const ImpactStories = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Analytics & Funnel Optimization
                     </h4>
@@ -320,7 +447,17 @@ const ImpactStories = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Deployment & Release Engineering
                     </h4>
@@ -336,7 +473,17 @@ const ImpactStories = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       SEO & Visibility
                     </h4>
@@ -382,7 +529,14 @@ const ImpactStories = () => {
           {/* Impact Story 2 */}
           <div
             id="product-feedback"
-            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            className={cn(
+              // Size and spacing
+              "mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 max-w-6xl mx-auto",
+              // Border
+              "border border-gray-300 rounded-xl sm:rounded-md lg:rounded-lg",
+              // Effects and interactive states
+              "shadow-lg"
+            )}>
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
               <div className="w-fit">
                 <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />
@@ -392,7 +546,15 @@ const ImpactStories = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 border-b border-gray-300 pb-6">
+            <div
+              className={cn(
+                // Layout
+                "grid grid-cols-1 md:grid-cols-2",
+                // Size and spacing
+                "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
+                // Border
+                "border-b border-gray-300"
+              )}>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="rounded-md">
@@ -484,7 +646,17 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
                       <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
                         Product Feedback Application
@@ -507,7 +679,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
                       <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
                         {`Testers' Application Development`}
@@ -527,7 +709,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Performance Optimization & Scaling
                     </h4>
@@ -537,7 +729,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Technical Leadership
                     </h4>
@@ -581,7 +783,14 @@ const ImpactStories = () => {
           {/* Impact Story 3: Wynk Limited */}
           <div
             id="wynk-limited"
-            className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-gray-300 max-w-6xl mx-auto">
+            className={cn(
+              // Size and spacing
+              "mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 max-w-6xl mx-auto",
+              // Border
+              "border border-gray-300 rounded-xl sm:rounded-md lg:rounded-lg",
+              // Effects and interactive states
+              "shadow-lg"
+            )}>
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-gray-300">
               <div className="w-fit">
                 <FaBriefcase className="text-2xl sm:text-3xl text-[#171717]" />
@@ -591,7 +800,15 @@ const ImpactStories = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 border-b border-gray-300 pb-6">
+            <div
+              className={cn(
+                // Layout
+                "grid grid-cols-1 md:grid-cols-2",
+                // Size and spacing
+                "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
+                // Border
+                "border-b border-gray-300"
+              )}>
               <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="rounded-md">
@@ -673,7 +890,17 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
                       <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
                         Wynk Super App – Financial Services
@@ -691,7 +918,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
                       <h4 className="font-semibold text-base sm:text-lg text-[#171717]">
                         Web Application Rebuild
@@ -705,7 +942,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Hiring & Team Scaling
                     </h4>
@@ -714,7 +961,17 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div
+                    className={cn(
+                      // Size and spacing
+                      "p-3 sm:p-5",
+                      // Border
+                      "border border-gray-300 rounded-lg sm:rounded-xl",
+                      // Background
+                      "bg-white",
+                      // Effects and interactive states
+                      "shadow-sm hover:shadow-md transition-shadow"
+                    )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Documentation
                     </h4>
@@ -848,7 +1105,16 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className={cn(
+                    // Size and spacing
+                    "p-3 sm:p-5",
+                    // Border
+                    "border border-gray-300 rounded-lg sm:rounded-xl",
+                    // Background
+                    "bg-white",
+                    // Effects and interactive states
+                    "shadow-sm hover:shadow-md transition-shadow"
+                  )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Gold Trading Dashboard
                     </h4>
@@ -861,7 +1127,16 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className={cn(
+                    // Size and spacing
+                    "p-3 sm:p-5",
+                    // Border
+                    "border border-gray-300 rounded-lg sm:rounded-xl",
+                    // Background
+                    "bg-white",
+                    // Effects and interactive states
+                    "shadow-sm hover:shadow-md transition-shadow"
+                  )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Wallet System Development
                     </h4>
@@ -873,7 +1148,16 @@ const ImpactStories = () => {
                     </p>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-5 border border-gray-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className={cn(
+                    // Size and spacing
+                    "p-3 sm:p-5",
+                    // Border
+                    "border border-gray-300 rounded-lg sm:rounded-xl",
+                    // Background
+                    "bg-white",
+                    // Effects and interactive states
+                    "shadow-sm hover:shadow-md transition-shadow"
+                  )}>
                     <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-[#171717]">
                       Security Features
                     </h4>
