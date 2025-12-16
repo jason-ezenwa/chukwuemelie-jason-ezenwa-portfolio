@@ -300,7 +300,7 @@ export default function Home() {
                   "Features include user authentication, persistent application tracking and AI-powered insights.",
                   "Built with: TypeScript, Next.js, MongoDB, AI",
                 ]}
-                image="/images/hunt-assistant.jpeg"
+                image="/images/hunt-assistant-dashboard.jpeg"
                 githubLink="https://github.com/jason-ezenwa/hunt-assistant"
                 seeLiveLink="https://hunt-assistant.vercel.app/"
               />
@@ -312,7 +312,7 @@ export default function Home() {
                   "It integrates with Maplerad and Paystack.",
                   "Built with: TypeScript, Next.js, Node.js, MongoDB",
                 ]}
-                image="/images/pay-online-illustration.jpeg"
+                image="/images/zen-dashboard.jpeg"
                 githubLink="https://github.com/jason-ezenwa/zen-finance"
                 seeLiveLink="https://try-zen-finance.vercel.app/"
               />
@@ -324,7 +324,7 @@ export default function Home() {
                   "Features a user interface with analytics and metrics for intent signal tracking, AI-powered personalized content generation, and automated lead magnet insights.",
                   "Built with: Next.js, Tailwind CSS, Shadcn UI",
                 ]}
-                image="/images/prospera-ai-dashboard.png"
+                image="/images/prospera-ai-dashboard.jpeg"
                 githubLink="https://github.com/jason-ezenwa/prospera-ai-dashboard"
                 seeLiveLink="https://prospera-ai-dashboard-one.vercel.app/"
               />
