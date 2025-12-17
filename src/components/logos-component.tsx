@@ -56,7 +56,7 @@ const LogosComponent: React.FC = () => {
                     title={logo.name}
                   />
                   <span
-                    className={`text-xs lg:text-sm text-gray-500 group-hover:text-gray-900 transition-colors duration-300`}>
+                    className={`text-xs lg:text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300`}>
                     {logo.name}
                   </span>
                 </div>
