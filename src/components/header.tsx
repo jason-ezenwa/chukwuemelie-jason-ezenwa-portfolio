@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navigationItems = [
   { label: "Home", href: "/" },
@@ -18,9 +19,9 @@ export default function Header() {
         // Layout
         "fixed top-1.5 left-2.5 right-2.5 z-50 flex items-center container-spacing",
         // Border
-        "border-b border-gray-100/50 rounded-2xl",
+        "border border-border rounded-2xl",
         // Background
-        "bg-white/30 backdrop-blur-md",
+        "bg-background/80 backdrop-blur-md",
         // Effects and interactive states
         "transition-all duration-300 shadow-md"
       )}>
@@ -28,7 +29,7 @@ export default function Header() {
         <div
           className={cn(
             // Text
-            "text-2xl font-bold text-[#171717] tracking-tight",
+            "text-2xl font-bold text-foreground tracking-tight",
             // Effects and interactive states
             "hover:scale-105 transition-transform duration-300"
           )}>
@@ -42,11 +43,11 @@ export default function Header() {
                   href={item.href}
                   className={cn(
                     // Text
-                    "text-[#171717] font-medium",
+                    "text-foreground font-medium",
                     // Layout
                     "relative group",
                     // Effects and interactive states
-                    "transition-colors duration-300",
+                    "transition-colors duration-300"
                   )}>
                   {item.label}
                   <span
@@ -56,16 +57,21 @@ export default function Header() {
                       // Layout
                       "absolute",
                       // Background
-                      "bg-black",
+                      "bg-foreground",
                       // Effects and interactive states
                       "transition-all duration-300",
-                      pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
+                      pathname === item.href
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
                     )}></span>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

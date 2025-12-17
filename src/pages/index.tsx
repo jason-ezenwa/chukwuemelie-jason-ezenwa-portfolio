@@ -12,6 +12,7 @@ import Helmet from "@/components/helmet";
 import router from "next/router";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header";
+import { Button } from "@/components/ui/button";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -20,12 +21,12 @@ export default function Home() {
     <>
       <Helmet />
       <Header />
-      <main className="min-h-screen text-black pb-24 md:pb-0">
+      <main className="min-h-screen text-foreground pb-24 md:pb-0">
         {/* Hero section */}
         <section
           className={cn(
             // Size and spacing
-            "pt-32 pb-32 container-spacing",
+            "py-32 container-spacing",
             // Layout
             "flex flex-col items-center",
             // Effects and interactive states
@@ -38,17 +39,17 @@ export default function Home() {
             className={`${dmSans.className} flex flex-col gap-6 lg:gap-10 text-center max-w-5xl`}>
             <motion.h1
               variants={fadeIn("up", 0.1)}
-              className="text-hero text-gray-800">
+              className="text-hero text-foreground">
               {`Hi, my name is`}
             </motion.h1>
             <motion.h1
               variants={fadeIn("up", 0.2)}
-              className="text-hero text-[#6b6c6b] bg-clip-text font-extrabold tracking-tight">
+              className="text-hero text-muted-foreground bg-clip-text font-extrabold tracking-tight">
               Chukwuemelie Jason Obumse
             </motion.h1>
             <motion.h2
               variants={fadeIn("up", 0.3)}
-              className="text-section text-gray-700">
+              className="text-section text-foreground">
               {`I'm a Full Stack Software Engineer.`}
             </motion.h2>
           </motion.div>
@@ -59,8 +60,8 @@ export default function Home() {
           className={cn(
             // Size and spacing
             "container-spacing section-spacing",
-            // Background
-            "bg-[#F5F6F4]",
+            // Border
+            "border-y-[0.5px] border-border",
             // Effects and interactive states
             "transition-colors duration-300"
           )}>
@@ -70,7 +71,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-section text-gray-900 mb-12">
+                className="text-section text-foreground mb-12">
                 About Me
               </motion.h2>
             </div>
@@ -87,7 +88,7 @@ export default function Home() {
                   // Layout
                   "absolute left-0",
                   // Background
-                  "bg-gradient-to-b from-gray-300 via-gray-400 to-gray-300",
+                  "bg-linear-to-b from-border via-muted-foreground to-border",
                   // Border
                   "rounded-full"
                 )}></div>
@@ -96,17 +97,17 @@ export default function Home() {
                   // Size and spacing
                   "p-5 lg:p-8 md:p-12 ml-5 lg:ml-8",
                   // Border
-                  "border border-gray-100/50 rounded-2xl",
+                  "border border-border rounded-2xl",
                   // Background
-                  "bg-white",
+                  "bg-card",
                   // Effects and interactive states
                   "shadow-sm hover:shadow-lg transition-all duration-300"
                 )}>
                 <div className="space-y-6">
-                  <p className="text-body-large text-gray-700 leading-relaxed">
+                  <p className="text-body-large text-foreground leading-relaxed">
                     {`I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.`}
                   </p>
-                  <p className="text-body-large text-gray-700 leading-relaxed">
+                  <p className="text-body-large text-foreground leading-relaxed">
                     {`I've helped companies like LaborHack, Peppermint and Wynk Limited turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
                   </p>
                 </div>
@@ -118,8 +119,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mt-12 flex justify-start">
-              <button
-                className="btn-primary relative group"
+              <Button
+                className="relative group px-3 py-6"
                 onClick={() =>
                   window.open(
                     "https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing",
@@ -135,12 +136,12 @@ export default function Home() {
                       // Layout
                       "absolute",
                       // Background
-                      "bg-white",
+                      "bg-primary-foreground",
                       // Effects and interactive states
                       "transition-all duration-300 group-hover:w-full"
                     )}></span>
                 </span>
-              </button>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -152,7 +153,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-section text-gray-900 mb-12">
+              className="text-section text-foreground mb-12">
               Core Skills
             </motion.h2>
           </div>
@@ -164,8 +165,8 @@ export default function Home() {
           className={cn(
             // Size and spacing
             "container-spacing section-spacing",
-            // Background
-            "bg-[#F5F6F4]",
+            // Border
+            "border-y-[0.5px] border-border",
             // Effects and interactive states
             "transition-colors duration-300"
           )}>
@@ -175,7 +176,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-section text-gray-900 mb-4">
+                className="text-section text-foreground mb-4">
                 Impact Stories
               </motion.h2>
               <motion.p
@@ -183,7 +184,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-body-large text-gray-600 max-w-2xl mx-auto">
+                className="text-body-large text-muted-foreground max-w-2xl mx-auto">
                 Detailed analysis of my most impactful projects and
                 contributions
               </motion.p>
@@ -243,8 +244,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="flex justify-center mt-12">
-              <button
-                className="btn-primary relative group"
+              <Button
+                className="relative group px-3 py-6"
                 onClick={() => router.push("/impact-stories")}>
                 <span className="relative">
                   View impact stories
@@ -255,12 +256,12 @@ export default function Home() {
                       // Layout
                       "absolute",
                       // Background
-                      "bg-white",
+                      "bg-primary-foreground",
                       // Effects and interactive states
                       "transition-all duration-300 group-hover:w-full"
                     )}></span>
                 </span>
-              </button>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -279,7 +280,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-section text-gray-900 mb-4">
+                className="text-section text-foreground mb-4">
                 Other Projects
               </motion.h2>
               <motion.p
@@ -287,7 +288,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-body-large text-gray-600 max-w-2xl mx-auto">
+                className="text-body-large text-muted-foreground max-w-2xl mx-auto">
                 Personal projects showcasing various technologies and
                 problem-solving approaches
               </motion.p>
@@ -337,8 +338,8 @@ export default function Home() {
           className={cn(
             // Size and spacing
             "container-spacing section-spacing",
-            // Background
-            "bg-[#F5F6F4]",
+            // Border
+            "border-y-[0.5px] border-border",
             // Effects and interactive states
             "transition-colors duration-300"
           )}>
@@ -348,7 +349,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-section text-gray-900 mb-4">
+                className="text-section text-foreground mb-4">
                 My Blog Posts
               </motion.h2>
               <motion.p
@@ -356,7 +357,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-body-large text-gray-600 max-w-2xl mx-auto">
+                className="text-body-large text-muted-foreground max-w-2xl mx-auto">
                 Thoughts on software engineering, technology trends, and
                 industry insights
               </motion.p>
@@ -417,14 +418,14 @@ export default function Home() {
         <StickyBottomRight>
           <StickyDiv
             text="Have a look at my resume"
-            textColor="text-white"
-            bgColor="bg-gray-900"
+            textColor="text-primary-foreground"
+            bgColor="bg-primary"
             link="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing"
           />
           <StickyDiv
             text="Connect with me on LinkedIn"
-            textColor="text-white"
-            bgColor="bg-gray-900"
+            textColor="text-primary-foreground"
+            bgColor="bg-primary"
             link="https://linkedin.com/in/chukwuemelie-obumse"
           />
         </StickyBottomRight>
