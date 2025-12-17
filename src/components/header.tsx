@@ -29,14 +29,14 @@ export default function Header() {
         <div
           className={cn(
             // Text
-            "text-2xl font-bold text-foreground tracking-tight",
+            "text-lg lg:text-2xl font-bold text-foreground tracking-tight",
             // Effects and interactive states
             "hover:scale-105 transition-transform duration-300"
           )}>
           CJO
         </div>
         <nav>
-          <ul className="flex space-x-10">
+          <ul className="flex  space-x-6 lg:space-x-8">
             {navigationItems.map((item) => (
               <li key={item.href}>
                 <Link
