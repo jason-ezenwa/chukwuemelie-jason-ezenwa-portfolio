@@ -17,11 +17,11 @@ export default function Header() {
         // Size and spacing
         "h-20",
         // Layout
-        "fixed top-1.5 left-2.5 right-2.5 z-50 flex items-center container-spacing",
+        "fixed top-1.5 left-1.5 right-1.5 lg:left-2.5 lg:right-2.5 z-50 flex items-center container-spacing",
         // Border
         "border border-border rounded-2xl",
         // Background
-        "bg-background/80 backdrop-blur-md",
+        "bg-background/30 backdrop-blur-sm",
         // Effects and interactive states
         "transition-all duration-300 shadow-md"
       )}>

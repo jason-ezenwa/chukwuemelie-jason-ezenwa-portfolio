@@ -29,11 +29,11 @@ const ImpactStories = () => {
     <>
       <Helmet />
       <Header />
-      <main className="min-h-screen text-foreground pb-10 md:pb-0">
+      <main className="min-h-screen text-foreground">
         <section
           className={cn(
             // Size and spacing
-            "py-32 container-spacing"
+            "section-spacing"
           )}>
           <div className="max-w-4xl mx-auto text-center">
             <div className={dmSans.className}>
@@ -191,10 +191,10 @@ const ImpactStories = () => {
           </div>
         </section>
 
-        <section className="py-4 container-spacing space-y-16 md:space-y-20 border-y-[0.5px] border-border">
+        <section className="section-spacing space-y-16 md:space-y-20 border-y border-border">
           <Card
             id="blue-collar-empowerment"
-            className="max-w-6xl mx-auto border-border shadow-lg">
+            className="border-border shadow-lg">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
@@ -524,9 +524,7 @@ const ImpactStories = () => {
           </Card>
 
           {/* Impact Story 2 */}
-          <Card
-            id="product-feedback"
-            className="max-w-6xl mx-auto border-border shadow-lg">
+          <Card id="product-feedback" className="border-border shadow-lg">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
@@ -775,9 +773,7 @@ const ImpactStories = () => {
           </Card>
 
           {/* Impact Story 3: Wynk Limited */}
-          <Card
-            id="wynk-limited"
-            className="max-w-6xl mx-auto border-border shadow-lg">
+          <Card id="wynk-limited" className="border-border shadow-lg">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
@@ -1191,7 +1187,7 @@ const ImpactStories = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex justify-center pb-12">
+            className="flex justify-center">
             <Button
               className="relative group px-3 py-6"
               onClick={() => router.push("/")}>

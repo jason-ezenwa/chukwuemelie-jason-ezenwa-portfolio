@@ -23,7 +23,7 @@ const ProjectCard = ({
     <Card
       className={cn(
         "group overflow-hidden transition-all duration-300 hover:shadow-lg",
-        "border-border bg-card"
+        "border-border"
       )}>
       <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
         <Image
