@@ -20,13 +20,22 @@ export function ThemeToggle() {
       onValueChange={setTheme}
       variant="outline"
       size="sm">
-      <ToggleGroupItem value="light" aria-label="Light theme">
+      <ToggleGroupItem
+        value="light"
+        aria-label="Light theme"
+        className="cursor-pointer">
         <Sun className="h-4 w-4" />
       </ToggleGroupItem>
-      <ToggleGroupItem value="dark" aria-label="Dark theme">
+      <ToggleGroupItem
+        value="dark"
+        aria-label="Dark theme"
+        className="cursor-pointer">
         <Moon className="h-4 w-4" />
       </ToggleGroupItem>
-      <ToggleGroupItem value="system" aria-label="System theme">
+      <ToggleGroupItem
+        value="system"
+        aria-label="System theme"
+        className="cursor-pointer">
         <Monitor className="h-4 w-4" />
       </ToggleGroupItem>
     </ToggleGroup>
