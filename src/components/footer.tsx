@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { cn } from "@/lib/utils";
+import { GITHUB_URL, EMAIL_URL, LINKEDIN_URL } from "@/utils/constants";
 
 const Footer = ({ className }: { className?: string }) => {
   return (
@@ -15,17 +16,18 @@ const Footer = ({ className }: { className?: string }) => {
         // Text
         "text-[#62646A]",
         // Effects and interactive states
-        "transition-all duration-300"
+        "transition-all duration-300",
+        className
       )}>
       <div className="flex">
         <div className="flex space-x-5  items-center mr-8">
-          <Link href="mailto:chukwuemelie.ezenwa@gmail.com">
+          <Link href={EMAIL_URL}>
             <MdEmail className="size-6 lg:size-7" />
           </Link>
-          <Link href="https://github.com/jason-ezenwa">
+          <Link href={GITHUB_URL}>
             <FaGithub className="size-6 lg:size-7" />
           </Link>
-          <Link href="https://www.linkedin.com/in/chukwuemelie-obumse/">
+          <Link href={LINKEDIN_URL}>
             <FaLinkedin className="size-6 lg:size-7" />
           </Link>
         </div>

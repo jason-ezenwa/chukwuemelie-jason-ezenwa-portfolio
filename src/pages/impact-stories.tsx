@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { LINKEDIN_URL } from "@/utils/constants";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -35,25 +36,6 @@ const ImpactStories = () => {
             // Size and spacing
             "section-spacing"
           )}>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className={dmSans.className}>
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-hero text-foreground mb-6">
-                Impact Stories
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-body-large text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Detailed analysis of my most impactful projects and
-                contributions
-              </motion.p>
-            </div>
-          </div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,6 +61,25 @@ const ImpactStories = () => {
               Back to Home
             </Link>
           </motion.div>
+
+          <div className="max-w-4xl mx-auto text-center">
+            <div className={dmSans.className}>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-hero text-foreground mb-6">
+                Impact Stories
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-body-large text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Detailed analysis of my most impactful projects and
+                contributions
+              </motion.p>
+            </div>
+          </div>
 
           <div className="flex justify-center mt-8 sm:mt-12">
             <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
@@ -313,7 +314,7 @@ const ImpactStories = () => {
                         </div>
                         <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
                           Collaborated cross-functionally to build and launch
-                          three product lines that generated over ₦25m in
+                          three product lines that generated over ₦35m in
                           revenue:
                         </p>
                         <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
@@ -507,7 +508,7 @@ const ImpactStories = () => {
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Built systems for artisan recruitment, home maintenance,
-                      and AI-driven portfolios, generating over ₦25m in revenue
+                      and AI-driven portfolios, generating over ₦35m in revenue
                     </li>
                     <li>
                       Provided data-driven insights that guided product
@@ -1204,7 +1205,7 @@ const ImpactStories = () => {
             text="Connect with me on LinkedIn"
             textColor="text-primary-foreground"
             bgColor="bg-primary"
-            link="https://linkedin.com/in/chukwuemelie-obumse"
+            link={LINKEDIN_URL}
           />
         </StickyBottomRight>
       </main>

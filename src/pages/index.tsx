@@ -5,7 +5,6 @@ import LogosComponent from "@/components/logos-component";
 import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
 import { fadeIn } from "@/utils/fadeInAnimation";
 import { DM_Sans } from "next/font/google";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
@@ -13,6 +12,7 @@ import router from "next/router";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
+import { LINKEDIN_URL, RESUME_URL } from "@/utils/constants";
 
 const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -120,12 +120,7 @@ export default function Home() {
             className="mt-12 flex justify-start">
             <Button
               className="relative group px-3 py-6"
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing",
-                  "_blank"
-                )
-              }>
+              onClick={() => window.open(RESUME_URL, "_blank")}>
               <span className="relative">
                 View my resume
                 <span
@@ -212,7 +207,7 @@ export default function Home() {
               techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
               duration="Jan 2024 - Present"
               keyContributions={[
-                "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦25m in revenue",
+                "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦35m in revenue",
                 "Provided data-driven insights that guided product improvements and optimized funnels",
                 "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
               ]}
@@ -447,13 +442,13 @@ export default function Home() {
             text="Have a look at my resume"
             textColor="text-primary-foreground"
             bgColor="bg-primary"
-            link="https://drive.google.com/file/d/1XMZG3lyUCAIL39IZ9NrOk2m5BsvXreDR/view?usp=sharing"
+            link={RESUME_URL}
           />
           <StickyDiv
             text="Connect with me on LinkedIn"
             textColor="text-primary-foreground"
             bgColor="bg-primary"
-            link="https://linkedin.com/in/chukwuemelie-obumse"
+            link={LINKEDIN_URL}
           />
         </StickyBottomRight>
       </main>
