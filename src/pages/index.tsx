@@ -142,6 +142,8 @@ export default function Home() {
         {/* Skills section */}
         <section
           className={cn(
+            // Background
+            "bg-muted/30",
             // Size and spacing
             "w-full max-w-screen-2xl mx-auto py-12 md:py-16 lg:py-20 xl:py-24",
             // Effects and interactive states

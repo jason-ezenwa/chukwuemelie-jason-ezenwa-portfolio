@@ -52,8 +52,9 @@ const LogosComponent: React.FC = () => {
                   className="group relative shrink-0 group flex flex-col items-center gap-1">
                   <IconComponent
                     color={logo.color}
-                    className="w-8 h-8 lg:w-12 lg:h-12 filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
+                    className="w-8 h-8 lg:w-12 lg:h-12 filter grayscale group-hover:grayscale-0 focus:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 focus:opacity-100 focus:outline-none"
                     title={logo.name}
+                    tabIndex={index}
                   />
                   <span
                     className={`text-xs lg:text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300`}>
