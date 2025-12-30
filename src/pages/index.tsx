@@ -39,17 +39,17 @@ export default function Home() {
             className={`${dmSans.className} flex flex-col gap-6 lg:gap-10 text-center max-w-5xl`}>
             <motion.h1
               variants={fadeIn("up", 0.1)}
-              className="text-hero text-foreground">
+              className="text-hero text-foreground/85">
               {`Hi, my name is`}
             </motion.h1>
             <motion.h1
               variants={fadeIn("up", 0.2)}
-              className="text-hero text-muted-foreground bg-clip-text font-extrabold tracking-tight">
+              className="text-hero text-foreground bg-clip-text font-extrabold tracking-tight">
               Chukwuemelie Jason Obumse
             </motion.h1>
             <motion.h2
               variants={fadeIn("up", 0.3)}
-              className="text-section text-foreground">
+              className="text-section text-muted-foreground">
               {`I'm a Full Stack Software Engineer.`}
             </motion.h2>
           </motion.div>
@@ -143,7 +143,7 @@ export default function Home() {
         <section
           className={cn(
             // Background
-            "bg-muted/30",
+            "bg-muted/45",
             // Size and spacing
             "w-full max-w-screen-2xl mx-auto py-12 md:py-16 lg:py-20 xl:py-24",
             // Effects and interactive states

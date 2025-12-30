@@ -38,8 +38,8 @@ const LogosComponent: React.FC = () => {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Fade gradients at edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 bg-linear-to-r from-background to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 bg-linear-to-l from-background to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-16 bg-linear-to-r from-muted/40 to-transparent z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 bg-linear-to-l from-muted/40 to-transparent z-10" />
 
       <div className="py-2">
         <Marquee speed={30} gradient={false} pauseOnHover={true}>
@@ -52,7 +52,7 @@ const LogosComponent: React.FC = () => {
                   className="group relative shrink-0 group flex flex-col items-center gap-1">
                   <IconComponent
                     color={logo.color}
-                    className="w-8 h-8 lg:w-12 lg:h-12 filter grayscale group-hover:grayscale-0 focus:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100 focus:opacity-100 focus:outline-none"
+                    className="w-8 h-8 lg:w-12 lg:h-12 filter grayscale group-hover:grayscale-0 focus:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 focus:opacity-100 focus:outline-none"
                     title={logo.name}
                     tabIndex={index}
                   />
