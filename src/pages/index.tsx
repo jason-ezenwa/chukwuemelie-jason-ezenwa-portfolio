@@ -219,7 +219,7 @@ export default function Home() {
               title="Product Feedback & Scaling Operations"
               role="Lead Software Engineer"
               techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
-              duration="Apr 2024 - Apr 2025"
+              duration="Apr 2024 - Nov 2025"
               keyContributions={[
                 "Launched an AI-powered product feedback application used by companies like Kuda",
                 "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",

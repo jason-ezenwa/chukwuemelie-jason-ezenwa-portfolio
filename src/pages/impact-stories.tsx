@@ -588,7 +588,7 @@ const ImpactStories = () => {
                         DURATION
                       </p>
                       <p className="font-medium text-sm sm:text-base text-foreground">
-                        Apr 2024 - Apr 2025
+                        Apr 2024 - Nov 2025
                       </p>
                     </div>
                   </div>
