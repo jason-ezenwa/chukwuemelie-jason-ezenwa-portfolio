@@ -1,4 +1,3 @@
-import { DM_Sans } from 'next/font/google';
 import {
   FaBriefcase,
   FaBuilding,
@@ -10,7 +9,7 @@ import {
   FaChartLine,
   FaAngleDoubleDown,
   FaExternalLinkAlt,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
 import Link from "next/link";
@@ -23,8 +22,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { LINKEDIN_URL } from "@/utils/constants";
 
-const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
-
 const ImpactStories = () => {
   return (
     <>
@@ -34,27 +31,27 @@ const ImpactStories = () => {
         <section
           className={cn(
             // Size and spacing
-            "section-spacing"
+            "py-32 conainer-spacing",
           )}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-8 mb-8">
+            className="mb-8 max-w-[calc(100vw-2.5rem)] lg:max-w-6xl mx-auto">
             <Link
               href="/"
               className={cn(
                 // Layout
                 "inline-flex items-center gap-3",
                 // Text
-                "text-foreground font-medium",
+                "text-foreground",
                 // Effects and interactive states
-                "hover:text-muted-foreground transition-colors duration-300 group"
+                "hover:text-muted-foreground transition-colors duration-300 group",
               )}>
               <span
                 className={cn(
                   // Effects and interactive states
-                  "transform rotate-90 group-hover:rotate-180 transition-transform duration-300"
+                  "transform rotate-90 group-hover:rotate-180 transition-transform duration-300",
                 )}>
                 <FaAngleDoubleDown className="text-sm" />
               </span>
@@ -63,7 +60,7 @@ const ImpactStories = () => {
           </motion.div>
 
           <div className="max-w-4xl mx-auto text-center">
-            <div className={dmSans.className}>
+            <div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -74,7 +71,7 @@ const ImpactStories = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-body-large text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                className="text-body text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Detailed analysis of my most impactful projects and
                 contributions
               </motion.p>
@@ -97,12 +94,12 @@ const ImpactStories = () => {
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300"
+                  "shadow-sm hover:shadow-md transition-all duration-300",
                 )}>
                 <span
                   className={cn(
                     // Layout
-                    "relative"
+                    "relative",
                   )}>
                   Blue-Collar Empowerment
                   <span
@@ -114,7 +111,7 @@ const ImpactStories = () => {
                       // Background
                       "bg-primary-foreground",
                       // Effects and interactive states
-                      "transition-all duration-300 group-hover:w-full"
+                      "transition-all duration-300 group-hover:w-full",
                     )}></span>
                 </span>
               </a>
@@ -132,12 +129,12 @@ const ImpactStories = () => {
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300"
+                  "shadow-sm hover:shadow-md transition-all duration-300",
                 )}>
                 <span
                   className={cn(
                     // Layout
-                    "relative"
+                    "relative",
                   )}>
                   Product Feedback
                   <span
@@ -149,7 +146,7 @@ const ImpactStories = () => {
                       // Background
                       "bg-primary-foreground",
                       // Effects and interactive states
-                      "transition-all duration-300 group-hover:w-full"
+                      "transition-all duration-300 group-hover:w-full",
                     )}></span>
                 </span>
               </a>
@@ -167,12 +164,12 @@ const ImpactStories = () => {
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300"
+                  "shadow-sm hover:shadow-md transition-all duration-300",
                 )}>
                 <span
                   className={cn(
                     // Layout
-                    "relative"
+                    "relative",
                   )}>
                   Lifestyle Super App
                   <span
@@ -184,7 +181,7 @@ const ImpactStories = () => {
                       // Background
                       "bg-primary-foreground",
                       // Effects and interactive states
-                      "transition-all duration-300 group-hover:w-full"
+                      "transition-all duration-300 group-hover:w-full",
                     )}></span>
                 </span>
               </a>
@@ -199,9 +196,9 @@ const ImpactStories = () => {
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
-                  <FaBriefcase className="text-2xl sm:text-3xl text-foreground" />
+                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
                 </div>
-                <h2 className="font-bold text-xl sm:text-2xl md:text-3xl text-foreground leading-tight">
+                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
                   Building Scalable Infrastructure for Blue-Collar Empowerment
                 </h2>
               </div>
@@ -213,7 +210,7 @@ const ImpactStories = () => {
                   // Size and spacing
                   "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
                   // Border
-                  "border-b border-border"
+                  "border-b border-border",
                 )}>
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center gap-3">
@@ -221,11 +218,11 @@ const ImpactStories = () => {
                       <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground uppercase">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         COMPANY
                       </p>
                       <div className="flex items-center gap-2">
-                        <p className="font-medium text-sm sm:text-base text-foreground">
+                        <p className="text-sm sm:text-base text-foreground">
                           LaborHack
                         </p>
                         <Link href="https://www.laborhack.com/" target="_blank">
@@ -239,10 +236,10 @@ const ImpactStories = () => {
                       <FaUser className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground uppercase">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         ROLE
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Software Engineer
                       </p>
                     </div>
@@ -252,10 +249,10 @@ const ImpactStories = () => {
                       <FaClock className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground uppercase">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         DURATION
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Jan 2024 - Present
                       </p>
                     </div>
@@ -267,10 +264,10 @@ const ImpactStories = () => {
                       <FaCode className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground uppercase">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         TECH STACK
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
                         TypeScript, React, Node.js, GraphQL, MongoDB, AWS
                       </p>
                     </div>
@@ -282,11 +279,11 @@ const ImpactStories = () => {
                 <div className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Overview
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
+                  <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
                     LaborHack is a platform that connects skilled blue-collar
                     artisans to jobs, training, and income opportunities. As
                     part of a distributed engineering team, I contributed to the
@@ -299,7 +296,7 @@ const ImpactStories = () => {
                 <div className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Key Contributions
                     </h3>
                   </div>
@@ -396,7 +393,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Semi-Automated Payout System
@@ -423,7 +420,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Analytics & Funnel Optimization
@@ -453,7 +450,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Deployment & Release Engineering
@@ -479,7 +476,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         SEO & Visibility
@@ -501,7 +498,7 @@ const ImpactStories = () => {
                 <div>
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Impact Summary
                     </h3>
                   </div>
@@ -529,9 +526,9 @@ const ImpactStories = () => {
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
-                  <FaBriefcase className="text-2xl sm:text-3xl text-foreground" />
+                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
                 </div>
-                <h2 className="font-bold text-xl sm:text-2xl md:text-3xl text-foreground leading-tight">
+                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
                   Product Feedback & Scaling Operations
                 </h2>
               </div>
@@ -543,7 +540,7 @@ const ImpactStories = () => {
                   // Size and spacing
                   "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
                   // Border
-                  "border-b border-border"
+                  "border-b border-border",
                 )}>
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center gap-3">
@@ -551,11 +548,11 @@ const ImpactStories = () => {
                       <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         COMPANY
                       </p>
                       <div className="flex items-center gap-2">
-                        <p className="font-medium text-sm sm:text-base text-foreground">
+                        <p className="text-sm sm:text-base text-foreground">
                           Peppermint Group
                         </p>
                         <Link
@@ -571,10 +568,10 @@ const ImpactStories = () => {
                       <FaUser className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         ROLE
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Lead Software Engineer
                       </p>
                     </div>
@@ -584,10 +581,10 @@ const ImpactStories = () => {
                       <FaClock className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         DURATION
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Apr 2024 - Nov 2025
                       </p>
                     </div>
@@ -599,10 +596,10 @@ const ImpactStories = () => {
                       <FaCode className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         TECH STACK
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
                         Next.js, NestJS, TypeScript, MongoDB, AWS
                       </p>
                     </div>
@@ -614,7 +611,7 @@ const ImpactStories = () => {
                 <div className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Overview
                     </h3>
                   </div>
@@ -632,7 +629,7 @@ const ImpactStories = () => {
                 <div className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Key Contributions
                     </h3>
                   </div>
@@ -647,7 +644,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -680,7 +677,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -710,7 +707,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Performance Optimization & Scaling
@@ -730,7 +727,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Technical Leadership
@@ -750,7 +747,7 @@ const ImpactStories = () => {
                 <div>
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Impact Summary
                     </h3>
                   </div>
@@ -778,9 +775,9 @@ const ImpactStories = () => {
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
-                  <FaBriefcase className="text-2xl sm:text-3xl text-foreground" />
+                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
                 </div>
-                <h2 className="font-bold text-xl sm:text-2xl md:text-3xl text-foreground leading-tight">
+                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
                   Building a Lifestyle Super App and Web Platform
                 </h2>
               </div>
@@ -792,7 +789,7 @@ const ImpactStories = () => {
                   // Size and spacing
                   "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
                   // Border
-                  "border-b border-border"
+                  "border-b border-border",
                 )}>
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center gap-3">
@@ -800,11 +797,11 @@ const ImpactStories = () => {
                       <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         COMPANY
                       </p>
                       <div className="flex items-center gap-2">
-                        <p className="font-medium text-sm sm:text-base text-foreground">
+                        <p className="text-sm sm:text-base text-foreground">
                           Wynk Limited
                         </p>
                       </div>
@@ -815,10 +812,10 @@ const ImpactStories = () => {
                       <FaUser className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         ROLE
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Full Stack Developer
                       </p>
                     </div>
@@ -828,10 +825,10 @@ const ImpactStories = () => {
                       <FaClock className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         DURATION
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Sep 2023 - Apr 2024
                       </p>
                     </div>
@@ -843,10 +840,10 @@ const ImpactStories = () => {
                       <FaCode className="text-muted-foreground text-sm sm:text-base" />
                     </div>
                     <div>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground">
+                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                         TECH STACK
                       </p>
-                      <p className="font-medium text-sm sm:text-base text-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
                         JavaScript, Node.js, Express, React
                       </p>
                     </div>
@@ -858,7 +855,7 @@ const ImpactStories = () => {
                 <div className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Overview
                     </h3>
                   </div>
@@ -871,7 +868,7 @@ const ImpactStories = () => {
                 <div className="border-b border-border pb-6">
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Key Contributions
                     </h3>
                   </div>
@@ -886,7 +883,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -914,7 +911,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -938,7 +935,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Hiring & Team Scaling
@@ -957,7 +954,7 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow"
+                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Documentation
@@ -972,7 +969,7 @@ const ImpactStories = () => {
                 <div>
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                       Impact Summary
                     </h3>
                   </div>
@@ -1000,9 +997,9 @@ const ImpactStories = () => {
             className="mb-12 sm:mb-16 md:mb-20 p-5 sm:p-8 md:p-10 rounded-xl sm:rounded-md lg:rounded-lg shadow-lg border border-border max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
               <div className="w-fit">
-                <FaBriefcase className="text-2xl sm:text-3xl text-foreground" />
+                <FaBriefcase className="text-xl md:text-2xl text-foreground" />
               </div>
-              <h2 className="font-bold text-xl sm:text-2xl md:text-3xl text-foreground leading-tight">
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
                 Laying the Foundation for Secure Gold Investment
               </h2>
             </div>
@@ -1014,11 +1011,11 @@ const ImpactStories = () => {
                     <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
                   </div>
                   <div>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground">
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                       COMPANY
                     </p>
                     <div className="flex items-center gap-2">
-                      <p className="font-medium text-sm sm:text-base text-foreground">
+                      <p className="text-sm sm:text-base text-foreground">
                         Lume Gold
                       </p>
                       <Link href="https://lume.gold/" target="_blank">
@@ -1032,8 +1029,8 @@ const ImpactStories = () => {
                     <FaUser className="text-muted-foreground text-sm sm:text-base" />
                   </div>
                   <div>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground">ROLE</p>
-                    <p className="font-medium text-sm sm:text-base text-foreground">
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">ROLE</p>
+                    <p className="text-sm sm:text-base text-foreground">
                       Software Engineer
                     </p>
                   </div>
@@ -1043,10 +1040,10 @@ const ImpactStories = () => {
                     <FaClock className="text-muted-foreground text-sm sm:text-base" />
                   </div>
                   <div>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground">
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                       DURATION
                     </p>
-                    <p className="font-medium text-sm sm:text-base text-foreground">
+                    <p className="text-sm sm:text-base text-foreground">
                       Aug 2024 - Jun 2025
                     </p>
                   </div>
@@ -1058,10 +1055,10 @@ const ImpactStories = () => {
                     <FaCode className="text-muted-foreground text-sm sm:text-base" />
                   </div>
                   <div>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground">
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                       TECH STACK
                     </p>
-                    <p className="font-medium text-sm sm:text-base text-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-foreground leading-relaxed">
                       Next.js, Node.js, TypeScript, PostgreSQL, Docker
                     </p>
                   </div>
@@ -1073,7 +1070,7 @@ const ImpactStories = () => {
               <div className="border-b border-border pb-6">
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <FaListUl className="text-foreground text-sm sm:text-base" />
-                  <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                     Overview
                   </h3>
                 </div>
@@ -1089,7 +1086,7 @@ const ImpactStories = () => {
               <div className="border-b border-border pb-6">
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <FaBullseye className="text-foreground text-sm sm:text-base" />
-                  <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                     Key Contributions
                   </h3>
                 </div>
@@ -1164,7 +1161,7 @@ const ImpactStories = () => {
               <div>
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <FaChartLine className="text-foreground text-sm sm:text-base" />
-                  <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground">
                     Impact Summary
                   </h3>
                 </div>

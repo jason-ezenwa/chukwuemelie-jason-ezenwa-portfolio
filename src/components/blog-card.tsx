@@ -14,18 +14,18 @@ const BlogCard = ({ title, descriptionParagraphs, link }: BlogCardProps) => {
     <Card
       className={cn(
         "group h-full transition-all duration-300 hover:shadow-lg",
-        "border-border"
+        "border-border",
       )}>
       <CardContent className="p-6 md:p-8 flex flex-col h-full">
         <div className="flex-1 space-y-3 md:space-y-4">
-          <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-foreground group-hover:text-muted-foreground transition-colors duration-300">
+          <h3 className="text-lg lg:text-xl font-semibold text-foreground transition-colors duration-300">
             {title}
           </h3>
           <div className="space-y-2 md:space-y-3">
             {descriptionParagraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-body-large text-muted-foreground leading-relaxed">
+                className="text-body text-muted-foreground leading-relaxed">
                 {paragraph}
               </p>
             ))}

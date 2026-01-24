@@ -4,7 +4,7 @@ import ImpactStoryCard from "@/components/impact-story-card";
 import LogosComponent from "@/components/logos-component";
 import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
 import { fadeIn } from "@/utils/fadeInAnimation";
-import { DM_Sans } from "next/font/google";
+
 import { motion } from "framer-motion";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
@@ -14,7 +14,7 @@ import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { LINKEDIN_URL, RESUME_URL } from "@/utils/constants";
 
-const dmSans = DM_Sans({ weight: "400", subsets: ["latin"] });
+
 
 export default function Home() {
   return (
@@ -30,13 +30,13 @@ export default function Home() {
             // Layout
             "flex flex-col items-center",
             // Effects and interactive states
-            "transition-colors duration-300"
+            "transition-colors duration-300",
           )}>
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className={`${dmSans.className} flex flex-col gap-6 lg:gap-10 text-center max-w-5xl`}>
+            className="flex flex-col gap-6 lg:gap-10 text-center max-w-6xl mx-auto">
             <motion.h1
               variants={fadeIn("up", 0.1)}
               className="text-hero text-foreground/85">
@@ -63,9 +63,9 @@ export default function Home() {
             // Border
             "border-y border-border",
             // Effects and interactive states
-            "transition-colors duration-300"
+            "transition-colors duration-300",
           )}>
-          <div className={dmSans.className}>
+          <div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Home() {
                 // Background
                 "bg-linear-to-b from-border via-muted-foreground to-border",
                 // Border
-                "rounded-full"
+                "rounded-full",
               )}></div>
             <div
               className={cn(
@@ -100,13 +100,13 @@ export default function Home() {
                 // Background
                 "bg-card",
                 // Effects and interactive states
-                "shadow-sm hover:shadow-lg transition-all duration-300"
+                "shadow-sm hover:shadow-lg transition-all duration-300",
               )}>
               <div className="space-y-6">
-                <p className="text-body-large text-foreground leading-relaxed">
+                <p className="text-body text-foreground leading-relaxed">
                   {`I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.`}
                 </p>
-                <p className="text-body-large text-foreground leading-relaxed">
+                <p className="text-body text-foreground leading-relaxed">
                   {`I've helped companies like LaborHack, Peppermint and Wynk Limited turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function Home() {
                     // Background
                     "bg-primary-foreground",
                     // Effects and interactive states
-                    "transition-all duration-300 group-hover:w-full"
+                    "transition-all duration-300 group-hover:w-full",
                   )}></span>
               </span>
             </Button>
@@ -147,14 +147,14 @@ export default function Home() {
             // Size and spacing
             "w-full max-w-screen-2xl mx-auto py-12 md:py-16 lg:py-20 xl:py-24",
             // Effects and interactive states
-            "transition-colors duration-300"
+            "transition-colors duration-300",
           )}>
           <div
             className={cn(
               // Text
-              `${dmSans.className} text-center`,
+              "text-center",
               // Effects and interactive states
-              "transition-colors duration-300"
+              "transition-colors duration-300",
             )}>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -175,16 +175,16 @@ export default function Home() {
             // Border
             "border-y border-border",
             // Effects and interactive states
-            "transition-colors duration-300"
+            "transition-colors duration-300",
           )}>
           <div
             className={cn(
               // Size and spacing
               "mb-12",
               // Text
-              `${dmSans.className} text-center`,
+              "text-center",
               // Effects and interactive states
-              "transition-colors duration-300"
+              "transition-colors duration-300",
             )}>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -198,7 +198,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              className="text-body text-muted-foreground max-w-2xl mx-auto">
               Detailed analysis of my most impactful projects and contributions
             </motion.p>
           </div>
@@ -271,7 +271,7 @@ export default function Home() {
                     // Background
                     "bg-primary-foreground",
                     // Effects and interactive states
-                    "transition-all duration-300 group-hover:w-full"
+                    "transition-all duration-300 group-hover:w-full",
                   )}></span>
               </span>
             </Button>
@@ -284,16 +284,16 @@ export default function Home() {
             // Size and spacing
             "section-spacing",
             // Effects and interactive states
-            "transition-colors duration-300"
+            "transition-colors duration-300",
           )}>
           <div
             className={cn(
               // Size and spacing
               "mb-12",
               // Text
-              `${dmSans.className} text-center`,
+              "text-center",
               // Effects and interactive states
-              "transition-colors duration-300"
+              "transition-colors duration-300",
             )}>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -307,7 +307,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              className="text-body text-muted-foreground max-w-2xl mx-auto">
               Personal projects showcasing various technologies and
               problem-solving approaches
             </motion.p>
@@ -359,16 +359,16 @@ export default function Home() {
             // Border
             "border-y border-border",
             // Effects and interactive states
-            "transition-colors duration-300"
+            "transition-colors duration-300",
           )}>
           <div
             className={cn(
               // Size and spacing
               "mb-12",
               // Text
-              `${dmSans.className} text-center`,
+              "text-center",
               // Effects and interactive states
-              "transition-colors duration-300"
+              "transition-colors duration-300",
             )}>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -382,7 +382,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              className="text-body text-muted-foreground max-w-2xl mx-auto">
               Thoughts on software engineering, technology trends, and industry
               insights
             </motion.p>

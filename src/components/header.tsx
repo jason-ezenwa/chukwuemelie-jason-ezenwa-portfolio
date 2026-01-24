@@ -23,15 +23,15 @@ export default function Header() {
         // Background
         "bg-background/30 backdrop-blur-sm",
         // Effects and interactive states
-        "transition-all duration-300 shadow-md"
+        "transition-all duration-300 shadow-md",
       )}>
       <div className="flex justify-between items-center w-full">
         <div
           className={cn(
             // Text
-            "text-lg lg:text-2xl font-bold text-foreground tracking-tight",
+            "text-lg lg:text-2xl font-medium text-foreground tracking-tight",
             // Effects and interactive states
-            "hover:scale-105 transition-transform duration-300"
+            "hover:scale-105 transition-transform duration-300",
           )}>
           CJO
         </div>
@@ -43,11 +43,11 @@ export default function Header() {
                   href={item.href}
                   className={cn(
                     // Text
-                    "text-foreground font-medium",
+                    "text-foreground",
                     // Layout
                     "relative group",
                     // Effects and interactive states
-                    "transition-colors duration-300"
+                    "transition-colors duration-300",
                   )}>
                   {item.label}
                   <span
@@ -62,7 +62,7 @@ export default function Header() {
                       "transition-all duration-300",
                       pathname === item.href
                         ? "w-full"
-                        : "w-0 group-hover:w-full"
+                        : "w-0 group-hover:w-full",
                     )}></span>
                 </Link>
               </li>

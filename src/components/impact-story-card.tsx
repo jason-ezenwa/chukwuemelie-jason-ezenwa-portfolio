@@ -30,12 +30,12 @@ const ImpactStoryCard = ({
     <Card
       className={cn(
         "group h-full transition-all duration-300 hover:shadow-lg",
-        "border-border bg-card"
+        "border-border bg-card",
       )}>
       <CardContent className="p-6 md:p-8 flex flex-col h-full">
         <div className="flex items-start gap-3 mb-4 md:mb-6">
           <div className="flex-1">
-            <h3 className="lg:w-[80%] text-base md:text-xl lg:text-2xl font-bold text-foreground group-hover:text-muted-foreground transition-colors duration-300 mb-1">
+            <h3 className="lg:w-[80%] text-base lg:text-xl font-semibold text-foreground transition-colors duration-300 mb-1">
               {title}
             </h3>
           </div>
@@ -45,22 +45,20 @@ const ImpactStoryCard = ({
           <div className="flex items-start gap-3">
             <FaUser className="lg:h-[1lh] w-4 text-muted-foreground text-xs md:text-sm" />
             <div className="flex-1">
-              <p className="text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
                 Role
               </p>
-              <p className="text-sm md:text-base font-medium text-foreground">
-                {role}
-              </p>
+              <p className="text-sm md:text-base text-foreground">{role}</p>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
             <FaCode className="lg:h-[1lh] w-4 text-muted-foreground text-xs md:text-sm" />
             <div>
-              <p className="text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
                 Tech Stack
               </p>
-              <p className="text-sm md:text-base font-medium text-foreground">
+              <p className="text-sm md:text-base text-foreground">
                 {techStack}
               </p>
             </div>
@@ -69,12 +67,10 @@ const ImpactStoryCard = ({
           <div className="flex items-start gap-3">
             <FaClock className="lg:h-[1lh] w-4 text-muted-foreground text-xs md:text-sm" />
             <div>
-              <p className="text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
                 Duration
               </p>
-              <p className="text-sm md:text-base font-medium text-foreground">
-                {duration}
-              </p>
+              <p className="text-sm md:text-base text-foreground">{duration}</p>
             </div>
           </div>
         </div>
@@ -87,7 +83,7 @@ const ImpactStoryCard = ({
             {keyContributions.map((contribution, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 text-body-large text-muted-foreground">
+                className="flex items-start gap-3 text-body text-muted-foreground">
                 <FaCheckCircle className="text-muted-foreground text-sm mt-1.5 flex-shrink-0" />
                 <span>{contribution}</span>
               </li>

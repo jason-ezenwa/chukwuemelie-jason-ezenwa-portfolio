@@ -10,8 +10,9 @@ interface StickyDivProps {
 
 const StickyDiv: React.FC<StickyDivProps> = ({ text, textColor, bgColor, link }) => {
   return (
-    <Link href={link} target='_blank'>
-      <div className={`p-2 text-[13px] text-center ${textColor} ${bgColor} hover:bg-[#6b6c6b] rounded-md font-[600] shadow-lg`}>
+    <Link href={link} target="_blank">
+      <div
+        className={`p-2 text-[13px] text-center ${textColor} ${bgColor} hover:bg-[#6b6c6b] rounded-md shadow-lg`}>
         {text}
       </div>
     </Link>
