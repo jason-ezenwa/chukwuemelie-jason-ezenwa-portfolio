@@ -397,7 +397,7 @@ export default function Home() {
               link="https://blog.stackademic.com/mvps-and-the-engineering-trap-building-what-actually-matters-6c253bb5b3cd"
             />
             <BlogCard
-              title="The Irreplaceable Software Engineer: Thriving in the Age of AI"
+              title="The Irreplaceable Software Engineer in the AI era"
               descriptionParagraphs={[
                 "The rapid advancement of AI has raised the question: Will AI replace software engineers? The reality is that some engineers will remain indispensable.",
                 "In this article, I discuss how adaptability, cross-disciplinary thinking, and effectively leveraging AI are the keys to staying irreplaceable in an AI-powered world.",
@@ -405,7 +405,7 @@ export default function Home() {
               link="https://blog.stackademic.com/the-irreplaceable-software-engineer-thriving-in-the-age-of-ai-569525593922"
             />
             <BlogCard
-              title="Beyond Silos: The Cross-Disciplinary Role of the Modern Software Engineer"
+              title="The Cross-Disciplinary Role of the Modern Software Engineer"
               descriptionParagraphs={[
                 "An article about the exposure of software engineers to different fields while working with experts in those fields.",
                 "In this piece, I talk about how engineers work across disciplines to build smarter, more impactful solutions over time.",
