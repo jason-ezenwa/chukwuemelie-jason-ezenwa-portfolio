@@ -81,41 +81,6 @@ const ImpactStories = () => {
           <div className="flex justify-center mt-8 sm:mt-12">
             <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
               <a
-                href="#blue-collar-empowerment"
-                className={cn(
-                  // Size and spacing
-                  "px-4 md:px-6 py-2 md:py-3",
-                  // Text
-                  "text-primary-foreground text-xs md:text-sm font-medium",
-                  // Layout
-                  "whitespace-nowrap relative group",
-                  // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
-                  // Background
-                  "bg-primary hover:bg-primary/90",
-                  // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300",
-                )}>
-                <span
-                  className={cn(
-                    // Layout
-                    "relative",
-                  )}>
-                  Blue-Collar Empowerment
-                  <span
-                    className={cn(
-                      // Size and spacing
-                      "-bottom-1 left-0 w-0 h-0.5",
-                      // Layout
-                      "absolute",
-                      // Background
-                      "bg-primary-foreground",
-                      // Effects and interactive states
-                      "transition-all duration-300 group-hover:w-full",
-                    )}></span>
-                </span>
-              </a>
-              <a
                 href="#product-feedback"
                 className={cn(
                   // Size and spacing
@@ -137,6 +102,41 @@ const ImpactStories = () => {
                     "relative",
                   )}>
                   Product Feedback
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-primary-foreground",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full",
+                    )}></span>
+                </span>
+              </a>
+              <a
+                href="#blue-collar-empowerment"
+                className={cn(
+                  // Size and spacing
+                  "px-4 md:px-6 py-2 md:py-3",
+                  // Text
+                  "text-primary-foreground text-xs md:text-sm font-medium",
+                  // Layout
+                  "whitespace-nowrap relative group",
+                  // Border
+                  "border border-primary hover:border-primary/80 rounded-full",
+                  // Background
+                  "bg-primary hover:bg-primary/90",
+                  // Effects and interactive states
+                  "shadow-sm hover:shadow-md transition-all duration-300",
+                )}>
+                <span
+                  className={cn(
+                    // Layout
+                    "relative",
+                  )}>
+                  Blue-Collar Empowerment
                   <span
                     className={cn(
                       // Size and spacing
@@ -190,338 +190,7 @@ const ImpactStories = () => {
         </section>
 
         <section className="section-spacing space-y-16 md:space-y-20 border-y border-border">
-          <Card
-            id="blue-collar-empowerment"
-            className="border-border shadow-lg">
-            <CardContent className="p-5 sm:p-8 md:p-10">
-              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
-                <div className="w-fit">
-                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
-                </div>
-                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
-                  Building Scalable Infrastructure for Blue-Collar Empowerment
-                </h2>
-              </div>
-
-              <div
-                className={cn(
-                  // Layout
-                  "grid grid-cols-1 md:grid-cols-2",
-                  // Size and spacing
-                  "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
-                  // Border
-                  "border-b border-border",
-                )}>
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        COMPANY
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm sm:text-base text-foreground">
-                          LaborHack
-                        </p>
-                        <Link href="https://www.laborhack.com/" target="_blank">
-                          <FaExternalLinkAlt className="text-muted-foreground text-sm sm:text-base" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaUser className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        ROLE
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Software Engineer
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaClock className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        DURATION
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Jan 2024 - Present
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex items-start gap-3 h-full">
-                    <div className="rounded-md mt-1">
-                      <FaCode className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        TECH STACK
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                        TypeScript, React, Node.js, GraphQL, MongoDB, AWS
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6 sm:space-y-8">
-                <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Overview
-                    </h3>
-                  </div>
-                  <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
-                    LaborHack is a platform that connects skilled blue-collar
-                    artisans to jobs, training, and income opportunities. As
-                    part of a distributed engineering team, I contributed to the
-                    architecture and implementation of several core systems that
-                    powered growth, retention, and automation across the
-                    platform.
-                  </p>
-                </div>
-
-                <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Key Contributions
-                    </h3>
-                  </div>
-
-                  <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <Card className="border border-border rounded-lg sm:rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
-                      <CardContent className="p-3 sm:p-5">
-                        <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                          <h4 className="font-semibold text-base sm:text-lg text-foreground">
-                            Artisan Recruitment & Home Maintenance Tools
-                          </h4>
-                        </div>
-                        <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                          Collaborated cross-functionally to build and launch
-                          three product lines that generated over ₦35m in
-                          revenue:
-                        </p>
-                        <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
-                          <li>
-                            <p>
-                              Artisan recruitment products, as well as a
-                              community management tool for businesses,
-                              accelerating onboarding and increasing partner
-                              satisfaction.
-                            </p>
-                          </li>
-                          <li>
-                            A home maintenance product that connects 1,000+
-                            homeowners with skilled labor, increasing company
-                            revenue.
-                          </li>
-                        </ul>
-                      </CardContent>
-                      <CardFooter className="px-3 sm:px-5 pb-3 sm:pb-5 pt-0">
-                        <div className="flex gap-3">
-                          <Link
-                            href="https://www.laborhack.com/businesses"
-                            target="_blank"
-                            className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
-                            <span className="text-sm sm:text-base">
-                              Businesses
-                            </span>
-                            <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
-                          </Link>
-                          <Link
-                            href="https://www.laborhack.com/homeowners"
-                            target="_blank"
-                            className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
-                            <span className="text-sm sm:text-base">
-                              Homeowners
-                            </span>
-                            <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
-                          </Link>
-                        </div>
-                      </CardFooter>
-                    </Card>
-
-                    <Card className="border border-border rounded-lg sm:rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
-                      <CardContent className="p-3 sm:p-5">
-                        <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                          <h4 className="font-semibold text-base sm:text-lg text-foreground">
-                            AI-Driven Artisan Portfolio System
-                          </h4>
-                        </div>
-                        <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                          Contributed to the design and engineering of a
-                          portfolio builder that leverages AI to help 4,000+
-                          artisans present their experience, skills, and past
-                          work.
-                        </p>
-                        <p className="text-foreground text-sm sm:text-base mt-2 sm:mt-3">
-                          This tool exposes artisans to higher-value jobs.
-                        </p>
-                      </CardContent>
-                      <CardFooter className="px-3 sm:px-5 pb-3 sm:pb-5 pt-0">
-                        <Link
-                          href="https://www.laborhack.com/portfolio"
-                          target="_blank"
-                          className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
-                          <span className="text-sm sm:text-base">
-                            View Portfolio
-                          </span>
-                          <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
-                        </Link>
-                      </CardFooter>
-                    </Card>
-
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
-                      )}>
-                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
-                        Semi-Automated Payout System
-                      </h4>
-                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                        Architected and implemented a payout workflow that
-                        streamlined payments to artisans and referrers.
-                      </p>
-                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
-                        <li>Reduced processing time</li>
-                        <li>
-                          Improved the quality of life of the customer success
-                          team
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
-                      )}>
-                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
-                        Analytics & Funnel Optimization
-                      </h4>
-                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                        Managed and implemented analytics dashboards for three
-                        key products using MongoDB Charts and Google Analytics.
-                      </p>
-                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
-                        <li>
-                          Tracked usage, user behavior, and drop-offs to guide
-                          feature improvements
-                        </li>
-                        <li>
-                          Played a key role in reducing churn and improving
-                          activation
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
-                      )}>
-                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
-                        Deployment & Release Engineering
-                      </h4>
-                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                        Improved the reliability and flexibility of releases by:
-                      </p>
-                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
-                        <li>Introducing feature toggles to control rollout</li>
-                        <li>
-                          Writing unit tests that boosted confidence in
-                          deployments and reduced rollback incidents by 40%
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
-                      )}>
-                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
-                        SEO & Visibility
-                      </h4>
-                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                        {`Enhanced the company's online visibility through
-                      collaborative SEO strategies with the marketing team.`}
-                      </p>
-                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
-                        <li>
-                          {`Boosted organic traffic by 28% and improved the
-                        platform's visibility in search engines by 21%`}
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Impact Summary
-                    </h3>
-                  </div>
-                  <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
-                    <li>
-                      Built systems for artisan recruitment, home maintenance,
-                      and AI-driven portfolios, generating over ₦35m in revenue
-                    </li>
-                    <li>
-                      Provided data-driven insights that guided product
-                      improvements and optimized funnels
-                    </li>
-                    <li>
-                      Improved the flexibility and reliability of software
-                      deployments ensuring 99.9% uptime
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Impact Story 2 */}
+          {/* Impact Story 1 - Peppermint */}
           <Card id="product-feedback" className="border-border shadow-lg">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
@@ -553,7 +222,7 @@ const ImpactStories = () => {
                       </p>
                       <div className="flex items-center gap-2">
                         <p className="text-sm sm:text-base text-foreground">
-                          Peppermint Group
+                          Peppermint
                         </p>
                         <Link
                           href="https://www.runpeppermint.com/"
@@ -572,7 +241,7 @@ const ImpactStories = () => {
                         ROLE
                       </p>
                       <p className="text-sm sm:text-base text-foreground">
-                        Lead Software Engineer
+                        Lead Software Engineer → Fractional Head of Engineering
                       </p>
                     </div>
                   </div>
@@ -585,7 +254,7 @@ const ImpactStories = () => {
                         DURATION
                       </p>
                       <p className="text-sm sm:text-base text-foreground">
-                        Apr 2024 - Nov 2025
+                        Apr 2024 - Present
                       </p>
                     </div>
                   </div>
@@ -616,13 +285,12 @@ const ImpactStories = () => {
                     </h3>
                   </div>
                   <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
-                    Peppermint Group develops digital tools to help companies
-                    collect and analyze product feedback. As a frontend
-                    engineer, I worked closely with the team to create
-                    user-facing applications that enhanced the product feedback
-                    process. My work helped streamline the way companies and
-                    testers engage with feedback, leading to better product
-                    decisions and faster user onboarding.
+                    {`Peppermint develops digital tools to help companies
+                    collect and analyze product feedback. Starting as Lead Software Engineer,
+                    I directed engineering efforts to build user-facing applications that
+                    enhanced the product feedback process. In January 2026, I transitioned
+                    to Fractional Head of Engineering — leading engineering strategy,
+                    technical direction, and cross-functional alignment on a fractional basis.`}
                   </p>
                 </div>
 
@@ -662,6 +330,9 @@ const ImpactStories = () => {
                       analyze detailed feedback from testers. This tool is the core
                       part of Peppermint's offerings, enabling more
                       informed product development decisions.`}
+                      </p>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        {`Built AI-powered pipelines with LLMs to generate usability study reports, improving feedback insights for clients.`}
                       </p>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
                         {`Enabled the company to organically generate $1,000+ in revenue within 3 months by architecting in-app usability tests and surveys, validating early product-market fit.`}
@@ -730,6 +401,25 @@ const ImpactStories = () => {
                         "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Wallet System Implementation
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        {`Implemented the wallet (mints) system integrated with Stripe to streamline cash flows, enabling seamless transactions for both clients and testers.`}
+                      </p>
+                    </div>
+
+                    <div
+                      className={cn(
+                        // Size and spacing
+                        "p-3 sm:p-5",
+                        // Border
+                        "border border-border rounded-lg sm:rounded-xl",
+                        // Background
+                        "bg-card",
+                        // Effects and interactive states
+                        "shadow-sm hover:shadow-md transition-shadow",
+                      )}>
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Technical Leadership
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
@@ -739,6 +429,25 @@ const ImpactStories = () => {
                         the quality and velocity of the engineering team as we
                         expanded, leading to the successful release of
                         Peppermint V1, following the MVP.
+                      </p>
+                    </div>
+
+                    <div
+                      className={cn(
+                        // Size and spacing
+                        "p-3 sm:p-5",
+                        // Border
+                        "border border-border rounded-lg sm:rounded-xl",
+                        // Background
+                        "bg-card",
+                        // Effects and interactive states
+                        "shadow-sm hover:shadow-md transition-shadow",
+                      )}>
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Fractional Head of Engineering
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        {`Transitioned to Fractional Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, and cross-functional alignment on a fractional basis.`}
                       </p>
                     </div>
                   </div>
@@ -757,6 +466,10 @@ const ImpactStories = () => {
                       like Kuda
                     </li>
                     <li>
+                      Built AI-powered pipelines with LLMs to generate usability
+                      study reports
+                    </li>
+                    <li>
                       Architected in-app usability tests and surveys which
                       generated over $1,000 within 3 months
                     </li>
@@ -764,13 +477,21 @@ const ImpactStories = () => {
                       {`Built the testers' application that onboarded 10,000+
                     testers in a month`}
                     </li>
+                    <li>
+                      Implemented wallet system integrated with Stripe for
+                      streamlined cash flows
+                    </li>
+                    <li>
+                      Transitioned to Fractional Head of Engineering in January
+                      2026
+                    </li>
                   </ul>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Impact Story 3: Wynk Limited */}
+          {/* Impact Story 3: Wynk */}
           <Card id="wynk-limited" className="border-border shadow-lg">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
@@ -802,7 +523,7 @@ const ImpactStories = () => {
                       </p>
                       <div className="flex items-center gap-2">
                         <p className="text-sm sm:text-base text-foreground">
-                          Wynk Limited
+                          Wynk
                         </p>
                       </div>
                     </div>
@@ -860,7 +581,7 @@ const ImpactStories = () => {
                     </h3>
                   </div>
                   <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
-                    {`At Wynk Limited, I worked within a cross-functional team on the Wynk Super App, focusing on financial services modules.
+                    {`At Wynk, I worked within a cross-functional team on the Wynk Super App, focusing on financial services modules.
                   I rebuilt the company's web application with React, which increased retention by 55%. I also contributed to team growth by evaluating candidates and documenting systems comprehensively.`}
                   </p>
                 </div>

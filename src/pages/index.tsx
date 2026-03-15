@@ -107,7 +107,7 @@ export default function Home() {
                   {`I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.`}
                 </p>
                 <p className="text-body text-foreground leading-relaxed">
-                  {`I've helped companies like LaborHack, Peppermint and Wynk Limited turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
+                  {`I've helped companies like LaborHack, Peppermint and Wynk turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
                 </p>
               </div>
             </div>
@@ -204,6 +204,18 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <ImpactStoryCard
+              title="Product Feedback & Scaling Operations"
+              role="Lead Software Engineer → Fractional Head of Engineering"
+              techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
+              duration="Apr 2024 - Present"
+              keyContributions={[
+                "Launched an AI-powered product feedback application used by companies like Kuda",
+                "Built AI-powered pipelines with LLMs to generate usability study reports",
+                "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
+              ]}
+              link="/impact-stories#product-feedback"
+            />
+            <ImpactStoryCard
               title="Building Scalable Infrastructure for Blue-Collar Empowerment"
               role="Software Engineer"
               techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
@@ -214,18 +226,6 @@ export default function Home() {
                 "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
               ]}
               link="/impact-stories#blue-collar-empowerment"
-            />
-            <ImpactStoryCard
-              title="Product Feedback & Scaling Operations"
-              role="Lead Software Engineer"
-              techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
-              duration="Apr 2024 - Nov 2025"
-              keyContributions={[
-                "Launched an AI-powered product feedback application used by companies like Kuda",
-                "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
-                "Built the testers' application that onboarded 10,000+ testers in a month",
-              ]}
-              link="/impact-stories#product-feedback"
             />
             {/* <ImpactStoryCard
                 title="Laying the Foundation for Secure Gold Investment"
