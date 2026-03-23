@@ -15,25 +15,25 @@ export default function Header() {
     <header
       className={cn(
         // Size and spacing
-        "h-20",
+        'h-20',
         // Layout
-        "fixed top-1.5 left-1.5 right-1.5 lg:left-2.5 lg:right-2.5 z-50 flex items-center container-spacing",
+        'fixed top-1.5 left-1.5 right-1.5 lg:left-2.5 lg:right-2.5 z-50 flex items-center container-spacing',
         // Border
-        "border border-border",
+        'border border-border',
         // Background
-        "bg-background/30 backdrop-blur-sm",
+        'bg-background/30 backdrop-blur-sm',
         // Effects and interactive states
-        "transition-all duration-300 shadow-md",
+        'transition-all duration-300',
       )}>
       <div className="flex justify-between items-center w-full">
         <div
           className={cn(
             // Text
-            "text-lg lg:text-2xl font-medium text-foreground tracking-tight",
+            'text-lg lg:text-2xl font-medium text-foreground tracking-tight',
             // Layout
-            "hidden md:block",
+            'hidden md:block',
             // Effects and interactive states
-            "hover:scale-105 transition-transform duration-300",
+            'hover:scale-105 transition-transform duration-300',
           )}>
           CJO
         </div>
@@ -45,26 +45,26 @@ export default function Header() {
                   href={item.href}
                   className={cn(
                     // Text
-                    "text-foreground",
+                    'text-foreground',
                     // Layout
-                    "relative group",
+                    'relative group',
                     // Effects and interactive states
-                    "transition-colors duration-300",
+                    'transition-colors duration-300',
                   )}>
                   {item.label}
                   <span
                     className={cn(
                       // Size and spacing
-                      "-bottom-1 left-0 h-0.5",
+                      '-bottom-1 left-0 h-0.5',
                       // Layout
-                      "absolute",
+                      'absolute',
                       // Background
-                      "bg-foreground",
+                      'bg-foreground',
                       // Effects and interactive states
-                      "transition-all duration-300",
+                      'transition-all duration-300',
                       pathname === item.href
-                        ? "w-full"
-                        : "w-0 group-hover:w-full",
+                        ? 'w-full'
+                        : 'w-0 group-hover:w-full',
                     )}></span>
                 </Link>
               </li>
