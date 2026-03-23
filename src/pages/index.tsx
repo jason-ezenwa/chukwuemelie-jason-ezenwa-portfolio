@@ -29,6 +29,8 @@ export default function Home() {
             "py-32 container-spacing",
             // Layout
             "flex flex-col items-center",
+            // Background
+            "grid-bg",
             // Effects and interactive states
             "transition-colors duration-300",
           )}>
@@ -88,19 +90,17 @@ export default function Home() {
                 "absolute left-0",
                 // Background
                 "bg-linear-to-b from-border via-muted-foreground to-border",
-                // Border
-                "rounded-full",
               )}></div>
             <div
               className={cn(
                 // Size and spacing
                 "p-5 lg:p-8 md:p-12 ml-5 lg:ml-8",
                 // Border
-                "border border-border rounded-2xl",
+                "border border-border",
                 // Background
                 "bg-card",
                 // Effects and interactive states
-                "shadow-sm hover:shadow-lg transition-all duration-300",
+                "transition-all duration-300",
               )}>
               <div className="space-y-6">
                 <p className="text-body text-foreground leading-relaxed">

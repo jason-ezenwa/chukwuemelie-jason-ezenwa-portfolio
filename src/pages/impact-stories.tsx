@@ -32,6 +32,8 @@ const ImpactStories = () => {
           className={cn(
             // Size and spacing
             "py-32 conainer-spacing",
+            // Background
+            "grid-bg",
           )}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,11 +92,11 @@ const ImpactStories = () => {
                   // Layout
                   "whitespace-nowrap relative group",
                   // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
+                  "border border-primary hover:border-primary/80",
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300",
+                  "transition-all duration-300",
                 )}>
                 <span
                   className={cn(
@@ -125,11 +127,11 @@ const ImpactStories = () => {
                   // Layout
                   "whitespace-nowrap relative group",
                   // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
+                  "border border-primary hover:border-primary/80",
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300",
+                  "transition-all duration-300",
                 )}>
                 <span
                   className={cn(
@@ -160,11 +162,11 @@ const ImpactStories = () => {
                   // Layout
                   "whitespace-nowrap relative group",
                   // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
+                  "border border-primary hover:border-primary/80",
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
-                  "shadow-sm hover:shadow-md transition-all duration-300",
+                  "transition-all duration-300",
                 )}>
                 <span
                   className={cn(
@@ -191,7 +193,7 @@ const ImpactStories = () => {
 
         <section className="section-spacing space-y-16 md:space-y-20 border-y border-border">
           {/* Impact Story 1 - Peppermint */}
-          <Card id="product-feedback" className="border-border shadow-lg">
+          <Card id="product-feedback" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
@@ -312,7 +314,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -348,7 +349,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -378,7 +378,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Performance Optimization & Scaling
@@ -398,7 +397,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Wallet System Implementation
@@ -417,7 +415,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Technical Leadership
@@ -441,7 +438,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Fractional Head of Engineering
@@ -492,7 +488,7 @@ const ImpactStories = () => {
           </Card>
 
           {/* Impact Story 3: Wynk */}
-          <Card id="wynk-limited" className="border-border shadow-lg">
+          <Card id="wynk-limited" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 <div className="w-fit">
@@ -604,7 +600,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -632,7 +627,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
@@ -656,7 +650,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Hiring & Team Scaling
@@ -675,7 +668,6 @@ const ImpactStories = () => {
                         // Background
                         "bg-card",
                         // Effects and interactive states
-                        "shadow-sm hover:shadow-md transition-shadow",
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Documentation
