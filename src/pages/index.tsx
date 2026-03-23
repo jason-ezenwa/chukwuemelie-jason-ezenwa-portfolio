@@ -202,7 +202,7 @@ export default function Home() {
               Detailed analysis of my most impactful projects and contributions
             </motion.p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 grid-bg p-6 lg:p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 grid-bg">
             <ImpactStoryCard
               title="Product Feedback & Scaling Operations"
               role="Lead Software Engineer → Fractional Head of Engineering"
