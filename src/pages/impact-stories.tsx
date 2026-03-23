@@ -32,6 +32,8 @@ const ImpactStories = () => {
           className={cn(
             // Size and spacing
             "py-32 conainer-spacing",
+            // Background
+            "grid-bg",
           )}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +92,7 @@ const ImpactStories = () => {
                   // Layout
                   "whitespace-nowrap relative group",
                   // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
+                  "border border-primary hover:border-primary/80",
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
@@ -125,7 +127,7 @@ const ImpactStories = () => {
                   // Layout
                   "whitespace-nowrap relative group",
                   // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
+                  "border border-primary hover:border-primary/80",
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
@@ -160,7 +162,7 @@ const ImpactStories = () => {
                   // Layout
                   "whitespace-nowrap relative group",
                   // Border
-                  "border border-primary hover:border-primary/80 rounded-full",
+                  "border border-primary hover:border-primary/80",
                   // Background
                   "bg-primary hover:bg-primary/90",
                   // Effects and interactive states
