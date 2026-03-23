@@ -280,7 +280,7 @@ h6 {
           }
         }
     
-        /* Flat aesthetic: subtle grid background */
+        /* Flat aesthetic: subtle grid background (fixed 80px for full-width sections) */
         .grid-bg {
           background-image:
             linear-gradient(to right, color-mix(in srgb, var(--border) 60%, transparent) 1px, transparent 1px),
@@ -288,6 +288,7 @@ h6 {
           background-size: 80px 80px;
           background-position: center center;
         }
+
 
         /* Smooth scrolling */
         html {
