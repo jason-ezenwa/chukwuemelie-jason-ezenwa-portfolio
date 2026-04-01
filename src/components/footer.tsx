@@ -10,7 +10,7 @@ const Footer = ({ className }: { className?: string }) => {
     <footer
       className={cn(
         // Layout
-        "w-full flex flex-col items-start justify-between",
+        "w-full flex flex-col items-start sm:items-center justify-between",
         // Size and spacing
         "section-spacing gap-2 lg:gap-6",
         // Text
