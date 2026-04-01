@@ -73,7 +73,7 @@ const ImpactStories = () => {
           </div>
 
           <div className="flex justify-center mt-8 sm:mt-12">
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 md:gap-3 px-4 w-full sm:w-auto">
               <a
                 href="#product-feedback"
                 className={cn(
@@ -82,7 +82,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "whitespace-nowrap relative group",
+                  "w-full sm:w-auto text-center relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
@@ -117,7 +117,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "whitespace-nowrap relative group",
+                  "w-full sm:w-auto text-center relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
@@ -130,7 +130,7 @@ const ImpactStories = () => {
                     // Layout
                     "relative",
                   )}>
-                  Blue-Collar Empowerment Infrastructure
+                  Blue-Collar Empowerment
                   <span
                     className={cn(
                       // Size and spacing
@@ -152,7 +152,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "whitespace-nowrap relative group",
+                  "w-full sm:w-auto text-center relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
