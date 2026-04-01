@@ -263,8 +263,8 @@ const ImpactStories = () => {
                     Key Contributions
                   </h3>
 
-                  <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <div>
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Product Feedback Application
@@ -290,7 +290,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           {`Testers' Application Development`}
@@ -310,7 +310,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Performance Optimization & Scaling
                       </h4>
@@ -320,7 +320,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Wallet System Implementation
                       </h4>
@@ -329,7 +329,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Technical Leadership
                       </h4>
@@ -343,7 +343,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Fractional Head of Engineering
                       </h4>
@@ -455,8 +455,8 @@ const ImpactStories = () => {
                     Key Contributions
                   </h3>
 
-                  <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <div>
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Wynk Super App – Financial Services
@@ -474,7 +474,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Web Application Rebuild
@@ -488,7 +488,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Hiring & Team Scaling
                       </h4>
@@ -497,7 +497,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Documentation
                       </h4>
@@ -630,7 +630,7 @@ const ImpactStories = () => {
                   </h3>
                 </div>
 
-                <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
+                <div className="pl-3 sm:pl-8 divide-y divide-border">
                   <div className={cn(
                     // Size and spacing
                     "p-3 sm:p-5",
