@@ -82,7 +82,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "w-full sm:w-auto text-center relative group",
+                  "w-56 sm:w-auto text-center relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
@@ -117,7 +117,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "w-full sm:w-auto text-center relative group",
+                  "w-56 sm:w-auto text-center relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
@@ -152,7 +152,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "w-full sm:w-auto text-center relative group",
+                  "w-56 sm:w-auto text-center relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
