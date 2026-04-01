@@ -26,28 +26,28 @@ const ImpactStoryCard = ({
         "group h-full transition-all duration-300",
         "border-border bg-card",
       )}>
-      <CardContent className="p-6 md:p-8 flex flex-col h-full">
+      <CardContent className="p-5 md:p-6 flex flex-col h-full">
         <h3 className="lg:w-[80%] text-base lg:text-xl font-semibold text-foreground transition-colors duration-300 mb-4">
           {title}
         </h3>
 
         <div className="grid grid-cols-1 gap-3 flex-1">
           <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%] mb-1">
               Role
             </p>
             <p className="text-sm md:text-base text-foreground">{role}</p>
           </div>
 
           <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%] mb-1">
               Tech Stack
             </p>
             <p className="text-sm md:text-base text-foreground">{techStack}</p>
           </div>
 
           <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%] mb-1">
               Duration
             </p>
             <p className="text-sm md:text-base text-foreground">{duration}</p>

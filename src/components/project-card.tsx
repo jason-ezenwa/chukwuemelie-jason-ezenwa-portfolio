@@ -36,7 +36,7 @@ const ProjectCard = ({
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
       </div>
 
-      <CardContent className="p-6 md:p-8 space-y-3 md:space-y-4">
+      <CardContent className="p-5 md:p-6 space-y-3 md:space-y-4">
         <h3 className="text-lg lg:text-xl font-semibold text-foreground transition-colors duration-300">
           {title}
         </h3>
@@ -52,7 +52,7 @@ const ProjectCard = ({
         </div>
       </CardContent>
 
-      <CardFooter className="px-6 md:px-8 pb-6 md:pb-8 w-full">
+      <CardFooter className="px-5 md:px-6 pb-5 md:pb-6 w-full">
         <div className="flex flex-row gap-3 md:gap-4 pt-3 md:pt-4 w-full">
           {githubLink && (
             <Link

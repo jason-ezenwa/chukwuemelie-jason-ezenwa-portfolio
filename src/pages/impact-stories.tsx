@@ -130,7 +130,7 @@ const ImpactStories = () => {
                     // Layout
                     "relative",
                   )}>
-                  Blue-Collar Empowerment
+                  Blue-Collar Empowerment Infrastructure
                   <span
                     className={cn(
                       // Size and spacing
@@ -200,7 +200,7 @@ const ImpactStories = () => {
                   // Border
                   "border-b border-border",
                 )}>
-                <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-5 sm:space-y-6">
                   <div>
                     <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                       COMPANY
@@ -389,6 +389,233 @@ const ImpactStories = () => {
             </CardContent>
           </Card>
 
+          {/* Impact Story 2: LaborHack */}
+          <Card id="blue-collar-empowerment" className="border-border">
+            <CardContent className="p-5 sm:p-8 md:p-10">
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Blue-Collar Empowerment Infrastructure
+              </h2>
+
+              <div
+                className={cn(
+                  "grid grid-cols-1 md:grid-cols-2",
+                  "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
+                  "border-b border-border",
+                )}>
+                <div className="space-y-5 sm:space-y-6">
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm sm:text-base text-foreground">
+                        LaborHack
+                      </p>
+                      <Link href="https://www.laborhack.com/" target="_blank">
+                        <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Software Engineer
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Jan 2024 - Present
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    TypeScript, React, Node.js, GraphQL, MongoDB, AWS
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6 sm:space-y-8">
+                <div className="border-b border-border pb-6">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
+                  <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
+                    LaborHack is a platform that connects skilled blue-collar
+                    artisans to jobs, training, and income opportunities. As
+                    part of a distributed engineering team, I contributed to the
+                    architecture and implementation of several core systems that
+                    powered growth, retention, and automation across the
+                    platform.
+                  </p>
+                </div>
+
+                <div className="border-b border-border pb-6">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
+
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Artisan Recruitment & Home Maintenance Tools
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Collaborated cross-functionally to build and launch
+                        three product lines that generated over ₦35m in
+                        revenue:
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2 mb-3 sm:mb-4">
+                        <li>
+                          Artisan recruitment products, as well as a community
+                          management tool for businesses, accelerating
+                          onboarding and increasing partner satisfaction.
+                        </li>
+                        <li>
+                          A home maintenance product that connects 1,000+
+                          homeowners with skilled labor, increasing company
+                          revenue.
+                        </li>
+                      </ul>
+                      <div className="flex gap-3">
+                        <Link
+                          href="https://www.laborhack.com/businesses"
+                          target="_blank"
+                          className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                          <span className="text-sm sm:text-base">Businesses</span>
+                          <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                        </Link>
+                        <Link
+                          href="https://www.laborhack.com/homeowners"
+                          target="_blank"
+                          className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                          <span className="text-sm sm:text-base">Homeowners</span>
+                          <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                        </Link>
+                      </div>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        AI-Driven Artisan Portfolio System
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Contributed to the design and engineering of a portfolio
+                        builder that leverages AI to help 4,000+ artisans
+                        present their experience, skills, and past work.
+                      </p>
+                      <p className="text-foreground text-sm sm:text-base mb-3 sm:mb-4">
+                        This tool exposes artisans to higher-value jobs.
+                      </p>
+                      <Link
+                        href="https://www.laborhack.com/portfolio"
+                        target="_blank"
+                        className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                        <span className="text-sm sm:text-base">View Portfolio</span>
+                        <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                      </Link>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Semi-Automated Payout System
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Architected and implemented a payout workflow that
+                        streamlined payments to artisans and referrers.
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>Reduced processing time</li>
+                        <li>
+                          Improved the quality of life of the customer success
+                          team
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Analytics & Funnel Optimization
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Managed and implemented analytics dashboards for three
+                        key products using MongoDB Charts and Google Analytics.
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>
+                          Tracked usage, user behavior, and drop-offs to guide
+                          feature improvements
+                        </li>
+                        <li>
+                          Played a key role in reducing churn and improving
+                          activation
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Deployment & Release Engineering
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Improved the reliability and flexibility of releases by:
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>Introducing feature toggles to control rollout</li>
+                        <li>
+                          Writing unit tests that boosted confidence in
+                          deployments and reduced rollback incidents by 40%
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        SEO & Visibility
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        {`Enhanced the company's online visibility through collaborative SEO strategies with the marketing team.`}
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>
+                          {`Boosted organic traffic by 28% and improved the platform's visibility in search engines by 21%`}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
+                  <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
+                    <li>
+                      Built systems for artisan recruitment, home maintenance,
+                      and AI-driven portfolios, generating over ₦35m in revenue
+                    </li>
+                    <li>
+                      Provided data-driven insights that guided product
+                      improvements and optimized funnels
+                    </li>
+                    <li>
+                      Improved the flexibility and reliability of software
+                      deployments ensuring 99.9% uptime
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Impact Story 3: Wynk */}
           <Card id="wynk-limited" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
@@ -405,7 +632,7 @@ const ImpactStories = () => {
                   // Border
                   "border-b border-border",
                 )}>
-                <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-5 sm:space-y-6">
                   <div>
                     <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
                       COMPANY
@@ -544,7 +771,7 @@ const ImpactStories = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 border-b border-border pb-6">
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="rounded-md">
                     <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
