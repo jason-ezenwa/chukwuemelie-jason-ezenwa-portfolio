@@ -264,16 +264,7 @@ const ImpactStories = () => {
                   </h3>
 
                   <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Product Feedback Application
@@ -299,16 +290,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           {`Testers' Application Development`}
@@ -328,16 +310,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Performance Optimization & Scaling
                       </h4>
@@ -347,16 +320,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Wallet System Implementation
                       </h4>
@@ -365,16 +329,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Technical Leadership
                       </h4>
@@ -388,16 +343,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Fractional Head of Engineering
                       </h4>
@@ -510,16 +456,7 @@ const ImpactStories = () => {
                   </h3>
 
                   <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Wynk Super App – Financial Services
@@ -537,16 +474,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Web Application Rebuild
@@ -560,16 +488,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Hiring & Team Scaling
                       </h4>
@@ -578,16 +497,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Documentation
                       </h4>

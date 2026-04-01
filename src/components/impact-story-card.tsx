@@ -26,12 +26,12 @@ const ImpactStoryCard = ({
         "group h-full transition-all duration-300",
         "border-border bg-card",
       )}>
-      <CardContent className="p-5 md:p-6 flex flex-col h-full">
+      <CardContent className="p-6 md:p-8 flex flex-col h-full">
         <h3 className="lg:w-[80%] text-base lg:text-xl font-semibold text-foreground transition-colors duration-300 mb-4">
           {title}
         </h3>
 
-        <div className="grid grid-cols-1 gap-2 mb-4">
+        <div className="grid grid-cols-1 gap-3 mb-4">
           <div>
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
               Role
@@ -60,7 +60,7 @@ const ImpactStoryCard = ({
           </p>
           <ul className="list-disc pl-4 space-y-1">
             {keyContributions.map((contribution, index) => (
-              <li key={index} className="text-body text-muted-foreground">
+              <li key={index} className="text-body text-foreground">
                 {contribution}
               </li>
             ))}
