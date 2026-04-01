@@ -1,12 +1,4 @@
 import {
-  FaBriefcase,
-  FaBuilding,
-  FaUser,
-  FaClock,
-  FaCode,
-  FaListUl,
-  FaBullseye,
-  FaChartLine,
   FaAngleDoubleDown,
   FaExternalLinkAlt,
 } from "react-icons/fa";
@@ -195,14 +187,9 @@ const ImpactStories = () => {
           {/* Impact Story 1 - Peppermint */}
           <Card id="product-feedback" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
-              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
-                <div className="w-fit">
-                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
-                </div>
-                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
-                  Product Feedback & Scaling Operations
-                </h2>
-              </div>
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Product Feedback & Scaling Operations
+              </h2>
 
               <div
                 className={cn(
@@ -213,79 +200,54 @@ const ImpactStories = () => {
                   // Border
                   "border-b border-border",
                 )}>
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        COMPANY
+                <div className="space-y-5 sm:space-y-6">
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm sm:text-base text-foreground">
+                        Peppermint
                       </p>
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm sm:text-base text-foreground">
-                          Peppermint
-                        </p>
-                        <Link
-                          href="https://www.runpeppermint.com/"
-                          target="_blank">
-                          <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
-                        </Link>
-                      </div>
+                      <Link
+                        href="https://www.runpeppermint.com/"
+                        target="_blank">
+                        <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
+                      </Link>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaUser className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        ROLE
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Lead Software Engineer → Fractional Head of Engineering
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Lead Software Engineer → Fractional Head of Engineering
+                    </p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaClock className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        DURATION
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Apr 2024 - Present
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Apr 2024 - Present
+                    </p>
                   </div>
                 </div>
                 <div>
-                  <div className="flex items-start gap-3 h-full">
-                    <div className="rounded-md mt-1">
-                      <FaCode className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        TECH STACK
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                        Next.js, NestJS, TypeScript, MongoDB, AWS
-                      </p>
-                    </div>
-                  </div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    Next.js, NestJS, TypeScript, MongoDB, AWS
+                  </p>
                 </div>
               </div>
 
               <div className="space-y-6 sm:space-y-8">
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Overview
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
                   <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
                     {`Peppermint develops digital tools to help companies
                     collect and analyze product feedback. Starting as Lead Software Engineer,
@@ -297,24 +259,12 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Key Contributions
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
 
-                  <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Product Feedback Application
@@ -340,16 +290,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           {`Testers' Application Development`}
@@ -369,16 +310,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Performance Optimization & Scaling
                       </h4>
@@ -388,16 +320,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Wallet System Implementation
                       </h4>
@@ -406,16 +329,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Technical Leadership
                       </h4>
@@ -429,16 +343,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Fractional Head of Engineering
                       </h4>
@@ -450,12 +355,9 @@ const ImpactStories = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Impact Summary
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Launched a product feedback application used by companies
@@ -487,17 +389,239 @@ const ImpactStories = () => {
             </CardContent>
           </Card>
 
+          {/* Impact Story 2: LaborHack */}
+          <Card id="blue-collar-empowerment" className="border-border">
+            <CardContent className="p-5 sm:p-8 md:p-10">
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Blue-Collar Empowerment Infrastructure
+              </h2>
+
+              <div
+                className={cn(
+                  "grid grid-cols-1 md:grid-cols-2",
+                  "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
+                  "border-b border-border",
+                )}>
+                <div className="space-y-5 sm:space-y-6">
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm sm:text-base text-foreground">
+                        LaborHack
+                      </p>
+                      <Link href="https://www.laborhack.com/" target="_blank">
+                        <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Software Engineer
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Jan 2024 - Present
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    TypeScript, React, Node.js, GraphQL, MongoDB, AWS
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6 sm:space-y-8">
+                <div className="border-b border-border pb-6">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
+                  <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
+                    LaborHack is a platform that connects skilled blue-collar
+                    artisans to jobs, training, and income opportunities. As
+                    part of a distributed engineering team, I contributed to the
+                    architecture and implementation of several core systems that
+                    powered growth, retention, and automation across the
+                    platform.
+                  </p>
+                </div>
+
+                <div className="border-b border-border pb-6">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
+
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Artisan Recruitment & Home Maintenance Tools
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Collaborated cross-functionally to build and launch
+                        three product lines that generated over ₦35m in
+                        revenue:
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2 mb-3 sm:mb-4">
+                        <li>
+                          Artisan recruitment products, as well as a community
+                          management tool for businesses, accelerating
+                          onboarding and increasing partner satisfaction.
+                        </li>
+                        <li>
+                          A home maintenance product that connects 1,000+
+                          homeowners with skilled labor, increasing company
+                          revenue.
+                        </li>
+                      </ul>
+                      <div className="flex gap-3">
+                        <Link
+                          href="https://www.laborhack.com/businesses"
+                          target="_blank"
+                          className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                          <span className="text-sm sm:text-base">Businesses</span>
+                          <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                        </Link>
+                        <Link
+                          href="https://www.laborhack.com/homeowners"
+                          target="_blank"
+                          className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                          <span className="text-sm sm:text-base">Homeowners</span>
+                          <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                        </Link>
+                      </div>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        AI-Driven Artisan Portfolio System
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Contributed to the design and engineering of a portfolio
+                        builder that leverages AI to help 4,000+ artisans
+                        present their experience, skills, and past work.
+                      </p>
+                      <p className="text-foreground text-sm sm:text-base mb-3 sm:mb-4">
+                        This tool exposes artisans to higher-value jobs.
+                      </p>
+                      <Link
+                        href="https://www.laborhack.com/portfolio"
+                        target="_blank"
+                        className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                        <span className="text-sm sm:text-base">View Portfolio</span>
+                        <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                      </Link>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Semi-Automated Payout System
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Architected and implemented a payout workflow that
+                        streamlined payments to artisans and referrers.
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>Reduced processing time</li>
+                        <li>
+                          Improved the quality of life of the customer success
+                          team
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Analytics & Funnel Optimization
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Managed and implemented analytics dashboards for three
+                        key products using MongoDB Charts and Google Analytics.
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>
+                          Tracked usage, user behavior, and drop-offs to guide
+                          feature improvements
+                        </li>
+                        <li>
+                          Played a key role in reducing churn and improving
+                          activation
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Deployment & Release Engineering
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Improved the reliability and flexibility of releases by:
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>Introducing feature toggles to control rollout</li>
+                        <li>
+                          Writing unit tests that boosted confidence in
+                          deployments and reduced rollback incidents by 40%
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        SEO & Visibility
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        {`Enhanced the company's online visibility through collaborative SEO strategies with the marketing team.`}
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>
+                          {`Boosted organic traffic by 28% and improved the platform's visibility in search engines by 21%`}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
+                  <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
+                    <li>
+                      Built systems for artisan recruitment, home maintenance,
+                      and AI-driven portfolios, generating over ₦35m in revenue
+                    </li>
+                    <li>
+                      Provided data-driven insights that guided product
+                      improvements and optimized funnels
+                    </li>
+                    <li>
+                      Improved the flexibility and reliability of software
+                      deployments ensuring 99.9% uptime
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Impact Story 3: Wynk */}
           <Card id="wynk-limited" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
-              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
-                <div className="w-fit">
-                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
-                </div>
-                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
-                  Building a Lifestyle Super App and Web Platform
-                </h2>
-              </div>
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Building a Lifestyle Super App and Web Platform
+              </h2>
 
               <div
                 className={cn(
@@ -508,74 +632,45 @@ const ImpactStories = () => {
                   // Border
                   "border-b border-border",
                 )}>
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        COMPANY
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm sm:text-base text-foreground">
-                          Wynk
-                        </p>
-                      </div>
-                    </div>
+                <div className="space-y-5 sm:space-y-6">
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">Wynk</p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaUser className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        ROLE
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Full Stack Developer
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Full Stack Developer
+                    </p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaClock className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        DURATION
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Sep 2023 - Apr 2024
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Sep 2023 - Apr 2024
+                    </p>
                   </div>
                 </div>
                 <div>
-                  <div className="flex items-start gap-3 h-full">
-                    <div className="rounded-md mt-1">
-                      <FaCode className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        TECH STACK
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                        JavaScript, Node.js, Express, React
-                      </p>
-                    </div>
-                  </div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    JavaScript, Node.js, Express, React
+                  </p>
                 </div>
               </div>
 
               <div className="space-y-6 sm:space-y-8">
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Overview
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
                   <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
                     {`At Wynk, I worked within a cross-functional team on the Wynk Super App, focusing on financial services modules.
                   I rebuilt the company's web application with React, which increased retention by 55%. I also contributed to team growth by evaluating candidates and documenting systems comprehensively.`}
@@ -583,24 +678,12 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Key Contributions
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
 
-                  <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Wynk Super App – Financial Services
@@ -618,16 +701,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <div className="flex items-center gap-2 mb-2 sm:mb-3">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">
                           Web Application Rebuild
@@ -641,16 +715,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Hiring & Team Scaling
                       </h4>
@@ -659,16 +724,7 @@ const ImpactStories = () => {
                       </p>
                     </div>
 
-                    <div
-                      className={cn(
-                        // Size and spacing
-                        "p-3 sm:p-5",
-                        // Border
-                        "border border-border rounded-lg sm:rounded-xl",
-                        // Background
-                        "bg-card",
-                        // Effects and interactive states
-                      )}>
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Documentation
                       </h4>
@@ -680,12 +736,9 @@ const ImpactStories = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Impact Summary
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Contributed to a lifestyle super app, focusing on
@@ -718,7 +771,7 @@ const ImpactStories = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 border-b border-border pb-6">
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="rounded-md">
                     <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
@@ -804,12 +857,12 @@ const ImpactStories = () => {
                   </h3>
                 </div>
 
-                <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
+                <div className="pl-3 sm:pl-8 divide-y divide-border">
                   <div className={cn(
                     // Size and spacing
                     "p-3 sm:p-5",
                     // Border
-                    "border border-border rounded-lg sm:rounded-xl",
+                    "border border-border",
                     // Background
                     "bg-card",
                     // Effects and interactive states
@@ -831,7 +884,7 @@ const ImpactStories = () => {
                     // Size and spacing
                     "p-3 sm:p-5",
                     // Border
-                    "border border-border rounded-lg sm:rounded-xl",
+                    "border border-border",
                     // Background
                     "bg-card",
                     // Effects and interactive states
@@ -852,7 +905,7 @@ const ImpactStories = () => {
                     // Size and spacing
                     "p-3 sm:p-5",
                     // Border
-                    "border border-border rounded-lg sm:rounded-xl",
+                    "border border-border",
                     // Background
                     "bg-card",
                     // Effects and interactive states
