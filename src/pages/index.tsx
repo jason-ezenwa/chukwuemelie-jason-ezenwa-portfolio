@@ -205,7 +205,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <ImpactStoryCard
               title="Product Feedback & Scaling Operations"
-              role="Lead Software Engineer → Fractional Head of Engineering"
+              role="Fractional Head of Engineering"
               techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
               duration="Apr 2024 - Present"
               keyContributions={[

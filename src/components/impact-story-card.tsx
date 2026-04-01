@@ -31,26 +31,10 @@ const ImpactStoryCard = ({
           {title}
         </h3>
 
-        <div className="grid grid-cols-1 gap-3 flex-1">
-          <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%] mb-1">
-              Role
-            </p>
-            <p className="text-sm md:text-base text-foreground">{role}</p>
-          </div>
-
-          <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%] mb-1">
-              Tech Stack
-            </p>
-            <p className="text-sm md:text-base text-foreground">{techStack}</p>
-          </div>
-
-          <div>
-            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%] mb-1">
-              Duration
-            </p>
-            <p className="text-sm md:text-base text-foreground">{duration}</p>
+        <div className="flex flex-col gap-3 flex-1">
+          <div className="text-sm md:text-base text-muted-foreground">
+            <p>{role} · {duration}</p>
+            <p>{techStack}</p>
           </div>
 
           <div>
@@ -59,7 +43,7 @@ const ImpactStoryCard = ({
             </p>
             <ul className="list-disc pl-4 space-y-1">
               {keyContributions.map((contribution, index) => (
-                <li key={index} className="text-body text-foreground">
+                <li key={index} className="text-body text-muted-foreground">
                   {contribution}
                 </li>
               ))}

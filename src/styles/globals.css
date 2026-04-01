@@ -191,7 +191,7 @@ html {
         }
         
                 .text-body {
-                  @apply text-sm lg:text-lg leading-relaxed;
+                  @apply text-sm md:text-base leading-relaxed;
         }
     
         
@@ -277,7 +277,7 @@ html {
             linear-gradient(to right, color-mix(in srgb, var(--border) 60%, transparent) 1px, transparent 1px),
             linear-gradient(to bottom, color-mix(in srgb, var(--border) 60%, transparent) 1px, transparent 1px);
           background-size: 80px 80px;
-          background-position: center center;
+          background-position: center bottom;
         }
 
 

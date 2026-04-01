@@ -73,7 +73,7 @@ const ImpactStories = () => {
           </div>
 
           <div className="flex justify-center mt-8 sm:mt-12">
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 md:gap-3 px-4 w-full sm:w-auto">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
               <a
                 href="#product-feedback"
                 className={cn(
@@ -82,7 +82,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "w-56 sm:w-auto text-center relative group",
+                  "whitespace-nowrap relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
@@ -117,7 +117,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "w-56 sm:w-auto text-center relative group",
+                  "whitespace-nowrap relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
@@ -152,7 +152,7 @@ const ImpactStories = () => {
                   // Text
                   "text-primary-foreground text-xs md:text-sm font-medium",
                   // Layout
-                  "w-56 sm:w-auto text-center relative group",
+                  "whitespace-nowrap relative group",
                   // Border
                   "border border-primary hover:border-primary/80",
                   // Background
