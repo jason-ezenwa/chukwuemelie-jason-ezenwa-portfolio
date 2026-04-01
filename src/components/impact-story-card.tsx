@@ -1,11 +1,5 @@
 import Link from 'next/link';
-import {
-  FaUser,
-  FaCode,
-  FaClock,
-  FaArrowRight,
-  FaCheckCircle,
-} from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -32,60 +26,42 @@ const ImpactStoryCard = ({
         "group h-full transition-all duration-300",
         "border-border bg-card",
       )}>
-      <CardContent className="p-6 md:p-8 flex flex-col h-full">
-        <div className="flex items-start gap-3 mb-4 md:mb-6">
-          <div className="flex-1">
-            <h3 className="lg:w-[80%] text-base lg:text-xl font-semibold text-foreground transition-colors duration-300 mb-1">
-              {title}
-            </h3>
-          </div>
-        </div>
+      <CardContent className="p-5 md:p-6 flex flex-col h-full">
+        <h3 className="lg:w-[80%] text-base lg:text-xl font-semibold text-foreground transition-colors duration-300 mb-4">
+          {title}
+        </h3>
 
-        <div className="grid grid-cols-1 gap-3 md:gap-4 mb-4 md:mb-6">
-          <div className="flex items-start gap-3">
-            <FaUser className="lg:h-[1lh] w-4 text-muted-foreground text-xs md:text-sm" />
-            <div className="flex-1">
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
-                Role
-              </p>
-              <p className="text-sm md:text-base text-foreground">{role}</p>
-            </div>
+        <div className="grid grid-cols-1 gap-2 mb-4">
+          <div>
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+              Role
+            </p>
+            <p className="text-sm md:text-base text-foreground">{role}</p>
           </div>
 
-          <div className="flex items-start gap-3">
-            <FaCode className="lg:h-[1lh] w-4 text-muted-foreground text-xs md:text-sm" />
-            <div>
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
-                Tech Stack
-              </p>
-              <p className="text-sm md:text-base text-foreground">
-                {techStack}
-              </p>
-            </div>
+          <div>
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+              Tech Stack
+            </p>
+            <p className="text-sm md:text-base text-foreground">{techStack}</p>
           </div>
 
-          <div className="flex items-start gap-3">
-            <FaClock className="lg:h-[1lh] w-4 text-muted-foreground text-xs md:text-sm" />
-            <div>
-              <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
-                Duration
-              </p>
-              <p className="text-sm md:text-base text-foreground">{duration}</p>
-            </div>
+          <div>
+            <p className="font-mono text-xs text-muted-foreground uppercase tracking-wide leading-[100%]">
+              Duration
+            </p>
+            <p className="text-sm md:text-base text-foreground">{duration}</p>
           </div>
         </div>
 
         <div className="flex-1">
-          <p className="text-sm md:text-base font-semibold text-foreground mb-3">
-            Key Contributions:
+          <p className="font-mono text-xs uppercase text-muted-foreground mb-2">
+            Key Contributions
           </p>
-          <ul className="space-y-2">
+          <ul className="list-disc pl-4 space-y-1">
             {keyContributions.map((contribution, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 text-body text-muted-foreground">
-                <FaCheckCircle className="text-muted-foreground text-sm mt-1.5 flex-shrink-0" />
-                <span>{contribution}</span>
+              <li key={index} className="text-body text-muted-foreground">
+                {contribution}
               </li>
             ))}
           </ul>

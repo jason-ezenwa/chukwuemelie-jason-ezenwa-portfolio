@@ -1,12 +1,4 @@
 import {
-  FaBriefcase,
-  FaBuilding,
-  FaUser,
-  FaClock,
-  FaCode,
-  FaListUl,
-  FaBullseye,
-  FaChartLine,
   FaAngleDoubleDown,
   FaExternalLinkAlt,
 } from "react-icons/fa";
@@ -195,14 +187,9 @@ const ImpactStories = () => {
           {/* Impact Story 1 - Peppermint */}
           <Card id="product-feedback" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
-              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
-                <div className="w-fit">
-                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
-                </div>
-                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
-                  Product Feedback & Scaling Operations
-                </h2>
-              </div>
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Product Feedback & Scaling Operations
+              </h2>
 
               <div
                 className={cn(
@@ -214,78 +201,53 @@ const ImpactStories = () => {
                   "border-b border-border",
                 )}>
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        COMPANY
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm sm:text-base text-foreground">
+                        Peppermint
                       </p>
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm sm:text-base text-foreground">
-                          Peppermint
-                        </p>
-                        <Link
-                          href="https://www.runpeppermint.com/"
-                          target="_blank">
-                          <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
-                        </Link>
-                      </div>
+                      <Link
+                        href="https://www.runpeppermint.com/"
+                        target="_blank">
+                        <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
+                      </Link>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaUser className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        ROLE
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Lead Software Engineer → Fractional Head of Engineering
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Lead Software Engineer → Fractional Head of Engineering
+                    </p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaClock className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        DURATION
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Apr 2024 - Present
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Apr 2024 - Present
+                    </p>
                   </div>
                 </div>
                 <div>
-                  <div className="flex items-start gap-3 h-full">
-                    <div className="rounded-md mt-1">
-                      <FaCode className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        TECH STACK
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                        Next.js, NestJS, TypeScript, MongoDB, AWS
-                      </p>
-                    </div>
-                  </div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    Next.js, NestJS, TypeScript, MongoDB, AWS
+                  </p>
                 </div>
               </div>
 
               <div className="space-y-6 sm:space-y-8">
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Overview
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
                   <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
                     {`Peppermint develops digital tools to help companies
                     collect and analyze product feedback. Starting as Lead Software Engineer,
@@ -297,12 +259,9 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Key Contributions
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
 
                   <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
                     <div
@@ -310,7 +269,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -345,7 +304,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -374,7 +333,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -393,7 +352,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -411,7 +370,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -434,7 +393,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -450,12 +409,9 @@ const ImpactStories = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Impact Summary
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Launched a product feedback application used by companies
@@ -490,14 +446,9 @@ const ImpactStories = () => {
           {/* Impact Story 3: Wynk */}
           <Card id="wynk-limited" className="border-border">
             <CardContent className="p-5 sm:p-8 md:p-10">
-              <div className="flex flex-col md:flex-row md:items-center gap-3 mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
-                <div className="w-fit">
-                  <FaBriefcase className="text-xl md:text-2xl text-foreground" />
-                </div>
-                <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight">
-                  Building a Lifestyle Super App and Web Platform
-                </h2>
-              </div>
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Building a Lifestyle Super App and Web Platform
+              </h2>
 
               <div
                 className={cn(
@@ -509,73 +460,44 @@ const ImpactStories = () => {
                   "border-b border-border",
                 )}>
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaBuilding className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        COMPANY
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <p className="text-sm sm:text-base text-foreground">
-                          Wynk
-                        </p>
-                      </div>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">Wynk</p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaUser className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        ROLE
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Full Stack Developer
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Full Stack Developer
+                    </p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaClock className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        DURATION
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Sep 2023 - Apr 2024
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Sep 2023 - Apr 2024
+                    </p>
                   </div>
                 </div>
                 <div>
-                  <div className="flex items-start gap-3 h-full">
-                    <div className="rounded-md mt-1">
-                      <FaCode className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        TECH STACK
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                        JavaScript, Node.js, Express, React
-                      </p>
-                    </div>
-                  </div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    JavaScript, Node.js, Express, React
+                  </p>
                 </div>
               </div>
 
               <div className="space-y-6 sm:space-y-8">
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaListUl className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Overview
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
                   <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
                     {`At Wynk, I worked within a cross-functional team on the Wynk Super App, focusing on financial services modules.
                   I rebuilt the company's web application with React, which increased retention by 55%. I also contributed to team growth by evaluating candidates and documenting systems comprehensively.`}
@@ -583,12 +505,9 @@ const ImpactStories = () => {
                 </div>
 
                 <div className="border-b border-border pb-6">
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaBullseye className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Key Contributions
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
 
                   <div className="pl-3 sm:pl-8 space-y-4 sm:space-y-6 md:space-y-8">
                     <div
@@ -596,7 +515,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -623,7 +542,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -646,7 +565,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -664,7 +583,7 @@ const ImpactStories = () => {
                         // Size and spacing
                         "p-3 sm:p-5",
                         // Border
-                        "border border-border rounded-lg sm:rounded-xl",
+                        "border border-border",
                         // Background
                         "bg-card",
                         // Effects and interactive states
@@ -680,12 +599,9 @@ const ImpactStories = () => {
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <FaChartLine className="text-foreground text-sm sm:text-base" />
-                    <h3 className="font-semibold text-lg sm:text-xl text-foreground">
-                      Impact Summary
-                    </h3>
-                  </div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Contributed to a lifestyle super app, focusing on
@@ -809,7 +725,7 @@ const ImpactStories = () => {
                     // Size and spacing
                     "p-3 sm:p-5",
                     // Border
-                    "border border-border rounded-lg sm:rounded-xl",
+                    "border border-border",
                     // Background
                     "bg-card",
                     // Effects and interactive states
@@ -831,7 +747,7 @@ const ImpactStories = () => {
                     // Size and spacing
                     "p-3 sm:p-5",
                     // Border
-                    "border border-border rounded-lg sm:rounded-xl",
+                    "border border-border",
                     // Background
                     "bg-card",
                     // Effects and interactive states
@@ -852,7 +768,7 @@ const ImpactStories = () => {
                     // Size and spacing
                     "p-3 sm:p-5",
                     // Border
-                    "border border-border rounded-lg sm:rounded-xl",
+                    "border border-border",
                     // Background
                     "bg-card",
                     // Effects and interactive states

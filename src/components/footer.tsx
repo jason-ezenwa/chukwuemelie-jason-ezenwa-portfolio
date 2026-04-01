@@ -10,7 +10,7 @@ const Footer = ({ className }: { className?: string }) => {
     <footer
       className={cn(
         // Layout
-        "w-full flex flex-col items-center justify-between",
+        "w-full flex flex-col items-start justify-between",
         // Size and spacing
         "section-spacing gap-2 lg:gap-6",
         // Text
@@ -19,8 +19,8 @@ const Footer = ({ className }: { className?: string }) => {
         "transition-all duration-300",
         className
       )}>
-      <div className="flex">
-        <div className="flex space-x-5  items-center mr-8">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-0">
+        <div className="flex space-x-5 items-center sm:mr-8">
           <Link href={EMAIL_URL}>
             <MdEmail className="size-6 lg:size-7" />
           </Link>
