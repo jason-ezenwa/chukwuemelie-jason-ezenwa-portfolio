@@ -216,7 +216,7 @@ export default function Home() {
               link="/impact-stories#product-feedback"
             />
             <ImpactStoryCard
-              title="Building Scalable Infrastructure for Blue-Collar Empowerment"
+              title="Blue-Collar Empowerment Infrastructure"
               role="Software Engineer"
               techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
               duration="Jan 2024 - Present"

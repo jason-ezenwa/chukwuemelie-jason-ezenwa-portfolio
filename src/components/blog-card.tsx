@@ -16,7 +16,7 @@ const BlogCard = ({ title, descriptionParagraphs, link }: BlogCardProps) => {
         "group h-full transition-all duration-300",
         "border-border",
       )}>
-      <CardContent className="p-6 md:p-8 flex flex-col h-full">
+      <CardContent className="p-5 md:p-6 flex flex-col h-full">
         <div className="flex-1 space-y-3 md:space-y-4">
           <h3 className="text-lg lg:text-xl font-semibold text-foreground transition-colors duration-300">
             {title}

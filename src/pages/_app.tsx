@@ -1,17 +1,14 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
-import { DM_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const geistSans = localFont({
+  src: "../../node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2",
+  variable: "--font-geist-sans",
+  weight: "100 900",
 });
 
 const jetBrainsMono = JetBrains_Mono({
@@ -23,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
       className={cn(
-        `${dmSans.variable} ${inter.variable} ${jetBrainsMono.variable} font-sans min-h-screen flex flex-col`,
+        `${geistSans.variable} ${jetBrainsMono.variable} font-sans min-h-screen flex flex-col`,
       )}>
       <ThemeProvider
         attribute="class"
