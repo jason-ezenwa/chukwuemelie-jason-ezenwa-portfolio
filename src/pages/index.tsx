@@ -205,7 +205,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <ImpactStoryCard
               title="Product Feedback & Scaling Operations"
-              role="Fractional Head of Engineering"
+              role="Lead Software Engineer → Head of Engineering"
               techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
               duration="Apr 2024 - Present"
               keyContributions={[
@@ -219,9 +219,9 @@ export default function Home() {
               title="Blue-Collar Empowerment Infrastructure"
               role="Software Engineer"
               techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
-              duration="Jan 2024 - Present"
+              duration="Jan 2024 - May 2026"
               keyContributions={[
-                "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦35m in revenue",
+                "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦45m in revenue",
                 "Provided data-driven insights that guided product improvements and optimized funnels",
                 "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
               ]}

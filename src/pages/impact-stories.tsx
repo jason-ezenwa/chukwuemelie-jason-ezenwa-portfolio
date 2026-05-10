@@ -1,6 +1,7 @@
 import {
   FaAngleDoubleDown,
   FaExternalLinkAlt,
+  FaUser,
 } from "react-icons/fa";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
@@ -221,7 +222,7 @@ const ImpactStories = () => {
                       ROLE
                     </p>
                     <p className="text-sm sm:text-base text-foreground">
-                      Lead Software Engineer → Fractional Head of Engineering
+                      Lead Software Engineer → Head of Engineering
                     </p>
                   </div>
                   <div>
@@ -253,8 +254,8 @@ const ImpactStories = () => {
                     collect and analyze product feedback. Starting as Lead Software Engineer,
                     I directed engineering efforts to build user-facing applications that
                     enhanced the product feedback process. In January 2026, I transitioned
-                    to Fractional Head of Engineering — leading engineering strategy,
-                    technical direction, and cross-functional alignment on a fractional basis.`}
+                    to Head of Engineering — leading engineering strategy,
+                    technical direction, and cross-functional alignment.`}
                   </p>
                 </div>
 
@@ -345,10 +346,10 @@ const ImpactStories = () => {
 
                     <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
-                        Fractional Head of Engineering
+                        Head of Engineering
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                        {`Transitioned to Fractional Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, and cross-functional alignment on a fractional basis.`}
+                        {`Transitioned to Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, and cross-functional alignment.`}
                       </p>
                     </div>
                   </div>
@@ -380,7 +381,7 @@ const ImpactStories = () => {
                       streamlined cash flows
                     </li>
                     <li>
-                      Transitioned to Fractional Head of Engineering in January
+                      Transitioned to Head of Engineering in January
                       2026
                     </li>
                   </ul>
@@ -429,7 +430,7 @@ const ImpactStories = () => {
                       DURATION
                     </p>
                     <p className="text-sm sm:text-base text-foreground">
-                      Jan 2024 - Present
+                      Jan 2024 - May 2026
                     </p>
                   </div>
                 </div>
@@ -470,7 +471,7 @@ const ImpactStories = () => {
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
                         Collaborated cross-functionally to build and launch
-                        three product lines that generated over ₦35m in
+                        three product lines that generated over ₦45m in
                         revenue:
                       </p>
                       <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2 mb-3 sm:mb-4">
@@ -509,7 +510,7 @@ const ImpactStories = () => {
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
                         Contributed to the design and engineering of a portfolio
-                        builder that leverages AI to help 4,000+ artisans
+                        builder that leverages AI to help 5,000+ artisans
                         present their experience, skills, and past work.
                       </p>
                       <p className="text-foreground text-sm sm:text-base mb-3 sm:mb-4">
@@ -600,7 +601,7 @@ const ImpactStories = () => {
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Built systems for artisan recruitment, home maintenance,
-                      and AI-driven portfolios, generating over ₦35m in revenue
+                      and AI-driven portfolios, generating over ₦45m in revenue
                     </li>
                     <li>
                       Provided data-driven insights that guided product
