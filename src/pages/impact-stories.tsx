@@ -243,7 +243,7 @@ const ImpactStories = () => {
                         ROLE
                       </p>
                       <p className="text-sm sm:text-base text-foreground">
-                        Lead Software Engineer → Fractional Head of Engineering
+                        Lead Software Engineer → Head of Engineering
                       </p>
                     </div>
                   </div>
@@ -291,8 +291,8 @@ const ImpactStories = () => {
                     collect and analyze product feedback. Starting as Lead Software Engineer,
                     I directed engineering efforts to build user-facing applications that
                     enhanced the product feedback process. In January 2026, I transitioned
-                    to Fractional Head of Engineering — leading engineering strategy,
-                    technical direction, and cross-functional alignment on a fractional basis.`}
+                    to Head of Engineering — leading engineering strategy,
+                    technical direction, and cross-functional alignment.`}
                   </p>
                 </div>
 
@@ -440,10 +440,10 @@ const ImpactStories = () => {
                         // Effects and interactive states
                       )}>
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
-                        Fractional Head of Engineering
+                        Head of Engineering
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
-                        {`Transitioned to Fractional Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, and cross-functional alignment on a fractional basis.`}
+                        {`Transitioned to Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, and cross-functional alignment.`}
                       </p>
                     </div>
                   </div>
@@ -478,7 +478,7 @@ const ImpactStories = () => {
                       streamlined cash flows
                     </li>
                     <li>
-                      Transitioned to Fractional Head of Engineering in January
+                      Transitioned to Head of Engineering in January
                       2026
                     </li>
                   </ul>
