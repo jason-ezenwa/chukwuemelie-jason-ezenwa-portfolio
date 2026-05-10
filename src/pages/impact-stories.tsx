@@ -217,18 +217,13 @@ const ImpactStories = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-md">
-                      <FaUser className="text-muted-foreground text-sm sm:text-base" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
-                        ROLE
-                      </p>
-                      <p className="text-sm sm:text-base text-foreground">
-                        Lead Software Engineer → Head of Engineering
-                      </p>
-                    </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Lead Software Engineer → Head of Engineering
+                    </p>
                   </div>
                   <div>
                     <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
