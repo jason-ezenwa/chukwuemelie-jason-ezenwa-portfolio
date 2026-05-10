@@ -1,6 +1,7 @@
 import {
   FaAngleDoubleDown,
   FaExternalLinkAlt,
+  FaUser,
 } from "react-icons/fa";
 import Footer from "@/components/footer";
 import Helmet from "@/components/helmet";
