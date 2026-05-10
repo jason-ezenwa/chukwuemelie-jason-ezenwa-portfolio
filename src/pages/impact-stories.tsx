@@ -435,7 +435,7 @@ const ImpactStories = () => {
                       DURATION
                     </p>
                     <p className="text-sm sm:text-base text-foreground">
-                      Jan 2024 - Present
+                      Jan 2024 - May 2026
                     </p>
                   </div>
                 </div>
@@ -476,7 +476,7 @@ const ImpactStories = () => {
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
                         Collaborated cross-functionally to build and launch
-                        three product lines that generated over ₦35m in
+                        three product lines that generated over ₦45m in
                         revenue:
                       </p>
                       <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2 mb-3 sm:mb-4">
@@ -606,7 +606,7 @@ const ImpactStories = () => {
                   <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
                     <li>
                       Built systems for artisan recruitment, home maintenance,
-                      and AI-driven portfolios, generating over ₦35m in revenue
+                      and AI-driven portfolios, generating over ₦45m in revenue
                     </li>
                     <li>
                       Provided data-driven insights that guided product
