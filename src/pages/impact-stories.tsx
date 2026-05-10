@@ -515,7 +515,7 @@ const ImpactStories = () => {
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
                         Contributed to the design and engineering of a portfolio
-                        builder that leverages AI to help 4,000+ artisans
+                        builder that leverages AI to help 5,000+ artisans
                         present their experience, skills, and past work.
                       </p>
                       <p className="text-foreground text-sm sm:text-base mb-3 sm:mb-4">
