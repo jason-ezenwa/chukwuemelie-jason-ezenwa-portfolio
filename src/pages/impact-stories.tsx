@@ -527,6 +527,22 @@ const ImpactStories = () => {
 
                     <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
                       <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Facility Maintenance REST API
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-3 sm:mb-4">
+                        {`Built a REST API that allows external third-party companies to outsource facility maintenance to LaborHack's network of vetted artisans, opening up a new B2B integration channel.`}
+                      </p>
+                      <Link
+                        href="https://www.laborhack.com/api-docs"
+                        target="_blank"
+                        className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                        <span className="text-sm sm:text-base">API Documentation</span>
+                        <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                      </Link>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
                         Semi-Automated Payout System
                       </h4>
                       <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
