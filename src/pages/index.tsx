@@ -3,7 +3,7 @@ import ProjectCard from "@/components/project-card";
 import ImpactStoryCard from "@/components/impact-story-card";
 import LogosComponent from "@/components/logos-component";
 import { StickyBottomRight, StickyDiv } from "@/components/sticky-widgets";
-import { fadeIn } from "@/utils/fadeInAnimation";
+import { fadeIn, staggerContainer, cardVariant } from "@/utils/fadeInAnimation";
 
 import { motion } from "framer-motion";
 import Footer from "@/components/footer";
@@ -72,6 +72,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="text-section text-foreground mb-12">
               About Me
             </motion.h2>
@@ -81,6 +82,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
             className="relative">
             <div
               className={cn(
@@ -117,6 +119,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
             className="mt-12 flex justify-start">
             <Button
               className="relative group px-3 py-6"
@@ -160,6 +163,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="text-section text-foreground mb-12">
               Core Skills
             </motion.h2>
@@ -190,6 +194,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="text-section text-foreground mb-4">
               Impact Stories
             </motion.h2>
@@ -197,65 +202,65 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.08, ease: [0.23, 1, 0.32, 1] }}
               className="text-body text-muted-foreground max-w-2xl mx-auto">
               Detailed analysis of my most impactful projects and contributions
             </motion.p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            <ImpactStoryCard
-              title="Product Feedback & Scaling Operations"
-              role="Lead Software Engineer → Head of Engineering"
-              techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
-              duration="Apr 2024 - Present"
-              keyContributions={[
-                "Launched an AI-powered product feedback application used by companies like Kuda",
-                "Built AI-powered pipelines with LLMs to generate usability study reports",
-                "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
-              ]}
-              link="/impact-stories#product-feedback"
-            />
-            <ImpactStoryCard
-              title="Blue-Collar Empowerment Infrastructure"
-              role="Software Engineer"
-              techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
-              duration="Jan 2024 - May 2026"
-              keyContributions={[
-                "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦45m in revenue",
-                "Provided data-driven insights that guided product improvements and optimized funnels",
-                "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
-              ]}
-              link="/impact-stories#blue-collar-empowerment"
-            />
-            {/* <ImpactStoryCard
-                title="Laying the Foundation for Secure Gold Investment"
-                role="Software Engineer"
-                techStack="Next.js, Node.js, TypeScript, PostgreSQL, Docker"
-                duration="Aug 2024 - Jun 2025"
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}>
+            <motion.div variants={cardVariant}>
+              <ImpactStoryCard
+                title="Product Feedback & Scaling Operations"
+                role="Lead Software Engineer → Head of Engineering"
+                techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
+                duration="Apr 2024 - Present"
                 keyContributions={[
-                  "Led the development of a gold sourcing and purchase platform",
-                  "Built secure wallet and authentication systems",
-                  "Shaped secure, scalable infrastructure for the gold investment platform",
+                  "Launched an AI-powered product feedback application used by companies like Kuda",
+                  "Built AI-powered pipelines with LLMs to generate usability study reports",
+                  "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
                 ]}
-                link="/impact-stories#gold-investment"
-              /> */}
-            <ImpactStoryCard
-              title="Building a Lifestyle Super App and Web Platform"
-              role="Full Stack Developer"
-              techStack="JavaScript, Node.js, Express, React"
-              duration="Sep 2023 - Apr 2024"
-              keyContributions={[
-                "Contributed to a lifestyle super app, focusing on financial services",
-                "Rebuilt the company web application in React, increasing retention by 55%",
-                "Led technical and culture-fit assessment of new hires",
-              ]}
-              link="/impact-stories#wynk-limited"
-            />
-          </div>
+                link="/impact-stories#product-feedback"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <ImpactStoryCard
+                title="Blue-Collar Empowerment Infrastructure"
+                role="Software Engineer"
+                techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
+                duration="Jan 2024 - May 2026"
+                keyContributions={[
+                  "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦45m in revenue",
+                  "Provided data-driven insights that guided product improvements and optimized funnels",
+                  "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
+                ]}
+                link="/impact-stories#blue-collar-empowerment"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <ImpactStoryCard
+                title="Building a Lifestyle Super App and Web Platform"
+                role="Full Stack Developer"
+                techStack="JavaScript, Node.js, Express, React"
+                duration="Sep 2023 - Apr 2024"
+                keyContributions={[
+                  "Contributed to a lifestyle super app, focusing on financial services",
+                  "Rebuilt the company web application in React, increasing retention by 55%",
+                  "Led technical and culture-fit assessment of new hires",
+                ]}
+                link="/impact-stories#wynk-limited"
+              />
+            </motion.div>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
             className="flex justify-center mt-12">
             <Button
               className="relative group px-3 py-6"
@@ -299,6 +304,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="text-section text-foreground mb-4">
               Other Projects
             </motion.h2>
@@ -306,49 +312,58 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.08, ease: [0.23, 1, 0.32, 1] }}
               className="text-body text-muted-foreground max-w-2xl mx-auto">
               Personal projects showcasing various technologies and
               problem-solving approaches
             </motion.p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            <ProjectCard
-              title="Hunt Assistant"
-              descriptionParagraphs={[
-                "A comprehensive AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and helps you track all your applications in one place.",
-                "Features include user authentication, persistent application tracking and AI-powered insights.",
-                "Built with: TypeScript, Next.js, MongoDB, AI",
-              ]}
-              image="/images/hunt-assistant-dashboard.jpeg"
-              githubLink="https://github.com/jason-ezenwa/hunt-assistant"
-              seeLiveLink="https://hunt-assistant.vercel.app/"
-            />
-
-            <ProjectCard
-              title="Zen"
-              descriptionParagraphs={[
-                "Zen Finance is a modern fintech application that allows users to manage multi-currency wallets, exchange currencies, and access virtual card services such as creation, funding, and transaction tracking.",
-                "It integrates with Maplerad and Paystack.",
-                "Built with: TypeScript, Next.js, Node.js, MongoDB",
-              ]}
-              image="/images/zen-dashboard.jpeg"
-              githubLink="https://github.com/jason-ezenwa/zen-finance"
-              seeLiveLink="https://try-zen-finance.vercel.app/"
-            />
-
-            <ProjectCard
-              title="Prospera AI Dashboard"
-              descriptionParagraphs={[
-                "This is a dashboard mockup created for Prospera AI, a company that helps increase lead conversion rates with AI-generated personalised Lead Magnets and Agentic Follow ups.",
-                "Features a user interface with analytics and metrics for intent signal tracking, AI-powered personalized content generation, and automated lead magnet insights.",
-                "Built with: Next.js, Tailwind CSS, Shadcn UI",
-              ]}
-              image="/images/prospera-ai-dashboard.jpeg"
-              githubLink="https://github.com/jason-ezenwa/prospera-ai-dashboard"
-              seeLiveLink="https://prospera-ai-dashboard-one.vercel.app/"
-            />
-          </div>
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}>
+            <motion.div variants={cardVariant}>
+              <ProjectCard
+                title="Hunt Assistant"
+                descriptionParagraphs={[
+                  "A comprehensive AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and helps you track all your applications in one place.",
+                  "Features include user authentication, persistent application tracking and AI-powered insights.",
+                  "Built with: TypeScript, Next.js, MongoDB, AI",
+                ]}
+                image="/images/hunt-assistant-dashboard.jpeg"
+                githubLink="https://github.com/jason-ezenwa/hunt-assistant"
+                seeLiveLink="https://hunt-assistant.vercel.app/"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <ProjectCard
+                title="Zen"
+                descriptionParagraphs={[
+                  "Zen Finance is a modern fintech application that allows users to manage multi-currency wallets, exchange currencies, and access virtual card services such as creation, funding, and transaction tracking.",
+                  "It integrates with Maplerad and Paystack.",
+                  "Built with: TypeScript, Next.js, Node.js, MongoDB",
+                ]}
+                image="/images/zen-dashboard.jpeg"
+                githubLink="https://github.com/jason-ezenwa/zen-finance"
+                seeLiveLink="https://try-zen-finance.vercel.app/"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <ProjectCard
+                title="Prospera AI Dashboard"
+                descriptionParagraphs={[
+                  "This is a dashboard mockup created for Prospera AI, a company that helps increase lead conversion rates with AI-generated personalised Lead Magnets and Agentic Follow ups.",
+                  "Features a user interface with analytics and metrics for intent signal tracking, AI-powered personalized content generation, and automated lead magnet insights.",
+                  "Built with: Next.js, Tailwind CSS, Shadcn UI",
+                ]}
+                image="/images/prospera-ai-dashboard.jpeg"
+                githubLink="https://github.com/jason-ezenwa/prospera-ai-dashboard"
+                seeLiveLink="https://prospera-ai-dashboard-one.vercel.app/"
+              />
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* Blogs section */}
@@ -374,6 +389,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="text-section text-foreground mb-4">
               My Blog Posts
             </motion.h2>
@@ -381,62 +397,79 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.08, ease: [0.23, 1, 0.32, 1] }}
               className="text-body text-muted-foreground max-w-2xl mx-auto">
               Thoughts on software engineering, technology trends, and industry
               insights
             </motion.p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            <BlogCard
-              title="MVPs and the Engineering Trap: Building What Actually Matters"
-              descriptionParagraphs={[
-                "Many startups fail not because they can't build, but because they build the wrong things — perfectly.",
-                "Here, I explore how clarity beats code in early-stage startups, and why your MVP should be a learning engine focused on understanding user needs rather than perfect architecture.",
-              ]}
-              link="https://blog.stackademic.com/mvps-and-the-engineering-trap-building-what-actually-matters-6c253bb5b3cd"
-            />
-            <BlogCard
-              title="The Irreplaceable Software Engineer in the AI era"
-              descriptionParagraphs={[
-                "The rapid advancement of AI has raised the question: Will AI replace software engineers? The reality is that some engineers will remain indispensable.",
-                "In this article, I discuss how adaptability, cross-disciplinary thinking, and effectively leveraging AI are the keys to staying irreplaceable in an AI-powered world.",
-              ]}
-              link="https://blog.stackademic.com/the-irreplaceable-software-engineer-thriving-in-the-age-of-ai-569525593922"
-            />
-            <BlogCard
-              title="The Cross-Disciplinary Role of the Modern Software Engineer"
-              descriptionParagraphs={[
-                "An article about the exposure of software engineers to different fields while working with experts in those fields.",
-                "In this piece, I talk about how engineers work across disciplines to build smarter, more impactful solutions over time.",
-              ]}
-              link="https://blog.stackademic.com/beyond-silos-the-cross-disciplinary-role-of-the-modern-software-engineer-23305b55389b"
-            />
-            <BlogCard
-              title="The Priceless Influence of Senior Software Engineers on Junior Engineers"
-              descriptionParagraphs={[
-                "An article that highlights the multifaceted benefits of working with senior software engineers.",
-                "In this piece, I explore how the mentorship and guidance from experienced engineers can dramatically accelerate the growth and expertise of junior engineers.",
-              ]}
-              link="https://blog.stackademic.com/the-priceless-influence-of-senior-software-engineers-on-junior-engineers-c7c7cac89747"
-            />
-            <BlogCard
-              title="Implementing an Escrow-like State in Node.js: Building Trust and Security in Online Transactions"
-              descriptionParagraphs={[
-                "Explains the concept of escrows and a nodejs implementation",
-                "In this blog post, I go through: What escrows are and their importance as well as a step by step implementation in Node.js.",
-              ]}
-              link="https://blog.stackademic.com/implementing-an-escrow-like-state-in-node-js-building-trust-and-security-in-online-transactions-a8058144c005"
-            />
-            <BlogCard
-              title="Authentication and Authorization with JSON Web Tokens"
-              descriptionParagraphs={[
-                "This blog dives deep into the world of JSON Web Tokens (JWTs), shedding light on how they're used in authentication and authorization processes.",
-                "In this blog post, I explain: What JWTs are and how they work, from token issuance to server verification.",
-              ]}
-              link="https://medium.com/stackademic/the-definitive-guide-to-authentication-and-authorization-with-json-web-tokens-everything-you-need-5bc7795cb668"
-            />
-          </div>
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.05 }}>
+            <motion.div variants={cardVariant}>
+              <BlogCard
+                title="MVPs and the Engineering Trap: Building What Actually Matters"
+                descriptionParagraphs={[
+                  "Many startups fail not because they can't build, but because they build the wrong things — perfectly.",
+                  "Here, I explore how clarity beats code in early-stage startups, and why your MVP should be a learning engine focused on understanding user needs rather than perfect architecture.",
+                ]}
+                link="https://blog.stackademic.com/mvps-and-the-engineering-trap-building-what-actually-matters-6c253bb5b3cd"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <BlogCard
+                title="The Irreplaceable Software Engineer in the AI era"
+                descriptionParagraphs={[
+                  "The rapid advancement of AI has raised the question: Will AI replace software engineers? The reality is that some engineers will remain indispensable.",
+                  "In this article, I discuss how adaptability, cross-disciplinary thinking, and effectively leveraging AI are the keys to staying irreplaceable in an AI-powered world.",
+                ]}
+                link="https://blog.stackademic.com/the-irreplaceable-software-engineer-thriving-in-the-age-of-ai-569525593922"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <BlogCard
+                title="The Cross-Disciplinary Role of the Modern Software Engineer"
+                descriptionParagraphs={[
+                  "An article about the exposure of software engineers to different fields while working with experts in those fields.",
+                  "In this piece, I talk about how engineers work across disciplines to build smarter, more impactful solutions over time.",
+                ]}
+                link="https://blog.stackademic.com/beyond-silos-the-cross-disciplinary-role-of-the-modern-software-engineer-23305b55389b"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <BlogCard
+                title="The Priceless Influence of Senior Software Engineers on Junior Engineers"
+                descriptionParagraphs={[
+                  "An article that highlights the multifaceted benefits of working with senior software engineers.",
+                  "In this piece, I explore how the mentorship and guidance from experienced engineers can dramatically accelerate the growth and expertise of junior engineers.",
+                ]}
+                link="https://blog.stackademic.com/the-priceless-influence-of-senior-software-engineers-on-junior-engineers-c7c7cac89747"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <BlogCard
+                title="Implementing an Escrow-like State in Node.js: Building Trust and Security in Online Transactions"
+                descriptionParagraphs={[
+                  "Explains the concept of escrows and a nodejs implementation",
+                  "In this blog post, I go through: What escrows are and their importance as well as a step by step implementation in Node.js.",
+                ]}
+                link="https://blog.stackademic.com/implementing-an-escrow-like-state-in-node-js-building-trust-and-security-in-online-transactions-a8058144c005"
+              />
+            </motion.div>
+            <motion.div variants={cardVariant}>
+              <BlogCard
+                title="Authentication and Authorization with JSON Web Tokens"
+                descriptionParagraphs={[
+                  "This blog dives deep into the world of JSON Web Tokens (JWTs), shedding light on how they're used in authentication and authorization processes.",
+                  "In this blog post, I explain: What JWTs are and how they work, from token issuance to server verification.",
+                ]}
+                link="https://medium.com/stackademic/the-definitive-guide-to-authentication-and-authorization-with-json-web-tokens-everything-you-need-5bc7795cb668"
+              />
+            </motion.div>
+          </motion.div>
         </section>
 
         <StickyBottomRight>
