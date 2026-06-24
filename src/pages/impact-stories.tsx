@@ -198,7 +198,7 @@ const ImpactStories = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.5, ease: EASE_OUT }}>
-          <Card id="product-feedback" className="border-border">
+          <Card id="product-feedback" className="border-border scroll-mt-28">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 Product Feedback & Scaling Operations
@@ -409,7 +409,7 @@ const ImpactStories = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.5, ease: EASE_OUT }}>
-          <Card id="blue-collar-empowerment" className="border-border">
+          <Card id="blue-collar-empowerment" className="border-border scroll-mt-28">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 Blue-Collar Empowerment Infrastructure
@@ -658,7 +658,7 @@ const ImpactStories = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.5, ease: EASE_OUT }}>
-          <Card id="wynk-limited" className="border-border">
+          <Card id="wynk-limited" className="border-border scroll-mt-28">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 Building a Lifestyle Super App and Web Platform
