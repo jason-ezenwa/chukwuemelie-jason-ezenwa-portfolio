@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { LINKEDIN_URL } from "@/utils/constants";
 
+const EASE_OUT = [0.23, 1, 0.32, 1] as const;
+
 const ImpactStories = () => {
   return (
     <>
@@ -31,7 +33,7 @@ const ImpactStories = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.15, ease: EASE_OUT }}
             className="mb-8 max-w-[calc(100vw-2.5rem)] lg:max-w-6xl mx-auto">
             <Link
               href="/"
@@ -59,13 +61,14 @@ const ImpactStories = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: EASE_OUT }}
                 className="text-hero text-foreground mb-6">
                 Impact Stories
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
+                transition={{ duration: 0.4, delay: 0.08, ease: EASE_OUT }}
                 className="text-body text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Detailed analysis of my most impactful projects and
                 contributions
@@ -73,7 +76,11 @@ const ImpactStories = () => {
             </div>
           </div>
 
-          <div className="flex justify-center mt-8 sm:mt-12">
+          <motion.div
+            className="flex justify-center mt-8 sm:mt-12"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2, ease: EASE_OUT }}>
             <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
               <a
                 href="#product-feedback"
@@ -181,12 +188,17 @@ const ImpactStories = () => {
                 </span>
               </a>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         <section className="section-spacing space-y-16 md:space-y-20 border-y border-border">
           {/* Impact Story 1 - Peppermint */}
-          <Card id="product-feedback" className="border-border">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, ease: EASE_OUT }}>
+          <Card id="product-feedback" className="border-border scroll-mt-28">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 Product Feedback & Scaling Operations
@@ -389,9 +401,15 @@ const ImpactStories = () => {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Impact Story 2: LaborHack */}
-          <Card id="blue-collar-empowerment" className="border-border">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, ease: EASE_OUT }}>
+          <Card id="blue-collar-empowerment" className="border-border scroll-mt-28">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 Blue-Collar Empowerment Infrastructure
@@ -632,9 +650,15 @@ const ImpactStories = () => {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Impact Story 3: Wynk */}
-          <Card id="wynk-limited" className="border-border">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, ease: EASE_OUT }}>
+          <Card id="wynk-limited" className="border-border scroll-mt-28">
             <CardContent className="p-5 sm:p-8 md:p-10">
               <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
                 Building a Lifestyle Super App and Web Platform
@@ -773,6 +797,7 @@ const ImpactStories = () => {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Impact Story 3 */}
           {/* <div
@@ -968,6 +993,7 @@ const ImpactStories = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: EASE_OUT }}
             className="flex justify-center">
             <Button
               className="relative group px-3 py-6"

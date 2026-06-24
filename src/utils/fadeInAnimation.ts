@@ -1,9 +1,9 @@
-export const fadeIn = (direction: string, delay: any) => {
+export const fadeIn = (direction: string, delay: number) => {
   return {
     hidden: {
-      y: direction === "up" ? 40 : direction === "down" ? -40 : 0,
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      opacity: 1, // keep opacity at 1 to prevent layout shifts
+      y: direction === "up" ? 30 : direction === "down" ? -30 : 0,
+      x: direction === "left" ? 60 : direction === "right" ? -60 : 0,
+      opacity: 0,
     },
     show: {
       y: 0,
@@ -11,10 +11,33 @@ export const fadeIn = (direction: string, delay: any) => {
       opacity: 1,
       transition: {
         type: "tween",
-        duration: 0.6,
-        delay: delay,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        duration: 0.4,
+        delay,
+        ease: [0.23, 1, 0.32, 1],
       },
     },
   };
 }
+
+export const staggerContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+export const cardVariant = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      duration: 0.4,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  },
+};

@@ -13,8 +13,9 @@ const BlogCard = ({ title, descriptionParagraphs, link }: BlogCardProps) => {
   return (
     <Card
       className={cn(
-        "group h-full transition-all duration-300",
+        "group h-full transition-[border-color,box-shadow,transform] duration-300",
         "border-border",
+        "hover:shadow-md hover:-translate-y-0.5",
       )}>
       <CardContent className="p-5 md:p-6 flex flex-col h-full">
         <div className="flex-1 space-y-3 md:space-y-4">
