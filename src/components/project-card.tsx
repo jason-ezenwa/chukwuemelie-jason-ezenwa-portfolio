@@ -22,8 +22,9 @@ const ProjectCard = ({
   return (
     <Card
       className={cn(
-        'group overflow-hidden transition-all duration-300',
+        'group overflow-hidden transition-[border-color,box-shadow,transform] duration-300',
         'border-border',
+        'hover:shadow-md hover:-translate-y-0.5',
       )}>
       <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
         <Image
@@ -31,7 +32,7 @@ const ProjectCard = ({
           alt={title}
           fill
           sizes="100vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
       </div>

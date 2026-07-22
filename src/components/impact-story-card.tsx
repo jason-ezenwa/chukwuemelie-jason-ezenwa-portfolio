@@ -23,8 +23,9 @@ const ImpactStoryCard = ({
   return (
     <Card
       className={cn(
-        "group h-full transition-all duration-300",
+        "group h-full transition-[border-color,box-shadow,transform] duration-300",
         "border-border bg-card",
+        "hover:shadow-md hover:-translate-y-0.5",
       )}>
       <CardContent className="p-5 md:p-6 flex flex-col h-full">
         <h3 className="lg:w-[80%] text-base lg:text-xl font-semibold text-foreground transition-colors duration-300 mb-4">
