@@ -216,7 +216,7 @@ export default function Home() {
             <motion.div variants={cardVariant}>
               <ImpactStoryCard
                 title="Product Feedback & Scaling Operations"
-                role="Lead Software Engineer → Head of Engineering"
+                role="Lead Software Engineer → Fractional Head of Engineering"
                 techStack="Next.js, NestJS, TypeScript, MongoDB, AWS"
                 duration="Apr 2024 - Present"
                 keyContributions={[
