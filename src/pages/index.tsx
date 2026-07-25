@@ -356,7 +356,7 @@ export default function Home() {
                 descriptionParagraphs={[
                   "This is a dashboard mockup created for Prospera AI, a company that helps increase lead conversion rates with AI-generated personalised Lead Magnets and Agentic Follow ups.",
                   "Features a user interface with analytics and metrics for intent signal tracking, AI-powered personalized content generation, and automated lead magnet insights.",
-                  "Built with: Next.js, Tailwind CSS, Shadcn UI",
+                  "Built with: TypeScript, Next.js, Tailwind CSS, Recharts",
                 ]}
                 image="/images/prospera-ai-dashboard.jpeg"
                 githubLink="https://github.com/jason-ezenwa/prospera-ai-dashboard"
