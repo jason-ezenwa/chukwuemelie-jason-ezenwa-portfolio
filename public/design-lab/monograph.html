@@ -362,6 +362,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 @media (min-width: 640px) {
   .fig-stack { grid-template-columns: 1fr 1fr; }
   .fig-stack .fig:first-child { grid-column: 1 / -1; }
+  .fig-stack .fig:nth-child(n+4) .num { font-size: clamp(2.6rem, 8vw, 4.2rem); }
 }
 @media (min-width: 1024px) {
   .fig-lead { grid-column: 1 / span 6; }
@@ -663,7 +664,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
   <section class="hero wrap" aria-labelledby="name">
     <dl class="grid hero-meta mono rise">
       <div><dt class="line"><span style="--i:0">Discipline</span></dt><dd class="line"><span style="--i:1">Full Stack Software Engineer</span></dd></div>
-      <div><dt class="line"><span style="--i:1">Currently</span></dt><dd class="line"><span style="--i:2">Fractional Head of Engineering, Peppermint</span></dd></div>
+      <div><dt class="line"><span style="--i:1">Currently</span></dt><dd class="line"><span style="--i:2">Lead Software Engineer, Scooler AI</span></dd><dd class="line"><span style="--i:3">Fractional Head of Engineering, Peppermint</span></dd></div>
       <div><dt class="line"><span style="--i:2">Status</span></dt><dd class="line"><span style="--i:3"><span class="avail">Available for select work</span></span></dd></div>
     </dl>
 
@@ -704,13 +705,13 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
     <div class="grid sec-head">
       <h2 class="t" id="stack-h">Stack</h2>
       <p class="s mono muted">Tools used in production</p>
-      <p class="c mono muted">14 tools / 4 layers</p>
+      <p class="c mono muted">16 tools / 4 layers</p>
     </div>
     <div class="grid stack">
       <div class="stack-col"><h3 class="mono mono-up muted">Languages</h3><ul><li>TypeScript</li><li>JavaScript</li><li>Python</li></ul></div>
-      <div class="stack-col"><h3 class="mono mono-up muted">Frameworks</h3><ul><li>React</li><li>Next.js</li><li>Node.js</li><li>Express.js</li><li>NestJS</li></ul></div>
+      <div class="stack-col"><h3 class="mono mono-up muted">Frameworks</h3><ul><li>React</li><li>Next.js</li><li>Node.js</li><li>Express.js</li><li>NestJS</li><li>Vercel AI SDK</li></ul></div>
       <div class="stack-col"><h3 class="mono mono-up muted">Data</h3><ul><li>GraphQL</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li></ul></div>
-      <div class="stack-col"><h3 class="mono mono-up muted">Infrastructure</h3><ul><li>AWS</li><li>Docker</li></ul></div>
+      <div class="stack-col"><h3 class="mono mono-up muted">Infrastructure</h3><ul><li>AWS</li><li>Docker</li><li>Terraform</li></ul></div>
     </div>
   </section>
 
@@ -718,7 +719,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
     <div class="grid sec-head">
       <h2 class="t" id="impact-h">Impact</h2>
       <p class="s mono muted">Selected outcomes, 2023&ndash;present</p>
-      <p class="c mono muted">3 companies</p>
+      <p class="c mono muted">4 companies</p>
     </div>
 
     <div class="grid figures">
@@ -730,10 +731,29 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
         <div class="fig"><span class="num">10,000+</span><span class="cap mono">Testers onboarded in the first month of Peppermint&rsquo;s testers&rsquo; app.</span></div>
         <div class="fig"><span class="num">&#8358;45m</span><span class="cap mono">Revenue from systems built at LaborHack.</span></div>
         <div class="fig"><span class="num">55%</span><span class="cap mono">Retention increase after rebuilding Wynk&rsquo;s web app in React.</span></div>
+        <div class="fig"><span class="num">85+</span><span class="cap mono">PRs landed in 6 weeks at Scooler AI, from build to production launch.</span></div>
+        <div class="fig"><span class="num">5&ndash;10&times;</span><span class="cap mono">Fewer LLM round-trips from batched tool calls in Scooler&rsquo;s browser agent.</span></div>
       </div>
     </div>
 
     <div class="stories">
+      <article class="grid story" id="scooler">
+        <p class="when mono"><span>May 2026 &ndash; Present</span><span class="muted">TypeScript, React, NestJS, Vercel AI SDK, AWS, Terraform, MongoDB, Docker, PostHog</span></p>
+        <h3 class="co display">Scooler AI</h3>
+        <div class="what">
+          <h3>Agentic AI for College Applications</h3>
+          <p class="mono muted">Lead Software Engineer &middot; United States, remote</p>
+        </div>
+        <div class="pts">
+          <ul>
+            <li>Led engineering for an agentic AI platform for college applications from build to production launch, landing 85+ PRs in 6 weeks.</li>
+            <li>Built a steerable browser agent that auto-fills Common App and university application forms, with batched tool calls cutting LLM inference round-trips 5&ndash;10&times;, plus an eval harness for reliability.</li>
+            <li>Built adaptive SAT prep &mdash; diagnostic, AI study plans, drills and full-length mocks over a 1,000+ question bank &mdash; and made Skye, the in-app assistant, agentic with live web search and secure tools over each student&rsquo;s data.</li>
+          </ul>
+          <p class="foot"><span class="mono muted">Owned infra and analytics end to end</span><a class="cta u" href="https://scooler.ai/" target="_blank" rel="noopener">scooler.ai <span class="arrow">&#8599;</span></a></p>
+        </div>
+      </article>
+
       <article class="grid story" id="peppermint">
         <p class="when mono"><span>Apr 2024 &ndash; Present</span><span class="muted">Next.js, NestJS, TypeScript, MongoDB, AWS</span></p>
         <h3 class="co display">Peppermint</h3>
@@ -966,6 +986,11 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 
     <nav class="next" aria-label="Next impact stories">
       <p class="k mono mono-up muted">Next stories</p>
+      <a href="#home" data-go="scooler">
+        <span class="mono mono-up">May 2026 &ndash; Present</span>
+        <span class="nm">Scooler AI <span class="arrow" aria-hidden="true">&rarr;</span></span>
+        <span class="sub mono">Agentic AI for College Applications</span>
+      </a>
       <a href="#home" data-go="laborhack">
         <span class="mono mono-up">Jan 2024 &ndash; May 2026</span>
         <span class="nm">LaborHack <span class="arrow" aria-hidden="true">&rarr;</span></span>
