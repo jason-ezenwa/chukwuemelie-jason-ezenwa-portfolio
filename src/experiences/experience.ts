@@ -57,6 +57,32 @@ export function toPublicPath(asPath: string): string {
   return path;
 }
 
+/** Home anchors that differ between experiences, as `[roast, monograph]` pairs */
+const HOME_ANCHOR_PAIRS: ReadonlyArray<Record<Experience, string>> = [
+  { roast: "impact", monograph: "work" },
+  { roast: "lot-agentic-college-applications", monograph: "scooler" },
+  { roast: "lot-product-feedback", monograph: "peppermint" },
+  { roast: "lot-blue-collar-empowerment", monograph: "laborhack" },
+  { roast: "lot-wynk-limited", monograph: "wynk" },
+];
+
+/** Maps a home-page hash to its equivalent anchor in another experience, so switching keeps the reader's place */
+export function translateHash(
+  publicPath: string,
+  hash: string,
+  to: Experience,
+): string {
+  const id = hash.replace(/^#/, "");
+
+  if (publicPath !== "/" || !id) return hash;
+
+  const pair = HOME_ANCHOR_PAIRS.find((candidate) =>
+    EXPERIENCES.some((experience) => candidate[experience] === id),
+  );
+
+  return pair ? `#${pair[to]}` : hash;
+}
+
 /** Shareable link to a public path in a given experience, e.g. `/impact-stories?experience=monograph#wynk-limited`. */
 export function buildExperienceHref(
   publicPath: string,

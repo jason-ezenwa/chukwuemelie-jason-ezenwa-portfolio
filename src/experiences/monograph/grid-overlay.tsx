@@ -18,7 +18,7 @@ export function useGridOverlay() {
         (/^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) ||
           target.isContentEditable);
 
-      if (event.metaKey || event.ctrlKey || event.altKey || isField) {
+      if (event.repeat || event.metaKey || event.ctrlKey || event.altKey || isField) {
         return;
       }
 

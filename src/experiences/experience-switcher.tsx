@@ -1,4 +1,4 @@
-import type { MouseEvent } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { useRouter } from "next/router";
 import { cn } from "@/lib/utils";
 import {
@@ -6,6 +6,7 @@ import {
   EXPERIENCE_LABELS,
   buildExperienceHref,
   toPublicPath,
+  translateHash,
   type Experience,
 } from "@/experiences/experience";
 
@@ -15,12 +16,31 @@ interface ExperienceSwitcherProps {
 
 /**
  * Floating pill that switches experience with a full document navigation
- * (plain `<a>`, never `next/link`), keeping the public path and hash.
+ * (plain `<a>`, never `next/link`), keeping the public path and the reader's place (hash).
  * Styled only through `--xp-bg`, `--xp-fg`, `--xp-line`, `--xp-on-bg`, `--xp-on-fg` and `--xp-font`.
  */
 export default function ExperienceSwitcher({ current }: ExperienceSwitcherProps) {
   const router = useRouter();
   const publicPath = toPublicPath(router.asPath);
+  // Read after mount so the server and first client render agree; keeps
+  // middle-click and "Copy link" in sync with the current hash.
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const syncHash = () => setHash(window.location.hash);
+
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, [router.asPath]);
+
+  const hrefFor = (experience: Experience, currentHash: string) =>
+    buildExperienceHref(
+      publicPath,
+      experience,
+      translateHash(publicPath, currentHash, experience),
+    );
 
   const handleClick = (
     event: MouseEvent<HTMLAnchorElement>,
@@ -31,11 +51,7 @@ export default function ExperienceSwitcher({ current }: ExperienceSwitcherProps)
       return;
     }
 
-    event.currentTarget.href = buildExperienceHref(
-      publicPath,
-      experience,
-      window.location.hash,
-    );
+    event.currentTarget.href = hrefFor(experience, window.location.hash);
   };
 
   return (
@@ -61,7 +77,7 @@ export default function ExperienceSwitcher({ current }: ExperienceSwitcherProps)
         return (
           <a
             key={experience}
-            href={buildExperienceHref(publicPath, experience)}
+            href={hrefFor(experience, hash)}
             aria-current={isCurrent ? "true" : undefined}
             onClick={(event) => handleClick(event, experience)}
             className={cn(

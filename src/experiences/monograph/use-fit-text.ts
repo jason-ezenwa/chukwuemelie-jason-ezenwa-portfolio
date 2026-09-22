@@ -1,4 +1,5 @@
-import { useEffect, type RefObject } from "react";
+import type { RefObject } from "react";
+import { useIsomorphicLayoutEffect } from "@/experiences/monograph/use-isomorphic-layout-effect";
 
 const PROBE_SIZE = 100;
 const FIT_RATIO = 0.995;
@@ -7,10 +8,10 @@ const RESIZE_DEBOUNCE_MS = 80;
 /**
  * Sizes `ref` so its widest line (`[data-fit-line] > span`) fills the element's width,
  * capped at `maxSize` px. Runs after `document.fonts.ready` and on a debounced resize.
- * Until it runs, the element's CSS `font-size` (a `clamp()`) is the fallback.
+ * Fits before paint so in-page hash scrolls land on the final layout.
  */
 export function useFitText(ref: RefObject<HTMLElement>, maxSize: number) {
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const element = ref.current;
 
     if (!element) {
