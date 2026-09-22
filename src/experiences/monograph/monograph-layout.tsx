@@ -13,12 +13,15 @@ import { useIsomorphicLayoutEffect } from "@/experiences/monograph/use-isomorphi
 const THEME_COLOR = { light: "#F1F0EC", dark: "#0E0E0D" };
 
 interface MonographLayoutProps {
+  /** Page-specific document title; SiteHead falls back to the site default */
+  title?: string;
   canonicalPath: PublicPath;
   asOf: string;
   children: ReactNode;
 }
 
 export default function MonographLayout({
+  title,
   canonicalPath,
   asOf,
   children,
@@ -32,7 +35,11 @@ export default function MonographLayout({
 
   return (
     <>
-      <SiteHead canonicalPath={canonicalPath} themeColor={THEME_COLOR} />
+      <SiteHead
+        title={title}
+        canonicalPath={canonicalPath}
+        themeColor={THEME_COLOR}
+      />
       <style jsx global>{`
         :root[data-experience="monograph"] {
           --mono-font-sans: ${archivo.style.fontFamily};

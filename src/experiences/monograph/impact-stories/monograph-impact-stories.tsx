@@ -14,9 +14,14 @@ import {
   motionVars,
 } from "@/experiences/monograph/primitives";
 
+const PAGE_TITLE = "Impact Stories | Chukwuemelie Obumse";
+
 export default function MonographImpactStories({ asOf }: { asOf: string }) {
   return (
-    <MonographLayout canonicalPath="/impact-stories" asOf={asOf}>
+    <MonographLayout
+      title={PAGE_TITLE}
+      canonicalPath="/impact-stories"
+      asOf={asOf}>
       <article aria-labelledby="cs-title" className={WRAP}>
         <div
           className={cn(
