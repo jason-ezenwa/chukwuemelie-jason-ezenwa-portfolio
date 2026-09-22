@@ -1,0 +1,206 @@
+<title>Portfolio Design Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Geist:wght@600&family=Archivo:wdth,wght@125,800&family=Instrument+Serif:ital@0;1&family=Syne:wght@800&display=swap">
+<style>
+  :root {
+    --bg: #F4F4F2;
+    --surface: #FFFFFF;
+    --ink: #121312;
+    --soft: #4A4C4A;
+    --muted: #6E706D;
+    --rule: #DEDFDB;
+    --focus: #2F5BFF;
+    --font: "Onest", "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F100F; --surface: #171817; --ink: #EDEDEA; --soft: #BDBEBA;
+      --muted: #8D8F8B; --rule: #2A2C2A; --focus: #6E8BFF; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F100F; --surface: #171817; --ink: #EDEDEA; --soft: #BDBEBA;
+    --muted: #8D8F8B; --rule: #2A2C2A; --focus: #6E8BFF; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--ink); font-family: var(--font);
+    font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 48px 72px; }
+  @media (min-width: 768px) { .wrap { padding-inline: 32px; padding-block: 72px 96px; } }
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.05; letter-spacing: -0.03em; margin: 12px 0 16px; text-wrap: balance; font-weight: 700; }
+  .lede { max-width: 62ch; color: var(--soft); margin: 0; }
+  .how { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .list { display: grid; gap: 16px; margin-top: 48px; }
+  .dir {
+    display: grid; grid-template-columns: 1fr; gap: 20px;
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 6px;
+    padding: 20px;
+  }
+  @media (min-width: 900px) {
+    .dir { grid-template-columns: 300px 1fr 220px; gap: 32px; padding: 28px; align-items: start; }
+  }
+  .swatch-block { border-radius: 4px; overflow: hidden; border: 1px solid var(--rule); }
+  .specimen { padding: 22px 20px; min-height: 132px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
+  .specimen .word { font-size: 34px; line-height: 1; }
+  .specimen .meta { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; opacity: .75; }
+  .chips { display: flex; height: 22px; }
+  .chips span { flex: 1; }
+  .letter { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .dir h2 { font-size: 26px; letter-spacing: -0.02em; margin: 4px 0 10px; line-height: 1.1; }
+  .dir p { margin: 0; color: var(--soft); max-width: 60ch; }
+  .facts { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 6px; font-size: 14px; }
+  .facts b { font-weight: 500; color: var(--ink); display: inline-block; min-width: 76px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  .facts li { color: var(--soft); }
+  .actions { display: flex; flex-direction: column; gap: 8px; }
+  .btn {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    padding: 12px 14px; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 15px;
+    border: 1px solid var(--rule); color: var(--ink); transition: background .15s, border-color .15s;
+  }
+  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .btn:hover { border-color: var(--ink); }
+  .btn.primary:hover { opacity: .9; }
+  .btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .btn span:last-child { font-family: var(--mono); font-size: 13px; }
+  footer { margin-top: 48px; font-size: 14px; color: var(--muted); max-width: 70ch; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Chukwuemelie Jason Obumse · Portfolio redesign</div>
+    <h1>Five directions. Pick one.</h1>
+    <p class="lede">Each prototype is a full design system, not a mood board: the same real content set as a home page and a Peppermint case study, so you can judge how each holds up across components and pages. Every one has its own light and dark mode and works down to phone width.</p>
+    <div class="how"><span>Home + case study in each</span><span>Theme toggle in each header</span><span>Resize to check mobile</span></div>
+  </header>
+
+  <div class="list">
+
+    <article class="dir">
+      <div class="swatch-block">
+        <div class="specimen" style="background:#17110E;color:#F1E6D6">
+          <div class="word" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-.02em">Roast<span style="color:#DB9A5F">.</span></div>
+          <div class="meta">Lot 2404 · Origin Peppermint</div>
+        </div>
+        <div class="chips"><span style="background:#17110E"></span><span style="background:#2A1F19"></span><span style="background:#C47A3A"></span><span style="background:#E8D5B9"></span><span style="background:#F3ECE1"></span></div>
+      </div>
+      <div>
+        <div class="letter">Direction A · evolves your current coffee theme</div>
+        <h2>Roast</h2>
+        <p>Coffee made premium: a specialty roaster's label system. Every role is a roast lot (Origin, Process, Roast date, Notes, Yield), your career is plotted as a copper roast curve that draws itself on load, and the case study reads like a roaster's spec sheet.</p>
+        <ul class="facts">
+          <li><b>Type</b>Bricolage Grotesque · Newsreader · JetBrains Mono</li>
+          <li><b>Theme</b>Espresso dark first, crema light</li>
+          <li><b>Feel</b>Warm, crafted, tactile</li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="design-lab/roast.html#home"><span>Open home</span><span>→</span></a>
+        <a class="btn" href="design-lab/roast.html#story"><span>Case study</span><span>→</span></a>
+      </div>
+    </article>
+
+    <article class="dir">
+      <div class="swatch-block">
+        <div class="specimen" style="background:#F6F7F9;color:#0B1020;background-image:radial-gradient(#C9CFDB 1px,transparent 1px);background-size:8px 8px">
+          <div class="word" style="font-family:'Geist',sans-serif;font-weight:600;letter-spacing:-.03em">Schematic<span style="color:#2F5BFF">_</span></div>
+          <div class="meta">Rev 2026.09 · Sheet 1 of 2 <span style="color:#FF7A45">◆</span></div>
+        </div>
+        <div class="chips"><span style="background:#F6F7F9"></span><span style="background:#0B1020"></span><span style="background:#2F5BFF"></span><span style="background:#6E8BFF"></span><span style="background:#FF7A45"></span></div>
+      </div>
+      <div>
+        <div class="letter">Direction B · new theme</div>
+        <h2>Schematic</h2>
+        <p>You as a systems architect. A technical-drawing aesthetic built to Linear and Stripe-docs polish: the hero is a live system diagram with data packets moving through Next.js, NestJS, queues and LLM pipelines, and the case study is laid out as a design doc (RFC).</p>
+        <ul class="facts">
+          <li><b>Type</b>Geist · Geist Mono</li>
+          <li><b>Theme</b>Drafting paper light, ink-navy dark</li>
+          <li><b>Feel</b>Precise, engineered, calm</li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="design-lab/schematic.html#home"><span>Open home</span><span>→</span></a>
+        <a class="btn" href="design-lab/schematic.html#story"><span>Case study</span><span>→</span></a>
+      </div>
+    </article>
+
+    <article class="dir">
+      <div class="swatch-block">
+        <div class="specimen" style="background:#F1F0EC;color:#0D0D0D">
+          <div class="word" style="font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;letter-spacing:-.02em">50<span style="background:#FFE14D">×</span></div>
+          <div class="meta">Faster data-intensive operations</div>
+        </div>
+        <div class="chips"><span style="background:#F1F0EC"></span><span style="background:#D9D7D0"></span><span style="background:#6B6A66"></span><span style="background:#0D0D0D"></span><span style="background:#FFE14D"></span></div>
+      </div>
+      <div>
+        <div class="letter">Direction C · new theme</div>
+        <h2>Monograph</h2>
+        <p>Swiss typography for a design-studio site, where the type is the design. Your name is set in expanded Archivo across the full width on a strict 12-column grid (press G to see it), headline numbers are printed poster-size, and the case study reads as a long magazine feature.</p>
+        <ul class="facts">
+          <li><b>Type</b>Archivo (expanded) · IBM Plex Mono</li>
+          <li><b>Theme</b>Paper light, ink dark, marker yellow</li>
+          <li><b>Feel</b>Bold, editorial, confident</li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="design-lab/monograph.html#home"><span>Open home</span><span>→</span></a>
+        <a class="btn" href="design-lab/monograph.html#story"><span>Case study</span><span>→</span></a>
+      </div>
+    </article>
+
+    <article class="dir">
+      <div class="swatch-block">
+        <div class="specimen" style="background:#ECEBE7;color:#1C1D1F">
+          <div class="word" style="font-family:'Instrument Serif',serif;font-size:40px">Room <i style="color:#4F5B3A">I</i></div>
+          <div class="meta">Peppermint · 2024 – Present</div>
+        </div>
+        <div class="chips"><span style="background:#ECEBE7"></span><span style="background:#F7F6F3"></span><span style="background:#76767A"></span><span style="background:#1C1D1F"></span><span style="background:#4F5B3A"></span></div>
+      </div>
+      <div>
+        <div class="letter">Direction D · new theme</div>
+        <h2>Atelier</h2>
+        <p>Quiet luxury in a contemporary gallery. Your work is exhibited rather than listed: projects hang matted and framed with museum placards, impact stories are numbered rooms, and the case study reads as an exhibition catalogue essay. It shows taste through restraint.</p>
+        <ul class="facts">
+          <li><b>Type</b>Instrument Serif · Hanken Grotesk</li>
+          <li><b>Theme</b>Stone and graphite, moss accent</li>
+          <li><b>Feel</b>Refined, calm, curated</li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="design-lab/atelier.html#home"><span>Open home</span><span>→</span></a>
+        <a class="btn" href="design-lab/atelier.html#story"><span>Case study</span><span>→</span></a>
+      </div>
+    </article>
+
+    <article class="dir">
+      <div class="swatch-block">
+        <div class="specimen" style="background:radial-gradient(120% 90% at 20% 110%,rgba(45,226,196,.45),transparent 60%),radial-gradient(90% 80% at 100% 0%,rgba(255,179,92,.35),transparent 60%),#070B0C;color:#E6EEEC">
+          <div class="word" style="font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.01em">Nocturne</div>
+          <div class="meta">10,000+ testers · month one</div>
+        </div>
+        <div class="chips"><span style="background:#070B0C"></span><span style="background:#0E1517"></span><span style="background:#2DE2C4"></span><span style="background:#FFB35C"></span><span style="background:#EEF3F2"></span></div>
+      </div>
+      <div>
+        <div class="letter">Direction E · new theme</div>
+        <h2>Nocturne</h2>
+        <p>Immersive and built like a product launch, the most "wow" of the five. The hero is a live, generative aurora that reacts to your cursor, impact stories scroll sideways as chapters with glowing metrics, and project screenshots tilt gently in 3D.</p>
+        <ul class="facts">
+          <li><b>Type</b>Syne · Figtree · JetBrains Mono</li>
+          <li><b>Theme</b>Midnight dark first, dawn light</li>
+          <li><b>Feel</b>Cinematic, alive, premium</li>
+        </ul>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="design-lab/nocturne.html#home"><span>Open home</span><span>→</span></a>
+        <a class="btn" href="design-lab/nocturne.html#story"><span>Case study</span><span>→</span></a>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>Mixing is fine: a common next step is one direction's structure with another's palette (for example Schematic's layout in Roast's coffee colours). Tell me which one, or which parts, and I'll build it into the Next.js app.</footer>
+</div>
