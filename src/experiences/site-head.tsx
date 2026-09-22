@@ -39,12 +39,15 @@ export default function SiteHead({
       <meta name="description" content={description} />
       <link rel="icon" type="image/ico" href="/favicon.ico" />
       <link rel="canonical" href={canonicalUrl} />
+      {/* Distinct keys stop next/head deduping the two metas by name */}
       <meta
+        key="theme-color-light"
         name="theme-color"
         media="(prefers-color-scheme: light)"
         content={themeColor.light}
       />
       <meta
+        key="theme-color-dark"
         name="theme-color"
         media="(prefers-color-scheme: dark)"
         content={themeColor.dark}
