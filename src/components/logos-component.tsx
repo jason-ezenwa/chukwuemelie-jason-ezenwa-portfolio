@@ -15,6 +15,8 @@ import {
   SiPostgresql,
   SiAmazonwebservices,
   SiDocker,
+  SiTerraform,
+  SiVercel,
 } from "react-icons/si";
 
 const LogosComponent: React.FC = () => {
@@ -33,6 +35,8 @@ const LogosComponent: React.FC = () => {
     { icon: SiPostgresql, name: "PostgreSQL", color: "#31648C" },
     { icon: SiAmazonwebservices, name: "AWS", color: "#FF9900" },
     { icon: SiDocker, name: "Docker", color: "#0DB7EA" },
+    { icon: SiTerraform, name: "Terraform", color: "#7B42BC" },
+    { icon: SiVercel, name: "Vercel AI SDK", color: "#000000" },
   ];
 
   return (

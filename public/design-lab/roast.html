@@ -423,7 +423,7 @@ ul,ol{padding:0;list-style:none}
         <path d="M20 9c-5 3.2-5 18.8 0 22 5-3.2 5-18.8 0-22z" fill="none" stroke="var(--accent)" stroke-width="1.4"/>
         <path d="M20 10.5c1.6 4 -1.6 15 0 19" fill="none" stroke="var(--accent)" stroke-width="1.1"/>
       </svg>
-      <span><span class="brand-name">C. J. Obumse</span><span class="brand-sub">Small-batch software</span></span>
+      <span><span class="brand-name">C. J. Obumse</span><span class="brand-sub">Software Engineer</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Primary">
       <ul>
@@ -431,7 +431,7 @@ ul,ol{padding:0;list-style:none}
         <li><a href="#stack">Stack <span class="mono">Tasting notes</span></a></li>
         <li><a href="#impact">Impact <span class="mono">Four lots</span></a></li>
         <li><a href="#story" data-nav="story">Case study <span class="mono">Peppermint</span></a></li>
-        <li><a href="#projects">Projects <span class="mono">Micro-lots</span></a></li>
+        <li><a href="#projects">Projects <span class="mono">Single origin</span></a></li>
         <li><a href="#writing">Writing <span class="mono">Journal</span></a></li>
         <li><a href="#contact">Contact <span class="mono">Orders</span></a></li>
       </ul>
@@ -749,8 +749,8 @@ ul,ol{padding:0;list-style:none}
   <section class="section" id="projects" aria-labelledby="projects-h">
     <div class="wrap">
       <div class="sec-head">
-        <p class="kicker">Projects &#183; <b>Micro-lots</b></p>
-        <h2 id="projects-h">Small batches, <span class="thin">built end to end.</span></h2>
+        <p class="kicker">Projects &#183; <b>Single origin</b></p>
+        <h2 id="projects-h">Single origin, <span class="thin">built end to end.</span></h2>
       </div>
       <div class="projects">
         <article class="proj proj-feature">
@@ -759,7 +759,7 @@ ul,ol{padding:0;list-style:none}
             <figcaption><span class="kicker">Fig. 2 &#8212; Hunt Assistant</span><span class="kicker">Dashboard</span></figcaption>
           </figure>
           <div class="proj-body">
-            <p class="kicker">Micro-lot &#183; AI</p>
+            <p class="kicker">Single origin &#183; AI</p>
             <h3 style="margin-top:10px">Hunt Assistant</h3>
             <p class="desc">An AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and tracks your applications &#8212; with auth, persistent tracking and AI insights.</p>
             <p class="stackline">TypeScript &#183; Next.js &#183; MongoDB &#183; AI</p>
@@ -776,7 +776,7 @@ ul,ol{padding:0;list-style:none}
             <figcaption><span class="kicker">Fig. 3 &#8212; Zen</span><span class="kicker">Wallets</span></figcaption>
           </figure>
           <div class="proj-body">
-            <p class="kicker">Micro-lot &#183; Fintech</p>
+            <p class="kicker">Single origin &#183; Fintech</p>
             <h3 style="margin-top:10px">Zen</h3>
             <p class="desc">A fintech app with multi-currency wallets, currency exchange, and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.</p>
             <p class="stackline">TypeScript &#183; Next.js &#183; Node.js &#183; MongoDB</p>
@@ -793,7 +793,7 @@ ul,ol{padding:0;list-style:none}
             <figcaption><span class="kicker">Fig. 4 &#8212; Prospera AI</span><span class="kicker">Analytics</span></figcaption>
           </figure>
           <div class="proj-body">
-            <p class="kicker">Micro-lot &#183; Dashboard</p>
+            <p class="kicker">Single origin &#183; Dashboard</p>
             <h3 style="margin-top:10px">Prospera AI Dashboard</h3>
             <p class="desc">A dashboard mockup for Prospera AI &#8212; AI-personalised lead magnets and agentic follow-ups &#8212; covering intent-signal analytics, AI content generation and lead magnet insights.</p>
             <p class="stackline">TypeScript &#183; Next.js &#183; Tailwind CSS &#183; Recharts</p>
@@ -993,7 +993,7 @@ ul,ol{padding:0;list-style:none}
     </div>
   </div>
   <footer class="footer" style="border-top:1px solid var(--line)">
-    <p class="kicker">Roasted in small batches by Chukwuemelie Jason Obumse</p>
+    <p class="kicker">Roasted by Chukwuemelie Jason Obumse</p>
     <p class="kicker">Lot CJO-2309 &#183; &#169; 2026</p>
   </footer>
 </section>
@@ -1077,6 +1077,27 @@ ul,ol{padding:0;list-style:none}
 })();
 </script>
 
+<script>
+(function(){
+  // Fit the first name line to the content width at its final (800) weight.
+  var n1 = document.querySelector('.n1');
+  if (!n1) return;
+  function fit(){
+    var box = n1.parentElement.getBoundingClientRect().width;
+    if (!box) return;
+    var probe = n1.cloneNode(true);
+    probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;animation:none;font-weight:800;font-size:100px;display:inline-block';
+    n1.parentElement.appendChild(probe);
+    var w = probe.getBoundingClientRect().width;
+    probe.remove();
+    if (w) n1.style.fontSize = Math.min(100 * box / w * 0.985, 240).toFixed(2) + 'px';
+  }
+  var t;
+  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(fit, 80); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+})();
+</script>
 <nav class="xp" aria-label="Experience"><span class="k">Experience</span><a href="roast.html" data-xp="roast" aria-current="true">Roast</a><a href="monograph.html" data-xp="monograph">Monograph</a></nav>
 
 <script>
