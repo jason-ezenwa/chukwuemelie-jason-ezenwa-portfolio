@@ -1,25 +1,27 @@
-<title>Monograph · Chukwuemelie Jason Obumse</title>
+<title>Crema &middot; Chukwuemelie Jason Obumse</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --paper: #F1F0EC;
-  --ink: #0D0D0D;
-  --mid: #6B6A66;
-  --rule: #D9D7D0;
-  --plate: #E6E4DE;
-  --signal: #FFE14D;
-  --mark-bg: #FFE14D;
-  --mark-fg: #0D0D0D;
-  --mark-line: transparent;
-  --grid-tint: rgba(13, 13, 13, 0.035);
-  --grid-edge: rgba(13, 13, 13, 0.12);
-  --sel-bg: #FFE14D;
-  --sel-fg: #0D0D0D;
+  --paper: #F3ECE1;
+  --ink: #1C1410;
+  --mid: #6C6056;
+  --rule: rgba(28, 20, 16, 0.12);
+  --plate: #EAE0D1;
+  --accent: #A65E25;
+  --accent-ink: #8C4C1B;
+  --cu-1: #6E3B17; --cu-2: #B8743A; --cu-3: #8E4F20; --cu-4: #C98A52;
+  --fill-a: rgba(166, 94, 37, 0.10); --fill-b: rgba(166, 94, 37, 0);
+  --grain: 0.028;
+  --grid-tint: rgba(166, 94, 37, 0.045);
+  --grid-edge: rgba(166, 94, 37, 0.22);
+  --sel-bg: #A65E25;
+  --sel-fg: #F3ECE1;
 
   --display: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --text: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
   --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
   --pad: clamp(16px, 4vw, 56px);
@@ -29,34 +31,38 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0E0E0D;
-    --ink: #EDEBE5;
-    --mid: #8E8C86;
-    --rule: #2A2A27;
-    --plate: #1A1A18;
-    --mark-bg: transparent;
-    --mark-fg: #FFE14D;
-    --mark-line: #FFE14D;
-    --grid-tint: rgba(237, 235, 229, 0.03);
-    --grid-edge: rgba(237, 235, 229, 0.10);
-    --sel-bg: #FFE14D;
-    --sel-fg: #0E0E0D;
+    --paper: #17110E;
+    --ink: #F1E6D6;
+    --mid: #9A8E84;
+    --rule: rgba(241, 230, 214, 0.12);
+    --plate: #211915;
+    --accent: #C47A3A;
+    --accent-ink: #DB9A5F;
+    --cu-1: #7A4520; --cu-2: #D99C62; --cu-3: #B36A30; --cu-4: #EDBB8A;
+    --fill-a: rgba(196, 122, 58, 0.16); --fill-b: rgba(196, 122, 58, 0);
+    --grain: 0.04;
+    --grid-tint: rgba(196, 122, 58, 0.05);
+    --grid-edge: rgba(196, 122, 58, 0.22);
+    --sel-bg: #C47A3A;
+    --sel-fg: #17110E;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0E0E0D;
-  --ink: #EDEBE5;
-  --mid: #8E8C86;
-  --rule: #2A2A27;
-  --plate: #1A1A18;
-  --mark-bg: transparent;
-  --mark-fg: #FFE14D;
-  --mark-line: #FFE14D;
-  --grid-tint: rgba(237, 235, 229, 0.03);
-  --grid-edge: rgba(237, 235, 229, 0.10);
-  --sel-bg: #FFE14D;
-  --sel-fg: #0E0E0D;
+  --paper: #17110E;
+  --ink: #F1E6D6;
+  --mid: #9A8E84;
+  --rule: rgba(241, 230, 214, 0.12);
+  --plate: #211915;
+  --accent: #C47A3A;
+  --accent-ink: #DB9A5F;
+  --cu-1: #7A4520; --cu-2: #D99C62; --cu-3: #B36A30; --cu-4: #EDBB8A;
+  --fill-a: rgba(196, 122, 58, 0.16); --fill-b: rgba(196, 122, 58, 0);
+  --grain: 0.04;
+  --grid-tint: rgba(196, 122, 58, 0.05);
+  --grid-edge: rgba(196, 122, 58, 0.22);
+  --sel-bg: #C47A3A;
+  --sel-fg: #17110E;
   color-scheme: dark;
 }
 
@@ -77,6 +83,10 @@ body {
   transition: background-color .4s var(--ease), color .4s var(--ease);
 }
 ::selection { background: var(--sel-bg); color: var(--sel-fg); }
+body::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 85; opacity: var(--grain);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .42  0 0 0 0 .3  0 0 0 1.1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
@@ -141,17 +151,20 @@ html.show-grid .grid-overlay { opacity: 1; }
 }
 
 .mark {
-  background: linear-gradient(transparent 8%, var(--mark-bg) 8%, var(--mark-bg) 92%, transparent 92%);
-  color: var(--mark-fg);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: -0.005em;
+  color: var(--accent-ink);
   text-decoration: underline;
-  text-decoration-color: var(--mark-line);
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.18em;
-  padding: 0 0.12em;
-  margin: 0 -0.06em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
+.serif { font-family: var(--serif); font-stretch: 100%; font-weight: 400; letter-spacing: -0.01em; }
+.serif-i { font-family: var(--serif); font-style: italic; font-stretch: 100%; font-weight: 400; letter-spacing: -0.01em; }
+.foil { background: linear-gradient(90deg, var(--cu-1), var(--cu-2) 35%, var(--cu-3) 55%, var(--cu-4) 80%, var(--cu-2)); }
 
 /* underline link: hairline at rest, ink line draws in on hover */
 .u {
@@ -265,8 +278,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 .avail { display: inline-flex; align-items: center; gap: 8px; }
 .avail::before {
   content: ""; width: 7px; height: 7px; border-radius: 50%;
-  background: var(--signal);
-  box-shadow: 0 0 0 1px var(--ink);
+  background: var(--accent);
 }
 @media (min-width: 640px) {
   .hero-meta > div { grid-column: span 6; }
@@ -289,14 +301,15 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 @media (min-width: 768px) {
   .name .l2 > span { padding-left: calc((100% + var(--gap)) / 12 * 4); }
 }
-.hero-rule { height: 1px; background: var(--ink); margin-top: clamp(24px, 3vw, 40px); }
-.hero-foot { padding-block: 16px clamp(56px, 9vw, 140px); row-gap: 28px; }
+.hero-rule { height: 1px; margin-top: clamp(24px, 3vw, 40px); }
+.hero-foot { padding-block: 16px clamp(48px, 7vw, 112px); row-gap: 28px; }
 .hero-foot .label { grid-column: 1 / -1; }
 .lede {
-  font-size: clamp(1.25rem, 2.3vw, 2.1rem);
-  line-height: 1.18;
+  font-family: var(--serif); font-style: italic; font-stretch: 100%;
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+  line-height: 1.16;
   letter-spacing: -0.012em;
-  font-weight: 400;
+  font-weight: 300;
   max-width: 30ch;
 }
 .hero-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px; }
@@ -304,6 +317,49 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 @media (min-width: 1024px) {
   .hero-foot .label { grid-column: 1 / span 3; }
   .hero-foot .lede-wrap { grid-column: 5 / span 7; }
+}
+
+/* ---------- roast profile (signature graphic) ---------- */
+.profile { padding-bottom: clamp(24px, 4vw, 48px); row-gap: 14px; }
+.profile-head { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.profile-key { display: flex; gap: 18px; }
+.profile-key span { display: inline-flex; align-items: center; gap: 8px; }
+.sw-line { width: 22px; height: 1px; }
+.sw-dot { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--accent); background: var(--paper); }
+.profile-plot { grid-column: 1 / -1; }
+.profile svg { width: 100%; height: auto; display: block; overflow: visible; }
+.rp-grid { stroke: var(--rule); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.rp-axis { stroke: var(--ink); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.rp-tick { font-family: var(--mono); font-size: 30px; fill: var(--mid); letter-spacing: 0.08em; }
+.rp-area { fill: url(#rp-fill); animation: fade 1.2s 1.6s var(--ease) both; }
+.rp-curve { fill: none; stroke: url(#rp-copper); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawline 2.4s .6s cubic-bezier(.45,.05,.25,1) forwards; }
+.rp-drop { stroke: var(--rule); stroke-dasharray: 2 4; vector-effect: non-scaling-stroke; }
+.rp-pt { fill: var(--paper); stroke: var(--accent); stroke-width: 1.25; vector-effect: non-scaling-stroke; }
+.rp-now { fill: var(--accent); }
+.rp-ev { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; fill: var(--accent-ink); text-transform: uppercase; }
+.rp-role { font-family: var(--display); font-stretch: 112%; font-weight: 600; font-size: 15px; fill: var(--ink); letter-spacing: -0.01em; }
+.rp-ms { animation: fade .6s ease both; }
+.rp-ms:nth-of-type(1) { animation-delay: .8s; } .rp-ms:nth-of-type(2) { animation-delay: 1.3s; }
+.rp-ms:nth-of-type(3) { animation-delay: 1.6s; } .rp-ms:nth-of-type(4) { animation-delay: 2.5s; }
+.rp-labels { display: none; }
+@keyframes drawline { to { stroke-dashoffset: 0; } }
+.profile-legend { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gap); }
+.profile-legend li { border-top: 1px solid var(--rule); padding-block: 10px 12px; }
+.profile-legend .ev { color: var(--accent-ink); text-transform: uppercase; letter-spacing: 0.1em; }
+.profile-legend .role { font-size: 0.95rem; line-height: 1.3; margin-top: 2px; }
+.profile-cap { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (min-width: 768px) {
+  .rp-tick { font-size: 18px; }
+  .rp-curve { stroke-width: 3; }
+  .profile-legend { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1024px) {
+  .rp-tick { font-size: 12px; }
+  .rp-curve { stroke-width: 1.75; }
+  .profile-head { grid-column: 1 / -1; }
+  .rp-labels { display: inline; }
+  .profile-legend { display: none; }
+  .profile-cap { grid-column: 1 / -1; }
 }
 
 /* ---------- sections ---------- */
@@ -391,6 +447,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 .pts li:last-child { border-bottom: 1px solid var(--rule); }
 .pts li::before { content: "\2014"; color: var(--mid); }
 .story .foot { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; }
+.lot { display: block; color: var(--mid); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
 .cta { font-family: var(--mono); font-size: 12px; font-weight: 500; }
 @media (min-width: 1024px) {
   .story .when { grid-column: 1 / span 2; flex-direction: column; justify-content: flex-start; }
@@ -466,6 +523,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
   grid-column: 1 / -1;
   font-size: clamp(2.6rem, 11vw, 11rem); line-height: 0.84; letter-spacing: -0.045em;
 }
+.contact-serif { font-weight: 300; letter-spacing: -0.035em; }
 .email {
   grid-column: 1 / -1; margin-top: clamp(28px, 4vw, 56px);
   font-family: var(--display); font-stretch: 100%; font-weight: 500;
@@ -503,7 +561,8 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 .cs-deck-row .k { grid-column: 1 / -1; }
 .cs-deck {
   grid-column: 1 / -1;
-  font-size: clamp(1.3rem, 2.3vw, 2.1rem); line-height: 1.2; letter-spacing: -0.015em; font-weight: 400; max-width: 34ch;
+  font-family: var(--serif); font-style: italic; font-stretch: 100%;
+  font-size: clamp(1.45rem, 2.6vw, 2.4rem); line-height: 1.16; letter-spacing: -0.012em; font-weight: 300; max-width: 34ch;
 }
 @media (min-width: 1024px) {
   .cs-deck-row .k { grid-column: 1 / span 3; }
@@ -538,7 +597,8 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 }
 .contrib .body-p a { text-decoration: none; }
 
-.metrics { margin-block: clamp(56px, 8vw, 120px); border-top: 1px solid var(--ink); row-gap: 0; }
+.metrics { position: relative; margin-block: clamp(56px, 8vw, 120px); row-gap: 0; }
+.metrics::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: linear-gradient(90deg, var(--cu-1), var(--cu-2) 35%, var(--cu-3) 55%, var(--cu-4) 80%, var(--cu-2)); }
 .metric { grid-column: 1 / -1; padding-block: 16px 28px; border-bottom: 1px solid var(--rule); }
 .metric .num {
   display: block; font-family: var(--display); font-stretch: 125%; font-weight: 800;
@@ -557,8 +617,8 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
   grid-column: 1 / -1;
 }
 .pull blockquote {
-  font-family: var(--display); font-stretch: 125%; font-weight: 700;
-  font-size: clamp(1.7rem, 4.4vw, 4.4rem); line-height: 1.02; letter-spacing: -0.035em;
+  font-family: var(--serif); font-style: italic; font-stretch: 100%; font-weight: 300;
+  font-size: clamp(1.9rem, 4.8vw, 4.8rem); line-height: 1.04; letter-spacing: -0.02em;
 }
 .pull figcaption { margin-top: 18px; }
 @media (min-width: 1024px) {
@@ -598,7 +658,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 .pill .sep { opacity: .5; }
 .pill .all { opacity: .7; }
 .pill:hover .all { opacity: 1; }
-@media (max-width: 639px) { .pill .sep-all, .pill .all { display: none; } }
+@media (max-width: 639px) { .pill .sep2, .pill .all { display: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -608,16 +668,6 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
     transition-duration: 0.001ms !important;
   }
 }
-</style>
-
-<style>
-/* Experience switch (Roast <-> Monograph) */
-.xp{--xp-bg:var(--paper);--xp-fg:var(--mid);--xp-line:var(--rule);--xp-on-bg:var(--ink);--xp-on-fg:var(--paper);--xp-font:var(--mono);position:fixed;right:12px;bottom:12px;z-index:85;display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--xp-line);border-radius:999px;background:var(--xp-bg);font-family:var(--xp-font);font-size:11px;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 10px 30px -16px rgba(0,0,0,.45)}
-.xp span.k{padding:0 8px 0 10px;color:var(--xp-fg);opacity:.8}
-.xp a{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;color:var(--xp-fg);text-decoration:none;transition:background-color .2s,color .2s}
-.xp a:hover{color:var(--xp-on-bg)}
-.xp a[aria-current="true"]{background:var(--xp-on-bg);color:var(--xp-on-fg)}
-@media (max-width:639px){.xp{bottom:58px}.xp span.k{display:none}}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -673,7 +723,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
       <span class="line l3"><span style="--i:2;--d:250ms">Obumse</span></span>
     </h1>
 
-    <div class="hero-rule draw" style="--d:700ms" aria-hidden="true"></div>
+    <div class="hero-rule foil draw" style="--d:700ms" aria-hidden="true"></div>
 
     <div class="grid hero-foot">
       <p class="label mono mono-up muted fade" style="--d:900ms">Index &mdash; 2026</p>
@@ -686,6 +736,73 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
         </p>
       </div>
     </div>
+
+    <figure class="grid profile" aria-labelledby="rp-t">
+      <div class="profile-head">
+        <p class="mono mono-up muted">Fig. 1 &mdash; Career roast profile</p>
+        <p class="profile-key mono muted"><span><i class="sw-line foil"></i>Scope of ownership</span><span><i class="sw-dot"></i>Milestone</span></p>
+      </div>
+      <div class="profile-plot">
+      <svg viewBox="0 0 1200 380" role="img" aria-labelledby="rp-t rp-d">
+        <title id="rp-t">Career roast profile, September 2023 to present</title>
+        <desc id="rp-d">A rising curve with four milestones: Wynk in September 2023, LaborHack in January 2024, Peppermint in April 2024, and Fractional Head of Engineering in January 2026.</desc>
+        <defs>
+          <linearGradient id="rp-copper" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" style="stop-color:var(--cu-1)"/><stop offset=".35" style="stop-color:var(--cu-2)"/>
+            <stop offset=".55" style="stop-color:var(--cu-3)"/><stop offset=".8" style="stop-color:var(--cu-4)"/>
+            <stop offset="1" style="stop-color:var(--cu-2)"/>
+          </linearGradient>
+          <linearGradient id="rp-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:var(--fill-a)"/><stop offset="1" style="stop-color:var(--fill-b)"/>
+          </linearGradient>
+        </defs>
+        <g>
+          <line class="rp-grid" x1="0" x2="1200" y1="80" y2="80"/>
+          <line class="rp-grid" x1="0" x2="1200" y1="163" y2="163"/>
+          <line class="rp-grid" x1="0" x2="1200" y1="246" y2="246"/>
+          <line class="rp-axis" x1="0" x2="1200" y1="330" y2="330"/>
+          <line class="rp-grid" x1="200" x2="200" y1="40" y2="336"/>
+          <line class="rp-grid" x1="560" x2="560" y1="40" y2="336"/>
+          <line class="rp-grid" x1="920" x2="920" y1="40" y2="336"/>
+          <text class="rp-tick" x="0" y="366">SEP 23</text>
+          <text class="rp-tick" x="200" y="366" text-anchor="middle">2024</text>
+          <text class="rp-tick" x="560" y="366" text-anchor="middle">2025</text>
+          <text class="rp-tick" x="920" y="366" text-anchor="middle">2026</text>
+          <text class="rp-tick" x="1200" y="366" text-anchor="end">NOW</text>
+        </g>
+        <path class="rp-area" d="M40,300 C100,270 150,245 200,225 S260,185 290,170 C450,120 700,95 920,80 S1110,66 1180,62 L1180,330 L40,330 Z"/>
+        <path class="rp-curve" pathLength="1" d="M40,300 C100,270 150,245 200,225 S260,185 290,170 C450,120 700,95 920,80 S1110,66 1180,62"/>
+        <g class="rp-ms">
+          <line class="rp-drop" x1="40" x2="40" y1="306" y2="330"/>
+          <circle class="rp-pt" cx="40" cy="300" r="5"/>
+          <g class="rp-labels"><text class="rp-ev" x="58" y="296">Charge &middot; Sep 2023</text><text class="rp-role" x="58" y="316">Wynk</text></g>
+        </g>
+        <g class="rp-ms">
+          <line class="rp-drop" x1="200" x2="200" y1="231" y2="330"/>
+          <circle class="rp-pt" cx="200" cy="225" r="5"/>
+          <g class="rp-labels"><text class="rp-ev" x="218" y="248">Dry end &middot; Jan 2024</text><text class="rp-role" x="218" y="268">LaborHack</text></g>
+        </g>
+        <g class="rp-ms">
+          <line class="rp-drop" x1="290" x2="290" y1="176" y2="330"/>
+          <circle class="rp-pt" cx="290" cy="170" r="5"/>
+          <g class="rp-labels"><text class="rp-ev" x="308" y="192">First crack &middot; Apr 2024</text><text class="rp-role" x="308" y="212">Peppermint</text></g>
+        </g>
+        <g class="rp-ms">
+          <line class="rp-drop" x1="920" x2="920" y1="86" y2="330"/>
+          <circle class="rp-pt" cx="920" cy="80" r="5"/>
+          <g class="rp-labels"><text class="rp-ev" x="905" y="118" text-anchor="end">Development &middot; Jan 2026</text><text class="rp-role" x="905" y="138" text-anchor="end">Head of Engineering</text></g>
+        </g>
+        <circle class="rp-now" cx="1180" cy="62" r="4"/>
+      </svg>
+      </div>
+      <ol class="profile-legend">
+        <li><p class="ev mono">Charge &middot; Sep 2023</p><p class="role">Wynk</p></li>
+        <li><p class="ev mono">Dry end &middot; Jan 2024</p><p class="role">LaborHack</p></li>
+        <li><p class="ev mono">First crack &middot; Apr 2024</p><p class="role">Peppermint</p></li>
+        <li><p class="ev mono">Development &middot; Jan 2026</p><p class="role">Head of Engineering</p></li>
+      </ol>
+      <figcaption class="profile-cap mono muted"><span>Curve plots scope of ownership over time</span><span>Roast in progress</span></figcaption>
+    </figure>
   </section>
 
   <section class="section wrap" id="about" aria-labelledby="about-h">
@@ -735,7 +852,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 
     <div class="stories">
       <article class="grid story" id="peppermint">
-        <p class="when mono"><span>Apr 2024 &ndash; Present</span><span class="muted">Next.js, NestJS, TypeScript, MongoDB, AWS</span></p>
+        <p class="when mono"><span><span class="lot">Lot 2404</span> Apr 2024 &ndash; Present</span><span class="muted">Next.js, NestJS, TypeScript, MongoDB, AWS</span></p>
         <h3 class="co display">Peppermint</h3>
         <div class="what">
           <h3>Product Feedback &amp; Scaling Operations</h3>
@@ -752,7 +869,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
       </article>
 
       <article class="grid story" id="laborhack">
-        <p class="when mono"><span>Jan 2024 &ndash; May 2026</span><span class="muted">TypeScript, React, Node.js, GraphQL, MongoDB, AWS</span></p>
+        <p class="when mono"><span><span class="lot">Lot 2401</span> Jan 2024 &ndash; May 2026</span><span class="muted">TypeScript, React, Node.js, GraphQL, MongoDB, AWS</span></p>
         <h3 class="co display">LaborHack</h3>
         <div class="what">
           <h3>Blue-Collar Empowerment Infrastructure</h3>
@@ -768,7 +885,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
       </article>
 
       <article class="grid story" id="wynk">
-        <p class="when mono"><span>Sep 2023 &ndash; Apr 2024</span><span class="muted">JavaScript, Node.js, Express, React</span></p>
+        <p class="when mono"><span><span class="lot">Lot 2309</span> Sep 2023 &ndash; Apr 2024</span><span class="muted">JavaScript, Node.js, Express, React</span></p>
         <h3 class="co display">Wynk</h3>
         <div class="what">
           <h3>Building a Lifestyle Super App and Web Platform</h3>
@@ -867,7 +984,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
   <div class="wrap">
     <div class="grid cs-top">
       <a class="back" href="#home" data-go="peppermint"><span aria-hidden="true">&larr;</span> Back to index</a>
-      <p class="crumb mono muted">Impact story / Peppermint</p>
+      <p class="crumb mono muted">Impact story / Peppermint / Lot 2404</p>
     </div>
 
     <h1 class="cs-title display rise" id="cs-title">
@@ -889,6 +1006,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
           <div><dt class="mono-up">Role</dt><dd>Lead Software Engineer &rarr; Fractional Head of Engineering</dd></div>
           <div><dt class="mono-up">Period</dt><dd>Apr 2024 &ndash; Present</dd></div>
           <div><dt class="mono-up">Stack</dt><dd>Next.js, NestJS, TypeScript, MongoDB, AWS</dd></div>
+          <div><dt class="mono-up">Roast</dt><dd>In progress</dd></div>
           <div><dt class="mono-up">Clients</dt><dd>Kuda, among others</dd></div>
           <div><dt class="mono-up">Also shipped</dt><dd><a class="u" href="https://tester.runpeppermint.com/" target="_blank" rel="noopener">Testers&rsquo; app <span class="arrow">&#8599;</span></a></dd></div>
         </dl>
@@ -985,7 +1103,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 <footer class="wrap">
   <section class="grid contact" id="contact" aria-labelledby="contact-h">
     <p class="kicker mono mono-up muted">Contact</p>
-    <h2 class="big display" id="contact-h">Let&rsquo;s build<br>what matters.</h2>
+    <h2 class="big display" id="contact-h">Let&rsquo;s build<br><span class="serif-i contact-serif">what matters.</span></h2>
     <p class="email"><a class="u" href="mailto:chukwuemelie.ezenwa@gmail.com">chukwuemelie.ezenwa@gmail.com</a></p>
     <p class="contact-links">
       <a class="u" href="https://drive.google.com/file/d/1cAvPMzTLxB9TSi7lBPi8GTOR1iXhWak3/view" target="_blank" rel="noopener">Resume <span class="arrow">&#8599;</span></a>
@@ -995,12 +1113,12 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
   </section>
   <div class="grid colophon mono muted">
     <p>&copy; 2026 Chukwuemelie Jason Obumse</p>
-    <p>Set in Archivo Expanded and IBM Plex Mono, on a 12-column grid.</p>
+    <p>Set in Archivo Expanded, Newsreader and IBM Plex Mono, on a 12-column grid. Roasted in small batches.</p>
     <p>Press G for the grid</p>
   </div>
 </footer>
 
-<a class="pill" href="../design-lab.html" title="All directions">Direction C <span class="sep">&middot;</span> Monograph <span class="sep sep-all">/</span> <span class="all">All directions</span></a>
+<a class="pill" href="../design-lab.html" title="All directions">Direction A&times;C <span class="sep">&middot;</span> Crema <span class="sep sep2">/</span> <span class="all">All directions</span></a>
 
 <script>
 (function () {
@@ -1123,22 +1241,5 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitName);
 
   render();
-})();
-</script>
-
-<nav class="xp" aria-label="Experience"><span class="k">Experience</span><a href="roast.html" data-xp="roast">Roast</a><a href="monograph.html" data-xp="monograph" aria-current="true">Monograph</a></nav>
-
-<script>
-(function(){
-  document.querySelectorAll('.xp a[data-xp]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      if (a.getAttribute('aria-current') === 'true') { e.preventDefault(); return; }
-      var r = document.documentElement, t = r.getAttribute('data-theme');
-      if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      try { localStorage.setItem('portfolio-theme', t); localStorage.setItem('portfolio-experience', a.getAttribute('data-xp')); } catch (err) {}
-      var h = location.hash.replace('#', '');
-      a.setAttribute('href', a.getAttribute('data-xp') + '.html' + (h === 'story' ? '#story' : ''));
-    });
-  });
 })();
 </script>

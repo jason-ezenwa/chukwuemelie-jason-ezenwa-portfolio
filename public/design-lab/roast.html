@@ -401,6 +401,16 @@ ul,ol{padding:0;list-style:none}
 }
 </style>
 
+<style>
+/* Experience switch (Roast <-> Monograph) */
+.xp{--xp-bg:var(--surface);--xp-fg:var(--ink-2);--xp-line:var(--line-strong);--xp-on-bg:var(--btn-bg);--xp-on-fg:var(--btn-ink);--xp-font:var(--f-mono);position:fixed;right:12px;bottom:12px;z-index:85;display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--xp-line);border-radius:999px;background:var(--xp-bg);font-family:var(--xp-font);font-size:11px;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 10px 30px -16px rgba(0,0,0,.45)}
+.xp span.k{padding:0 8px 0 10px;color:var(--xp-fg);opacity:.8}
+.xp a{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;color:var(--xp-fg);text-decoration:none;transition:background-color .2s,color .2s}
+.xp a:hover{color:var(--xp-on-bg)}
+.xp a[aria-current="true"]{background:var(--xp-on-bg);color:var(--xp-on-fg)}
+@media (max-width:639px){.xp{bottom:58px}.xp span.k{display:none}}
+</style>
+
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
@@ -958,7 +968,7 @@ ul,ol{padding:0;list-style:none}
 <script>
 (function(){
   var root = document.documentElement;
-  var KEY = 'design-lab-roast-theme';
+  var KEY = 'portfolio-theme';
   var stored = null;
   try { stored = localStorage.getItem(KEY); } catch (e) {}
   if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
@@ -1028,5 +1038,22 @@ ul,ol{padding:0;list-style:none}
   }
   window.addEventListener('hashchange', route);
   route();
+})();
+</script>
+
+<nav class="xp" aria-label="Experience"><span class="k">Experience</span><a href="roast.html" data-xp="roast" aria-current="true">Roast</a><a href="monograph.html" data-xp="monograph">Monograph</a></nav>
+
+<script>
+(function(){
+  document.querySelectorAll('.xp a[data-xp]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (a.getAttribute('aria-current') === 'true') { e.preventDefault(); return; }
+      var r = document.documentElement, t = r.getAttribute('data-theme');
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try { localStorage.setItem('portfolio-theme', t); localStorage.setItem('portfolio-experience', a.getAttribute('data-xp')); } catch (err) {}
+      var h = location.hash.replace('#', '');
+      a.setAttribute('href', a.getAttribute('data-xp') + '.html' + (h === 'story' ? '#story' : ''));
+    });
+  });
 })();
 </script>
