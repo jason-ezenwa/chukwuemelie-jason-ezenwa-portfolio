@@ -109,7 +109,7 @@ export default function Home() {
                   {`I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.`}
                 </p>
                 <p className="text-body text-foreground leading-relaxed">
-                  {`I've helped companies like LaborHack, Peppermint and Wynk turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
+                  {`I've helped companies like Scooler AI, Peppermint, LaborHack and Wynk turn complex business problems into scalable products that drive growth and efficiency — from agentic AI that guides students through college applications, to AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.`}
                 </p>
               </div>
             </div>
@@ -213,6 +213,20 @@ export default function Home() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.1 }}>
+            <motion.div variants={cardVariant}>
+              <ImpactStoryCard
+                title="Agentic AI for College Applications"
+                role="Lead Software Engineer"
+                techStack="TypeScript, React, NestJS, Vercel AI SDK, AWS, Terraform"
+                duration="May 2026 - Present"
+                keyContributions={[
+                  "Led engineering for an agentic AI college applications platform from build to production launch, landing 85+ PRs in 6 weeks",
+                  "Built a steerable browser agent that auto-fills Common App and university forms, cutting LLM inference round-trips 5–10x",
+                  "Built SAT test prep over a 1,000+ question bank and made the in-app AI assistant agentic with live web search and secure tools",
+                ]}
+                link="/impact-stories#agentic-college-applications"
+              />
+            </motion.div>
             <motion.div variants={cardVariant}>
               <ImpactStoryCard
                 title="Product Feedback & Scaling Operations"

@@ -83,6 +83,41 @@ const ImpactStories = () => {
             transition={{ duration: 0.4, delay: 0.2, ease: EASE_OUT }}>
             <div className="flex flex-wrap justify-center gap-2 md:gap-3 px-4">
               <a
+                href="#agentic-college-applications"
+                className={cn(
+                  // Size and spacing
+                  "px-4 md:px-6 py-2 md:py-3",
+                  // Text
+                  "text-primary-foreground text-xs md:text-sm font-medium",
+                  // Layout
+                  "whitespace-nowrap relative group",
+                  // Border
+                  "border border-primary hover:border-primary/80",
+                  // Background
+                  "bg-primary hover:bg-primary/90",
+                  // Effects and interactive states
+                  "transition-all duration-300",
+                )}>
+                <span
+                  className={cn(
+                    // Layout
+                    "relative",
+                  )}>
+                  Agentic AI
+                  <span
+                    className={cn(
+                      // Size and spacing
+                      "-bottom-1 left-0 w-0 h-0.5",
+                      // Layout
+                      "absolute",
+                      // Background
+                      "bg-primary-foreground",
+                      // Effects and interactive states
+                      "transition-all duration-300 group-hover:w-full",
+                    )}></span>
+                </span>
+              </a>
+              <a
                 href="#product-feedback"
                 className={cn(
                   // Size and spacing
@@ -192,7 +227,168 @@ const ImpactStories = () => {
         </section>
 
         <section className="section-spacing space-y-16 md:space-y-20 border-y border-border">
-          {/* Impact Story 1 - Peppermint */}
+          {/* Impact Story 1 - Scooler AI */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.5, ease: EASE_OUT }}>
+          <Card id="agentic-college-applications" className="border-border scroll-mt-28">
+            <CardContent className="p-5 sm:p-8 md:p-10">
+              <h2 className="font-semibold text-xl md:text-2xl text-foreground leading-tight mb-6 sm:mb-8 pb-4 sm:pb-5 border-b border-border">
+                Agentic AI for College Applications
+              </h2>
+
+              <div
+                className={cn(
+                  "grid grid-cols-1 md:grid-cols-2",
+                  "gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10 pb-6",
+                  "border-b border-border",
+                )}>
+                <div className="space-y-5 sm:space-y-6">
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      COMPANY
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm sm:text-base text-foreground">
+                        Scooler AI
+                      </p>
+                      <Link href="https://scooler.ai/" target="_blank">
+                        <FaExternalLinkAlt className="text-foreground text-sm sm:text-base" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      ROLE
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      Lead Software Engineer
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                      DURATION
+                    </p>
+                    <p className="text-sm sm:text-base text-foreground">
+                      May 2026 - Present
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase">
+                    TECH STACK
+                  </p>
+                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                    TypeScript, React, NestJS, Vercel AI SDK, MongoDB, AWS, Terraform, Docker, PostHog
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6 sm:space-y-8">
+                <div className="border-b border-border pb-6">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Overview
+                  </h3>
+                  <p className="text-foreground text-sm sm:text-base leading-relaxed pl-3 sm:pl-8">
+                    {`Scooler AI is an agentic AI platform that helps students through college applications. As Lead Software Engineer, I led engineering from build to production launch, landing 85+ PRs in 6 weeks, and owned the platform's infrastructure, analytics and engineering process.`}
+                  </p>
+                </div>
+
+                <div className="border-b border-border pb-6">
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Key Contributions
+                  </h3>
+
+                  <div className="pl-3 sm:pl-8 divide-y divide-border">
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Application Browser Agent
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-3 sm:mb-4">
+                        {`Built a steerable browser agent that auto-fills Common App and university application forms. Batched tool calls cut LLM inference round-trips 5–10x, and an eval harness keeps the agent reliable.`}
+                      </p>
+                      <Link
+                        href="https://scooler.ai/"
+                        target="_blank"
+                        className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground font-medium transition-all duration-300 group/link">
+                        <span className="text-sm sm:text-base">Visit Scooler AI</span>
+                        <FaExternalLinkAlt className="w-3 lg:w-3.5 h-3 lg:h-3.5 group-hover/link:translate-x-0.5 transition-transform duration-300" />
+                      </Link>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        SAT Test Prep
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base">
+                        Built SAT prep with an adaptive diagnostic, AI-generated
+                        study plans, practice drills and full-length mock exams
+                        over a 1,000+ question bank.
+                      </p>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Agentic AI Assistant
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base">
+                        {`Made Skye, the in-app AI assistant, agentic by building live web search and secure tools over each student's profile, recommendations and essays.`}
+                      </p>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Infrastructure & Analytics
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base">
+                        Owned infrastructure and analytics end to end with AWS,
+                        Terraform, MongoDB, Docker and PostHog.
+                      </p>
+                    </div>
+
+                    <div className="py-4 sm:py-6 first:pt-0 last:pb-0">
+                      <h4 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-foreground">
+                        Engineering Process
+                      </h4>
+                      <p className="text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                        Established seed-stage engineering processes:
+                      </p>
+                      <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-foreground space-y-1 sm:space-y-2">
+                        <li>Automated weekly AI code-quality reviews</li>
+                        <li>Jira epics and stories, RFCs and ADRs</li>
+                        <li>Multi-agent workflows to parallelize delivery</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-lg sm:text-xl text-foreground mb-3 sm:mb-4">
+                    Impact Summary
+                  </h3>
+                  <ul className="list-disc pl-6 sm:pl-12 text-sm sm:text-base text-foreground space-y-1.5 sm:space-y-3">
+                    <li>
+                      Led the platform from build to production launch, landing
+                      85+ PRs in 6 weeks
+                    </li>
+                    <li>
+                      Cut LLM inference round-trips 5–10x in the application
+                      browser agent with batched tool calls
+                    </li>
+                    <li>
+                      Shipped SAT prep over a 1,000+ question bank and an agentic
+                      in-app assistant
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          </motion.div>
+
+          {/* Impact Story 2 - Peppermint */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -403,7 +599,7 @@ const ImpactStories = () => {
           </Card>
           </motion.div>
 
-          {/* Impact Story 2: LaborHack */}
+          {/* Impact Story 3: LaborHack */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -652,7 +848,7 @@ const ImpactStories = () => {
           </Card>
           </motion.div>
 
-          {/* Impact Story 3: Wynk */}
+          {/* Impact Story 4: Wynk */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
