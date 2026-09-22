@@ -245,7 +245,7 @@ export default function Home() {
               <ImpactStoryCard
                 title="Blue-Collar Empowerment Infrastructure"
                 role="Software Engineer"
-                techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS"
+                techStack="TypeScript, React, Node.js, GraphQL, MongoDB, AWS, Docker"
                 duration="Jan 2024 - May 2026"
                 keyContributions={[
                   "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦45m in revenue",

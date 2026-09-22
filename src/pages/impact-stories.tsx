@@ -653,7 +653,7 @@ const ImpactStories = () => {
                     TECH STACK
                   </p>
                   <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                    TypeScript, React, Node.js, GraphQL, MongoDB, AWS
+                    TypeScript, React, Node.js, GraphQL, MongoDB, AWS, Docker
                   </p>
                 </div>
               </div>

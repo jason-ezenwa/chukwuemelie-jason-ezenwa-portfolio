@@ -264,9 +264,9 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 .hero-meta dd { color: var(--ink); }
 .avail { display: inline-flex; align-items: center; gap: 8px; }
 .avail::before {
-  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  content: ""; flex: none; box-sizing: border-box; width: 9px; height: 9px; border-radius: 50%;
   background: var(--signal);
-  box-shadow: 0 0 0 1px var(--ink);
+  border: 1px solid var(--ink);
 }
 @media (min-width: 640px) {
   .hero-meta > div { grid-column: span 6; }
@@ -459,7 +459,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 .contact .kicker { grid-column: 1 / -1; margin-bottom: 20px; }
 .contact .big {
   grid-column: 1 / -1;
-  font-size: clamp(2.6rem, 11vw, 11rem); line-height: 0.84; letter-spacing: -0.045em;
+  font-size: clamp(2.6rem, 11vw, 11rem); line-height: 0.84; letter-spacing: -0.01em;
 }
 .email {
   grid-column: 1 / -1; margin-top: clamp(28px, 4vw, 56px);
@@ -765,7 +765,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
       </article>
 
       <article class="grid story" id="laborhack">
-        <p class="when mono"><span>Jan 2024 &ndash; May 2026</span><span class="muted">TypeScript, React, Node.js, GraphQL, MongoDB, AWS</span></p>
+        <p class="when mono"><span>Jan 2024 &ndash; May 2026</span><span class="muted">TypeScript, React, Node.js, GraphQL, MongoDB, AWS, Docker</span></p>
         <h3 class="co display">LaborHack</h3>
         <div class="what">
           <h3>Blue-Collar Empowerment Infrastructure</h3>
@@ -1144,7 +1144,7 @@ a:hover .arrow, a:focus-visible .arrow { transform: translate(2px, -2px); }
 })();
 </script>
 
-<nav class="xp" aria-label="Experience"><span class="k">Experience</span><a href="roast.html" data-xp="roast">Roast</a><a href="monograph.html" data-xp="monograph" aria-current="true">Monograph</a></nav>
+<nav class="xp" aria-label="Experience"><a href="roast.html" data-xp="roast">Roast</a><a href="monograph.html" data-xp="monograph" aria-current="true">Monograph</a></nav>
 
 <script>
 (function(){
