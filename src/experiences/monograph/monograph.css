@@ -1,2 +1,274 @@
 /* Monograph experience: tokens, @theme inline mapping, keyframes and scoped named classes.
-   Every selector is scoped under :root[data-experience="monograph"]. Filled by Lane M. */
+   Every selector is scoped under :root[data-experience="monograph"].
+   Font families (--mono-font-sans, --mono-font-code) are set by the layout from next/font. */
+
+@theme inline {
+  --color-mono-paper: var(--mono-paper);
+  --color-mono-ink: var(--mono-ink);
+  --color-mono-mid: var(--mono-mid);
+  --color-mono-rule: var(--mono-rule);
+  --color-mono-plate: var(--mono-plate);
+  --color-mono-signal: var(--mono-signal);
+  --color-mono-grid-tint: var(--mono-grid-tint);
+  --color-mono-grid-edge: var(--mono-grid-edge);
+
+  --font-mono-sans: var(--mono-font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono-code: var(--mono-font-code), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --ease-mono-out: var(--mono-ease);
+}
+
+/* ---------- tokens ---------- */
+:root[data-experience="monograph"] {
+  --mono-paper: #f1f0ec;
+  --mono-ink: #0d0d0d;
+  --mono-mid: #6b6a66;
+  --mono-rule: #d9d7d0;
+  --mono-plate: #e6e4de;
+  --mono-signal: #ffe14d;
+  --mono-mark-bg: #ffe14d;
+  --mono-mark-fg: #0d0d0d;
+  --mono-mark-line: transparent;
+  --mono-grid-tint: rgba(13, 13, 13, 0.035);
+  --mono-grid-edge: rgba(13, 13, 13, 0.12);
+  --mono-sel-bg: #ffe14d;
+  --mono-sel-fg: #0d0d0d;
+
+  --mono-pad: clamp(16px, 4vw, 56px);
+  --mono-gap: clamp(12px, 1.6vw, 24px);
+  --mono-ease: cubic-bezier(0.19, 1, 0.22, 1);
+
+  /* Shared <ExperienceSwitcher> */
+  --xp-bg: var(--mono-paper);
+  --xp-fg: var(--mono-mid);
+  --xp-line: var(--mono-rule);
+  --xp-on-bg: var(--mono-ink);
+  --xp-on-fg: var(--mono-paper);
+  --xp-font: var(--mono-font-code), ui-monospace, monospace;
+
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-experience="monograph"]:not([data-theme="light"]) {
+    --mono-paper: #0e0e0d;
+    --mono-ink: #edebe5;
+    --mono-mid: #8e8c86;
+    --mono-rule: #2a2a27;
+    --mono-plate: #1a1a18;
+    --mono-mark-bg: transparent;
+    --mono-mark-fg: #ffe14d;
+    --mono-mark-line: #ffe14d;
+    --mono-grid-tint: rgba(237, 235, 229, 0.03);
+    --mono-grid-edge: rgba(237, 235, 229, 0.1);
+    --mono-sel-bg: #ffe14d;
+    --mono-sel-fg: #0e0e0d;
+    color-scheme: dark;
+  }
+}
+
+:root[data-experience="monograph"][data-theme="dark"] {
+  --mono-paper: #0e0e0d;
+  --mono-ink: #edebe5;
+  --mono-mid: #8e8c86;
+  --mono-rule: #2a2a27;
+  --mono-plate: #1a1a18;
+  --mono-mark-bg: transparent;
+  --mono-mark-fg: #ffe14d;
+  --mono-mark-line: #ffe14d;
+  --mono-grid-tint: rgba(237, 235, 229, 0.03);
+  --mono-grid-edge: rgba(237, 235, 229, 0.1);
+  --mono-sel-bg: #ffe14d;
+  --mono-sel-fg: #0e0e0d;
+  color-scheme: dark;
+}
+
+/* ---------- base (layered, so utilities such as focus-visible:outline-offset-* still win) ---------- */
+@layer base {
+  :root[data-experience="monograph"] body {
+    background: var(--mono-paper);
+    color: var(--mono-ink);
+    font-family: var(--mono-font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-stretch: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    transition:
+      background-color 0.4s var(--mono-ease),
+      color 0.4s var(--mono-ease);
+  }
+
+  :root[data-experience="monograph"] ::selection {
+    background: var(--mono-sel-bg);
+    color: var(--mono-sel-fg);
+  }
+
+  :root[data-experience="monograph"] :focus {
+    outline: none;
+  }
+
+  :root[data-experience="monograph"] :focus-visible {
+    outline: 2px solid var(--mono-ink);
+    outline-offset: 3px;
+  }
+}
+
+/* ---------- theme toggle label (CSS-driven, D6): the label names the mode it switches to ---------- */
+:root[data-experience="monograph"] .mono-label-to-light {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-experience="monograph"]:not([data-theme="light"]) .mono-label-to-light {
+    display: inline;
+  }
+  :root[data-experience="monograph"]:not([data-theme="light"]) .mono-label-to-dark {
+    display: none;
+  }
+}
+
+:root[data-experience="monograph"][data-theme="dark"] .mono-label-to-light {
+  display: inline;
+}
+
+:root[data-experience="monograph"][data-theme="dark"] .mono-label-to-dark {
+  display: none;
+}
+
+/* ---------- highlight ---------- */
+:root[data-experience="monograph"] .mono-mark {
+  background: linear-gradient(
+    transparent 8%,
+    var(--mono-mark-bg) 8%,
+    var(--mono-mark-bg) 92%,
+    transparent 92%
+  );
+  color: var(--mono-mark-fg);
+  text-decoration: underline;
+  text-decoration-color: var(--mono-mark-line);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  padding: 0 0.12em;
+  margin: 0 -0.06em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ---------- underline link: hairline at rest, ink line draws in on hover ---------- */
+:root[data-experience="monograph"] .mono-u {
+  text-decoration: none;
+  background-image:
+    linear-gradient(var(--mono-ink), var(--mono-ink)),
+    linear-gradient(var(--mono-rule), var(--mono-rule));
+  background-size:
+    0% 1px,
+    100% 1px;
+  background-position:
+    0 100%,
+    0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  transition: background-size 0.5s var(--mono-ease);
+}
+
+:root[data-experience="monograph"] .mono-u:hover,
+:root[data-experience="monograph"] .mono-u:focus-visible {
+  background-size:
+    100% 1px,
+    100% 1px;
+}
+
+:root[data-experience="monograph"] .mono-arrow {
+  display: inline-block;
+  transition: transform 0.4s var(--mono-ease);
+}
+
+:root[data-experience="monograph"] a:hover .mono-arrow,
+:root[data-experience="monograph"] a:focus-visible .mono-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* ---------- masks and motion ---------- */
+:root[data-experience="monograph"] .mono-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.04em;
+  margin-bottom: -0.04em;
+}
+
+:root[data-experience="monograph"] .mono-line > span {
+  display: block;
+}
+
+:root[data-experience="monograph"] .mono-rise .mono-line > span {
+  animation: mono-rise 1.25s var(--mono-ease) both;
+  animation-delay: calc(var(--i, 0) * 90ms + var(--d, 0ms));
+}
+
+:root[data-experience="monograph"] .mono-draw {
+  transform-origin: 0 50%;
+  animation: mono-draw 1.4s var(--mono-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+:root[data-experience="monograph"] .mono-fade {
+  animation: mono-fade 1s var(--mono-ease) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@keyframes mono-rise {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mono-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes mono-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- grid-position rules the utilities cannot express ---------- */
+@media (min-width: 640px) {
+  :root[data-experience="monograph"] .mono-fig-stack > :first-child {
+    grid-column: 1 / -1;
+  }
+  :root[data-experience="monograph"] .mono-fig-stack > :nth-child(n + 4) .mono-fig-num {
+    font-size: clamp(2.6rem, 8vw, 4.2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-experience="monograph"] {
+    scroll-behavior: auto;
+  }
+  :root[data-experience="monograph"] *,
+  :root[data-experience="monograph"] *::before,
+  :root[data-experience="monograph"] *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

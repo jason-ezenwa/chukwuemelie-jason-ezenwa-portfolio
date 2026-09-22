@@ -1,35 +1,11 @@
-import Link from "next/link";
 import type { InferGetStaticPropsType } from "next";
-import { cn } from "@/lib/utils";
-import ExperienceSwitcher from "@/experiences/experience-switcher";
-import SiteHead from "@/experiences/site-head";
 import { getExperienceStaticProps } from "@/experiences/get-experience-static-props";
+import MonographImpactStories from "@/experiences/monograph/impact-stories/monograph-impact-stories";
 
 export const getStaticProps = getExperienceStaticProps("monograph");
 
-// Phase 1 placeholder, replaced by the Monograph page.
 export default function MonographImpactStoriesPage({
-  experience,
   asOf,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return (
-    <>
-      <SiteHead
-        canonicalPath="/impact-stories"
-        themeColor={{ light: "#ffffff", dark: "#000000" }}
-      />
-      <main
-        className={cn(
-          // Size and spacing
-          "min-h-screen p-4 sm:p-6 lg:p-8 space-y-4",
-        )}>
-        <h1 data-testid="experience-name">Monograph · Impact stories</h1>
-        <p>As of {asOf}</p>
-        <Link href="/" data-testid="internal-link">
-          Home
-        </Link>
-      </main>
-      <ExperienceSwitcher current={experience} />
-    </>
-  );
+  return <MonographImpactStories asOf={asOf} />;
 }
