@@ -1,6 +1,7 @@
 import { useEffect, type RefObject } from "react";
 
 const PROBE_SIZE = 100;
+const FIT_RATIO = 0.995;
 const RESIZE_DEBOUNCE_MS = 80;
 
 /**
@@ -46,7 +47,7 @@ export function useFitText(ref: RefObject<HTMLElement>, maxSize: number) {
       }
 
       const size = Math.min(
-        ((PROBE_SIZE * available) / widest) * 0.995,
+        ((PROBE_SIZE * available) / widest) * FIT_RATIO,
         maxSize,
       );
       element.style.fontSize = `${size.toFixed(2)}px`;

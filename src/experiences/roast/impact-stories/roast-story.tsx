@@ -175,7 +175,6 @@ export default function RoastStory({
   const framing = ROAST_STORY_FRAMING[story.id];
   const headingId = `${story.id}-title`;
   const brewId = `${story.id}-brew`;
-  const [lead, ...restOverview] = story.overview;
 
   return (
     <section
@@ -238,7 +237,7 @@ export default function RoastStory({
             <RoastKicker className="mb-[18px]">
               <RoastKickerText copy={ROAST_STORIES_PAGE.overviewKicker} />
             </RoastKicker>
-            {[lead, ...restOverview].map((paragraph, paragraphIndex) => (
+            {story.overview.map((paragraph, paragraphIndex) => (
               <p
                 key={paragraph}
                 className={cn(
