@@ -12,7 +12,6 @@ import RoastStory, {
   roastStoryThinClassName,
   roastStoryTitleClassName,
 } from "@/experiences/roast/impact-stories/roast-story";
-import { getTenureScale } from "@/experiences/roast/roast-dates";
 import { RoastArrowLeftIcon } from "@/experiences/roast/roast-icons";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import RoastLayout from "@/experiences/roast/roast-layout";
@@ -23,8 +22,6 @@ import { ROAST_THEME_COLOR } from "@/experiences/roast/roast-theme-color";
 const PAGE_TITLE = "Impact Stories | Chukwuemelie Obumse";
 
 export default function RoastImpactStories({ asOf }: { asOf: string }) {
-  const tenureScale = getTenureScale(IMPACT_STORIES, asOf);
-
   return (
     <RoastLayout asOf={asOf}>
       <SiteHead
@@ -51,8 +48,7 @@ export default function RoastImpactStories({ asOf }: { asOf: string }) {
             </Link>
             <RoastKicker>
               {ROAST_STORIES_PAGE.kicker.lead} ·{" "}
-              <b>{ROAST_STORIES_PAGE.kicker.bold}</b> ·{" "}
-              {ROAST_STORIES_PAGE.kickerTail}
+              <b>{ROAST_STORIES_PAGE.kicker.bold}</b>
             </RoastKicker>
           </div>
 
@@ -104,7 +100,6 @@ export default function RoastImpactStories({ asOf }: { asOf: string }) {
             total={IMPACT_STORIES.length}
             next={IMPACT_STORIES[index + 1]}
             asOf={asOf}
-            tenureScale={tenureScale}
           />
         ))}
       </div>
