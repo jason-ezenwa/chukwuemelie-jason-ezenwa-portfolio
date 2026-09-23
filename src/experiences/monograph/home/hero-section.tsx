@@ -89,7 +89,7 @@ export default function HeroSection({ asOf }: { asOf: string }) {
           // Size and spacing
           "mt-[clamp(28px,6vw,96px)]",
           // Text
-          "text-[clamp(2.1rem,10.4vw,14rem)] leading-[0.84] tracking-[-0.035em] uppercase",
+          "text-[clamp(2.1rem,10.4vw,14rem)] font-extrabold leading-[0.84] tracking-[-0.035em] uppercase",
         )}>
         {HERO_NAME_LINES.map((line, index) => (
           <span key={line} className="mono-line" data-fit-line>
