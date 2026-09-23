@@ -289,7 +289,7 @@ export const WRITING = {
 
 export const NAV_LINKS = [
   { label: "Work", href: "/#work", note: "Impact, projects" },
-  { label: "Case studies", href: "/impact-stories", note: `${IMPACT_STORIES.length} stories` },
+  { label: "Impact stories", href: "/impact-stories", note: `${IMPACT_STORIES.length} stories` },
   { label: "Writing", href: "/#writing", note: ESSAY_COUNT },
   { label: "Contact", href: "#contact", note: "Email" },
 ] as const;
@@ -304,7 +304,7 @@ export const CONTACT = {
   gridHint: "Press G for the grid",
 };
 
-// ---------- impact stories (case-study framing) ----------
+// ---------- impact stories (story framing) ----------
 
 export interface MonographMetric {
   kicker: string;

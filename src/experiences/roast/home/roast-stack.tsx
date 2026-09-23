@@ -52,17 +52,10 @@ export default function RoastStack() {
                   )}>
                   <span
                     className={cn(
-                      // Size and spacing
-                      "gap-2.5",
                       // Text
                       "font-roast-display text-[1.45rem] font-medium font-stretch-88% leading-[1.1] tracking-[-.015em] whitespace-nowrap",
                       item.house && "font-bold",
-                      // Layout
-                      "inline-flex items-center",
                     )}>
-                    {item.house && (
-                      <i className="roast-diamond" aria-hidden="true" />
-                    )}
                     {item.name}
                   </span>
                   <span className="roast-menu-lead" aria-hidden="true" />
@@ -79,16 +72,7 @@ export default function RoastStack() {
           </div>
         ))}
       </div>
-      <RoastKicker
-        className={cn(
-          // Size and spacing
-          "mt-7 gap-2.5",
-          // Layout
-          "flex items-center",
-        )}>
-        <i className="roast-diamond" aria-hidden="true" />
-        {ROAST_STACK.note}
-      </RoastKicker>
+      <RoastKicker className="mt-7">{ROAST_STACK.note}</RoastKicker>
     </RoastSection>
   );
 }

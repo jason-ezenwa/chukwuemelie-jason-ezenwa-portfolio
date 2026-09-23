@@ -60,7 +60,7 @@ export const ROAST_NAV: RoastNavItem[] = [
   { label: "About", note: "Producer", href: "/#about" },
   { label: "Stack", note: "Tasting notes", href: "/#stack" },
   { label: "Impact", note: LOT_COUNT, href: "/#impact" },
-  { label: "Case studies", note: "In full", href: "/impact-stories" },
+  { label: "Impact stories", note: "In full", href: "/impact-stories" },
   { label: "Projects", note: "Single origin", href: "/#projects" },
   { label: "Writing", note: "Journal", href: "/#writing" },
   { label: "Contact", note: "Orders", href: "/#contact" },
@@ -82,7 +82,7 @@ export const ROAST_HERO = {
     after: " — with TypeScript, React and Node.js, from system design to DevOps.",
   },
   primaryCta: {
-    label: "Read the Peppermint case study",
+    label: "Read the Peppermint story",
     href: "/impact-stories#product-feedback",
   },
   secondaryCta: { label: "Resume", href: RESUME_URL },
@@ -176,7 +176,7 @@ export const ROAST_YIELD = {
 export interface RoastMenuItem {
   name: string;
   where: string;
-  /** House specialty: bold with a copper diamond */
+  /** House specialty: set in bold */
   house?: boolean;
 }
 
@@ -258,7 +258,6 @@ export const ROAST_IMPACT = {
   heading: { strong: "Roasted in production,", thin: "labelled honestly." } satisfies RoastSplitHeading,
   lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded. Lot numbers are the year and month each started.",
   readStory: "Read the story",
-  readCaseStudy: "Read the case study",
 };
 
 // ---------------------------------------------------------------------------
@@ -407,7 +406,7 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
     yieldLine: string;
     bullets: string[];
     footKicker?: string;
-    /** The featured lot gets the copper foil and a case-study link */
+    /** The featured lot gets the copper foil */
     featured?: boolean;
     /** Extra external link kept in the foot, e.g. scooler.ai */
     footLink?: RoastLink;

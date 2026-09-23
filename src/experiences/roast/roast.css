@@ -209,15 +209,6 @@
     );
   }
 
-  :root[data-experience="roast"] .roast-diamond {
-    display: inline-block;
-    flex: none;
-    width: 7px;
-    height: 7px;
-    transform: rotate(45deg);
-    background: linear-gradient(135deg, var(--roast-cu-4), var(--roast-cu-3));
-  }
-
   /* ---------- Menu button lines ---------- */
   :root[data-experience="roast"] .roast-menu-lines i {
     display: block;
