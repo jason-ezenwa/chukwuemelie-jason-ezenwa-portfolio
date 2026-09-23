@@ -78,10 +78,10 @@ const SCOOLER_AI = defineStory({
   ],
   contributions: [
     {
-      id: "application-browser-agent",
-      title: "Application Browser Agent",
+      id: "skye-ai-agent",
+      title: "Skye, the In-App AI Agent",
       body: [
-        "Built a steerable browser agent that auto-fills Common App and university application forms. Batched tool calls cut LLM inference round-trips 5–10x, and an eval harness keeps the agent reliable.",
+        "Built Skye, an in-app AI agent that guides each student's application journey and auto-fills their Common App and university application forms.",
       ],
       links: [{ label: "Visit Scooler AI", href: SCOOLER_URL }],
     },
@@ -89,14 +89,14 @@ const SCOOLER_AI = defineStory({
       id: "sat-test-prep",
       title: "SAT Test Prep",
       body: [
-        "Built SAT prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
+        "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
       ],
     },
     {
-      id: "agentic-ai-assistant",
-      title: "Agentic AI Assistant",
+      id: "inference-and-reliability",
+      title: "Inference & Reliability",
       body: [
-        "Made Skye, the in-app AI assistant, agentic by building live web search and secure tools over each student's profile, recommendations and essays.",
+        "Batched Skye's tool calls to cut LLM inference round-trips 5–10x, and built an eval harness for reliability.",
       ],
     },
     {
@@ -119,8 +119,9 @@ const SCOOLER_AI = defineStory({
   ],
   impactSummary: [
     "Led the platform from build to production launch, landing 85+ PRs in 6 weeks",
-    "Cut LLM inference round-trips 5–10x in the application browser agent with batched tool calls",
-    "Shipped SAT prep over a 1,000+ question bank and an agentic in-app assistant",
+    "Built Skye, an in-app AI agent that guides students and auto-fills their application forms",
+    "Cut Skye's LLM inference round-trips 5–10x with batched tool calls",
+    "Shipped SAT test prep over a 1,000+ question bank",
   ],
 });
 

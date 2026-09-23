@@ -105,7 +105,7 @@ export const IMPACT = {
     },
     {
       num: "5–10×",
-      cap: "Fewer LLM round-trips from batched tool calls in Scooler’s browser agent.",
+      cap: "Fewer LLM round-trips from batched tool calls in Skye, Scooler’s AI agent.",
     },
   ] satisfies MonographFigure[],
 };
@@ -332,7 +332,7 @@ export const IMPACT_STORIES_PAGE = {
 export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<StoryId> } = {
   "agentic-college-applications": {
     titleLines: ["Agentic AI", "for College", "Applications"],
-    deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: a browser agent, SAT prep and an in-app assistant, and the infrastructure underneath.",
+    deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: Skye, an in-app AI agent, SAT test prep and the infrastructure underneath.",
     metrics: [
       {
         kicker: "Velocity",
@@ -351,14 +351,14 @@ export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<
       },
     ],
     pull: {
-      marked: "A steerable browser agent",
-      rest: " that auto-fills Common App and university application forms.",
-      caption: "On the application browser agent, kept reliable by an eval harness",
+      marked: "An in-app AI agent",
+      rest: " that guides each student’s application journey and auto-fills their forms.",
+      caption: "On Skye, kept reliable by an eval harness",
     },
     contributionKickers: {
-      "application-browser-agent": "Agents",
+      "skye-ai-agent": "Agents",
       "sat-test-prep": "Learning",
-      "agentic-ai-assistant": "Assistant",
+      "inference-and-reliability": "Efficiency",
       "infrastructure-and-analytics": "Infrastructure",
       "engineering-process": "Process",
     },

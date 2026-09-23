@@ -425,17 +425,17 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     },
     yield: [
       { num: "85", sup: "+", what: "PRs landed in 6 weeks, build to launch", kicker: "Launch" },
-      { num: "5–10", sup: "x", what: "fewer LLM inference round-trips", kicker: "Browser agent" },
+      { num: "5–10", sup: "x", what: "fewer LLM inference round-trips", kicker: "Skye" },
       { num: "1,000", sup: "+", what: "questions behind adaptive SAT prep", kicker: "Test prep" },
     ],
     pullQuote: {
-      text: "A browser agent that fills in the Common App —",
-      bold: "steerable, batched and held to an eval harness.",
+      text: "An AI agent that guides each student and fills in the Common App —",
+      bold: "batched and held to an eval harness.",
     },
     contributions: {
-      "application-browser-agent": { kicker: "Agent", metric: "5–10x", metricCap: "fewer inference round-trips" },
+      "skye-ai-agent": { kicker: "Agent", metric: "Skye", metricCap: "guides students and fills their forms" },
       "sat-test-prep": { kicker: "Test prep", metric: "1,000+", metricCap: "question bank" },
-      "agentic-ai-assistant": { kicker: "Assistant", metric: "Skye", metricCap: "live web search and secure tools" },
+      "inference-and-reliability": { kicker: "Inference", metric: "5–10x", metricCap: "fewer inference round-trips" },
       "infrastructure-and-analytics": { kicker: "Infrastructure", metric: "End to end", metricCap: "AWS · Terraform · PostHog" },
       "engineering-process": { kicker: "Process" },
     },
