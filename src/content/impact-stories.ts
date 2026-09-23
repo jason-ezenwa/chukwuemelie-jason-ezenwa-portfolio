@@ -11,12 +11,6 @@ import {
   WYNK_URL,
 } from "@/utils/constants";
 
-export type ImpactStoryId =
-  | "agentic-college-applications"
-  | "product-feedback"
-  | "blue-collar-empowerment"
-  | "wynk-limited";
-
 export interface ImpactStoryRole {
   title: string;
   /** `YYYY-MM` */
@@ -30,18 +24,18 @@ export interface ImpactStoryLink {
   href: string;
 }
 
-export interface ImpactStoryContribution {
+export interface ImpactStoryContribution<ContributionId extends string = string> {
   /** kebab-case, used as the key for per-experience framing */
-  id: string;
+  id: ContributionId;
   title: string;
   body: string[];
   bullets?: string[];
   links?: ImpactStoryLink[];
 }
 
-export interface ImpactStory {
+interface ImpactStoryDefinition<Id extends string, ContributionId extends string> {
   /** Also the DOM anchor on `/impact-stories` */
-  id: ImpactStoryId;
+  id: Id;
   company: string;
   companyUrl: string;
   title: string;
@@ -51,11 +45,18 @@ export interface ImpactStory {
   stack: string[];
   /** Paragraphs */
   overview: string[];
-  contributions: ImpactStoryContribution[];
+  contributions: ImpactStoryContribution<ContributionId>[];
   impactSummary: string[];
 }
 
-const SCOOLER_AI: ImpactStory = {
+/** Keeps each story's id and contribution ids as literal types, so framing can be checked against them */
+function defineStory<const Id extends string, const ContributionId extends string>(
+  story: ImpactStoryDefinition<Id, ContributionId>,
+) {
+  return story;
+}
+
+const SCOOLER_AI = defineStory({
   id: "agentic-college-applications",
   company: "Scooler AI",
   companyUrl: SCOOLER_URL,
@@ -121,9 +122,9 @@ const SCOOLER_AI: ImpactStory = {
     "Cut LLM inference round-trips 5–10x in the application browser agent with batched tool calls",
     "Shipped SAT prep over a 1,000+ question bank and an agentic in-app assistant",
   ],
-};
+});
 
-const PEPPERMINT: ImpactStory = {
+const PEPPERMINT = defineStory({
   id: "product-feedback",
   company: "Peppermint",
   companyUrl: PEPPERMINT_URL,
@@ -192,9 +193,9 @@ const PEPPERMINT: ImpactStory = {
     "Implemented wallet system integrated with Stripe for streamlined cash flows",
     "Transitioned to Fractional Head of Engineering in January 2026",
   ],
-};
+});
 
-const LABORHACK: ImpactStory = {
+const LABORHACK = defineStory({
   id: "blue-collar-empowerment",
   company: "LaborHack",
   companyUrl: LABORHACK_URL,
@@ -292,9 +293,9 @@ const LABORHACK: ImpactStory = {
     "Provided data-driven insights that guided product improvements and optimized funnels",
     "Improved the flexibility and reliability of software deployments ensuring 99.9% uptime",
   ],
-};
+});
 
-const WYNK: ImpactStory = {
+const WYNK = defineStory({
   id: "wynk-limited",
   company: "Wynk",
   companyUrl: WYNK_URL,
@@ -341,12 +342,21 @@ const WYNK: ImpactStory = {
     "Rebuilt the company web application in React, increasing retention by 55%",
     "Led technical and culture-fit assessment of new hires",
   ],
-};
+});
 
-/** Display order */
-export const IMPACT_STORIES: ImpactStory[] = [
-  SCOOLER_AI,
-  PEPPERMINT,
-  LABORHACK,
-  WYNK,
-];
+/** Display order. Adding a story here extends `ImpactStoryId`, so every experience must frame it. */
+const STORY_DEFINITIONS = [SCOOLER_AI, PEPPERMINT, LABORHACK, WYNK] as const;
+
+type StoryDefinition = (typeof STORY_DEFINITIONS)[number];
+
+export type ImpactStoryId = StoryDefinition["id"];
+
+/** Contribution ids of one story, e.g. `ContributionId<"product-feedback">` */
+export type ContributionId<StoryId extends ImpactStoryId> = Extract<
+  StoryDefinition,
+  { id: StoryId }
+>["contributions"][number]["id"];
+
+export type ImpactStory = ImpactStoryDefinition<ImpactStoryId, string>;
+
+export const IMPACT_STORIES: ImpactStory[] = [...STORY_DEFINITIONS];

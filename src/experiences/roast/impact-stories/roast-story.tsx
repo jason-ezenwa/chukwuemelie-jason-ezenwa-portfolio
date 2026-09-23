@@ -7,6 +7,7 @@ import type {
 import {
   ROAST_STORIES_PAGE,
   ROAST_STORY_FRAMING,
+  getRoastContributionFraming,
 } from "@/experiences/roast/content";
 import RoastPhaseBar from "@/experiences/roast/impact-stories/roast-phase-bar";
 import RoastSpecSheet from "@/experiences/roast/impact-stories/roast-spec-sheet";
@@ -55,7 +56,7 @@ function RoastStep({
   contribution: ImpactStoryContribution;
   storyId: ImpactStory["id"];
 }) {
-  const framing = ROAST_STORY_FRAMING[storyId].contributions[contribution.id];
+  const framing = getRoastContributionFraming(storyId, contribution.id);
 
   return (
     <li
