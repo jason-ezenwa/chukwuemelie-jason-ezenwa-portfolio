@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import type { RoastYieldItem } from "@/experiences/roast/content";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
 
-/** Row of big thin figures. Two columns on mobile, one per item from 1024px. */
+/** Row of big thin figures. Two columns on mobile, one per item from 1024px; the kickers share a baseline. */
 export default function RoastYieldStrip({
   items,
   className,
@@ -14,7 +14,7 @@ export default function RoastYieldStrip({
     <ul
       className={cn("roast-yield", `roast-yield-cols-${items.length}`, className)}>
       {items.map((item) => (
-        <li key={`${item.num}-${item.what}`}>
+        <li key={`${item.num}-${item.what}`} className="flex flex-col">
           <span
             className={cn(
               // Text
@@ -48,7 +48,7 @@ export default function RoastYieldStrip({
             )}>
             {item.what}
           </span>
-          <RoastKicker as="span" className="mt-2 block">
+          <RoastKicker as="span" className="mt-auto block pt-2">
             {item.kicker}
           </RoastKicker>
         </li>
