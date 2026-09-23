@@ -418,9 +418,9 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       notes: "TypeScript · React · NestJS · Vercel AI SDK · AWS · Terraform · MongoDB · Docker · PostHog",
       yieldLine: "85+ PRs in 6 weeks",
       bullets: [
-        "Led engineering for an agentic AI platform for college applications from build to production launch, landing 85+ PRs in 6 weeks",
-        "Built a browser agent that auto-fills college applications and an agentic in-app assistant with live web search",
-        "Built adaptive SAT prep with AI study plans and full-length mocks over a 1,000+ question bank",
+        "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks",
+        "Built Skye, an in-app AI agent that guides each student's application journey and auto-fills their Common App and university application forms",
+        "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank",
       ],
     },
     yield: [
