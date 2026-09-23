@@ -11,7 +11,7 @@ import {
   GRID,
   MONO,
   WRAP,
-  motionVars,
+  motionClasses,
 } from "@/experiences/monograph/primitives";
 
 const PAGE_TITLE = "Impact Stories | Chukwuemelie Obumse";
@@ -61,7 +61,7 @@ export default function MonographImpactStories({ asOf }: { asOf: string }) {
             className={cn(CS_TITLE, "mono-rise mt-[clamp(40px,8vw,128px)]")}>
             {IMPACT_STORIES_PAGE.titleLines.map((line, index) => (
               <span key={line} className="mono-line">
-                <span style={motionVars(index)}>{line}</span>
+                <span className={motionClasses(index)}>{line}</span>
               </span>
             ))}
           </h1>

@@ -274,10 +274,32 @@
     border: 1px solid var(--roast-line-strong);
   }
 
-  :root[data-experience="roast"] .roast-tenure > i {
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: calc(var(--m) / var(--scale) * 100%);
+  /* Tenure bar: a <meter> whose value/max set the fill */
+  :root[data-experience="roast"] .roast-tenure {
+    appearance: none;
+    border: 0;
+    background: var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-inner-element {
+    display: flex;
+    height: 100%;
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-bar {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-optimum-value,
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-suboptimum-value,
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-even-less-good-value {
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 60%, var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-moz-meter-bar {
     background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 60%, var(--roast-cu-4));
   }
 
@@ -337,8 +359,23 @@
   }
 
   @media (min-width: 1024px) {
-    :root[data-experience="roast"] .roast-yield {
-      grid-template-columns: repeat(var(--yield-cols, 5), 1fr);
+    :root[data-experience="roast"] .roast-yield-cols-1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-6 {
+      grid-template-columns: repeat(6, 1fr);
     }
 
     :root[data-experience="roast"] .roast-yield > li,
@@ -415,6 +452,31 @@
     font-family: var(--roast-font-body);
     font-size: 16px;
     fill: var(--roast-ink);
+  }
+
+  /* Gradient stops for the roast-profile curve and area */
+  :root[data-experience="roast"] .rp-stop-cu-1 {
+    stop-color: var(--roast-cu-1);
+  }
+
+  :root[data-experience="roast"] .rp-stop-cu-2 {
+    stop-color: var(--roast-cu-2);
+  }
+
+  :root[data-experience="roast"] .rp-stop-cu-3 {
+    stop-color: var(--roast-cu-3);
+  }
+
+  :root[data-experience="roast"] .rp-stop-cu-4 {
+    stop-color: var(--roast-cu-4);
+  }
+
+  :root[data-experience="roast"] .rp-stop-fill-a {
+    stop-color: var(--roast-fill-a);
+  }
+
+  :root[data-experience="roast"] .rp-stop-fill-b {
+    stop-color: var(--roast-fill-b);
   }
 
   :root[data-experience="roast"] .rp-ms {
@@ -505,12 +567,39 @@
   }
 
   /* ---------- Phase bar ---------- */
-  :root[data-experience="roast"] .roast-phase-hatch {
+  /* Phase bar: a <meter> filling the current phase in copper from the right over the hatched earlier ones */
+  :root[data-experience="roast"] .roast-phase-meter {
+    appearance: none;
+    direction: rtl;
     background: repeating-linear-gradient(
       135deg,
       var(--roast-surface-2) 0 6px,
       var(--roast-surface) 6px 12px
     );
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-inner-element {
+    display: flex;
+    height: 100%;
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-bar {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-optimum-value,
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-suboptimum-value,
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-even-less-good-value {
+    border-left: 1px solid var(--roast-line-strong);
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 55%, var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-moz-meter-bar {
+    border-left: 1px solid var(--roast-line-strong);
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 55%, var(--roast-cu-4));
   }
 
   :root[data-experience="roast"] .roast-phase-hatch-sm {
@@ -521,23 +610,42 @@
     );
   }
 
-  :root[data-experience="roast"] .roast-phase-copper {
-    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 55%, var(--roast-cu-4));
-  }
-
   :root[data-experience="roast"] .roast-phase-copper-sm {
     background: linear-gradient(90deg, var(--roast-cu-2), var(--roast-cu-4));
-  }
-
-  @media (min-width: 640px) {
-    :root[data-experience="roast"] .roast-phase-legend {
-      grid-template-columns: var(--phase-cols);
-    }
   }
 
   /* ---------- Animations ---------- */
   :root[data-experience="roast"] .roast-anim-roast {
     animation: roast-roast 1.6s cubic-bezier(0.3, 0.6, 0.2, 1) both;
+  }
+
+  /* Start offsets for .roast-anim-rise and .rp-ms */
+  :root[data-experience="roast"] .roast-delay-350 {
+    --delay: 350ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-500 {
+    --delay: 500ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-650 {
+    --delay: 650ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-1000 {
+    --delay: 1000ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-1300 {
+    --delay: 1300ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-2200 {
+    --delay: 2200ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-2500 {
+    --delay: 2500ms;
   }
 
   :root[data-experience="roast"] .roast-anim-rise {

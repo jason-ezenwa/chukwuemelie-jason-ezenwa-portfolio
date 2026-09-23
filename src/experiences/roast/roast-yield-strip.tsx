@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import type { RoastYieldItem } from "@/experiences/roast/content";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
@@ -13,8 +12,7 @@ export default function RoastYieldStrip({
 }) {
   return (
     <ul
-      className={cn("roast-yield", className)}
-      style={{ "--yield-cols": items.length } as CSSProperties}>
+      className={cn("roast-yield", `roast-yield-cols-${items.length}`, className)}>
       {items.map((item) => (
         <li key={`${item.num}-${item.what}`}>
           <span

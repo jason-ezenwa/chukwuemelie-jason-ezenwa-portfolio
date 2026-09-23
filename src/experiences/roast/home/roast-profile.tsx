@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import { ROAST_PROFILE } from "@/experiences/roast/content";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
@@ -7,7 +6,13 @@ const CURVE =
   "M80,300 C130,270 160,245 200,225 S260,185 290,170 C450,120 700,95 920,80 S1100,66 1160,62";
 
 /** Milestones fade in as the curve draws past them */
-const MILESTONE_DELAYS = ["0.5s", "1s", "1.3s", "2.2s", "2.5s"];
+const MILESTONE_DELAYS = [
+  "roast-delay-500",
+  "roast-delay-1000",
+  "roast-delay-1300",
+  "roast-delay-2200",
+  "roast-delay-2500",
+];
 
 const GRID_ROWS = [80, 163, 246];
 const GRID_COLUMNS = [200, 560, 920];
@@ -71,15 +76,15 @@ export default function RoastProfile() {
         <desc id="rp-d">{ROAST_PROFILE.description}</desc>
         <defs>
           <linearGradient id="rp-copper" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" style={{ stopColor: "var(--roast-cu-1)" }} />
-            <stop offset=".35" style={{ stopColor: "var(--roast-cu-2)" }} />
-            <stop offset=".55" style={{ stopColor: "var(--roast-cu-3)" }} />
-            <stop offset=".8" style={{ stopColor: "var(--roast-cu-4)" }} />
-            <stop offset="1" style={{ stopColor: "var(--roast-cu-2)" }} />
+            <stop offset="0" className="rp-stop-cu-1" />
+            <stop offset=".35" className="rp-stop-cu-2" />
+            <stop offset=".55" className="rp-stop-cu-3" />
+            <stop offset=".8" className="rp-stop-cu-4" />
+            <stop offset="1" className="rp-stop-cu-2" />
           </linearGradient>
           <linearGradient id="rp-fill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" style={{ stopColor: "var(--roast-fill-a)" }} />
-            <stop offset="1" style={{ stopColor: "var(--roast-fill-b)" }} />
+            <stop offset="0" className="rp-stop-fill-a" />
+            <stop offset="1" className="rp-stop-fill-b" />
           </linearGradient>
         </defs>
         <g>
@@ -111,8 +116,7 @@ export default function RoastProfile() {
         {ROAST_PROFILE.milestones.map((milestone, index) => (
           <g
             key={milestone.event}
-            className="rp-ms"
-            style={{ "--delay": MILESTONE_DELAYS[index] } as CSSProperties}>
+            className={cn("rp-ms", MILESTONE_DELAYS[index])}>
             <line
               className="rp-drop"
               x1={milestone.x}

@@ -1,4 +1,4 @@
-import type { CSSProperties, ElementType, ReactNode } from "react";
+import type { ElementType, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
 
@@ -13,7 +13,6 @@ export function RoastLabel({
   className?: string;
   children: ReactNode;
   id?: string;
-  style?: CSSProperties;
   "aria-label"?: string;
   "aria-labelledby"?: string;
 }) {
@@ -138,20 +137,19 @@ export function RoastTenure({
 }) {
   return (
     <>
-      <span
+      <meter
         aria-hidden="true"
+        min={0}
+        max={scale}
+        value={months}
         className={cn(
           "roast-tenure",
           // Size and spacing
-          "mt-2 h-[3px] max-w-[220px]",
-          // Background
-          "bg-roast-line",
+          "mt-2 h-[3px] w-full max-w-[220px]",
           // Layout
-          "relative block",
+          "block",
         )}
-        style={{ "--m": months, "--scale": scale } as CSSProperties}>
-        <i />
-      </span>
+      />
       <span
         className={cn(
           // Size and spacing

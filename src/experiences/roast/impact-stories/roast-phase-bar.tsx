@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import type { ImpactStory } from "@/content/impact-stories";
 import {
@@ -14,7 +13,10 @@ interface RoastPhaseBarProps {
   asOf: string;
 }
 
-/** Role phases drawn to scale; only used for stories with more than one role. */
+/**
+ * Role phases drawn to scale; only used for stories with more than one role.
+ * A `<meter>` fills the current phase in copper from the right over the hatched earlier phases.
+ */
 export default function RoastPhaseBar({
   story,
   phaseNames,
@@ -27,6 +29,8 @@ export default function RoastPhaseBar({
     isLast: index === story.roles.length - 1,
   }));
 
+  const totalMonths = phases.reduce((sum, phase) => sum + phase.months, 0);
+  const currentMonths = phases[phases.length - 1].months;
   const first = story.roles[0];
   const last = story.roles[story.roles.length - 1];
   const rangeEnd = last.end ? formatMonth(last.end) : "Present";
@@ -44,46 +48,28 @@ export default function RoastPhaseBar({
       <RoastKicker>
         Roast phases · {formatMonth(first.start)} → {rangeEnd}, to scale
       </RoastKicker>
-      <div
-        role="img"
+      <meter
         aria-label={ariaLabel}
+        min={0}
+        max={totalMonths}
+        value={currentMonths}
         className={cn(
+          "roast-phase-meter",
           // Size and spacing
-          "mt-3 h-9",
+          "mt-3 h-9 w-full",
           // Border
           "border border-roast-line-strong",
           // Layout
-          "flex",
-        )}>
-        {phases.map((phase) => (
-          <span
-            key={phase.start}
-            className={cn(
-              // Size and spacing
-              "h-full",
-              // Layout
-              "block",
-              phase.isLast
-                ? "roast-phase-copper"
-                : ["roast-phase-hatch", "border-r border-roast-line-strong"],
-            )}
-            style={{ flex: phase.months }}
-          />
-        ))}
-      </div>
+          "block",
+        )}
+      />
       <ul
         className={cn(
-          "roast-phase-legend",
           // Size and spacing
           "mt-3.5 gap-3 sm:gap-6",
           // Layout
-          "grid",
-        )}
-        style={
-          {
-            "--phase-cols": phases.map((phase) => `${phase.months}fr`).join(" "),
-          } as CSSProperties
-        }>
+          "grid sm:flex sm:justify-between",
+        )}>
         {phases.map((phase) => (
           <li
             key={phase.start}

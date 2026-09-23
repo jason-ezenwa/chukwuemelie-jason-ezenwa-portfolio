@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import { ROAST_HERO } from "@/experiences/roast/content";
 import RoastButton from "@/experiences/roast/roast-button";
@@ -15,7 +14,6 @@ import { roastWrapClassName } from "@/experiences/roast/roast-section";
 import { RoastTextLink } from "@/experiences/roast/roast-text-link";
 import { useFitName } from "@/experiences/roast/use-fit-name";
 
-const riseDelay = (delay: string) => ({ "--delay": delay }) as CSSProperties;
 
 export default function RoastHero() {
   const firstNameRef = useFitName<HTMLSpanElement>();
@@ -66,15 +64,14 @@ export default function RoastHero() {
         </span>
         <span
           className={cn(
-            "roast-anim-rise",
+            "roast-anim-rise roast-delay-350",
             // Size and spacing
             "mt-[.08em] md:pl-[1.1em]",
             // Text
             "text-[clamp(2.1rem,9.2vw,7rem)] font-extralight font-stretch-100% tracking-[-.03em] text-roast-ink-2 [font-variation-settings:'opsz'_96]",
             // Layout
             "block",
-          )}
-          style={riseDelay(".35s")}>
+          )}>
           {ROAST_HERO.lastNames}
         </span>
       </h1>
@@ -89,13 +86,12 @@ export default function RoastHero() {
         <div>
           <p
             className={cn(
-              "roast-anim-rise",
+              "roast-anim-rise roast-delay-500",
               // Size and spacing
               "max-w-[34ch]",
               // Text
               "text-[clamp(1.2rem,2.4vw,1.55rem)] font-[350] leading-[1.45] text-roast-ink-2",
-            )}
-            style={riseDelay(".5s")}>
+            )}>
             {ROAST_HERO.lede.before}
             <em className="italic text-roast-ink">{ROAST_HERO.lede.em}</em>
             {ROAST_HERO.lede.after}
@@ -127,8 +123,7 @@ export default function RoastHero() {
         <RoastLabel
           as="aside"
           aria-label="Profile label"
-          className="roast-anim-rise"
-          style={riseDelay(".65s")}>
+          className="roast-anim-rise roast-delay-650">
           <RoastLabelTop>{label.kicker}</RoastLabelTop>
           <div
             className={cn(

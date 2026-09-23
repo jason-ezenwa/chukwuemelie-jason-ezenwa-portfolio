@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -45,9 +45,15 @@ export const DISPLAY = cn(
   "font-mono-sans font-stretch-125% font-extrabold tracking-[-0.02em] leading-[0.86]",
 );
 
-/** Animation offsets for `.mono-rise` lines and `.mono-fade`/`.mono-draw` blocks */
-export function motionVars(index: number, delayMs = 0): CSSProperties {
-  return { "--i": index, "--d": `${delayMs}ms` } as CSSProperties;
+/** Start offsets, in ms, that have a matching `.mono-d-*` class in monograph.css */
+export type MotionDelay = 0 | 250 | 700 | 900 | 1000;
+
+/** Highest stagger step with a matching `.mono-i-*` class in monograph.css */
+const MAX_STAGGER_INDEX = 7;
+
+/** Classes that stagger a `.mono-rise` line by `index` steps (90ms each) after `delay` ms */
+export function motionClasses(index: number, delay: MotionDelay = 0): string {
+  return `mono-i-${Math.min(index, MAX_STAGGER_INDEX)} mono-d-${delay}`;
 }
 
 export function Arrow({ children }: { children: ReactNode }) {

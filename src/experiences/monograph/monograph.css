@@ -221,6 +221,59 @@
   animation-delay: var(--d, 0ms);
 }
 
+/* Stagger steps and start offsets for .mono-rise / .mono-draw / .mono-fade (see motionClasses) */
+:root[data-experience="monograph"] .mono-i-0 {
+  --i: 0;
+}
+
+:root[data-experience="monograph"] .mono-i-1 {
+  --i: 1;
+}
+
+:root[data-experience="monograph"] .mono-i-2 {
+  --i: 2;
+}
+
+:root[data-experience="monograph"] .mono-i-3 {
+  --i: 3;
+}
+
+:root[data-experience="monograph"] .mono-i-4 {
+  --i: 4;
+}
+
+:root[data-experience="monograph"] .mono-i-5 {
+  --i: 5;
+}
+
+:root[data-experience="monograph"] .mono-i-6 {
+  --i: 6;
+}
+
+:root[data-experience="monograph"] .mono-i-7 {
+  --i: 7;
+}
+
+:root[data-experience="monograph"] .mono-d-0 {
+  --d: 0ms;
+}
+
+:root[data-experience="monograph"] .mono-d-250 {
+  --d: 250ms;
+}
+
+:root[data-experience="monograph"] .mono-d-700 {
+  --d: 700ms;
+}
+
+:root[data-experience="monograph"] .mono-d-900 {
+  --d: 900ms;
+}
+
+:root[data-experience="monograph"] .mono-d-1000 {
+  --d: 1000ms;
+}
+
 @keyframes mono-rise {
   from {
     transform: translateY(105%);

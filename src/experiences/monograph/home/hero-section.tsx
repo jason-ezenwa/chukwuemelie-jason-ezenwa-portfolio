@@ -16,7 +16,7 @@ import {
   MONO_UP,
   TextLink,
   WRAP,
-  motionVars,
+  motionClasses,
 } from "@/experiences/monograph/primitives";
 import { useFitText } from "@/experiences/monograph/use-fit-text";
 
@@ -49,21 +49,21 @@ export default function HeroSection({ asOf }: { asOf: string }) {
             key={item.term}
             className={cn(CELL, "sm:col-span-6", META_COLUMNS[index])}>
             <dt className="mono-line text-mono-mid">
-              <span style={motionVars(index)}>{item.term}</span>
+              <span className={motionClasses(index)}>{item.term}</span>
             </dt>
             {item.details.map((detail, detailIndex) => (
               <dd key={detail} className="mono-line">
-                <span style={motionVars(index + detailIndex + 1)}>{detail}</span>
+                <span className={motionClasses(index + detailIndex + 1)}>{detail}</span>
               </dd>
             ))}
           </div>
         ))}
         <div className={cn(CELL, "sm:col-span-6", META_COLUMNS[2])}>
           <dt className="mono-line text-mono-mid">
-            <span style={motionVars(2)}>{HERO_STATUS.term}</span>
+            <span className={motionClasses(2)}>{HERO_STATUS.term}</span>
           </dt>
           <dd className="mono-line">
-            <span style={motionVars(3)}>
+            <span className={motionClasses(3)}>
               <span
                 className={cn(
                   // Size and spacing
@@ -93,16 +93,16 @@ export default function HeroSection({ asOf }: { asOf: string }) {
         )}>
         {HERO_NAME_LINES.map((line, index) => (
           <span key={line} className="mono-line" data-fit-line>
-            <span style={motionVars(index, 250)}>{line}</span>
+            <span className={motionClasses(index, 250)}>{line}</span>
           </span>
         ))}
       </h1>
 
       <div
         aria-hidden="true"
-        style={motionVars(0, 700)}
         className={cn(
           "mono-draw",
+          motionClasses(0, 700),
           // Size and spacing
           "h-px mt-[clamp(24px,3vw,40px)]",
           // Background
@@ -117,13 +117,11 @@ export default function HeroSection({ asOf }: { asOf: string }) {
           "gap-y-7 pt-4 pb-[clamp(56px,9vw,140px)]",
         )}>
         <p
-          style={motionVars(0, 900)}
-          className={cn(CELL, MONO, MONO_UP, "mono-fade text-mono-mid")}>
+          className={cn(CELL, MONO, MONO_UP, "mono-fade text-mono-mid", motionClasses(0, 900))}>
           Index — {yearOf(asOf)}
         </p>
         <div
-          style={motionVars(0, 1000)}
-          className={cn(CELL, "mono-fade lg:col-[1/span_8]")}>
+          className={cn(CELL, "mono-fade lg:col-[1/span_8]", motionClasses(0, 1000))}>
           <p
             className={cn(
               // Size and spacing
