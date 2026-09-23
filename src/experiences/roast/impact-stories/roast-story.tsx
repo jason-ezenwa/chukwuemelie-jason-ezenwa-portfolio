@@ -69,8 +69,8 @@ function RoastStep({
         "grid sm:grid-cols-[11rem_minmax(0,1fr)]",
       )}>
       <div>
-        <RoastKicker>{framing.kicker}</RoastKicker>
-        {framing.metric && (
+        {framing && <RoastKicker>{framing.kicker}</RoastKicker>}
+        {framing?.metric && (
           <span
             className={cn(
               // Size and spacing
@@ -83,7 +83,7 @@ function RoastStep({
             {framing.metric}
           </span>
         )}
-        {framing.metricCap && (
+        {framing?.metricCap && (
           <span
             className={cn(
               // Size and spacing

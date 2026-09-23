@@ -11,7 +11,7 @@ import {
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
-import { capitalisedCountWord, countWord } from "@/utils/count-words";
+import { capitalisedCountWord } from "@/utils/count-words";
 
 /** Lot count from the number of impact stories, e.g. Four lots */
 const LOT_COUNT = `${capitalisedCountWord(IMPACT_STORIES.length)} lots`;
@@ -117,25 +117,22 @@ export interface RoastMilestone {
   anchor: "start" | "end";
 }
 
-const ROAST_MILESTONES = [
-  { event: "Charge", date: "Sep 2023", role: "Wynk — Full Stack Developer", x: 80, y: 300, labelX: 100, labelY: 296, anchor: "start" },
-  { event: "Dry end", date: "Jan 2024", role: "LaborHack — Software Engineer", x: 200, y: 225, labelX: 218, labelY: 244, anchor: "start" },
-  { event: "First crack", date: "Apr 2024", role: "Peppermint — Lead Software Engineer", x: 290, y: 170, labelX: 308, labelY: 188, anchor: "start" },
-  { event: "Development", date: "Jan 2026", role: "Fractional Head of Engineering", x: 920, y: 80, labelX: 905, labelY: 118, anchor: "end" },
-  { event: "Second crack", date: "May 2026", role: "Scooler AI — Lead Software Engineer", x: 1040, y: 71.6, labelX: 1024, labelY: 30, anchor: "end" },
-] satisfies RoastMilestone[];
-
 export const ROAST_PROFILE = {
   kicker: "Fig. 1 — Career roast profile",
   keyLine: "Scope of ownership",
   keyDot: "Milestone",
   title: "Career roast profile, September 2023 to present",
-  description: `A rising curve with ${countWord(ROAST_MILESTONES.length)} milestones: ${ROAST_MILESTONES.map(
-    (milestone) => `${milestone.role} (${milestone.date})`,
-  ).join(", ")}.`,
+  description:
+    "A rising curve with five milestones: Wynk in September 2023, LaborHack in January 2024, Peppermint in April 2024, Fractional Head of Engineering in January 2026, and Scooler AI in May 2026.",
   captionLeft: "Curve plots scope of ownership over time",
   captionRight: "Roast in progress",
-  milestones: ROAST_MILESTONES,
+  milestones: [
+    { event: "Charge", date: "Sep 2023", role: "Wynk — Full Stack Developer", x: 80, y: 300, labelX: 100, labelY: 296, anchor: "start" },
+    { event: "Dry end", date: "Jan 2024", role: "LaborHack — Software Engineer", x: 200, y: 225, labelX: 218, labelY: 244, anchor: "start" },
+    { event: "First crack", date: "Apr 2024", role: "Peppermint — Lead Software Engineer", x: 290, y: 170, labelX: 308, labelY: 188, anchor: "start" },
+    { event: "Development", date: "Jan 2026", role: "Fractional Head of Engineering", x: 920, y: 80, labelX: 905, labelY: 118, anchor: "end" },
+    { event: "Second crack", date: "May 2026", role: "Scooler AI — Lead Software Engineer", x: 1040, y: 71.6, labelX: 1024, labelY: 30, anchor: "end" },
+  ] satisfies RoastMilestone[],
 };
 
 // ---------------------------------------------------------------------------
@@ -595,11 +592,11 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
   },
 };
 
-/** Framing for one contribution of a story (every contribution has one, see `RoastStoryFraming`) */
+/** Framing for one contribution of a story; `undefined` if the id isn't one of that story's contributions */
 export function getRoastContributionFraming(
   storyId: ImpactStoryId,
   contributionId: string,
-): RoastContributionFraming {
+): RoastContributionFraming | undefined {
   const contributions: Record<string, RoastContributionFraming> = ROAST_STORY_FRAMING[storyId].contributions;
 
   return contributions[contributionId];
