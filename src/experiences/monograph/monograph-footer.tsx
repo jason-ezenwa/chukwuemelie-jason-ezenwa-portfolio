@@ -100,9 +100,8 @@ export default function MonographFooter({ asOf }: { asOf: string }) {
         <p className={cn(CELL, "md:col-[1/span_4]")}>
           © {yearOf(asOf)} Chukwuemelie Jason Obumse
         </p>
-        <p className={cn(CELL, "md:col-[5/span_5]")}>{CONTACT.colophon}</p>
-        <p className={cn(CELL, "md:col-[10/span_3] md:text-right")}>
-          {CONTACT.gridHint}
+        <p className={cn(CELL, "md:col-[5/span_8] md:text-right")}>
+          {CONTACT.colophon}
         </p>
       </div>
     </footer>

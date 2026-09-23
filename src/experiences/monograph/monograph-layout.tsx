@@ -4,7 +4,6 @@ import ExperienceSwitcher from "@/experiences/experience-switcher";
 import SiteHead from "@/experiences/site-head";
 import type { PublicPath } from "@/experiences/experience";
 import { archivo, plexMono } from "@/experiences/monograph/fonts";
-import GridOverlay, { useGridOverlay } from "@/experiences/monograph/grid-overlay";
 import MonographFooter from "@/experiences/monograph/monograph-footer";
 import MonographHeader from "@/experiences/monograph/monograph-header";
 import { useIsomorphicLayoutEffect } from "@/experiences/monograph/use-isomorphic-layout-effect";
@@ -26,8 +25,6 @@ export default function MonographLayout({
   asOf,
   children,
 }: MonographLayoutProps) {
-  const { isVisible: isGridVisible, toggle: toggleGrid } = useGridOverlay();
-
   // D4 safety net: a client transition can land here from the other experience.
   useIsomorphicLayoutEffect(() => {
     document.documentElement.dataset.experience = "monograph";
@@ -62,12 +59,7 @@ export default function MonographLayout({
         Skip to content
       </a>
 
-      <GridOverlay isVisible={isGridVisible} />
-
-      <MonographHeader
-        isGridVisible={isGridVisible}
-        onToggleGrid={toggleGrid}
-      />
+      <MonographHeader />
 
       <main id="main">{children}</main>
 
