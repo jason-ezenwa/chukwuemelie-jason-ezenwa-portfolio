@@ -550,11 +550,13 @@
   }
 
   /* ---------- Menu board leader dots ---------- */
+  /* Runs the full row behind the name and places, which mask it with the page background,
+     so the dots always stop at the first word even when the places wrap */
   :root[data-experience="roast"] .roast-menu-lead {
-    flex: 1;
-    min-width: 12px;
+    position: absolute;
+    inset-inline: 0;
+    top: 1.7rem;
     border-bottom: 1px dotted var(--roast-line-strong);
-    transform: translateY(-5px);
   }
 
   /* ---------- Phase bar ---------- */
