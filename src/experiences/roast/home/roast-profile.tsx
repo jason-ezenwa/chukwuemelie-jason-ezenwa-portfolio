@@ -150,9 +150,7 @@ export default function RoastProfile() {
       <ol className="roast-profile-legend">
         {ROAST_PROFILE.milestones.map((milestone) => (
           <li key={milestone.event}>
-            <RoastKicker>
-              <b>{milestone.event}</b> · {milestone.date}
-            </RoastKicker>
+            <RoastKicker>{milestone.date}</RoastKicker>
             <p
               className={cn(
                 // Size and spacing
@@ -166,15 +164,8 @@ export default function RoastProfile() {
         ))}
       </ol>
 
-      <figcaption
-        className={cn(
-          // Size and spacing
-          "mt-3 gap-3",
-          // Layout
-          "flex flex-wrap justify-between",
-        )}>
-        <RoastKicker as="span">{ROAST_PROFILE.captionLeft}</RoastKicker>
-        <RoastKicker as="span">{ROAST_PROFILE.captionRight}</RoastKicker>
+      <figcaption className="mt-3">
+        <RoastKicker as="span">{ROAST_PROFILE.caption}</RoastKicker>
       </figcaption>
     </figure>
   );

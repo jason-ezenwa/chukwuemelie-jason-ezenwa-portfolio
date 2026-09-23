@@ -124,8 +124,7 @@ export const ROAST_PROFILE = {
   title: "Career roast profile, September 2023 to present",
   description:
     "A rising curve with five milestones: Wynk in September 2023, LaborHack in January 2024, Peppermint in April 2024, Fractional Head of Engineering in January 2026, and Scooler AI in May 2026.",
-  captionLeft: "Curve plots scope of ownership over time",
-  captionRight: "Roast in progress",
+  caption: "Roast in progress",
   milestones: [
     { event: "Charge", date: "Sep 2023", role: "Wynk — Full Stack Developer", x: 80, y: 300, labelX: 100, labelY: 296, anchor: "start" },
     { event: "Dry end", date: "Jan 2024", role: "LaborHack — Software Engineer", x: 200, y: 225, labelX: 218, labelY: 244, anchor: "start" },
