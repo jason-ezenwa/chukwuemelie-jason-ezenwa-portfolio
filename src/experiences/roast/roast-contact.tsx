@@ -42,7 +42,7 @@ export default function RoastContact({ asOf }: { asOf: string }) {
             id="contact-h"
             className={cn(
               // Text
-              "font-roast-display text-[clamp(3rem,11vw,8.5rem)] font-extrabold font-stretch-75% leading-[.88] tracking-[-.02em] [font-variation-settings:'opsz'_96]",
+              "font-roast-display text-[clamp(3rem,11vw,8.5rem)] font-semibold font-stretch-75% leading-[.88] tracking-[-.02em] [font-variation-settings:'opsz'_96]",
             )}>
             {ROAST_CONTACT.heading.strong}{" "}
             <span
