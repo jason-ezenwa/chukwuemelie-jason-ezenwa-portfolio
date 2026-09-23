@@ -1,13 +1,9 @@
 import { IMPACT_STORIES, type ContributionId, type ImpactStoryId } from "@/content/impact-stories";
 import {
   GITHUB_URL,
-  LABORHACK_URL,
   LINKEDIN_URL,
-  PEPPERMINT_TESTER_URL,
-  PEPPERMINT_URL,
   RESUME_URL,
   SCOOLER_URL,
-  WYNK_URL,
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
@@ -374,7 +370,6 @@ export const ROAST_STORIES_PAGE = {
   back: "Back to all lots",
   backHref: "/#impact",
   kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
-  kickerTail: "Spec sheets",
   indexKicker: "The lots",
   overviewKicker: { lead: "Overview", bold: "Origin story" } satisfies RoastKickerCopy,
   brewKicker: { lead: "Brewing notes", bold: "Key contributions" } satisfies RoastKickerCopy,
@@ -416,14 +411,6 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
   pullQuote: { text: string; bold: string };
   /** One entry per contribution in the shared story; a missing one fails the type check */
   contributions: Record<ContributionId<StoryId>, RoastContributionFraming>;
-  spec: {
-    subtitle: string;
-    origin: RoastLink;
-    yield: string;
-    servedTo?: string;
-    footKicker: string;
-    footLink: RoastLink;
-  };
 }
 
 export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFraming<StoryId> } = {
@@ -457,14 +444,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       "agentic-ai-assistant": { kicker: "Assistant", metric: "Skye", metricCap: "live web search and secure tools" },
       "infrastructure-and-analytics": { kicker: "Infrastructure", metric: "End to end", metricCap: "AWS · Terraform · PostHog" },
       "engineering-process": { kicker: "Process" },
-    },
-    spec: {
-      subtitle: "Agentic AI, build to launch",
-      origin: { label: "scooler.ai", href: SCOOLER_URL },
-      yield: "85+ PRs in 6 weeks · 5–10x fewer round-trips · 1,000+ questions",
-      servedTo: "Students applying to college",
-      footKicker: "Roast in progress",
-      footLink: { label: "scooler.ai", href: SCOOLER_URL },
     },
   },
   "product-feedback": {
@@ -501,14 +480,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       "technical-leadership": { kicker: "Team", metric: "V1", metricCap: "released after the MVP" },
       "fractional-head-of-engineering": { kicker: "Leadership", metric: "2026", metricCap: "from January" },
     },
-    spec: {
-      subtitle: "Product feedback, at scale",
-      origin: { label: "runpeppermint.com", href: PEPPERMINT_URL },
-      yield: "10,000+ testers · 50x faster · $1,000+ in 3 months",
-      servedTo: "Clients including Kuda",
-      footKicker: "Roast in progress",
-      footLink: { label: "Testers' app", href: PEPPERMINT_TESTER_URL },
-    },
   },
   "blue-collar-empowerment": {
     lot: "2401",
@@ -543,14 +514,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       "deployment-and-release-engineering": { kicker: "Releases", metric: "40%", metricCap: "fewer rollback incidents" },
       "seo-and-visibility": { kicker: "Visibility", metric: "28%", metricCap: "more organic traffic" },
     },
-    spec: {
-      subtitle: "Jobs, training and income for artisans",
-      origin: { label: "laborhack.com", href: LABORHACK_URL },
-      yield: "₦45m+ revenue · 99.9% uptime · 5,000+ artisans",
-      servedTo: "Artisans, homeowners and businesses",
-      footKicker: "Roast complete",
-      footLink: { label: "laborhack.com", href: LABORHACK_URL },
-    },
   },
   "wynk-limited": {
     lot: "2309",
@@ -579,13 +542,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       "web-application-rebuild": { kicker: "Web app", metric: "+55%", metricCap: "retention" },
       "hiring-and-team-scaling": { kicker: "Team", metric: "4", metricCap: "hires who accelerated delivery" },
       documentation: { kicker: "Docs" },
-    },
-    spec: {
-      subtitle: "A lifestyle super app, financial services first",
-      origin: { label: "wynk.ng", href: WYNK_URL },
-      yield: "+55% retention · 4 hires",
-      footKicker: "Roast complete",
-      footLink: { label: "wynk.ng", href: WYNK_URL },
     },
   },
 };

@@ -10,7 +10,6 @@ import {
   getRoastContributionFraming,
 } from "@/experiences/roast/content";
 import RoastPhaseBar from "@/experiences/roast/impact-stories/roast-phase-bar";
-import RoastSpecSheet from "@/experiences/roast/impact-stories/roast-spec-sheet";
 import { formatStoryRange } from "@/experiences/roast/roast-dates";
 import { RoastArrowLeftIcon } from "@/experiences/roast/roast-icons";
 import { RoastKicker, RoastKickerText } from "@/experiences/roast/roast-kicker";
@@ -161,17 +160,15 @@ interface RoastStoryProps {
   total: number;
   next?: ImpactStory;
   asOf: string;
-  tenureScale: number;
 }
 
-/** One full story in the spec-sheet template */
+/** One full story: header, yield strip, overview and contributions */
 export default function RoastStory({
   story,
   index,
   total,
   next,
   asOf,
-  tenureScale,
 }: RoastStoryProps) {
   const framing = ROAST_STORY_FRAMING[story.id];
   const headingId = `${story.id}-title`;
@@ -196,7 +193,7 @@ export default function RoastStory({
           "flex flex-wrap items-center justify-between",
         )}>
         <RoastKicker>
-          Impact story · Lot <b>{framing.lot}</b> · Spec sheet
+          Impact story · Lot <b>{framing.lot}</b>
         </RoastKicker>
         <RoastKicker>
           {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
@@ -229,78 +226,72 @@ export default function RoastStory({
       <div
         className={cn(
           // Size and spacing
-          "mt-[72px] gap-12 lg:gap-16",
-          // Layout
-          "grid lg:grid-cols-[minmax(0,7.5fr)_minmax(0,4.5fr)] lg:items-start",
+          "mt-[72px] lg:max-w-[46rem]",
         )}>
         <div>
-          <div>
-            <RoastKicker className="mb-[18px]">
-              <RoastKickerText copy={ROAST_STORIES_PAGE.overviewKicker} />
-            </RoastKicker>
-            {story.overview.map((paragraph, paragraphIndex) => (
-              <p
-                key={paragraph}
-                className={cn(
-                  // Size and spacing
-                  paragraphIndex > 0 && "mt-[1em]",
-                  // Text
-                  "text-[clamp(1.15rem,2vw,1.35rem)] font-[350] leading-[1.55]",
-                  paragraphIndex === 0 ? "text-roast-ink" : "text-roast-ink-2",
-                )}>
-                {paragraph}
-              </p>
-            ))}
-          </div>
-
-          <p
-            className={cn(
-              // Size and spacing
-              "my-11 py-7",
-              // Text
-              "font-roast-display text-[clamp(1.6rem,3.4vw,2.3rem)] font-light font-stretch-92% leading-[1.12] tracking-[-.02em]",
-              // Border
-              "border-y border-roast-line-strong",
-            )}>
-            {framing.pullQuote.text}{" "}
-            <b className="font-bold text-roast-accent-ink">
-              {framing.pullQuote.bold}
-            </b>
-          </p>
-
-          <section aria-labelledby={brewId}>
-            <RoastKicker>
-              <RoastKickerText copy={ROAST_STORIES_PAGE.brewKicker} />
-            </RoastKicker>
+          <RoastKicker className="mb-[18px]">
+            <RoastKickerText copy={ROAST_STORIES_PAGE.overviewKicker} />
+          </RoastKicker>
+          {story.overview.map((paragraph, paragraphIndex) => (
             <p
-              id={brewId}
+              key={paragraph}
               className={cn(
                 // Size and spacing
-                "mt-2.5",
+                paragraphIndex > 0 && "mt-[1em]",
                 // Text
-                "font-roast-display text-[clamp(1.8rem,4vw,2.6rem)] font-bold font-stretch-84% leading-none tracking-[-.025em]",
+                "text-[clamp(1.15rem,2vw,1.35rem)] font-[350] leading-[1.55]",
+                paragraphIndex === 0 ? "text-roast-ink" : "text-roast-ink-2",
               )}>
-              {ROAST_STORIES_PAGE.brewHeading}
+              {paragraph}
             </p>
-            <ol
-              className={cn(
-                // Size and spacing
-                "mt-7",
-                // Border
-                "border-t border-roast-line-strong",
-              )}>
-              {story.contributions.map((contribution) => (
-                <RoastStep
-                  key={contribution.id}
-                  contribution={contribution}
-                  storyId={story.id}
-                />
-              ))}
-            </ol>
-          </section>
+          ))}
         </div>
 
-        <RoastSpecSheet story={story} asOf={asOf} tenureScale={tenureScale} />
+        <p
+          className={cn(
+            // Size and spacing
+            "my-11 py-7",
+            // Text
+            "font-roast-display text-[clamp(1.6rem,3.4vw,2.3rem)] font-light font-stretch-92% leading-[1.12] tracking-[-.02em]",
+            // Border
+            "border-y border-roast-line-strong",
+          )}>
+          {framing.pullQuote.text}{" "}
+          <b className="font-bold text-roast-accent-ink">
+            {framing.pullQuote.bold}
+          </b>
+        </p>
+
+        <section aria-labelledby={brewId}>
+          <RoastKicker>
+            <RoastKickerText copy={ROAST_STORIES_PAGE.brewKicker} />
+          </RoastKicker>
+          <p
+            id={brewId}
+            className={cn(
+              // Size and spacing
+              "mt-2.5",
+              // Text
+              "font-roast-display text-[clamp(1.8rem,4vw,2.6rem)] font-bold font-stretch-84% leading-none tracking-[-.025em]",
+            )}>
+            {ROAST_STORIES_PAGE.brewHeading}
+          </p>
+          <ol
+            className={cn(
+              // Size and spacing
+              "mt-7",
+              // Border
+              "border-t border-roast-line-strong",
+            )}>
+            {story.contributions.map((contribution) => (
+              <RoastStep
+                key={contribution.id}
+                contribution={contribution}
+                storyId={story.id}
+              />
+            ))}
+          </ol>
+        </section>
       </div>
 
       <nav
