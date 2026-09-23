@@ -201,7 +201,7 @@ export const ROAST_STACK = {
       items: [
         { name: "Node.js", where: "LaborHack · Wynk", house: true },
         { name: "NestJS", where: "Scooler AI · Peppermint" },
-        { name: "Vercel AI SDK", where: "Scooler AI" },
+        { name: "Vercel AI SDK", where: "Scooler AI · Peppermint" },
         { name: "Express.js", where: "Wynk" },
         { name: "GraphQL", where: "LaborHack" },
       ],
@@ -469,7 +469,7 @@ export const ROAST_STORY_FRAMING: Record<ImpactStoryId, RoastStoryFraming> = {
     title: { strong: "Product Feedback", thin: "& Scaling Operations" },
     lotCard: {
       process: "Lead Software Engineer → Fractional Head of Engineering",
-      notes: "Next.js · NestJS · TypeScript · MongoDB · AWS",
+      notes: "Next.js · NestJS · TypeScript · Vercel AI SDK · MongoDB · AWS",
       yieldLine: "$1,000+ in 3 months",
       bullets: [
         "Launched an AI-powered product feedback application used by companies like Kuda",

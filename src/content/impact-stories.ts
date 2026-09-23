@@ -132,7 +132,7 @@ const PEPPERMINT: ImpactStory = {
     { title: "Lead Software Engineer", start: "2024-04", end: "2026-01" },
     { title: "Fractional Head of Engineering", start: "2026-01", end: null },
   ],
-  stack: ["Next.js", "NestJS", "TypeScript", "MongoDB", "AWS"],
+  stack: ["Next.js", "NestJS", "TypeScript", "Vercel AI SDK", "MongoDB", "AWS"],
   overview: [
     "Peppermint develops digital tools to help companies collect and analyze product feedback. Starting as Lead Software Engineer, I directed engineering efforts to build user-facing applications that enhanced the product feedback process. In January 2026, I transitioned to Fractional Head of Engineering — leading engineering strategy, technical direction, and cross-functional alignment.",
   ],
