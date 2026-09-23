@@ -20,7 +20,7 @@ import { PointList } from "@/experiences/monograph/point-list";
 const FIG_NUM = cn(
   "mono-fig-num",
   // Text
-  "font-mono-sans font-stretch-125% font-extrabold tabular-nums lining-nums",
+  "font-mono-sans font-stretch-125% font-bold tabular-nums lining-nums",
   "text-[clamp(3rem,12vw,5.4rem)] leading-[0.85] tracking-[-0.045em]",
   // Layout
   "block",

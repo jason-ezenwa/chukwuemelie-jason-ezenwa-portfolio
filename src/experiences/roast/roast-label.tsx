@@ -247,7 +247,7 @@ export function RoastLotName({
       <span
         className={cn(
           // Text
-          "font-roast-display text-[clamp(2.2rem,5vw,2.9rem)] font-extrabold font-stretch-78% leading-[.95] tracking-[-.03em] [font-variation-settings:'opsz'_96]",
+          "font-roast-display text-[clamp(2.2rem,5vw,2.9rem)] font-bold font-stretch-78% leading-[.95] tracking-[-.03em] [font-variation-settings:'opsz'_96]",
           // Layout
           "block",
         )}>

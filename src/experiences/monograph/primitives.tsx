@@ -39,10 +39,10 @@ export const MONO_UP = cn(
   "uppercase tracking-[0.08em]",
 );
 
-/** `.display`: expanded heavy headline */
+/** `.display`: expanded bold headline */
 export const DISPLAY = cn(
   // Text
-  "font-mono-sans font-stretch-125% font-extrabold tracking-[-0.02em] leading-[0.86]",
+  "font-mono-sans font-stretch-125% font-bold tracking-[-0.02em] leading-[0.86]",
 );
 
 /** Start offsets, in ms, that have a matching `.mono-d-*` class in monograph.css */

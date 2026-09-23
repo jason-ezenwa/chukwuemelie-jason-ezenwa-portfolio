@@ -64,7 +64,7 @@ export default function ProjectsSection() {
                     // Size and spacing
                     "mt-2.5 mb-3",
                     // Text
-                    "font-mono-sans font-stretch-125% font-extrabold text-[clamp(1.6rem,3vw,2.6rem)] leading-[0.95] tracking-[-0.03em]",
+                    "font-mono-sans font-stretch-125% font-bold text-[clamp(1.6rem,3vw,2.6rem)] leading-[0.95] tracking-[-0.03em]",
                   )}>
                   {project.name}
                 </h3>

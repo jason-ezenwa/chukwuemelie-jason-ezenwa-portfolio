@@ -194,7 +194,7 @@ export default function MonographStory({ story }: { story: ImpactStory }) {
                 // Size and spacing
                 "mt-[18px]",
                 // Text
-                "font-mono-sans font-stretch-125% font-extrabold lining-nums tabular-nums",
+                "font-mono-sans font-stretch-125% font-bold lining-nums tabular-nums",
                 "text-[clamp(3rem,16vw,6rem)] md:text-[clamp(2.6rem,5.4vw,6.4rem)] leading-[0.82] tracking-[-0.05em]",
                 // Layout
                 "block",
