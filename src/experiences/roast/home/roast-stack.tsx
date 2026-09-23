@@ -48,23 +48,41 @@ export default function RoastStack() {
                     // Border
                     "border-b border-roast-line",
                     // Layout
-                    "flex items-baseline",
+                    "relative flex items-baseline",
                   )}>
+                  <span className="roast-menu-lead" aria-hidden="true" />
                   <span
                     className={cn(
+                      // Size and spacing
+                      "pr-2.5",
                       // Text
                       "font-roast-display text-[1.45rem] font-medium font-stretch-88% leading-[1.1] tracking-[-.015em] whitespace-nowrap",
+                      // Background
+                      "bg-roast-bg",
+                      // Layout
+                      "relative",
                       item.house && "font-bold",
                     )}>
                     {item.name}
                   </span>
-                  <span className="roast-menu-lead" aria-hidden="true" />
                   <span
                     className={cn(
+                      // Size and spacing
+                      "flex-1",
                       // Text
                       "text-right font-roast-mono text-[.68rem] tracking-[.06em] text-roast-muted",
                     )}>
-                    {item.where}
+                    <span
+                      className={cn(
+                        // Size and spacing
+                        "pl-2.5",
+                        // Background
+                        "bg-roast-bg box-decoration-clone",
+                        // Layout
+                        "relative",
+                      )}>
+                      {item.where}
+                    </span>
                   </span>
                 </li>
               ))}

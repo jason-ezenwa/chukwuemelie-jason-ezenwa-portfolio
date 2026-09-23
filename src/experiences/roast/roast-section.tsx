@@ -96,7 +96,7 @@ export function RoastSectionHead({
         id={headingId}
         className={cn(
           // Size and spacing
-          "max-w-[16ch]",
+          "lg:max-w-[16ch]",
           // Text
           "font-roast-display text-[clamp(2.2rem,6.4vw,4.4rem)] font-bold font-stretch-82% leading-[.95] tracking-[-.03em] [font-variation-settings:'opsz'_96]",
         )}>
