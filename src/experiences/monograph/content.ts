@@ -6,7 +6,6 @@ import {
   POST_URLS,
   PROJECT_URLS,
   RESUME_URL,
-  SCOOLER_URL,
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
@@ -117,8 +116,6 @@ export interface MonographHomeStory {
   anchor: string;
   role: string;
   points: string[];
-  footNote?: string;
-  externalLink?: { label: string; href: string };
 }
 
 export const HOME_STORIES: Record<ImpactStoryId, MonographHomeStory> = {
@@ -127,11 +124,9 @@ export const HOME_STORIES: Record<ImpactStoryId, MonographHomeStory> = {
     role: "Lead Software Engineer · United States, remote",
     points: [
       "Led engineering for an agentic AI platform for college applications from build to production launch, landing 85+ PRs in 6 weeks.",
-      "Built a steerable browser agent that auto-fills Common App and university application forms, with batched tool calls cutting LLM inference round-trips 5–10×, plus an eval harness for reliability.",
-      "Built adaptive SAT prep — diagnostic, AI study plans, drills and full-length mocks over a 1,000+ question bank — and made Skye, the in-app assistant, agentic with live web search and secure tools over each student’s data.",
+      "Built a browser agent that auto-fills college applications and an agentic in-app assistant with live web search.",
+      "Built adaptive SAT prep with AI study plans and full-length mocks over a 1,000+ question bank.",
     ],
-    footNote: "Owned infra and analytics end to end",
-    externalLink: { label: "scooler.ai", href: SCOOLER_URL },
   },
   "product-feedback": {
     anchor: "peppermint",

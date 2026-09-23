@@ -3,7 +3,6 @@ import {
   GITHUB_URL,
   LINKEDIN_URL,
   RESUME_URL,
-  SCOOLER_URL,
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
@@ -399,11 +398,8 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
     notes: string;
     yieldLine: string;
     bullets: string[];
-    footKicker?: string;
     /** The featured lot gets the copper foil */
     featured?: boolean;
-    /** Extra external link kept in the foot, e.g. scooler.ai */
-    footLink?: RoastLink;
   };
   yield: RoastYieldItem[];
   /** One roast-phase name per role; the phase bar only shows with more than one role */
@@ -423,11 +419,9 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       yieldLine: "85+ PRs in 6 weeks",
       bullets: [
         "Led engineering for an agentic AI platform for college applications from build to production launch, landing 85+ PRs in 6 weeks",
-        "Built a steerable browser agent that auto-fills Common App and university application forms, with batched tool calls cutting LLM inference round-trips 5–10x, plus an eval harness for reliability",
-        "Built adaptive SAT prep (diagnostic, AI study plans, drills, full-length mocks over a 1,000+ question bank) and made Skye, the in-app assistant, agentic with live web search and secure tools over each student's data",
+        "Built a browser agent that auto-fills college applications and an agentic in-app assistant with live web search",
+        "Built adaptive SAT prep with AI study plans and full-length mocks over a 1,000+ question bank",
       ],
-      footKicker: "Owned infra & analytics end to end",
-      footLink: { label: "scooler.ai", href: SCOOLER_URL },
     },
     yield: [
       { num: "85", sup: "+", what: "PRs landed in 6 weeks, build to launch", kicker: "Launch" },

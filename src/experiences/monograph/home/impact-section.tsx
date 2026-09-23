@@ -107,31 +107,13 @@ function StoryRow({ story }: { story: ImpactStory }) {
         <p
           className={cn(
             // Size and spacing
-            "gap-x-6 gap-y-2.5 mt-4",
-            // Layout
-            "flex flex-wrap justify-between",
+            "mt-4",
+            // Text
+            "font-mono-code text-[12px] font-medium",
           )}>
-          {home.footNote && (
-            <span className={cn(MONO, "text-mono-mid")}>{home.footNote}</span>
-          )}
-          <span
-            className={cn(
-              // Size and spacing
-              "gap-x-6 gap-y-2.5",
-              // Text
-              "font-mono-code text-[12px] font-medium",
-              // Layout
-              "flex flex-wrap",
-            )}>
-            {home.externalLink && (
-              <TextLink href={home.externalLink.href} external>
-                {home.externalLink.label}
-              </TextLink>
-            )}
-            <TextLink href={`/impact-stories#${story.id}`} internal arrow="→">
-              Read the story
-            </TextLink>
-          </span>
+          <TextLink href={`/impact-stories#${story.id}`} internal arrow="→">
+            Read the story
+          </TextLink>
         </p>
       </div>
     </article>
