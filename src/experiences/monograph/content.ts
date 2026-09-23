@@ -6,7 +6,6 @@ import {
   POST_URLS,
   PROJECT_URLS,
   RESUME_URL,
-  SCOOLER_URL,
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
@@ -106,7 +105,7 @@ export const IMPACT = {
     },
     {
       num: "5–10×",
-      cap: "Fewer LLM round-trips from batched tool calls in Scooler’s browser agent.",
+      cap: "Fewer LLM round-trips from batched tool calls in Skye, Scooler’s AI agent.",
     },
   ] satisfies MonographFigure[],
 };
@@ -117,8 +116,6 @@ export interface MonographHomeStory {
   anchor: string;
   role: string;
   points: string[];
-  footNote?: string;
-  externalLink?: { label: string; href: string };
 }
 
 export const HOME_STORIES: Record<ImpactStoryId, MonographHomeStory> = {
@@ -126,12 +123,10 @@ export const HOME_STORIES: Record<ImpactStoryId, MonographHomeStory> = {
     anchor: "scooler",
     role: "Lead Software Engineer · United States, remote",
     points: [
-      "Led engineering for an agentic AI platform for college applications from build to production launch, landing 85+ PRs in 6 weeks.",
-      "Built a steerable browser agent that auto-fills Common App and university application forms, with batched tool calls cutting LLM inference round-trips 5–10×, plus an eval harness for reliability.",
-      "Built adaptive SAT prep — diagnostic, AI study plans, drills and full-length mocks over a 1,000+ question bank — and made Skye, the in-app assistant, agentic with live web search and secure tools over each student’s data.",
+      "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks.",
+      "Built Skye, an in-app AI agent that guides each student’s application journey and auto-fills their Common App and university application forms.",
+      "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
     ],
-    footNote: "Owned infra and analytics end to end",
-    externalLink: { label: "scooler.ai", href: SCOOLER_URL },
   },
   "product-feedback": {
     anchor: "peppermint",
@@ -336,7 +331,7 @@ export const IMPACT_STORIES_PAGE = {
 export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<StoryId> } = {
   "agentic-college-applications": {
     titleLines: ["Agentic AI", "for College", "Applications"],
-    deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: a browser agent, SAT prep and an in-app assistant, and the infrastructure underneath.",
+    deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: Skye, an in-app AI agent, SAT test prep and the infrastructure underneath.",
     metrics: [
       {
         kicker: "Velocity",
@@ -355,14 +350,14 @@ export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<
       },
     ],
     pull: {
-      marked: "A steerable browser agent",
-      rest: " that auto-fills Common App and university application forms.",
-      caption: "On the application browser agent, kept reliable by an eval harness",
+      marked: "An in-app AI agent",
+      rest: " that guides each student’s application journey and auto-fills their forms.",
+      caption: "On Skye, kept reliable by an eval harness",
     },
     contributionKickers: {
-      "application-browser-agent": "Agents",
+      "skye-ai-agent": "Agents",
       "sat-test-prep": "Learning",
-      "agentic-ai-assistant": "Assistant",
+      "inference-and-reliability": "Efficiency",
       "infrastructure-and-analytics": "Infrastructure",
       "engineering-process": "Process",
     },

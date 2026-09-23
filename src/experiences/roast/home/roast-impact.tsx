@@ -8,7 +8,6 @@ import {
   getTenureScale,
   isStoryOngoing,
 } from "@/experiences/roast/roast-dates";
-import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import {
   RoastLabel,
   RoastLabelFields,
@@ -83,25 +82,7 @@ function RoastLotCard({ story, asOf, tenureScale }: RoastLotCardProps) {
       </RoastLabelFields>
       <RoastNotes items={lotCard.bullets} />
       <RoastLabelFoot>
-        {lotCard.footKicker && (
-          <RoastKicker as="span">{lotCard.footKicker}</RoastKicker>
-        )}
-        <div
-          className={cn(
-            // Size and spacing
-            "gap-x-[22px] gap-y-3",
-            // Layout
-            "flex flex-wrap items-center",
-          )}>
-          <RoastTextLink href={storyHref}>
-            {ROAST_IMPACT.readStory}
-          </RoastTextLink>
-          {lotCard.footLink && (
-            <RoastTextLink href={lotCard.footLink.href} external>
-              {lotCard.footLink.label}
-            </RoastTextLink>
-          )}
-        </div>
+        <RoastTextLink href={storyHref}>{ROAST_IMPACT.readStory}</RoastTextLink>
       </RoastLabelFoot>
     </RoastLabel>
   );

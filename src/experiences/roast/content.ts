@@ -3,7 +3,6 @@ import {
   GITHUB_URL,
   LINKEDIN_URL,
   RESUME_URL,
-  SCOOLER_URL,
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
@@ -399,11 +398,8 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
     notes: string;
     yieldLine: string;
     bullets: string[];
-    footKicker?: string;
     /** The featured lot gets the copper foil */
     featured?: boolean;
-    /** Extra external link kept in the foot, e.g. scooler.ai */
-    footLink?: RoastLink;
   };
   yield: RoastYieldItem[];
   /** One roast-phase name per role; the phase bar only shows with more than one role */
@@ -422,26 +418,24 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       notes: "TypeScript · React · NestJS · Vercel AI SDK · AWS · Terraform · MongoDB · Docker · PostHog",
       yieldLine: "85+ PRs in 6 weeks",
       bullets: [
-        "Led engineering for an agentic AI platform for college applications from build to production launch, landing 85+ PRs in 6 weeks",
-        "Built a steerable browser agent that auto-fills Common App and university application forms, with batched tool calls cutting LLM inference round-trips 5–10x, plus an eval harness for reliability",
-        "Built adaptive SAT prep (diagnostic, AI study plans, drills, full-length mocks over a 1,000+ question bank) and made Skye, the in-app assistant, agentic with live web search and secure tools over each student's data",
+        "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks",
+        "Built Skye, an in-app AI agent that guides each student's application journey and auto-fills their Common App and university application forms",
+        "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank",
       ],
-      footKicker: "Owned infra & analytics end to end",
-      footLink: { label: "scooler.ai", href: SCOOLER_URL },
     },
     yield: [
       { num: "85", sup: "+", what: "PRs landed in 6 weeks, build to launch", kicker: "Launch" },
-      { num: "5–10", sup: "x", what: "fewer LLM inference round-trips", kicker: "Browser agent" },
+      { num: "5–10", sup: "x", what: "fewer LLM inference round-trips", kicker: "Skye" },
       { num: "1,000", sup: "+", what: "questions behind adaptive SAT prep", kicker: "Test prep" },
     ],
     pullQuote: {
-      text: "A browser agent that fills in the Common App —",
-      bold: "steerable, batched and held to an eval harness.",
+      text: "An AI agent that guides each student and fills in the Common App —",
+      bold: "batched and held to an eval harness.",
     },
     contributions: {
-      "application-browser-agent": { kicker: "Agent", metric: "5–10x", metricCap: "fewer inference round-trips" },
+      "skye-ai-agent": { kicker: "Agent", metric: "Skye", metricCap: "guides students and fills their forms" },
       "sat-test-prep": { kicker: "Test prep", metric: "1,000+", metricCap: "question bank" },
-      "agentic-ai-assistant": { kicker: "Assistant", metric: "Skye", metricCap: "live web search and secure tools" },
+      "inference-and-reliability": { kicker: "Inference", metric: "5–10x", metricCap: "fewer inference round-trips" },
       "infrastructure-and-analytics": { kicker: "Infrastructure", metric: "End to end", metricCap: "AWS · Terraform · PostHog" },
       "engineering-process": { kicker: "Process" },
     },
