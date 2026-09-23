@@ -301,7 +301,6 @@ export const CONTACT = {
   /** Locked delta: "Let's build something that matters." */
   headingLines: ["Let’s build something", "that matters."],
   colophon: "Set in Archivo Expanded and IBM Plex Mono, on a 12-column grid.",
-  gridHint: "Press G for the grid",
 };
 
 // ---------- impact stories (story framing) ----------

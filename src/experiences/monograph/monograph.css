@@ -9,8 +9,6 @@
   --color-mono-rule: var(--mono-rule);
   --color-mono-plate: var(--mono-plate);
   --color-mono-signal: var(--mono-signal);
-  --color-mono-grid-tint: var(--mono-grid-tint);
-  --color-mono-grid-edge: var(--mono-grid-edge);
 
   --font-mono-sans: var(--mono-font-sans), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono-code: var(--mono-font-code), ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
@@ -29,8 +27,6 @@
   --mono-mark-bg: #ffe14d;
   --mono-mark-fg: #0d0d0d;
   --mono-mark-line: transparent;
-  --mono-grid-tint: rgba(13, 13, 13, 0.035);
-  --mono-grid-edge: rgba(13, 13, 13, 0.12);
   --mono-sel-bg: #ffe14d;
   --mono-sel-fg: #0d0d0d;
 
@@ -61,8 +57,6 @@
     --mono-mark-bg: transparent;
     --mono-mark-fg: #ffe14d;
     --mono-mark-line: #ffe14d;
-    --mono-grid-tint: rgba(237, 235, 229, 0.03);
-    --mono-grid-edge: rgba(237, 235, 229, 0.1);
     --mono-sel-bg: #ffe14d;
     --mono-sel-fg: #0e0e0d;
     color-scheme: dark;
@@ -78,8 +72,6 @@
   --mono-mark-bg: transparent;
   --mono-mark-fg: #ffe14d;
   --mono-mark-line: #ffe14d;
-  --mono-grid-tint: rgba(237, 235, 229, 0.03);
-  --mono-grid-edge: rgba(237, 235, 229, 0.1);
   --mono-sel-bg: #ffe14d;
   --mono-sel-fg: #0e0e0d;
   color-scheme: dark;

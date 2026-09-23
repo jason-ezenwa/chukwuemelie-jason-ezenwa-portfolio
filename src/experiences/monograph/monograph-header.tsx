@@ -11,11 +11,6 @@ import {
   TOOL_BUTTON,
 } from "@/experiences/monograph/tool-button";
 
-interface MonographHeaderProps {
-  isGridVisible: boolean;
-  onToggleGrid: () => void;
-}
-
 interface NavAnchorProps {
   href: string;
   className?: string;
@@ -51,10 +46,7 @@ function NavAnchor({
   );
 }
 
-export default function MonographHeader({
-  isGridVisible,
-  onToggleGrid,
-}: MonographHeaderProps) {
+export default function MonographHeader() {
   const router = useRouter();
   const publicPath = toPublicPath(router.asPath);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,15 +148,6 @@ export default function MonographHeader({
                 </NavAnchor>
               ))}
             </nav>
-
-            <button
-              type="button"
-              aria-pressed={isGridVisible}
-              title="Show the 12-column grid (G)"
-              onClick={onToggleGrid}
-              className={cn(TOOL_BUTTON, "hidden md:inline-flex")}>
-              Grid
-            </button>
 
             <MonographThemeToggle />
 
