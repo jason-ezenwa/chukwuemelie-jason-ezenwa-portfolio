@@ -256,7 +256,7 @@ export const ROAST_STACK = {
 export const ROAST_IMPACT = {
   kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
   heading: { strong: "Roasted in production,", thin: "labelled honestly." } satisfies RoastSplitHeading,
-  lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded. Lot numbers are the year and month each started.",
+  lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded.",
   readStory: "Read the story",
 };
 
