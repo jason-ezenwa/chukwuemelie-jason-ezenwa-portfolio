@@ -2,9 +2,9 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { IMPACT_STORIES } from "@/content/impact-stories";
 import { IMPACT_STORIES_PAGE } from "@/experiences/monograph/content";
-import CaseStudy, {
+import MonographStory, {
   CS_TITLE,
-} from "@/experiences/monograph/impact-stories/case-study";
+} from "@/experiences/monograph/impact-stories/monograph-story";
 import StoryLinkList from "@/experiences/monograph/impact-stories/story-link-list";
 import MonographLayout from "@/experiences/monograph/monograph-layout";
 import {
@@ -79,7 +79,7 @@ export default function MonographImpactStories({ asOf }: { asOf: string }) {
 
           return (
             <div key={story.id}>
-              <CaseStudy story={story} />
+              <MonographStory story={story} />
               {nextStory && (
                 <StoryLinkList
                   label="Next impact story"
