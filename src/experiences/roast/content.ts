@@ -1,4 +1,4 @@
-import type { ImpactStoryId } from "@/content/impact-stories";
+import { IMPACT_STORIES, type ContributionId, type ImpactStoryId } from "@/content/impact-stories";
 import {
   GITHUB_URL,
   LABORHACK_URL,
@@ -11,6 +11,10 @@ import {
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
+import { capitalisedCountWord, countWord } from "@/utils/count-words";
+
+/** Lot count from the number of impact stories, e.g. Four lots */
+const LOT_COUNT = `${capitalisedCountWord(IMPACT_STORIES.length)} lots`;
 
 /** A heading split into its bold lead and the thin, lighter tail. */
 export interface RoastSplitHeading {
@@ -55,7 +59,7 @@ export interface RoastNavItem {
 export const ROAST_NAV: RoastNavItem[] = [
   { label: "About", note: "Producer", href: "/#about" },
   { label: "Stack", note: "Tasting notes", href: "/#stack" },
-  { label: "Impact", note: "Four lots", href: "/#impact" },
+  { label: "Impact", note: LOT_COUNT, href: "/#impact" },
   { label: "Case studies", note: "In full", href: "/impact-stories" },
   { label: "Projects", note: "Single origin", href: "/#projects" },
   { label: "Writing", note: "Journal", href: "/#writing" },
@@ -113,22 +117,25 @@ export interface RoastMilestone {
   anchor: "start" | "end";
 }
 
+const ROAST_MILESTONES = [
+  { event: "Charge", date: "Sep 2023", role: "Wynk — Full Stack Developer", x: 80, y: 300, labelX: 100, labelY: 296, anchor: "start" },
+  { event: "Dry end", date: "Jan 2024", role: "LaborHack — Software Engineer", x: 200, y: 225, labelX: 218, labelY: 244, anchor: "start" },
+  { event: "First crack", date: "Apr 2024", role: "Peppermint — Lead Software Engineer", x: 290, y: 170, labelX: 308, labelY: 188, anchor: "start" },
+  { event: "Development", date: "Jan 2026", role: "Fractional Head of Engineering", x: 920, y: 80, labelX: 905, labelY: 118, anchor: "end" },
+  { event: "Second crack", date: "May 2026", role: "Scooler AI — Lead Software Engineer", x: 1040, y: 71.6, labelX: 1024, labelY: 30, anchor: "end" },
+] satisfies RoastMilestone[];
+
 export const ROAST_PROFILE = {
   kicker: "Fig. 1 — Career roast profile",
   keyLine: "Scope of ownership",
   keyDot: "Milestone",
   title: "Career roast profile, September 2023 to present",
-  description:
-    "A rising curve with five milestones: Wynk in September 2023, LaborHack in January 2024, Peppermint in April 2024, Fractional Head of Engineering in January 2026, and Scooler AI in May 2026.",
+  description: `A rising curve with ${countWord(ROAST_MILESTONES.length)} milestones: ${ROAST_MILESTONES.map(
+    (milestone) => `${milestone.role} (${milestone.date})`,
+  ).join(", ")}.`,
   captionLeft: "Curve plots scope of ownership over time",
   captionRight: "Roast in progress",
-  milestones: [
-    { event: "Charge", date: "Sep 2023", role: "Wynk — Full Stack Developer", x: 80, y: 300, labelX: 100, labelY: 296, anchor: "start" },
-    { event: "Dry end", date: "Jan 2024", role: "LaborHack — Software Engineer", x: 200, y: 225, labelX: 218, labelY: 244, anchor: "start" },
-    { event: "First crack", date: "Apr 2024", role: "Peppermint — Lead Software Engineer", x: 290, y: 170, labelX: 308, labelY: 188, anchor: "start" },
-    { event: "Development", date: "Jan 2026", role: "Fractional Head of Engineering", x: 920, y: 80, labelX: 905, labelY: 118, anchor: "end" },
-    { event: "Second crack", date: "May 2026", role: "Scooler AI — Lead Software Engineer", x: 1040, y: 71.6, labelX: 1024, labelY: 30, anchor: "end" },
-  ] satisfies RoastMilestone[],
+  milestones: ROAST_MILESTONES,
 };
 
 // ---------------------------------------------------------------------------
@@ -250,7 +257,7 @@ export const ROAST_STACK = {
 // ---------------------------------------------------------------------------
 
 export const ROAST_IMPACT = {
-  kicker: { lead: "Impact stories", bold: "Four lots" } satisfies RoastKickerCopy,
+  kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
   heading: { strong: "Roasted in production,", thin: "labelled honestly." } satisfies RoastSplitHeading,
   lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded. Lot numbers are the year and month each started.",
   readStory: "Read the story",
@@ -371,7 +378,7 @@ export const ROAST_CONTACT = {
 export const ROAST_STORIES_PAGE = {
   back: "Back to all lots",
   backHref: "/#impact",
-  kicker: { lead: "Impact stories", bold: "Four lots" } satisfies RoastKickerCopy,
+  kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
   kickerTail: "Spec sheets",
   indexKicker: "The lots",
   overviewKicker: { lead: "Overview", bold: "Origin story" } satisfies RoastKickerCopy,
@@ -392,7 +399,7 @@ export interface RoastContributionFraming {
   metricCap?: string;
 }
 
-export interface RoastStoryFraming {
+export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId> {
   /** Start `YYMM` */
   lot: string;
   title: RoastSplitHeading;
@@ -412,7 +419,8 @@ export interface RoastStoryFraming {
   /** One roast-phase name per role; the phase bar only shows with more than one role */
   phaseNames?: string[];
   pullQuote: { text: string; bold: string };
-  contributions: Record<string, RoastContributionFraming>;
+  /** One entry per contribution in the shared story; a missing one fails the type check */
+  contributions: Record<ContributionId<StoryId>, RoastContributionFraming>;
   spec: {
     subtitle: string;
     origin: RoastLink;
@@ -423,7 +431,7 @@ export interface RoastStoryFraming {
   };
 }
 
-export const ROAST_STORY_FRAMING: Record<ImpactStoryId, RoastStoryFraming> = {
+export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFraming<StoryId> } = {
   "agentic-college-applications": {
     lot: "2605",
     title: { strong: "Agentic AI", thin: "for College Applications" },
@@ -586,3 +594,13 @@ export const ROAST_STORY_FRAMING: Record<ImpactStoryId, RoastStoryFraming> = {
     },
   },
 };
+
+/** Framing for one contribution of a story (every contribution has one, see `RoastStoryFraming`) */
+export function getRoastContributionFraming(
+  storyId: ImpactStoryId,
+  contributionId: string,
+): RoastContributionFraming {
+  const contributions: Record<string, RoastContributionFraming> = ROAST_STORY_FRAMING[storyId].contributions;
+
+  return contributions[contributionId];
+}

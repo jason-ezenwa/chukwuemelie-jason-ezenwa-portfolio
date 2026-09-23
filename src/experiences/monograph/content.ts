@@ -1,4 +1,4 @@
-import type { ImpactStoryId } from "@/content/impact-stories";
+import { IMPACT_STORIES, type ContributionId, type ImpactStoryId } from "@/content/impact-stories";
 import {
   GITHUB_URL,
   LINKEDIN_URL,
@@ -10,6 +10,7 @@ import {
   type PostId,
   type ProjectId,
 } from "@/utils/constants";
+import { capitalisedCountWord } from "@/utils/count-words";
 
 /* Monograph framing and home copy. Detailed story content lives in @/content/impact-stories. */
 
@@ -54,21 +55,25 @@ export const ABOUT = {
 
 // ---------- stack ----------
 
+const STACK_GROUPS = [
+  { name: "Languages", tools: ["TypeScript", "JavaScript", "Python"] },
+  { name: "Frontend", tools: ["React", "Next.js"] },
+  {
+    name: "Backend & AI",
+    tools: ["Node.js", "NestJS", "Express.js", "GraphQL", "Vercel AI SDK"],
+  },
+  {
+    name: "Data & Cloud",
+    tools: ["MongoDB", "PostgreSQL", "MySQL", "AWS", "Docker", "Terraform"],
+  },
+];
+
+const STACK_TOOL_COUNT = STACK_GROUPS.reduce((total, group) => total + group.tools.length, 0);
+
 export const STACK = {
   sub: "Tools used in production",
-  count: "16 tools / 4 layers",
-  groups: [
-    { name: "Languages", tools: ["TypeScript", "JavaScript", "Python"] },
-    { name: "Frontend", tools: ["React", "Next.js"] },
-    {
-      name: "Backend & AI",
-      tools: ["Node.js", "NestJS", "Express.js", "GraphQL", "Vercel AI SDK"],
-    },
-    {
-      name: "Data & Cloud",
-      tools: ["MongoDB", "PostgreSQL", "MySQL", "AWS", "Docker", "Terraform"],
-    },
-  ],
+  count: `${STACK_TOOL_COUNT} tools / ${STACK_GROUPS.length} layers`,
+  groups: STACK_GROUPS,
 };
 
 // ---------- impact ----------
@@ -80,7 +85,7 @@ export interface MonographFigure {
 
 export const IMPACT = {
   sub: "Selected outcomes, 2023–present",
-  count: "4 companies",
+  count: `${new Set(IMPACT_STORIES.map((story) => story.company)).size} companies`,
   lead: {
     num: "50×",
     cap: "Faster data-intensive operations at Peppermint, through query optimisation and caching.",
@@ -168,53 +173,55 @@ export interface MonographProject {
   image: { src: string; alt: string; width: number; height: number };
 }
 
+const PROJECT_ITEMS = [
+  {
+    id: "hunt-assistant",
+    plate: "Pl. A — AI / Careers",
+    name: "Hunt Assistant",
+    blurb:
+      "An AI-powered job-hunting platform: analyses your resume against job requirements, writes tailored cover letters and tracks every application, with auth and persistent tracking.",
+    tags: "TypeScript / Next.js / MongoDB / AI",
+    image: {
+      src: "/images/hunt-assistant-dashboard.jpeg",
+      alt: "Hunt Assistant dashboard showing tracked job applications and AI resume insights",
+      width: 2939,
+      height: 1665,
+    },
+  },
+  {
+    id: "zen-finance",
+    plate: "Pl. B — Fintech",
+    name: "Zen",
+    blurb:
+      "Multi-currency wallets, currency exchange and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
+    tags: "TypeScript / Next.js / Node.js / MongoDB",
+    image: {
+      src: "/images/zen-dashboard.jpeg",
+      alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
+      width: 2939,
+      height: 1673,
+    },
+  },
+  {
+    id: "prospera-ai-dashboard",
+    plate: "Pl. C — Analytics",
+    name: "Prospera AI",
+    blurb:
+      "Dashboard for AI-personalised lead magnets and agentic follow-ups: intent-signal analytics, AI content generation and lead-magnet insights.",
+    tags: "TypeScript / Next.js / Tailwind CSS / Recharts",
+    image: {
+      src: "/images/prospera-ai-dashboard.jpeg",
+      alt: "Prospera AI dashboard with intent-signal analytics and lead magnet insights",
+      width: 2938,
+      height: 1656,
+    },
+  },
+] satisfies MonographProject[];
+
 export const PROJECTS = {
   sub: "Independent builds, shipped and live",
-  count: "3 plates",
-  items: [
-    {
-      id: "hunt-assistant",
-      plate: "Pl. A — AI / Careers",
-      name: "Hunt Assistant",
-      blurb:
-        "An AI-powered job-hunting platform: analyses your resume against job requirements, writes tailored cover letters and tracks every application, with auth and persistent tracking.",
-      tags: "TypeScript / Next.js / MongoDB / AI",
-      image: {
-        src: "/images/hunt-assistant-dashboard.jpeg",
-        alt: "Hunt Assistant dashboard showing tracked job applications and AI resume insights",
-        width: 2939,
-        height: 1665,
-      },
-    },
-    {
-      id: "zen-finance",
-      plate: "Pl. B — Fintech",
-      name: "Zen",
-      blurb:
-        "Multi-currency wallets, currency exchange and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
-      tags: "TypeScript / Next.js / Node.js / MongoDB",
-      image: {
-        src: "/images/zen-dashboard.jpeg",
-        alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
-        width: 2939,
-        height: 1673,
-      },
-    },
-    {
-      id: "prospera-ai-dashboard",
-      plate: "Pl. C — Analytics",
-      name: "Prospera AI",
-      blurb:
-        "Dashboard for AI-personalised lead magnets and agentic follow-ups: intent-signal analytics, AI content generation and lead-magnet insights.",
-      tags: "TypeScript / Next.js / Tailwind CSS / Recharts",
-      image: {
-        src: "/images/prospera-ai-dashboard.jpeg",
-        alt: "Prospera AI dashboard with intent-signal analytics and lead magnet insights",
-        width: 2938,
-        height: 1656,
-      },
-    },
-  ] satisfies MonographProject[],
+  count: `${PROJECT_ITEMS.length} plates`,
+  items: PROJECT_ITEMS,
   urls: PROJECT_URLS,
 };
 
@@ -228,49 +235,53 @@ export interface MonographPost {
   publication: string;
 }
 
+const WRITING_POSTS = [
+  {
+    id: "mvps-and-the-engineering-trap",
+    topic: "Product",
+    title: "MVPs and the Engineering Trap: Building What Actually Matters",
+    excerpt:
+      "Many startups fail not because they can’t build, but because they build the wrong things — perfectly.",
+    publication: "Stackademic",
+  },
+  {
+    id: "irreplaceable-software-engineer",
+    topic: "Career",
+    title: "The Irreplaceable Software Engineer in the AI Era",
+    publication: "Stackademic",
+  },
+  {
+    id: "beyond-silos",
+    topic: "Career",
+    title: "The Cross-Disciplinary Role of the Modern Software Engineer",
+    publication: "Stackademic",
+  },
+  {
+    id: "influence-of-senior-engineers",
+    topic: "Leadership",
+    title: "The Priceless Influence of Senior Engineers on Junior Engineers",
+    publication: "Stackademic",
+  },
+  {
+    id: "escrow-like-state-in-node-js",
+    topic: "Node.js",
+    title: "Implementing an Escrow-like State in Node.js",
+    publication: "Stackademic",
+  },
+  {
+    id: "json-web-tokens-guide",
+    topic: "Security",
+    title: "Authentication and Authorization with JSON Web Tokens",
+    publication: "Medium",
+  },
+] satisfies MonographPost[];
+
+const ESSAY_COUNT = `${WRITING_POSTS.length} essays`;
+
 export const WRITING = {
   sub: "Essays on engineering, product and craft",
-  count: "6 essays",
-  posts: [
-    {
-      id: "mvps-and-the-engineering-trap",
-      topic: "Product",
-      title: "MVPs and the Engineering Trap: Building What Actually Matters",
-      excerpt:
-        "Many startups fail not because they can’t build, but because they build the wrong things — perfectly.",
-      publication: "Stackademic",
-    },
-    {
-      id: "irreplaceable-software-engineer",
-      topic: "Career",
-      title: "The Irreplaceable Software Engineer in the AI Era",
-      publication: "Stackademic",
-    },
-    {
-      id: "beyond-silos",
-      topic: "Career",
-      title: "The Cross-Disciplinary Role of the Modern Software Engineer",
-      publication: "Stackademic",
-    },
-    {
-      id: "influence-of-senior-engineers",
-      topic: "Leadership",
-      title: "The Priceless Influence of Senior Engineers on Junior Engineers",
-      publication: "Stackademic",
-    },
-    {
-      id: "escrow-like-state-in-node-js",
-      topic: "Node.js",
-      title: "Implementing an Escrow-like State in Node.js",
-      publication: "Stackademic",
-    },
-    {
-      id: "json-web-tokens-guide",
-      topic: "Security",
-      title: "Authentication and Authorization with JSON Web Tokens",
-      publication: "Medium",
-    },
-  ] satisfies MonographPost[],
+  count: ESSAY_COUNT,
+  posts: WRITING_POSTS,
   urls: POST_URLS,
 };
 
@@ -278,8 +289,8 @@ export const WRITING = {
 
 export const NAV_LINKS = [
   { label: "Work", href: "/#work", note: "Impact, projects" },
-  { label: "Case studies", href: "/impact-stories", note: "4 stories" },
-  { label: "Writing", href: "/#writing", note: "6 essays" },
+  { label: "Case studies", href: "/impact-stories", note: `${IMPACT_STORIES.length} stories` },
+  { label: "Writing", href: "/#writing", note: ESSAY_COUNT },
   { label: "Contact", href: "#contact", note: "Email" },
 ] as const;
 
@@ -301,29 +312,29 @@ export interface MonographMetric {
   cap: string;
 }
 
-export interface MonographStoryFraming {
+export interface MonographStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId> {
   titleLines: string[];
   deck: string;
   /** Extra sidenote rows after Company, Role, Period and Stack */
   sidenoteExtras?: { term: string; detail: string; href?: string }[];
   metrics: MonographMetric[];
   pull: { marked: string; rest: string; caption: string };
-  /** Keyed by contribution id */
-  contributionKickers: Record<string, string>;
+  /** One kicker per contribution id in the shared story; a missing one fails the type check */
+  contributionKickers: Record<ContributionId<StoryId>, string>;
   /** Contributions shown before the metrics and pull quote (default 2) */
   splitIndex?: number;
 }
 
 export const IMPACT_STORIES_PAGE = {
   back: "Back to index",
-  crumb: "Impact stories / 4",
+  crumb: `Impact stories / ${IMPACT_STORIES.length}`,
   titleLines: ["Impact", "Stories"],
-  indexKicker: "Four stories",
+  indexKicker: `${capitalisedCountWord(IMPACT_STORIES.length)} stories`,
   nextKicker: "Next story",
   summaryKicker: "Summary",
 };
 
-export const STORY_FRAMING: Record<ImpactStoryId, MonographStoryFraming> = {
+export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<StoryId> } = {
   "agentic-college-applications": {
     titleLines: ["Agentic AI", "for College", "Applications"],
     deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: a browser agent, SAT prep and an in-app assistant, and the infrastructure underneath.",
