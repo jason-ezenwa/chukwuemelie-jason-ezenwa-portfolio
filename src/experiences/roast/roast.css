@@ -1,0 +1,737 @@
+/* Roast experience: tokens, @theme inline mapping, keyframes and scoped named classes.
+   Every selector is scoped under :root[data-experience="roast"]. */
+
+/* ---------- Tokens: dark-first ("espresso") ---------- */
+:root[data-experience="roast"] {
+  --roast-bg: #17110e;
+  --roast-bg-2: #1c1511;
+  --roast-bg-glass: rgba(23, 17, 14, 0.84);
+  --roast-surface: #211914;
+  --roast-surface-2: #2a1f19;
+  --roast-ink: #f1e6d6;
+  --roast-ink-2: #d3c1a8;
+  --roast-muted: #9a8e84;
+  --roast-line: rgba(232, 213, 185, 0.11);
+  --roast-line-strong: rgba(232, 213, 185, 0.24);
+  --roast-accent: #c47a3a;
+  --roast-accent-ink: #db9a5f;
+  --roast-cu-1: #7a4520;
+  --roast-cu-2: #d99c62;
+  --roast-cu-3: #b36a30;
+  --roast-cu-4: #edbb8a;
+  --roast-fill-a: rgba(196, 122, 58, 0.22);
+  --roast-fill-b: rgba(196, 122, 58, 0);
+  --roast-btn-bg: #e8d5b9;
+  --roast-btn-ink: #17110e;
+  --roast-grain: 0.07;
+  --roast-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 24px 48px -28px rgba(0, 0, 0, 0.7);
+  color-scheme: dark;
+
+  /* Experience switcher */
+  --xp-bg: var(--roast-surface);
+  --xp-fg: var(--roast-ink-2);
+  --xp-line: var(--roast-line-strong);
+  --xp-on-bg: var(--roast-btn-bg);
+  --xp-on-fg: var(--roast-btn-ink);
+  --xp-font: var(--roast-font-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root[data-experience="roast"]:not([data-theme="dark"]) {
+    --roast-bg: #f3ece1;
+    --roast-bg-2: #ede3d4;
+    --roast-bg-glass: rgba(243, 236, 225, 0.86);
+    --roast-surface: #f8f3eb;
+    --roast-surface-2: #e8d5b9;
+    --roast-ink: #1c1410;
+    --roast-ink-2: #44362c;
+    --roast-muted: #6c6056;
+    --roast-line: rgba(28, 20, 16, 0.11);
+    --roast-line-strong: rgba(28, 20, 16, 0.26);
+    --roast-accent: #a65e25;
+    --roast-accent-ink: #8c4c1b;
+    --roast-cu-1: #6e3b17;
+    --roast-cu-2: #b8743a;
+    --roast-cu-3: #8e4f20;
+    --roast-cu-4: #c98a52;
+    --roast-fill-a: rgba(166, 94, 37, 0.16);
+    --roast-fill-b: rgba(166, 94, 37, 0);
+    --roast-btn-bg: #1c1410;
+    --roast-btn-ink: #f3ece1;
+    --roast-grain: 0.045;
+    --roast-shadow: 0 1px 0 rgba(28, 20, 16, 0.06), 0 24px 48px -30px rgba(60, 35, 15, 0.35);
+    color-scheme: light;
+  }
+}
+
+:root[data-experience="roast"][data-theme="light"] {
+  --roast-bg: #f3ece1;
+  --roast-bg-2: #ede3d4;
+  --roast-bg-glass: rgba(243, 236, 225, 0.86);
+  --roast-surface: #f8f3eb;
+  --roast-surface-2: #e8d5b9;
+  --roast-ink: #1c1410;
+  --roast-ink-2: #44362c;
+  --roast-muted: #6c6056;
+  --roast-line: rgba(28, 20, 16, 0.11);
+  --roast-line-strong: rgba(28, 20, 16, 0.26);
+  --roast-accent: #a65e25;
+  --roast-accent-ink: #8c4c1b;
+  --roast-cu-1: #6e3b17;
+  --roast-cu-2: #b8743a;
+  --roast-cu-3: #8e4f20;
+  --roast-cu-4: #c98a52;
+  --roast-fill-a: rgba(166, 94, 37, 0.16);
+  --roast-fill-b: rgba(166, 94, 37, 0);
+  --roast-btn-bg: #1c1410;
+  --roast-btn-ink: #f3ece1;
+  --roast-grain: 0.045;
+  --roast-shadow: 0 1px 0 rgba(28, 20, 16, 0.06), 0 24px 48px -30px rgba(60, 35, 15, 0.35);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-roast-bg: var(--roast-bg);
+  --color-roast-bg-2: var(--roast-bg-2);
+  --color-roast-bg-glass: var(--roast-bg-glass);
+  --color-roast-surface: var(--roast-surface);
+  --color-roast-surface-2: var(--roast-surface-2);
+  --color-roast-ink: var(--roast-ink);
+  --color-roast-ink-2: var(--roast-ink-2);
+  --color-roast-muted: var(--roast-muted);
+  --color-roast-line: var(--roast-line);
+  --color-roast-line-strong: var(--roast-line-strong);
+  --color-roast-accent: var(--roast-accent);
+  --color-roast-accent-ink: var(--roast-accent-ink);
+  --color-roast-cu-1: var(--roast-cu-1);
+  --color-roast-cu-2: var(--roast-cu-2);
+  --color-roast-cu-3: var(--roast-cu-3);
+  --color-roast-cu-4: var(--roast-cu-4);
+  --color-roast-btn-bg: var(--roast-btn-bg);
+  --color-roast-btn-ink: var(--roast-btn-ink);
+  --font-roast-display: var(--roast-font-display);
+  --font-roast-body: var(--roast-font-body);
+  --font-roast-mono: var(--roast-font-mono);
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  :root[data-experience="roast"] {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  :root[data-experience="roast"] body {
+    margin: 0;
+    background: var(--roast-bg);
+    color: var(--roast-ink);
+    font-family: var(--roast-font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition:
+      background-color 0.35s ease,
+      color 0.35s ease;
+  }
+
+  /* Grain overlay */
+  :root[data-experience="roast"] body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 90;
+    opacity: var(--roast-grain);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .42  0 0 0 0 .3  0 0 0 1.1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  :root[data-experience="roast"] a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  :root[data-experience="roast"] a:hover {
+    color: var(--roast-accent-ink);
+  }
+
+  :root[data-experience="roast"] [tabindex="-1"]:focus {
+    outline: none;
+  }
+
+  :root[data-experience="roast"] :focus-visible {
+    outline: 2px solid var(--roast-accent-ink);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  :root[data-experience="roast"] ::selection {
+    background: var(--roast-accent);
+    color: #17110e;
+  }
+}
+
+/* ---------- Theme toggle label (CSS-driven, no hydration mismatch) ---------- */
+@layer components {
+  :root[data-experience="roast"] .roast-when-light {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root[data-experience="roast"]:not([data-theme="dark"]) .roast-when-dark {
+      display: none;
+    }
+
+    :root[data-experience="roast"]:not([data-theme="dark"]) .roast-when-light {
+      display: inline;
+    }
+  }
+
+  :root[data-experience="roast"][data-theme="light"] .roast-when-dark {
+    display: none;
+  }
+
+  :root[data-experience="roast"][data-theme="light"] .roast-when-light {
+    display: inline;
+  }
+
+  /* ---------- Copper ---------- */
+  :root[data-experience="roast"] .roast-copper {
+    background: linear-gradient(
+      90deg,
+      var(--roast-cu-1),
+      var(--roast-cu-2) 35%,
+      var(--roast-cu-3) 55%,
+      var(--roast-cu-4) 78%,
+      var(--roast-cu-1)
+    );
+  }
+
+  :root[data-experience="roast"] .roast-diamond {
+    display: inline-block;
+    flex: none;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--roast-cu-4), var(--roast-cu-3));
+  }
+
+  /* ---------- Menu button lines ---------- */
+  :root[data-experience="roast"] .roast-menu-lines i {
+    display: block;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 0.25s;
+  }
+
+  :root[data-experience="roast"] [aria-expanded="true"] .roast-menu-lines i:first-child {
+    transform: translateY(2.75px) rotate(45deg);
+  }
+
+  :root[data-experience="roast"] [aria-expanded="true"] .roast-menu-lines i:last-child {
+    transform: translateY(-2.75px) rotate(-45deg);
+  }
+
+  /* ---------- Desktop nav underline ---------- */
+  @media (min-width: 1024px) {
+    :root[data-experience="roast"] .roast-nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--roast-accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    :root[data-experience="roast"] .roast-nav-link:hover::after,
+    :root[data-experience="roast"] .roast-nav-link[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+  }
+
+  /* ---------- Label ---------- */
+  :root[data-experience="roast"] .roast-label-seal {
+    height: 12px;
+    border-bottom: 1px solid var(--roast-line-strong);
+    background: repeating-linear-gradient(
+      90deg,
+      var(--roast-line-strong) 0 1px,
+      transparent 1px 5px
+    );
+  }
+
+  :root[data-experience="roast"] .roast-valve::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--roast-line-strong);
+  }
+
+  /* Tenure bar: a <meter> whose value/max set the fill */
+  :root[data-experience="roast"] .roast-tenure {
+    appearance: none;
+    border: 0;
+    background: var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-inner-element {
+    display: flex;
+    height: 100%;
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-bar {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-optimum-value,
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-suboptimum-value,
+  :root[data-experience="roast"] .roast-tenure::-webkit-meter-even-less-good-value {
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 60%, var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .roast-tenure::-moz-meter-bar {
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 60%, var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .roast-notes > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 8px;
+    height: 1px;
+    background: var(--roast-accent);
+  }
+
+  :root[data-experience="roast"] .roast-lot-feature {
+    background: linear-gradient(180deg, var(--roast-surface), var(--roast-surface-2) 280%);
+  }
+
+  /* ---------- Kicker bold ---------- */
+  :root[data-experience="roast"] .roast-kicker b {
+    color: var(--roast-accent-ink);
+    font-weight: 500;
+  }
+
+  /* ---------- About drop cap ---------- */
+  :root[data-experience="roast"] .roast-drop-cap::first-letter {
+    font-family: var(--roast-font-display);
+    font-weight: 800;
+    font-stretch: 75%;
+    float: left;
+    font-size: 4.1em;
+    line-height: 0.8;
+    padding: 0.06em 0.08em 0 0;
+    color: var(--roast-accent-ink);
+  }
+
+  /* ---------- Yield strip ---------- */
+  :root[data-experience="roast"] .roast-yield {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--roast-line-strong);
+  }
+
+  :root[data-experience="roast"] .roast-yield > li {
+    padding: 22px 14px 22px 0;
+    border-bottom: 1px solid var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-yield > li:nth-child(even) {
+    padding-left: 14px;
+    border-left: 1px solid var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-yield > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  @media (min-width: 1024px) {
+    :root[data-experience="roast"] .roast-yield-cols-1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    :root[data-experience="roast"] .roast-yield-cols-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    :root[data-experience="roast"] .roast-yield > li,
+    :root[data-experience="roast"] .roast-yield > li:nth-child(even),
+    :root[data-experience="roast"] .roast-yield > li:last-child:nth-child(odd) {
+      grid-column: auto;
+      padding: 26px 20px;
+      border-left: 1px solid var(--roast-line);
+    }
+
+    :root[data-experience="roast"] .roast-yield > li:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  /* ---------- Roast profile figure ---------- */
+  :root[data-experience="roast"] .roast-swatch-line {
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2), var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .rp-grid {
+    stroke: var(--roast-line);
+    stroke-width: 1;
+  }
+
+  :root[data-experience="roast"] .rp-axis {
+    stroke: var(--roast-line-strong);
+    stroke-width: 1;
+  }
+
+  :root[data-experience="roast"] .rp-tick {
+    font-family: var(--roast-font-mono);
+    font-size: 12px;
+    fill: var(--roast-muted);
+    letter-spacing: 0.08em;
+  }
+
+  :root[data-experience="roast"] .rp-area {
+    fill: url(#rp-fill);
+    animation: roast-fade 1.2s 1.4s ease both;
+  }
+
+  :root[data-experience="roast"] .rp-curve {
+    fill: none;
+    stroke: url(#rp-copper);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: roast-draw 2.4s 0.3s cubic-bezier(0.45, 0.05, 0.25, 1) forwards;
+  }
+
+  :root[data-experience="roast"] .rp-drop {
+    stroke: var(--roast-line-strong);
+    stroke-dasharray: 2 4;
+  }
+
+  :root[data-experience="roast"] .rp-pt {
+    fill: var(--roast-bg);
+    stroke: var(--roast-accent);
+    stroke-width: 2;
+  }
+
+  :root[data-experience="roast"] .rp-ev {
+    font-family: var(--roast-font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    fill: var(--roast-accent-ink);
+    text-transform: uppercase;
+  }
+
+  :root[data-experience="roast"] .rp-role {
+    font-family: var(--roast-font-body);
+    font-size: 16px;
+    fill: var(--roast-ink);
+  }
+
+  /* Gradient stops for the roast-profile curve and area */
+  :root[data-experience="roast"] .rp-stop-cu-1 {
+    stop-color: var(--roast-cu-1);
+  }
+
+  :root[data-experience="roast"] .rp-stop-cu-2 {
+    stop-color: var(--roast-cu-2);
+  }
+
+  :root[data-experience="roast"] .rp-stop-cu-3 {
+    stop-color: var(--roast-cu-3);
+  }
+
+  :root[data-experience="roast"] .rp-stop-cu-4 {
+    stop-color: var(--roast-cu-4);
+  }
+
+  :root[data-experience="roast"] .rp-stop-fill-a {
+    stop-color: var(--roast-fill-a);
+  }
+
+  :root[data-experience="roast"] .rp-stop-fill-b {
+    stop-color: var(--roast-fill-b);
+  }
+
+  :root[data-experience="roast"] .rp-ms {
+    animation: roast-fade 0.6s var(--delay, 0s) ease both;
+  }
+
+  :root[data-experience="roast"] .rp-now {
+    fill: var(--roast-accent);
+  }
+
+  :root[data-experience="roast"] .rp-pulse {
+    fill: none;
+    stroke: var(--roast-accent);
+    transform-origin: 1160px 62px;
+    transform-box: view-box;
+    animation: roast-pulse 2.6s 2.8s ease-out infinite;
+  }
+
+  :root[data-experience="roast"] .rp-labels {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    :root[data-experience="roast"] .rp-labels {
+      display: inline;
+    }
+  }
+
+  /* Legend: 2 columns with shared rules, 5 across from 768px, hidden from 1024px */
+  :root[data-experience="roast"] .roast-profile-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 14px;
+    border-top: 1px solid var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-profile-legend > li {
+    padding: 12px 12px 12px 0;
+    border-bottom: 1px solid var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-profile-legend > li:nth-child(odd) {
+    border-right: 1px solid var(--roast-line);
+  }
+
+  :root[data-experience="roast"] .roast-profile-legend > li:nth-child(even) {
+    padding-left: 12px;
+  }
+
+  :root[data-experience="roast"] .roast-profile-legend > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    border-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    :root[data-experience="roast"] .roast-profile-legend {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    :root[data-experience="roast"] .roast-profile-legend > li,
+    :root[data-experience="roast"] .roast-profile-legend > li:last-child:nth-child(odd) {
+      grid-column: auto;
+      padding-left: 12px;
+      border-right: 1px solid var(--roast-line);
+    }
+
+    :root[data-experience="roast"] .roast-profile-legend > li:first-child {
+      padding-left: 0;
+    }
+
+    :root[data-experience="roast"] .roast-profile-legend > li:last-child {
+      border-right: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root[data-experience="roast"] .roast-profile-legend {
+      display: none;
+    }
+  }
+
+  /* ---------- Menu board leader dots ---------- */
+  :root[data-experience="roast"] .roast-menu-lead {
+    flex: 1;
+    min-width: 12px;
+    border-bottom: 1px dotted var(--roast-line-strong);
+    transform: translateY(-5px);
+  }
+
+  /* ---------- Phase bar ---------- */
+  /* Phase bar: a <meter> filling the current phase in copper from the right over the hatched earlier ones */
+  :root[data-experience="roast"] .roast-phase-meter {
+    appearance: none;
+    direction: rtl;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--roast-surface-2) 0 6px,
+      var(--roast-surface) 6px 12px
+    );
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-inner-element {
+    display: flex;
+    height: 100%;
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-bar {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-optimum-value,
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-suboptimum-value,
+  :root[data-experience="roast"] .roast-phase-meter::-webkit-meter-even-less-good-value {
+    border-left: 1px solid var(--roast-line-strong);
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 55%, var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .roast-phase-meter::-moz-meter-bar {
+    border-left: 1px solid var(--roast-line-strong);
+    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 55%, var(--roast-cu-4));
+  }
+
+  :root[data-experience="roast"] .roast-phase-hatch-sm {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--roast-surface-2) 0 3px,
+      var(--roast-surface) 3px 6px
+    );
+  }
+
+  :root[data-experience="roast"] .roast-phase-copper-sm {
+    background: linear-gradient(90deg, var(--roast-cu-2), var(--roast-cu-4));
+  }
+
+  /* ---------- Animations ---------- */
+  :root[data-experience="roast"] .roast-anim-roast {
+    animation: roast-roast 1.6s cubic-bezier(0.3, 0.6, 0.2, 1) both;
+  }
+
+  /* Start offsets for .roast-anim-rise and .rp-ms */
+  :root[data-experience="roast"] .roast-delay-350 {
+    --delay: 350ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-500 {
+    --delay: 500ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-650 {
+    --delay: 650ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-1000 {
+    --delay: 1000ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-1300 {
+    --delay: 1300ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-2200 {
+    --delay: 2200ms;
+  }
+
+  :root[data-experience="roast"] .roast-delay-2500 {
+    --delay: 2500ms;
+  }
+
+  :root[data-experience="roast"] .roast-anim-rise {
+    animation: roast-rise 0.9s var(--delay, 0s) ease both;
+  }
+
+  :root[data-experience="roast"] .roast-anim-rise-fast {
+    animation: roast-rise 0.8s ease both;
+  }
+
+  :root[data-experience="roast"] .roast-anim-fade {
+    animation: roast-fade 0.45s ease both;
+  }
+}
+
+@keyframes roast-roast {
+  from {
+    font-weight: 260;
+    color: var(--roast-ink-2);
+  }
+
+  to {
+    font-weight: 800;
+    color: var(--roast-ink);
+  }
+}
+
+@keyframes roast-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes roast-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes roast-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes roast-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-experience="roast"] {
+    scroll-behavior: auto;
+  }
+
+  :root[data-experience="roast"] *,
+  :root[data-experience="roast"] *::before,
+  :root[data-experience="roast"] *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  :root[data-experience="roast"] .rp-curve {
+    stroke-dashoffset: 0;
+  }
+
+  :root[data-experience="roast"] .rp-pulse {
+    display: none;
+  }
+}

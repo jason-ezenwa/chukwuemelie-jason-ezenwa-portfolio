@@ -1,34 +1,18 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
-import localFont from "next/font/local";
-import { JetBrains_Mono } from "next/font/google";
-import { cn } from "@/lib/utils";
-
-const geistSans = localFont({
-  src: "../../node_modules/geist/dist/fonts/geist-sans/Geist-Variable.woff2",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
+import { useInstantRouteScroll } from "@/experiences/use-instant-route-scroll";
 
 export default function App({ Component, pageProps }: AppProps) {
+  useInstantRouteScroll();
+
   return (
-    <div
-      className={cn(
-        `${geistSans.variable} ${jetBrainsMono.variable} font-sans min-h-screen flex flex-col`,
-      )}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider
+      attribute="data-theme"
+      storageKey="portfolio-theme"
+      defaultTheme="system"
+      enableSystem>
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }
