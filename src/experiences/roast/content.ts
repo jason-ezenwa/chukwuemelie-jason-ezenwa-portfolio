@@ -432,7 +432,7 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     lot: "2605",
     title: { strong: "Agentic AI", thin: "for College Applications" },
     lotCard: {
-      process: "Lead Software Engineer · Remote, US",
+      process: "Lead Software Engineer",
       notes: "TypeScript · React · NestJS · Vercel AI SDK · AWS · Terraform · MongoDB · Docker · PostHog",
       yieldLine: "85+ PRs in 6 weeks",
       bullets: [
