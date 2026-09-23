@@ -11,8 +11,7 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 
-/* Monograph framing and home copy, verbatim from docs/design-lab/monograph.html
-   (except the locked deltas in the spec). Detailed story content lives in @/content/impact-stories. */
+/* Monograph framing and home copy. Detailed story content lives in @/content/impact-stories. */
 
 // ---------- hero ----------
 

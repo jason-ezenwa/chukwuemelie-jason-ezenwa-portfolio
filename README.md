@@ -38,8 +38,6 @@ Both serve the same public URLs, `/` and `/impact-stories`. The middleware in `s
 
 The floating switcher on every page moves between experiences while keeping the current page and anchor. Each experience has its own light and dark palettes. The theme choice (light, dark or system) is shared by both and stored under the `portfolio-theme` key in local storage.
 
-The early design prototypes, including the directions that were not built, are in `docs/design-lab/`. Open `docs/design-lab.html` in a browser from disk to view them. They are not served by the site.
-
 ## Prerequisites
 
 Make sure you have Node.js (version 20.9 or higher, required by `sharp`) installed on your system.
