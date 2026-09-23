@@ -43,7 +43,7 @@ export default function ContributionList({
                 // Size and spacing
                 "mb-3.5",
                 // Text
-                "font-mono-sans font-stretch-125% font-extrabold text-[clamp(1.35rem,2vw,1.9rem)] tracking-[-0.025em] leading-none",
+                "font-mono-sans font-stretch-125% font-bold text-[clamp(1.35rem,2vw,1.9rem)] tracking-[-0.025em] leading-none",
               )}>
               {contribution.title}
             </h3>

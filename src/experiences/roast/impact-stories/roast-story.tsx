@@ -23,7 +23,7 @@ export const roastStoryTitleClassName = cn(
   // Size and spacing
   "mt-9 max-w-[14ch]",
   // Text
-  "font-roast-display text-[clamp(2.6rem,8.6vw,7.2rem)] font-extrabold font-stretch-76% leading-[.9] tracking-[-.035em] [font-variation-settings:'opsz'_96]",
+  "font-roast-display text-[clamp(2.6rem,8.6vw,7.2rem)] font-semibold font-stretch-76% leading-[.9] tracking-[-.035em] [font-variation-settings:'opsz'_96]",
 );
 
 export const roastStoryThinClassName = cn(

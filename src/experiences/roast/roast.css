@@ -317,7 +317,7 @@
   /* ---------- About drop cap ---------- */
   :root[data-experience="roast"] .roast-drop-cap::first-letter {
     font-family: var(--roast-font-display);
-    font-weight: 800;
+    font-weight: 700;
     font-stretch: 75%;
     float: left;
     font-size: 4.1em;

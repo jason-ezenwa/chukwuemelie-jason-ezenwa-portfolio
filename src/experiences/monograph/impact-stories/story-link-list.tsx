@@ -53,7 +53,7 @@ export default function StoryLinkList({
               // Size and spacing
               "min-w-0",
               // Text
-              "font-mono-sans font-stretch-125% font-extrabold text-[clamp(2rem,6.5vw,6.5rem)] leading-[0.88] tracking-[-0.045em]",
+              "font-mono-sans font-stretch-125% font-bold text-[clamp(2rem,6.5vw,6.5rem)] leading-[0.88] tracking-[-0.045em]",
               // Layout
               "col-span-full lg:col-[3/span_7]",
               // Effects and interactive states

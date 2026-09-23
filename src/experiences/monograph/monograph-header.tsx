@@ -107,7 +107,7 @@ export default function MonographHeader() {
             <b
               className={cn(
                 // Text
-                "font-mono-sans font-stretch-125% font-extrabold text-[15px] tracking-[-0.01em] whitespace-nowrap",
+                "font-mono-sans font-stretch-125% font-bold text-[15px] tracking-[-0.01em] whitespace-nowrap",
               )}>
               C.J. Obumse
             </b>
