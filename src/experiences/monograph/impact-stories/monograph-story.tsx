@@ -76,8 +76,8 @@ function Sidenote({ rows }: { rows: SidenoteRow[] }) {
   );
 }
 
-/** One full story in the Monograph case-study template */
-export default function CaseStudy({ story }: { story: ImpactStory }) {
+/** One full story in the Monograph long-form template */
+export default function MonographStory({ story }: { story: ImpactStory }) {
   const framing = STORY_FRAMING[story.id];
   const period = formatPeriod(story.roles);
   const splitIndex = framing.splitIndex ?? DEFAULT_SPLIT_INDEX;

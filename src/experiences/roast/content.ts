@@ -60,7 +60,7 @@ export const ROAST_NAV: RoastNavItem[] = [
   { label: "About", note: "Producer", href: "/#about" },
   { label: "Stack", note: "Tasting notes", href: "/#stack" },
   { label: "Impact", note: LOT_COUNT, href: "/#impact" },
-  { label: "Case studies", note: "In full", href: "/impact-stories" },
+  { label: "Impact stories", note: "In full", href: "/impact-stories" },
   { label: "Projects", note: "Single origin", href: "/#projects" },
   { label: "Writing", note: "Journal", href: "/#writing" },
   { label: "Contact", note: "Orders", href: "/#contact" },
@@ -82,7 +82,7 @@ export const ROAST_HERO = {
     after: " — with TypeScript, React and Node.js, from system design to DevOps.",
   },
   primaryCta: {
-    label: "Read the Peppermint case study",
+    label: "Read the Peppermint story",
     href: "/impact-stories#product-feedback",
   },
   secondaryCta: { label: "Resume", href: RESUME_URL },
@@ -124,8 +124,7 @@ export const ROAST_PROFILE = {
   title: "Career roast profile, September 2023 to present",
   description:
     "A rising curve with five milestones: Wynk in September 2023, LaborHack in January 2024, Peppermint in April 2024, Fractional Head of Engineering in January 2026, and Scooler AI in May 2026.",
-  captionLeft: "Curve plots scope of ownership over time",
-  captionRight: "Roast in progress",
+  caption: "Roast in progress",
   milestones: [
     { event: "Charge", date: "Sep 2023", role: "Wynk — Full Stack Developer", x: 80, y: 300, labelX: 100, labelY: 296, anchor: "start" },
     { event: "Dry end", date: "Jan 2024", role: "LaborHack — Software Engineer", x: 200, y: 225, labelX: 218, labelY: 244, anchor: "start" },
@@ -176,7 +175,7 @@ export const ROAST_YIELD = {
 export interface RoastMenuItem {
   name: string;
   where: string;
-  /** House specialty: bold with a copper diamond */
+  /** House specialty: set in bold */
   house?: boolean;
 }
 
@@ -256,9 +255,8 @@ export const ROAST_STACK = {
 export const ROAST_IMPACT = {
   kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
   heading: { strong: "Roasted in production,", thin: "labelled honestly." } satisfies RoastSplitHeading,
-  lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded. Lot numbers are the year and month each started.",
+  lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded.",
   readStory: "Read the story",
-  readCaseStudy: "Read the case study",
 };
 
 // ---------------------------------------------------------------------------
@@ -407,7 +405,7 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
     yieldLine: string;
     bullets: string[];
     footKicker?: string;
-    /** The featured lot gets the copper foil and a case-study link */
+    /** The featured lot gets the copper foil */
     featured?: boolean;
     /** Extra external link kept in the foot, e.g. scooler.ai */
     footLink?: RoastLink;
@@ -433,7 +431,7 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     lot: "2605",
     title: { strong: "Agentic AI", thin: "for College Applications" },
     lotCard: {
-      process: "Lead Software Engineer · Remote, US",
+      process: "Lead Software Engineer",
       notes: "TypeScript · React · NestJS · Vercel AI SDK · AWS · Terraform · MongoDB · Docker · PostHog",
       yieldLine: "85+ PRs in 6 weeks",
       bullets: [

@@ -129,7 +129,7 @@ function StoryRow({ story }: { story: ImpactStory }) {
               </TextLink>
             )}
             <TextLink href={`/impact-stories#${story.id}`} internal arrow="→">
-              Read the case study
+              Read the story
             </TextLink>
           </span>
         </p>

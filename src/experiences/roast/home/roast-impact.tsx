@@ -94,9 +94,7 @@ function RoastLotCard({ story, asOf, tenureScale }: RoastLotCardProps) {
             "flex flex-wrap items-center",
           )}>
           <RoastTextLink href={storyHref}>
-            {lotCard.featured
-              ? ROAST_IMPACT.readCaseStudy
-              : ROAST_IMPACT.readStory}
+            {ROAST_IMPACT.readStory}
           </RoastTextLink>
           {lotCard.footLink && (
             <RoastTextLink href={lotCard.footLink.href} external>

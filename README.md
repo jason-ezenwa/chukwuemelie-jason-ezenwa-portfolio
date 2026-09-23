@@ -8,7 +8,7 @@ This is my personal portfolio website that highlights my experience in building 
 
 - **About Section**: Overview of my background and expertise
 - **Core Skills**: Technologies and tools I specialize in
-- **Impact Stories**: Detailed case studies of my most significant projects
+- **Impact Stories**: In-depth stories of my most significant work
 - **Other Projects**: Personal projects and side work
 - **Blog Posts**: Technical articles and insights on software engineering
 
