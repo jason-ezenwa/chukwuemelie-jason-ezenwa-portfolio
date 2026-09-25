@@ -68,7 +68,6 @@ export const ROAST_NAV: RoastNavItem[] = [
 export const ROAST_HERO = {
   lotCode: "CJO-2309",
   since: "Roasting since Sep 2023",
-  role: "Full Stack Software Engineer",
   firstName: "Chukwuemelie",
   lastNames: "Jason Obumse",
   lede: {

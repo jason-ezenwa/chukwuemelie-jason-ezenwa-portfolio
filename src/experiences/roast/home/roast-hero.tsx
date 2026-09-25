@@ -30,16 +30,13 @@ export default function RoastHero() {
       <div
         className={cn(
           // Size and spacing
-          "gap-x-6 gap-y-1.5 pb-[18px]",
+          "pb-[18px]",
           // Border
           "border-b border-roast-line",
-          // Layout
-          "flex flex-wrap justify-between",
         )}>
         <RoastKicker>
           Lot <b>{ROAST_HERO.lotCode}</b> · {ROAST_HERO.since}
         </RoastKicker>
-        <RoastKicker>{ROAST_HERO.role}</RoastKicker>
       </div>
 
       <h1
