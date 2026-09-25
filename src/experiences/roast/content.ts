@@ -52,7 +52,7 @@ export interface RoastNavItem {
 }
 
 export const ROAST_NAV: RoastNavItem[] = [
-  { label: "Impact", note: LOT_COUNT, href: "/#impact" },
+  { label: "Work", note: LOT_COUNT, href: "/#impact" },
   { label: "Impact stories", note: "In full", href: "/impact-stories" },
   { label: "Projects", note: "Single origin", href: "/#projects" },
   { label: "Writing", note: "Journal", href: "/#writing" },
