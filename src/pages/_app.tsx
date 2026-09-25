@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "next-themes";
 import { useInstantRouteScroll } from "@/experiences/use-instant-route-scroll";
+import { skipOptedOutVisits } from "@/lib/analytics-opt-out";
 
 export default function App({ Component, pageProps }: AppProps) {
   useInstantRouteScroll();
@@ -14,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
       defaultTheme="system"
       enableSystem>
       <Component {...pageProps} />
-      <Analytics />
+      <Analytics beforeSend={skipOptedOutVisits} />
     </ThemeProvider>
   );
 }
