@@ -445,7 +445,7 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       notes: "Next.js · NestJS · TypeScript · Vercel AI SDK · MongoDB · AWS",
       yieldLine: "$1,000+ in 3 months",
       bullets: [
-        "Launched an AI-powered product feedback application used by companies like Kuda",
+        "Launched a product feedback application used by companies like Kuda",
         "Built AI-powered pipelines with LLMs to generate usability study reports",
         "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
       ],
@@ -467,7 +467,7 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
       "product-feedback-application": { kicker: "Core product", metric: "$1,000+", metricCap: "organic revenue in 3 months" },
       "testers-application-development": { kicker: "Adoption", metric: "10,000+", metricCap: "testers in the first month" },
       "performance-optimization-and-scaling": { kicker: "Performance", metric: "50x", metricCap: "faster data-intensive operations" },
-      "wallet-system-implementation": { kicker: "Payments", metric: "Mints", metricCap: "wallet, integrated with Stripe" },
+      "wallet-system-implementation": { kicker: "Payments", metric: "Mints", metricCap: "credit wallet, with Stripe billing" },
       "technical-leadership": { kicker: "Team", metric: "V1", metricCap: "released after the MVP" },
       "fractional-head-of-engineering": { kicker: "Leadership", metric: "2026", metricCap: "from January" },
     },

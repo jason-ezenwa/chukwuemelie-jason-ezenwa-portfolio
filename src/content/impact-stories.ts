@@ -136,7 +136,7 @@ const PEPPERMINT = defineStory({
   ],
   stack: ["Next.js", "NestJS", "TypeScript", "Vercel AI SDK", "MongoDB", "AWS"],
   overview: [
-    "Peppermint develops digital tools to help companies collect and analyze product feedback. Starting as Lead Software Engineer, I directed engineering efforts to build user-facing applications that enhanced the product feedback process. In January 2026, I transitioned to Fractional Head of Engineering — leading engineering strategy, technical direction, and cross-functional alignment.",
+    "Peppermint develops digital tools to help companies collect and analyze product feedback. Starting as Lead Software Engineer, I directed engineering efforts to build user-facing applications that enhanced the product feedback process. In January 2026, I transitioned to Fractional Head of Engineering — leading engineering strategy, technical direction, AI enablement and cross-functional alignment.",
   ],
   contributions: [
     {
@@ -161,14 +161,14 @@ const PEPPERMINT = defineStory({
       id: "performance-optimization-and-scaling",
       title: "Performance Optimization & Scaling",
       body: [
-        "I led the efforts that made data intensive operations 50x faster through query optimizations and caching.",
+        "I drove the efforts that made data intensive operations 50x faster through query optimizations and caching.",
       ],
     },
     {
       id: "wallet-system-implementation",
-      title: "Wallet System Implementation",
+      title: "Credit Wallet & Stripe Billing",
       body: [
-        "Implemented the wallet (mints) system integrated with Stripe to streamline cash flows, enabling seamless transactions for both clients and testers.",
+        "Designed and shipped the in-app credit wallet (mints) and Stripe billing, covering tiered pricing, checkout and one-click repeat purchases.",
       ],
     },
     {
@@ -182,7 +182,7 @@ const PEPPERMINT = defineStory({
       id: "fractional-head-of-engineering",
       title: "Fractional Head of Engineering",
       body: [
-        "Transitioned to Fractional Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, and cross-functional alignment.",
+        "Transitioned to Fractional Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, AI enablement and cross-functional alignment.",
       ],
     },
   ],
@@ -191,7 +191,7 @@ const PEPPERMINT = defineStory({
     "Built AI-powered pipelines with LLMs to generate usability study reports",
     "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
     "Built the testers' application that onboarded 10,000+ testers in a month",
-    "Implemented wallet system integrated with Stripe for streamlined cash flows",
+    "Shipped the in-app credit wallet and Stripe billing, with tiered pricing and one-click repeat purchases",
     "Transitioned to Fractional Head of Engineering in January 2026",
   ],
 });
