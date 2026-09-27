@@ -132,7 +132,7 @@ export const HOME_STORIES: Record<ImpactStoryId, MonographHomeStory> = {
     anchor: "peppermint",
     role: "Lead Software Engineer → Fractional Head of Engineering",
     points: [
-      "Launched an AI-powered product feedback application used by companies like Kuda.",
+      "Launched a product feedback application used by companies like Kuda.",
       "Built AI-powered pipelines with LLMs to generate usability study reports.",
       "Architected in-app usability tests and surveys which generated over $1,000 within 3 months.",
     ],
