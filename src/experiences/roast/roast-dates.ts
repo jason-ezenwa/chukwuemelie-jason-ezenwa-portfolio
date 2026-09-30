@@ -15,9 +15,6 @@ const MONTHS = [
   "Dec",
 ];
 
-/** Minimum months a tenure bar spans, so short tenures stay proportionate. */
-const MIN_TENURE_SCALE = 30;
-
 function toMonthIndex(yearMonth: string): number {
   const [year, month] = yearMonth.split("-").map(Number);
 
@@ -51,14 +48,6 @@ export function getStoryEnd(story: ImpactStory): string | null {
   return story.roles[story.roles.length - 1].end;
 }
 
-export function isStoryOngoing(story: ImpactStory): boolean {
-  return getStoryEnd(story) === null;
-}
-
-export function getStoryMonths(story: ImpactStory, asOf: string): number {
-  return monthsBetween(getStoryStart(story), getStoryEnd(story), asOf);
-}
-
 /** `Apr 2024 – Present` */
 export function formatStoryRange(story: ImpactStory): string {
   const end = getStoryEnd(story);
@@ -71,14 +60,6 @@ export function formatTenure(months: number, ongoing: boolean): string {
   const unit = months === 1 ? "month" : "months";
 
   return ongoing ? `${months} ${unit} and counting` : `${months} ${unit}`;
-}
-
-/** Tenure bar scale: `max(30, longest tenure in months)` so bars never overflow. */
-export function getTenureScale(stories: ImpactStory[], asOf: string): number {
-  return Math.max(
-    MIN_TENURE_SCALE,
-    ...stories.map((story) => getStoryMonths(story, asOf)),
-  );
 }
 
 export function getYear(asOf: string): string {

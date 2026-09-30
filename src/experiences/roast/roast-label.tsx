@@ -125,46 +125,6 @@ export function RoastLabelField({
   );
 }
 
-/** Tenure bar and caption, scaled so the longest tenure fills the bar. */
-export function RoastTenure({
-  months,
-  scale,
-  caption,
-}: {
-  months: number;
-  scale: number;
-  caption: string;
-}) {
-  return (
-    <>
-      <meter
-        aria-hidden="true"
-        min={0}
-        max={scale}
-        value={months}
-        className={cn(
-          "roast-tenure",
-          // Size and spacing
-          "mt-2 h-[3px] w-full max-w-[220px]",
-          // Layout
-          "block",
-        )}
-      />
-      <span
-        className={cn(
-          // Size and spacing
-          "mt-[5px]",
-          // Text
-          "font-roast-mono text-[.66rem] tracking-[.06em] text-roast-muted",
-          // Layout
-          "block",
-        )}>
-        {caption}
-      </span>
-    </>
-  );
-}
-
 /** Bulleted notes with copper dashes */
 export function RoastNotes({
   items,

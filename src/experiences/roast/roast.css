@@ -265,35 +265,6 @@
     border: 1px solid var(--roast-line-strong);
   }
 
-  /* Tenure bar: a <meter> whose value/max set the fill */
-  :root[data-experience="roast"] .roast-tenure {
-    appearance: none;
-    border: 0;
-    background: var(--roast-line);
-  }
-
-  :root[data-experience="roast"] .roast-tenure::-webkit-meter-inner-element {
-    display: flex;
-    height: 100%;
-  }
-
-  :root[data-experience="roast"] .roast-tenure::-webkit-meter-bar {
-    height: 100%;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-  }
-
-  :root[data-experience="roast"] .roast-tenure::-webkit-meter-optimum-value,
-  :root[data-experience="roast"] .roast-tenure::-webkit-meter-suboptimum-value,
-  :root[data-experience="roast"] .roast-tenure::-webkit-meter-even-less-good-value {
-    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 60%, var(--roast-cu-4));
-  }
-
-  :root[data-experience="roast"] .roast-tenure::-moz-meter-bar {
-    background: linear-gradient(90deg, var(--roast-cu-1), var(--roast-cu-2) 60%, var(--roast-cu-4));
-  }
-
   :root[data-experience="roast"] .roast-notes > li::before {
     content: "";
     position: absolute;
