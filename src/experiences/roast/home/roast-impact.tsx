@@ -1,23 +1,15 @@
 import { cn } from "@/lib/utils";
 import { IMPACT_STORIES, type ImpactStory } from "@/content/impact-stories";
 import { ROAST_IMPACT, ROAST_STORY_FRAMING } from "@/experiences/roast/content";
-import {
-  formatStoryRange,
-  formatTenure,
-  getStoryMonths,
-  getTenureScale,
-  isStoryOngoing,
-} from "@/experiences/roast/roast-dates";
+import { formatStoryRange } from "@/experiences/roast/roast-dates";
+import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import {
   RoastLabel,
-  RoastLabelFields,
-  RoastLabelField,
   RoastLabelFoil,
   RoastLabelFoot,
   RoastLabelTop,
   RoastLotName,
   RoastNotes,
-  RoastTenure,
 } from "@/experiences/roast/roast-label";
 import {
   RoastSection,
@@ -25,17 +17,9 @@ import {
 } from "@/experiences/roast/roast-section";
 import { RoastTextLink } from "@/experiences/roast/roast-text-link";
 
-interface RoastLotCardProps {
-  story: ImpactStory;
-  asOf: string;
-  tenureScale: number;
-}
-
-function RoastLotCard({ story, asOf, tenureScale }: RoastLotCardProps) {
+function RoastLotCard({ story }: { story: ImpactStory }) {
   const framing = ROAST_STORY_FRAMING[story.id];
   const { lotCard } = framing;
-  const isOngoing = isStoryOngoing(story);
-  const months = getStoryMonths(story, asOf);
   const storyHref = `/impact-stories#${story.id}`;
   const headingId = `lot-${story.id}-name`;
 
@@ -53,43 +37,34 @@ function RoastLotCard({ story, asOf, tenureScale }: RoastLotCardProps) {
       )}>
       {lotCard.featured && <RoastLabelFoil />}
       <RoastLabelTop>
-        Lot <b>{framing.lot}</b>
-        {isOngoing && " · Ongoing"}
+        Lot <b>{framing.lot}</b> · {formatStoryRange(story)}
       </RoastLabelTop>
-      <RoastLotName id={headingId} origin={story.company} title={story.title} />
-      <RoastLabelFields>
-        <RoastLabelField term="Process">{lotCard.process}</RoastLabelField>
-        <RoastLabelField term="Roast date">
-          {formatStoryRange(story)}
-          <RoastTenure
-            months={months}
-            scale={tenureScale}
-            caption={formatTenure(months, isOngoing)}
-          />
-        </RoastLabelField>
-        <RoastLabelField term="Notes" mono>
-          {lotCard.notes}
-        </RoastLabelField>
-        <RoastLabelField term="Yield">
-          <span
-            className={cn(
-              // Text
-              "font-roast-display text-[1.15rem] font-semibold font-stretch-88%",
-            )}>
-            {lotCard.yieldLine}
-          </span>
-        </RoastLabelField>
-      </RoastLabelFields>
+      <RoastLotName
+        id={headingId}
+        origin={story.company}
+        title={story.title}
+        className="border-b-0 pb-3"
+      />
+      <RoastKicker
+        as="p"
+        className={cn(
+          // Size and spacing
+          "px-[18px] pb-[18px]",
+          // Border
+          "border-b border-roast-line",
+        )}>
+        {lotCard.process}
+      </RoastKicker>
       <RoastNotes items={lotCard.bullets} />
       <RoastLabelFoot>
+        <RoastKicker as="span">{lotCard.yieldLine}</RoastKicker>
         <RoastTextLink href={storyHref}>{ROAST_IMPACT.readStory}</RoastTextLink>
       </RoastLabelFoot>
     </RoastLabel>
   );
 }
 
-export default function RoastImpact({ asOf }: { asOf: string }) {
-  const tenureScale = getTenureScale(IMPACT_STORIES, asOf);
+export default function RoastImpact() {
 
   return (
     <RoastSection id="impact" labelledBy="impact-h" alt>
@@ -107,12 +82,7 @@ export default function RoastImpact({ asOf }: { asOf: string }) {
           "grid md:grid-cols-2",
         )}>
         {IMPACT_STORIES.map((story) => (
-          <RoastLotCard
-            key={story.id}
-            story={story}
-            asOf={asOf}
-            tenureScale={tenureScale}
-          />
+          <RoastLotCard key={story.id} story={story} />
         ))}
       </div>
     </RoastSection>

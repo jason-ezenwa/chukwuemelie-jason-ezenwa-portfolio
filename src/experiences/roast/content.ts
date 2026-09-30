@@ -392,7 +392,6 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
   /** Home lot card copy */
   lotCard: {
     process: string;
-    notes: string;
     yieldLine: string;
     bullets: string[];
     /** The featured lot gets the copper foil */
@@ -412,7 +411,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     title: { strong: "Agentic AI", thin: "for College Applications" },
     lotCard: {
       process: "Lead Software Engineer",
-      notes: "TypeScript · React · NestJS · Vercel AI SDK · AWS · Terraform · MongoDB · Docker · PostHog",
       yieldLine: "85+ PRs in 6 weeks",
       bullets: [
         "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks",
@@ -442,7 +440,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     title: { strong: "Product Feedback", thin: "& Scaling Operations" },
     lotCard: {
       process: "Lead Software Engineer → Fractional Head of Engineering",
-      notes: "Next.js · NestJS · TypeScript · Vercel AI SDK · MongoDB · AWS",
       yieldLine: "$1,000+ in 3 months",
       bullets: [
         "Launched a product feedback application used by companies like Kuda",
@@ -477,7 +474,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     title: { strong: "Blue-Collar", thin: "Empowerment Infrastructure" },
     lotCard: {
       process: "Software Engineer",
-      notes: "TypeScript · React · Node.js · GraphQL · MongoDB · AWS · Docker",
       yieldLine: "₦45m+ revenue",
       bullets: [
         "Built systems for artisan recruitment, home maintenance, and AI-driven portfolios, generating over ₦45m in revenue",
@@ -511,7 +507,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     title: { strong: "Building a Lifestyle Super App", thin: "and Web Platform" },
     lotCard: {
       process: "Full Stack Developer",
-      notes: "JavaScript · Node.js · Express · React",
       yieldLine: "+55% retention",
       bullets: [
         "Contributed to a lifestyle super app, focusing on financial services",
