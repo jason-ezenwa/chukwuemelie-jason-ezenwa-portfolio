@@ -273,41 +273,41 @@ export const ROAST_PROJECTS = {
   heading: { strong: "Single origin,", thin: "built end to end." } satisfies RoastSplitHeading,
   items: [
     {
+      id: "paprwrk",
+      name: "PaprWrk",
+      kicker: "Single origin · Logistics",
+      figure: "Fig. 2 — PaprWrk",
+      figureNote: "Paperwork",
+      image: "/images/paprwrk-dashboard.jpeg",
+      alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
+      description:
+        "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what's missing or wrong before they bill or pay. Prototype, testing with freight brokers.",
+      stack: "TypeScript · React · Vite",
+      featured: true,
+    },
+    {
       id: "hunt-assistant",
       name: "Hunt Assistant",
       kicker: "Single origin · AI",
-      figure: "Fig. 2 — Hunt Assistant",
+      figure: "Fig. 3 — Hunt Assistant",
       figureNote: "Dashboard",
       image: "/images/hunt-assistant-dashboard.jpeg",
       alt: "Hunt Assistant dashboard showing tracked job applications and AI insights",
       description:
         "An AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and tracks your applications — with auth, persistent tracking and AI insights.",
       stack: "TypeScript · Next.js · MongoDB · AI",
-      featured: true,
     },
     {
       id: "zen-finance",
       name: "Zen",
       kicker: "Single origin · Fintech",
-      figure: "Fig. 3 — Zen",
+      figure: "Fig. 4 — Zen",
       figureNote: "Wallets",
       image: "/images/zen-dashboard.jpeg",
       alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
       description:
         "A fintech app with multi-currency wallets, currency exchange, and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
       stack: "TypeScript · Next.js · Node.js · MongoDB",
-    },
-    {
-      id: "prospera-ai-dashboard",
-      name: "Prospera AI Dashboard",
-      kicker: "Single origin · Dashboard",
-      figure: "Fig. 4 — Prospera AI",
-      figureNote: "Analytics",
-      image: "/images/prospera-ai-dashboard.jpeg",
-      alt: "Prospera AI dashboard with intent-signal analytics and lead magnet insights",
-      description:
-        "A dashboard mockup for Prospera AI — AI-personalised lead magnets and agentic follow-ups — covering intent-signal analytics, AI content generation and lead magnet insights.",
-      stack: "TypeScript · Next.js · Tailwind CSS · Recharts",
     },
   ] satisfies RoastProject[],
 };

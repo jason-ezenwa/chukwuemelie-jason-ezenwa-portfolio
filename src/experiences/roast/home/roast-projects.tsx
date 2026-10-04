@@ -105,9 +105,11 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
           <RoastTextLink href={urls.live} external>
             Live site
           </RoastTextLink>
-          <RoastTextLink href={urls.repo} external>
-            GitHub
-          </RoastTextLink>
+          {urls.repo && (
+            <RoastTextLink href={urls.repo} external>
+              GitHub
+            </RoastTextLink>
+          )}
         </div>
       </div>
     </article>
