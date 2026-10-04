@@ -174,7 +174,7 @@ const PROJECT_ITEMS = [
     plate: "Pl. A — AI / Logistics",
     name: "PaprWrk",
     blurb:
-      "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what’s missing or wrong before they bill or pay. Prototype, testing with freight brokers.",
+      "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what’s missing or wrong before they bill or pay. Prototype, currently testing with freight brokers.",
     tags: "TypeScript / React / Vite",
     image: {
       src: "/images/paprwrk-dashboard.jpeg",
