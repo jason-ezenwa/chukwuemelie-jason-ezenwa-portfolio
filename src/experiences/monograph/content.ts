@@ -198,17 +198,17 @@ const PROJECT_ITEMS = [
     },
   },
   {
-    id: "prospera-ai-dashboard",
-    plate: "Pl. C — Analytics",
-    name: "Prospera AI",
+    id: "paprwrk",
+    plate: "Pl. C — AI / Logistics",
+    name: "PaprWrk",
     blurb:
-      "Dashboard for AI-personalised lead magnets and agentic follow-ups: intent-signal analytics, AI content generation and lead-magnet insights.",
-    tags: "TypeScript / Next.js / Tailwind CSS / Recharts",
+      "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what’s missing or wrong before they bill or pay. Prototype, testing with freight brokers.",
+    tags: "React / Vite / AI",
     image: {
-      src: "/images/prospera-ai-dashboard.jpeg",
-      alt: "Prospera AI dashboard with intent-signal analytics and lead magnet insights",
-      width: 2938,
-      height: 1656,
+      src: "/images/paprwrk-dashboard.jpeg",
+      alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
+      width: 2940,
+      height: 1672,
     },
   },
 ] satisfies MonographProject[];

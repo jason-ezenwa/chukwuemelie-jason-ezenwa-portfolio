@@ -32,9 +32,9 @@ export const WYNK_PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=ng.wynk.wynksupappsupapp&pli=1";
 
 // Projects
-export type ProjectId = "hunt-assistant" | "zen-finance" | "prospera-ai-dashboard";
+export type ProjectId = "hunt-assistant" | "zen-finance" | "paprwrk";
 
-export const PROJECT_URLS: Record<ProjectId, { live: string; repo: string }> = {
+export const PROJECT_URLS: Record<ProjectId, { live: string; repo?: string }> = {
   "hunt-assistant": {
     live: "https://hunt-assistant.vercel.app/",
     repo: "https://github.com/jason-ezenwa/hunt-assistant",
@@ -43,9 +43,8 @@ export const PROJECT_URLS: Record<ProjectId, { live: string; repo: string }> = {
     live: "https://try-zen-finance.vercel.app/",
     repo: "https://github.com/jason-ezenwa/zen-finance",
   },
-  "prospera-ai-dashboard": {
-    live: "https://prospera-ai-dashboard-one.vercel.app/",
-    repo: "https://github.com/jason-ezenwa/prospera-ai-dashboard",
+  paprwrk: {
+    live: "https://paprwrk.chukwuemelie.com/",
   },
 };
 

@@ -81,9 +81,11 @@ export default function ProjectsSection() {
                     // Layout
                     "flex",
                   )}>
-                  <TextLink href={urls.repo} external>
-                    GitHub
-                  </TextLink>
+                  {urls.repo && (
+                    <TextLink href={urls.repo} external>
+                      GitHub
+                    </TextLink>
+                  )}
                   <TextLink href={urls.live} external>
                     Live
                   </TextLink>
