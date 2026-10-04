@@ -170,8 +170,22 @@ export interface MonographProject {
 
 const PROJECT_ITEMS = [
   {
+    id: "paprwrk",
+    plate: "Pl. A — AI / Logistics",
+    name: "PaprWrk",
+    blurb:
+      "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what’s missing or wrong before they bill or pay. Prototype, testing with freight brokers.",
+    tags: "TypeScript / React / Vite",
+    image: {
+      src: "/images/paprwrk-dashboard.jpeg",
+      alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
+      width: 2940,
+      height: 1672,
+    },
+  },
+  {
     id: "hunt-assistant",
-    plate: "Pl. A — AI / Careers",
+    plate: "Pl. B — AI / Careers",
     name: "Hunt Assistant",
     blurb:
       "An AI-powered job-hunting platform: analyses your resume against job requirements, writes tailored cover letters and tracks every application, with auth and persistent tracking.",
@@ -185,7 +199,7 @@ const PROJECT_ITEMS = [
   },
   {
     id: "zen-finance",
-    plate: "Pl. B — Fintech",
+    plate: "Pl. C — Fintech",
     name: "Zen",
     blurb:
       "Multi-currency wallets, currency exchange and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
@@ -195,20 +209,6 @@ const PROJECT_ITEMS = [
       alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
       width: 2939,
       height: 1673,
-    },
-  },
-  {
-    id: "paprwrk",
-    plate: "Pl. C — AI / Logistics",
-    name: "PaprWrk",
-    blurb:
-      "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what’s missing or wrong before they bill or pay. Prototype, testing with freight brokers.",
-    tags: "React / Vite / AI",
-    image: {
-      src: "/images/paprwrk-dashboard.jpeg",
-      alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
-      width: 2940,
-      height: 1672,
     },
   },
 ] satisfies MonographProject[];
