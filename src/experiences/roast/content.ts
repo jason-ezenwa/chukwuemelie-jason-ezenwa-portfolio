@@ -281,7 +281,7 @@ export const ROAST_PROJECTS = {
       image: "/images/paprwrk-dashboard.jpeg",
       alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
       description:
-        "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what's missing or wrong before they bill or pay. Prototype, testing with freight brokers.",
+        "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what's missing or wrong before they bill or pay. Prototype, currently testing with freight brokers.",
       stack: "TypeScript · React · Vite",
       featured: true,
     },
