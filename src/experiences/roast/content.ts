@@ -412,7 +412,7 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     title: { strong: "Agentic AI", thin: "for College Applications" },
     lotCard: {
       process: "Lead Software Engineer",
-      yieldLine: "85+ PRs in 6 weeks",
+      yieldLine: "156% user growth",
       bullets: [
         "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks",
         "Built Skye, an AI agent that guides each student's application journey from discovery to essays and application",
