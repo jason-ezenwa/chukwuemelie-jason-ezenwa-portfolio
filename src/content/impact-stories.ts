@@ -79,9 +79,9 @@ const SCOOLER_AI = defineStory({
   contributions: [
     {
       id: "skye-ai-agent",
-      title: "Skye, the In-App AI Agent",
+      title: "Skye, the AI Agent",
       body: [
-        "Built Skye, an in-app AI agent that guides each student's application journey and auto-fills their Common App and university application forms.",
+        "Built Skye, an AI agent that guides each student's application journey from discovery to essays and application.",
       ],
       links: [{ label: "Visit Scooler AI", href: SCOOLER_URL }],
     },
@@ -89,7 +89,14 @@ const SCOOLER_AI = defineStory({
       id: "sat-test-prep",
       title: "SAT Test Prep",
       body: [
-        "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
+        "Built SAT test prep with an adaptive diagnostic, AI-assisted study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
+      ],
+    },
+    {
+      id: "redesign-and-growth",
+      title: "Redesign & Growth",
+      body: [
+        "Led the application's redesign and supported marketing efforts, improving UI/UX and growing the user base by 156% in 12 days.",
       ],
     },
     {
@@ -109,17 +116,18 @@ const SCOOLER_AI = defineStory({
     {
       id: "engineering-process",
       title: "Engineering Process",
-      body: ["Established seed-stage engineering processes:"],
+      body: ["Established engineering processes:"],
       bullets: [
-        "Automated weekly AI code-quality reviews",
-        "Jira epics and stories, RFCs and ADRs",
-        "Multi-agent workflows to parallelize delivery",
+        "Automated AI code-quality reviews",
+        "Architecture decision records (ADRs)",
+        "Multi-agent workflows",
       ],
     },
   ],
   impactSummary: [
     "Led the platform from build to production launch, landing 85+ PRs in 6 weeks",
-    "Built Skye, an in-app AI agent that guides students and auto-fills their application forms",
+    "Built Skye, an AI agent that guides students from discovery to essays and application",
+    "Led the redesign that grew the user base 156% in 12 days",
     "Cut Skye's LLM inference round-trips 5–10x with batched tool calls",
     "Shipped SAT test prep over a 1,000+ question bank",
   ],
@@ -136,7 +144,7 @@ const PEPPERMINT = defineStory({
   ],
   stack: ["Next.js", "NestJS", "TypeScript", "Vercel AI SDK", "MongoDB", "AWS"],
   overview: [
-    "Peppermint develops digital tools to help companies collect and analyze product feedback. Starting as Lead Software Engineer, I directed engineering efforts to build user-facing applications that enhanced the product feedback process. In January 2026, I transitioned to Fractional Head of Engineering — leading engineering strategy, technical direction, AI enablement and cross-functional alignment.",
+    "Peppermint develops digital tools to help companies collect and analyze product feedback. Starting as Lead Software Engineer, I directed engineering efforts to build user-facing applications that enhanced the product feedback process. In January 2026, I transitioned to Fractional Head of Engineering — leading technical direction and cross-functional alignment.",
   ],
   contributions: [
     {
@@ -182,7 +190,7 @@ const PEPPERMINT = defineStory({
       id: "fractional-head-of-engineering",
       title: "Fractional Head of Engineering",
       body: [
-        "Transitioned to Fractional Head of Engineering in January 2026, taking on broader responsibilities including engineering strategy, technical direction, AI enablement and cross-functional alignment.",
+        "Transitioned to Fractional Head of Engineering in January 2026, leading technical direction and cross-functional alignment.",
       ],
     },
   ],

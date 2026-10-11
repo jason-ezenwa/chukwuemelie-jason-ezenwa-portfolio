@@ -152,6 +152,7 @@ export const ROAST_YIELD = {
   kicker: { lead: "Yield", bold: "Measured in production" } satisfies RoastKickerCopy,
   heading: { strong: "What came", thin: "out of the roaster." } satisfies RoastSplitHeading,
   items: [
+    { num: "156", sup: "%", what: "user growth in 12 days after the redesign & marketing", kicker: "Scooler AI" },
     { num: "10,000", sup: "+", what: "testers onboarded in the first month", kicker: "Peppermint" },
     { num: "50", sup: "x", what: "faster data-intensive operations", kicker: "Peppermint" },
     { num: "₦45m", sup: "+", what: "revenue from systems built", kicker: "LaborHack" },
@@ -411,25 +412,27 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
     title: { strong: "Agentic AI", thin: "for College Applications" },
     lotCard: {
       process: "Lead Software Engineer",
-      yieldLine: "85+ PRs in 6 weeks",
+      yieldLine: "156% user growth",
       bullets: [
         "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks",
-        "Built Skye, an in-app AI agent that guides each student's application journey and auto-fills their Common App and university application forms",
-        "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank",
+        "Built Skye, an AI agent that guides each student's application journey from discovery to essays and application",
+        "Built SAT test prep with an adaptive diagnostic, AI-assisted study plans, practice drills and full-length mock exams over a 1,000+ question bank",
+        "Led the application's redesign and supported marketing efforts, improving UI/UX and growing the user base by 156% in 12 days",
       ],
     },
     yield: [
       { num: "85", sup: "+", what: "PRs landed in 6 weeks, build to launch", kicker: "Launch" },
+      { num: "156", sup: "%", what: "user growth in 12 days after the redesign & marketing", kicker: "Growth" },
       { num: "5–10", sup: "x", what: "fewer LLM inference round-trips", kicker: "Skye" },
-      { num: "1,000", sup: "+", what: "questions behind adaptive SAT prep", kicker: "Test prep" },
     ],
     pullQuote: {
-      text: "An AI agent that guides each student and fills in the Common App —",
+      text: "An AI agent that guides each student from discovery to application —",
       bold: "batched and held to an eval harness.",
     },
     contributions: {
-      "skye-ai-agent": { kicker: "Agent", metric: "Skye", metricCap: "guides students and fills their forms" },
+      "skye-ai-agent": { kicker: "Agent", metric: "Skye", metricCap: "guides students from discovery to application" },
       "sat-test-prep": { kicker: "Test prep", metric: "1,000+", metricCap: "question bank" },
+      "redesign-and-growth": { kicker: "Redesign", metric: "156%", metricCap: "user growth in 12 days" },
       "inference-and-reliability": { kicker: "Inference", metric: "5–10x", metricCap: "fewer inference round-trips" },
       "infrastructure-and-analytics": { kicker: "Infrastructure", metric: "End to end", metricCap: "AWS · Terraform · PostHog" },
       "engineering-process": { kicker: "Process" },

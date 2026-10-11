@@ -300,8 +300,12 @@
   :root[data-experience="monograph"] .mono-fig-stack > :first-child {
     grid-column: 1 / -1;
   }
-  :root[data-experience="monograph"] .mono-fig-stack > :nth-child(n + 4) .mono-fig-num {
-    font-size: clamp(2.6rem, 8vw, 4.2rem);
+  /* Paired figures size to the stack's width so wide numbers like ₦45m never touch */
+  :root[data-experience="monograph"] .mono-fig-stack {
+    container-type: inline-size;
+  }
+  :root[data-experience="monograph"] .mono-fig-stack > :nth-child(n + 2) .mono-fig-num {
+    font-size: clamp(2.2rem, 11cqi, 4.2rem);
   }
 }
 

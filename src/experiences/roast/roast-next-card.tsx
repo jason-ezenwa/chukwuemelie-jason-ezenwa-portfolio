@@ -42,7 +42,8 @@ export default function RoastNextCard({ story }: { story: ImpactStory }) {
           title={story.title}
           className="border-b-0"
         />
-        <RoastLabelFoot>
+        {/* Stacked so the yield and link sit the same way whatever the yield's length */}
+        <RoastLabelFoot className="flex-col items-start">
           <RoastKicker as="span">{framing.lotCard.yieldLine}</RoastKicker>
           <RoastTextLinkLabel>{ROAST_STORIES_PAGE.viewLot}</RoastTextLinkLabel>
         </RoastLabelFoot>

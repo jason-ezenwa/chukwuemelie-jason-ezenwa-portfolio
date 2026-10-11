@@ -100,8 +100,8 @@ export const IMPACT = {
       cap: "Retention increase after rebuilding Wynk’s web app in React.",
     },
     {
-      num: "85+",
-      cap: "PRs landed in 6 weeks at Scooler AI, from build to production launch.",
+      num: "156%",
+      cap: "User growth in 12 days after the Scooler AI redesign & marketing.",
     },
     {
       num: "5–10×",
@@ -124,8 +124,9 @@ export const HOME_STORIES: Record<ImpactStoryId, MonographHomeStory> = {
     role: "Lead Software Engineer · United States, remote",
     points: [
       "Led engineering for an agentic AI platform for college applications, from build to production launch, landing 85+ PRs in 6 weeks.",
-      "Built Skye, an in-app AI agent that guides each student’s application journey and auto-fills their Common App and university application forms.",
-      "Built SAT test prep with an adaptive diagnostic, AI-generated study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
+      "Built Skye, an AI agent that guides each student’s application journey from discovery to essays and application.",
+      "Built SAT test prep with an adaptive diagnostic, AI-assisted study plans, practice drills and full-length mock exams over a 1,000+ question bank.",
+      "Led the application’s redesign and supported marketing efforts, improving UI/UX and growing the user base by 156% in 12 days.",
     ],
   },
   "product-feedback": {
@@ -331,7 +332,7 @@ export const IMPACT_STORIES_PAGE = {
 export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<StoryId> } = {
   "agentic-college-applications": {
     titleLines: ["Agentic AI", "for College", "Applications"],
-    deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: Skye, an in-app AI agent, SAT test prep and the infrastructure underneath.",
+    deck: "Leading engineering on an agentic AI platform for college applications, from build to production launch: Skye, an AI agent, SAT test prep and the infrastructure underneath.",
     metrics: [
       {
         kicker: "Velocity",
@@ -339,24 +340,25 @@ export const STORY_FRAMING: { [StoryId in ImpactStoryId]: MonographStoryFraming<
         cap: "PRs landed in 6 weeks, from build to production launch.",
       },
       {
+        kicker: "Growth",
+        num: "156%",
+        cap: "User growth in 12 days after the redesign & marketing.",
+      },
+      {
         kicker: "Efficiency",
         num: "5–10×",
         cap: "Fewer LLM inference round-trips from batched tool calls.",
       },
-      {
-        kicker: "Practice",
-        num: "1,000+",
-        cap: "Questions in the bank behind adaptive SAT prep.",
-      },
     ],
     pull: {
-      marked: "An in-app AI agent",
-      rest: " that guides each student’s application journey and auto-fills their forms.",
+      marked: "An AI agent",
+      rest: " that guides each student from discovery to essays and application.",
       caption: "On Skye, kept reliable by an eval harness",
     },
     contributionKickers: {
       "skye-ai-agent": "Agents",
       "sat-test-prep": "Learning",
+      "redesign-and-growth": "Growth",
       "inference-and-reliability": "Efficiency",
       "infrastructure-and-analytics": "Infrastructure",
       "engineering-process": "Process",
