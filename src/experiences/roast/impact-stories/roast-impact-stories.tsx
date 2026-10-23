@@ -46,10 +46,7 @@ export default function RoastImpactStories({ asOf }: { asOf: string }) {
               <RoastArrowLeftIcon className={roastBackIconClassName} />
               {ROAST_STORIES_PAGE.back}
             </Link>
-            <RoastKicker>
-              {ROAST_STORIES_PAGE.kicker.lead} ·{" "}
-              <b>{ROAST_STORIES_PAGE.kicker.bold}</b>
-            </RoastKicker>
+            <RoastKicker>{ROAST_STORIES_PAGE.kicker}</RoastKicker>
           </div>
 
           <h1

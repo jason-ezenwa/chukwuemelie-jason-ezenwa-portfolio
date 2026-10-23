@@ -12,7 +12,7 @@ import {
 import RoastPhaseBar from "@/experiences/roast/impact-stories/roast-phase-bar";
 import { formatStoryRange } from "@/experiences/roast/roast-dates";
 import { RoastArrowLeftIcon } from "@/experiences/roast/roast-icons";
-import { RoastKicker, RoastKickerText } from "@/experiences/roast/roast-kicker";
+import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import RoastNextCard from "@/experiences/roast/roast-next-card";
 import { RoastSplit, roastWrapClassName } from "@/experiences/roast/roast-section";
 import { RoastTextLink } from "@/experiences/roast/roast-text-link";
@@ -193,7 +193,7 @@ export default function RoastStory({
           "flex flex-wrap items-center justify-between",
         )}>
         <RoastKicker>
-          Impact story · Lot <b>{framing.lot}</b>
+          Lot <b>{framing.lot}</b>
         </RoastKicker>
         <RoastKicker>
           {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
@@ -230,7 +230,7 @@ export default function RoastStory({
         )}>
         <div>
           <RoastKicker className="mb-[18px]">
-            <RoastKickerText copy={ROAST_STORIES_PAGE.overviewKicker} />
+            {ROAST_STORIES_PAGE.overviewKicker}
           </RoastKicker>
           {story.overview.map((paragraph, paragraphIndex) => (
             <p
@@ -263,9 +263,7 @@ export default function RoastStory({
         </p>
 
         <section aria-labelledby={brewId}>
-          <RoastKicker>
-            <RoastKickerText copy={ROAST_STORIES_PAGE.brewKicker} />
-          </RoastKicker>
+          <RoastKicker>{ROAST_STORIES_PAGE.brewKicker}</RoastKicker>
           <p
             id={brewId}
             className={cn(

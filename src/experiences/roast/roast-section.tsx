@@ -1,10 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import type {
-  RoastKickerCopy,
-  RoastSplitHeading,
-} from "@/experiences/roast/content";
-import { RoastKicker, RoastKickerText } from "@/experiences/roast/roast-kicker";
+import type { RoastSplitHeading } from "@/experiences/roast/content";
+import { RoastKicker } from "@/experiences/roast/roast-kicker";
 
 /** Centred page column: 1280px max with 16 / 24 / 40px gutters */
 export const roastWrapClassName = cn(
@@ -69,7 +66,7 @@ export function RoastSplit({
 }
 
 interface RoastSectionHeadProps {
-  kicker: RoastKickerCopy;
+  kicker: string;
   heading: RoastSplitHeading;
   headingId: string;
   lede?: string;
@@ -89,9 +86,7 @@ export function RoastSectionHead({
         // Layout
         "grid lg:grid-cols-[minmax(0,3fr)_minmax(0,9fr)]",
       )}>
-      <RoastKicker className="lg:pt-[.9rem]">
-        <RoastKickerText copy={kicker} />
-      </RoastKicker>
+      <RoastKicker className="lg:pt-[.9rem]">{kicker}</RoastKicker>
       <h2
         id={headingId}
         className={cn(
