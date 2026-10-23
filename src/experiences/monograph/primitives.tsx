@@ -49,7 +49,7 @@ export const DISPLAY = cn(
 export type MotionDelay = 0 | 250 | 700 | 900 | 1000;
 
 /** Highest stagger step with a matching `.mono-i-*` class in monograph.css */
-const MAX_STAGGER_INDEX = 7;
+const MAX_STAGGER_INDEX = 2;
 
 /** Classes that stagger a `.mono-rise` line by `index` steps (90ms each) after `delay` ms */
 export function motionClasses(index: number, delay: MotionDelay = 0): string {

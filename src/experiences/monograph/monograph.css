@@ -226,26 +226,6 @@
   --i: 2;
 }
 
-:root[data-experience="monograph"] .mono-i-3 {
-  --i: 3;
-}
-
-:root[data-experience="monograph"] .mono-i-4 {
-  --i: 4;
-}
-
-:root[data-experience="monograph"] .mono-i-5 {
-  --i: 5;
-}
-
-:root[data-experience="monograph"] .mono-i-6 {
-  --i: 6;
-}
-
-:root[data-experience="monograph"] .mono-i-7 {
-  --i: 7;
-}
-
 :root[data-experience="monograph"] .mono-d-0 {
   --d: 0ms;
 }

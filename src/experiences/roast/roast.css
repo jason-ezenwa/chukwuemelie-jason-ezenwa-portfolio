@@ -588,10 +588,6 @@
     --delay: 500ms;
   }
 
-  :root[data-experience="roast"] .roast-delay-650 {
-    --delay: 650ms;
-  }
-
   :root[data-experience="roast"] .roast-delay-1000 {
     --delay: 1000ms;
   }
