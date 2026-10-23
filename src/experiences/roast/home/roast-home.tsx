@@ -16,9 +16,9 @@ export default function RoastHome({ asOf }: { asOf: string }) {
         <RoastHero />
         <RoastAbout />
         <RoastYield />
-        <RoastStack />
         <RoastImpact />
         <RoastProjects />
+        <RoastStack />
         <RoastWriting />
       </div>
     </RoastLayout>

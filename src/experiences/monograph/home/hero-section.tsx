@@ -2,9 +2,7 @@ import { useRef } from "react";
 import { cn } from "@/lib/utils";
 import {
   HERO_LEDE,
-  HERO_META,
   HERO_NAME_LINES,
-  HERO_STATUS,
   PROFILE_LINKS,
 } from "@/experiences/monograph/content";
 import { yearOf } from "@/experiences/monograph/format";
@@ -23,13 +21,6 @@ import { useFitText } from "@/experiences/monograph/use-fit-text";
 /** Largest the fitted name may grow, in px */
 const NAME_MAX_SIZE = 260;
 
-/** Hero meta columns: stacked, halves at `sm`, even thirds at `lg` */
-const META_COLUMNS = [
-  "lg:col-[1/span_4]",
-  "lg:col-[5/span_4]",
-  "lg:col-[9/span_4]",
-];
-
 export default function HeroSection({ asOf }: { asOf: string }) {
   const nameRef = useRef<HTMLHeadingElement>(null);
 
@@ -41,53 +32,14 @@ export default function HeroSection({ asOf }: { asOf: string }) {
       className={cn(
         WRAP,
         // Size and spacing
-        "pt-[clamp(20px,3vw,40px)]",
+        "pt-[clamp(28px,5vw,72px)]",
       )}>
-      <dl className={cn(GRID, MONO, "mono-rise gap-y-2.5")}>
-        {HERO_META.map((item, index) => (
-          <div
-            key={item.term}
-            className={cn(CELL, "sm:col-span-6", META_COLUMNS[index])}>
-            <dt className="mono-line text-mono-mid">
-              <span className={motionClasses(index)}>{item.term}</span>
-            </dt>
-            {item.details.map((detail, detailIndex) => (
-              <dd key={detail} className="mono-line">
-                <span className={motionClasses(index + detailIndex + 1)}>{detail}</span>
-              </dd>
-            ))}
-          </div>
-        ))}
-        <div className={cn(CELL, "sm:col-span-6", META_COLUMNS[2])}>
-          <dt className="mono-line text-mono-mid">
-            <span className={motionClasses(2)}>{HERO_STATUS.term}</span>
-          </dt>
-          <dd className="mono-line">
-            <span className={motionClasses(3)}>
-              <span
-                className={cn(
-                  // Size and spacing
-                  "gap-2",
-                  // Layout
-                  "inline-flex items-center",
-                  // Status dot: a full circle with its border drawn inside
-                  "before:box-border before:size-[9px] before:flex-none before:rounded-full before:border before:border-mono-ink before:bg-mono-signal",
-                )}>
-                {HERO_STATUS.detail}
-              </span>
-            </span>
-          </dd>
-        </div>
-      </dl>
-
       <h1
         id="name"
         ref={nameRef}
         className={cn(
           DISPLAY,
           "mono-rise",
-          // Size and spacing
-          "mt-[clamp(28px,6vw,96px)]",
           // Text
           "text-[clamp(2.1rem,10.4vw,14rem)] font-extrabold leading-[0.84] tracking-[-0.035em] uppercase",
         )}>

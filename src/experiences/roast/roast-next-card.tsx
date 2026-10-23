@@ -40,7 +40,7 @@ export default function RoastNextCard({ story }: { story: ImpactStory }) {
           as="p"
           origin={story.company}
           title={story.title}
-          className="border-b-0"
+          className="px-[18px] pt-[22px] pb-[18px]"
         />
         {/* Stacked so the yield and link sit the same way whatever the yield's length */}
         <RoastLabelFoot className="flex-col items-start">

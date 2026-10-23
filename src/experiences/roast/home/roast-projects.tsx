@@ -118,7 +118,7 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
 
 export default function RoastProjects() {
   return (
-    <RoastSection id="projects" labelledBy="projects-h">
+    <RoastSection id="projects" labelledBy="projects-h" alt>
       <RoastSectionHead
         kicker={ROAST_PROJECTS.kicker}
         heading={ROAST_PROJECTS.heading}

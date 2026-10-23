@@ -11,9 +11,9 @@ export default function MonographHome({ asOf }: { asOf: string }) {
     <MonographLayout canonicalPath="/" asOf={asOf}>
       <HeroSection asOf={asOf} />
       <AboutSection />
-      <StackSection />
       <ImpactSection />
       <ProjectsSection />
+      <StackSection />
       <WritingSection />
     </MonographLayout>
   );

@@ -1,13 +1,13 @@
 import { Bricolage_Grotesque, JetBrains_Mono, Newsreader } from "next/font/google";
 
-export const roastDisplayFont = Bricolage_Grotesque({
+const roastDisplayFont = Bricolage_Grotesque({
   subsets: ["latin"],
   axes: ["opsz", "wdth"],
   display: "swap",
   fallback: ["Helvetica Neue", "Arial", "sans-serif"],
 });
 
-export const roastBodyFont = Newsreader({
+const roastBodyFont = Newsreader({
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz"],
@@ -17,7 +17,7 @@ export const roastBodyFont = Newsreader({
   adjustFontFallback: false,
 });
 
-export const roastMonoFont = JetBrains_Mono({
+const roastMonoFont = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   display: "swap",

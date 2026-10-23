@@ -4,20 +4,14 @@ import { RoastKicker } from "@/experiences/roast/roast-kicker";
 
 /** The bag label: the core Roast component. */
 export function RoastLabel({
-  as: Component = "div",
   className,
   children,
-  ...rest
 }: {
-  as?: ElementType;
   className?: string;
   children: ReactNode;
-  id?: string;
-  "aria-label"?: string;
-  "aria-labelledby"?: string;
 }) {
   return (
-    <Component
+    <div
       className={cn(
         // Border
         "border border-roast-line-strong",
@@ -28,10 +22,9 @@ export function RoastLabel({
         // Effects and interactive states
         "shadow-(--roast-shadow)",
         className,
-      )}
-      {...rest}>
+      )}>
       {children}
-    </Component>
+    </div>
   );
 }
 
@@ -67,66 +60,10 @@ export function RoastLabelTop({ children }: { children: ReactNode }) {
   );
 }
 
-export function RoastLabelFields({ children }: { children: ReactNode }) {
-  return <dl className="grid">{children}</dl>;
-}
-
-export function RoastLabelField({
-  term,
-  mono,
-  children,
-}: {
-  term: string;
-  /** Renders the value in the small mono style used for stacks */
-  mono?: boolean;
-  children: ReactNode;
-}) {
-  return (
-    <div
-      className={cn(
-        // Size and spacing
-        "gap-3.5 px-[18px] py-[11px]",
-        // Border
-        "border-b border-roast-line",
-        // Layout
-        "grid grid-cols-[6.4rem_minmax(0,1fr)] items-baseline",
-      )}>
-      <dt
-        className={cn(
-          // Text
-          "font-roast-mono text-[.66rem] uppercase tracking-[.14em] text-roast-muted",
-        )}>
-        {term}
-      </dt>
-      <dd
-        className={cn(
-          // Text
-          "text-base leading-[1.45]",
-          mono &&
-            "font-roast-mono text-[.78rem] leading-[1.7] tracking-[.02em] text-roast-ink-2",
-        )}>
-        {children}
-      </dd>
-    </div>
-  );
-}
-
 /** Bulleted notes with copper dashes */
-export function RoastNotes({
-  items,
-  className,
-}: {
-  items: string[];
-  className?: string;
-}) {
+export function RoastNotes({ items }: { items: string[] }) {
   return (
-    <ul
-      className={cn(
-        "roast-notes",
-        // Size and spacing
-        "px-[18px] pt-4 pb-1.5",
-        className,
-      )}>
+    <ul className="roast-notes">
       {items.map((item) => (
         <li
           key={item}
@@ -166,7 +103,7 @@ export function RoastLabelFoot({
   );
 }
 
-/** Origin (big condensed display) and title (italic serif), as on the lot cards */
+/** Origin (big condensed display) and title (italic serif) of a lot */
 export function RoastLotName({
   as: Component = "h3",
   id,
@@ -183,13 +120,7 @@ export function RoastLotName({
   return (
     <Component
       id={id}
-      className={cn(
-        // Size and spacing
-        "px-[18px] pt-[22px] pb-[18px]",
-        // Border
-        "border-b border-roast-line",
-        className,
-      )}>
+      className={className}>
       <span
         className={cn(
           // Text
