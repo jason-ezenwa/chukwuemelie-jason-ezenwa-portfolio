@@ -12,9 +12,7 @@ export function RoastLabel({
   as?: ElementType;
   className?: string;
   children: ReactNode;
-  id?: string;
   "aria-label"?: string;
-  "aria-labelledby"?: string;
 }) {
   return (
     <Component
@@ -112,21 +110,9 @@ export function RoastLabelField({
 }
 
 /** Bulleted notes with copper dashes */
-export function RoastNotes({
-  items,
-  className,
-}: {
-  items: string[];
-  className?: string;
-}) {
+export function RoastNotes({ items }: { items: string[] }) {
   return (
-    <ul
-      className={cn(
-        "roast-notes",
-        // Size and spacing
-        "px-[18px] pt-4 pb-1.5",
-        className,
-      )}>
+    <ul className="roast-notes">
       {items.map((item) => (
         <li
           key={item}
@@ -166,7 +152,7 @@ export function RoastLabelFoot({
   );
 }
 
-/** Origin (big condensed display) and title (italic serif), as on the lot cards */
+/** Origin (big condensed display) and title (italic serif) of a lot */
 export function RoastLotName({
   as: Component = "h3",
   id,
@@ -183,13 +169,7 @@ export function RoastLotName({
   return (
     <Component
       id={id}
-      className={cn(
-        // Size and spacing
-        "px-[18px] pt-[22px] pb-[18px]",
-        // Border
-        "border-b border-roast-line",
-        className,
-      )}>
+      className={className}>
       <span
         className={cn(
           // Text

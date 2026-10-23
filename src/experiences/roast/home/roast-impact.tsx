@@ -3,7 +3,7 @@ import { IMPACT_STORIES, type ImpactStory } from "@/content/impact-stories";
 import { ROAST_IMPACT, ROAST_STORY_FRAMING } from "@/experiences/roast/content";
 import { formatStoryRange } from "@/experiences/roast/roast-dates";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
-import { RoastNotes } from "@/experiences/roast/roast-label";
+import { RoastLotName, RoastNotes } from "@/experiences/roast/roast-label";
 import {
   RoastSection,
   RoastSectionHead,
@@ -32,34 +32,18 @@ function RoastLotRow({ story }: { story: ImpactStory }) {
         <RoastKicker>
           Lot <b>{framing.lot}</b> · {formatStoryRange(story)}
         </RoastKicker>
-        <h3 id={headingId} className="mt-3">
-          <span
-            className={cn(
-              // Text
-              "font-roast-display text-[clamp(2.2rem,5vw,2.9rem)] font-bold font-stretch-78% leading-[.95] tracking-[-.03em] [font-variation-settings:'opsz'_96]",
-              // Layout
-              "block",
-            )}>
-            {story.company}
-          </span>
-          <span
-            className={cn(
-              // Size and spacing
-              "mt-2.5",
-              // Text
-              "font-roast-body text-[1.15rem] font-normal italic leading-[1.3] text-roast-ink-2",
-              // Layout
-              "block",
-            )}>
-            {story.title}
-          </span>
-        </h3>
+        <RoastLotName
+          id={headingId}
+          origin={story.company}
+          title={story.title}
+          className="mt-3"
+        />
         <RoastKicker as="p" className="mt-3">
           {lotCard.process}
         </RoastKicker>
       </div>
       <div className="flex flex-1 flex-col">
-        <RoastNotes items={lotCard.bullets} className="px-0 pt-0 pb-0" />
+        <RoastNotes items={lotCard.bullets} />
         <div
           className={cn(
             // Size and spacing
