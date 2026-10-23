@@ -129,7 +129,7 @@ export const ROAST_PROFILE = {
 // ---------------------------------------------------------------------------
 
 export const ROAST_ABOUT = {
-  kicker: { lead: "About", bold: "The producer" } satisfies RoastKickerCopy,
+  kicker: "About",
   heading: { strong: "Reliable products", thin: "that earn their keep." } satisfies RoastSplitHeading,
   paragraphs: [
     "I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.",
@@ -147,7 +147,7 @@ export const ROAST_ABOUT = {
 // ---------------------------------------------------------------------------
 
 export const ROAST_YIELD = {
-  kicker: { lead: "Yield", bold: "Measured in production" } satisfies RoastKickerCopy,
+  kicker: "Yield",
   heading: { strong: "What came", thin: "out of the roaster." } satisfies RoastSplitHeading,
   items: [
     { num: "156", sup: "%", what: "user growth in 12 days after the redesign & marketing", kicker: "Scooler AI" },
@@ -177,7 +177,7 @@ export interface RoastMenuGroup {
 }
 
 export const ROAST_STACK = {
-  kicker: { lead: "Stack", bold: "Tasting notes" } satisfies RoastKickerCopy,
+  kicker: "Stack",
   heading: { strong: "On the bar,", thin: "and where it was poured." } satisfies RoastSplitHeading,
   groups: [
     {
@@ -244,7 +244,7 @@ export const ROAST_STACK = {
 // ---------------------------------------------------------------------------
 
 export const ROAST_IMPACT = {
-  kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
+  kicker: "Impact stories",
   heading: { strong: "Roasted in production,", thin: "labelled honestly." } satisfies RoastSplitHeading,
   lede: "Each role, read like a bag label: where it came from, how it was processed, how long it roasted, and what it yielded.",
   readStory: "Read the story",
@@ -268,7 +268,7 @@ export interface RoastProject {
 }
 
 export const ROAST_PROJECTS = {
-  kicker: { lead: "Projects", bold: "Single origin" } satisfies RoastKickerCopy,
+  kicker: "Projects",
   heading: { strong: "Single origin,", thin: "built end to end." } satisfies RoastSplitHeading,
   items: [
     {
@@ -322,7 +322,7 @@ export interface RoastPost {
 }
 
 export const ROAST_WRITING = {
-  kicker: { lead: "Writing", bold: "Brew journal" } satisfies RoastKickerCopy,
+  kicker: "Writing",
   heading: { strong: "Notes on", thin: "the craft." } satisfies RoastSplitHeading,
   lede: "Essays on product engineering, careers and implementation, published on Stackademic.",
   feature: {
@@ -346,7 +346,7 @@ export const ROAST_WRITING = {
 // ---------------------------------------------------------------------------
 
 export const ROAST_CONTACT = {
-  kicker: { lead: "Contact", bold: "Orders open" } satisfies RoastKickerCopy,
+  kicker: "Contact",
   heading: { strong: "Let's build", thin: "something worth pouring." } satisfies RoastSplitHeading,
   links: [
     { label: "Resume", note: "Drive ↗", href: RESUME_URL },
@@ -364,10 +364,10 @@ export const ROAST_CONTACT = {
 export const ROAST_STORIES_PAGE = {
   back: "Back to all lots",
   backHref: "/#impact",
-  kicker: { lead: "Impact stories", bold: LOT_COUNT } satisfies RoastKickerCopy,
+  kicker: "Impact stories",
   indexKicker: "The lots",
-  overviewKicker: { lead: "Overview", bold: "Origin story" } satisfies RoastKickerCopy,
-  brewKicker: { lead: "Brewing notes", bold: "Key contributions" } satisfies RoastKickerCopy,
+  overviewKicker: "Overview",
+  brewKicker: "Key contributions",
   brewHeading: "How it was brewed",
   nextKicker: "Next lot",
   viewLot: "View lot",

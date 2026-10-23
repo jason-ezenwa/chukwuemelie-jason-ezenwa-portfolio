@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { EMAIL_ADDRESS } from "@/utils/constants";
 import { ROAST_CONTACT } from "@/experiences/roast/content";
 import { getYear } from "@/experiences/roast/roast-dates";
-import { RoastKicker, RoastKickerText } from "@/experiences/roast/roast-kicker";
+import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import { roastWrapClassName } from "@/experiences/roast/roast-section";
 
 /** Shared contact block and footer, on both pages */
@@ -35,9 +35,7 @@ export default function RoastContact({ asOf }: { asOf: string }) {
           "grid lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] lg:items-end",
         )}>
         <div>
-          <RoastKicker className="mb-5">
-            <RoastKickerText copy={ROAST_CONTACT.kicker} />
-          </RoastKicker>
+          <RoastKicker className="mb-5">{ROAST_CONTACT.kicker}</RoastKicker>
           <h2
             id="contact-h"
             className={cn(
