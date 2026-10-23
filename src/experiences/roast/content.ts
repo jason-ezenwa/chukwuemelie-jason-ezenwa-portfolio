@@ -89,8 +89,6 @@ export const ROAST_HERO = {
       { term: "Notes", value: "TypeScript · React · Node.js" },
       { term: "Also", value: "System design · DevOps · Data analytics" },
     ],
-    footKicker: "Available to read",
-    footLink: { label: "LinkedIn", href: LINKEDIN_URL },
   },
 };
 
@@ -393,8 +391,6 @@ export interface RoastStoryFraming<StoryId extends ImpactStoryId = ImpactStoryId
     process: string;
     yieldLine: string;
     bullets: string[];
-    /** The featured lot gets the copper foil */
-    featured?: boolean;
   };
   yield: RoastYieldItem[];
   /** One roast-phase name per role; the phase bar only shows with more than one role */
@@ -447,7 +443,6 @@ export const ROAST_STORY_FRAMING: { [StoryId in ImpactStoryId]: RoastStoryFramin
         "Built AI-powered pipelines with LLMs to generate usability study reports",
         "Architected in-app usability tests and surveys which generated over $1,000 within 3 months",
       ],
-      featured: true,
     },
     yield: [
       { num: "10,000", sup: "+", what: "testers onboarded within the first month", kicker: "Testers' app" },

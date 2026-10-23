@@ -35,20 +35,6 @@ export function RoastLabel({
   );
 }
 
-/** Copper foil strip on featured labels */
-export function RoastLabelFoil() {
-  return (
-    <div
-      aria-hidden="true"
-      className={cn(
-        "roast-copper",
-        // Size and spacing
-        "h-0.5",
-      )}
-    />
-  );
-}
-
 /** Crimped seal and the header row with the one-way valve */
 export function RoastLabelTop({ children }: { children: ReactNode }) {
   return (

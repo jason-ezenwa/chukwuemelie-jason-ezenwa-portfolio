@@ -2,16 +2,13 @@ import { cn } from "@/lib/utils";
 import { ROAST_HERO } from "@/experiences/roast/content";
 import RoastButton from "@/experiences/roast/roast-button";
 import RoastProfile from "@/experiences/roast/home/roast-profile";
-import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import {
   RoastLabel,
   RoastLabelField,
   RoastLabelFields,
-  RoastLabelFoot,
   RoastLabelTop,
 } from "@/experiences/roast/roast-label";
 import { roastWrapClassName } from "@/experiences/roast/roast-section";
-import { RoastTextLink } from "@/experiences/roast/roast-text-link";
 import { useFitName } from "@/experiences/roast/use-fit-name";
 
 
@@ -144,12 +141,6 @@ export default function RoastHero() {
               </RoastLabelField>
             ))}
           </RoastLabelFields>
-          <RoastLabelFoot>
-            <RoastKicker as="span">{label.footKicker}</RoastKicker>
-            <RoastTextLink href={label.footLink.href} external>
-              {label.footLink.label}
-            </RoastTextLink>
-          </RoastLabelFoot>
         </RoastLabel>
       </div>
 
