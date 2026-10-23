@@ -27,24 +27,10 @@ export default function RoastHero() {
         // Size and spacing
         "pt-9 pb-6",
       )}>
-      <div
-        className={cn(
-          // Size and spacing
-          "pb-[18px]",
-          // Border
-          "border-b border-roast-line",
-        )}>
-        <RoastKicker>
-          Lot <b>{ROAST_HERO.lotCode}</b> · {ROAST_HERO.since}
-        </RoastKicker>
-      </div>
-
       <h1
         id="hero-name"
         tabIndex={-1}
         className={cn(
-          // Size and spacing
-          "mt-7",
           // Text
           "font-roast-display leading-[.86] tracking-[-.035em]",
         )}>
