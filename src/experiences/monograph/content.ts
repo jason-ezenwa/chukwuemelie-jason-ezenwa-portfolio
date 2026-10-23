@@ -15,19 +15,6 @@ import { capitalisedCountWord } from "@/utils/count-words";
 
 // ---------- hero ----------
 
-export const HERO_META = [
-  { term: "Discipline", details: ["Full Stack Software Engineer"] },
-  {
-    term: "Currently",
-    details: [
-      "Lead Software Engineer, Scooler AI",
-      "Fractional Head of Engineering, Peppermint",
-    ],
-  },
-] as const;
-
-export const HERO_STATUS = { term: "Status", detail: "Available for select work" };
-
 export const HERO_NAME_LINES = ["Chukwuemelie", "Jason", "Obumse"] as const;
 
 export const HERO_LEDE =

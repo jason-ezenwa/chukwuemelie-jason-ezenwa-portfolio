@@ -76,20 +76,6 @@ export const ROAST_HERO = {
     href: "/impact-stories#product-feedback",
   },
   secondaryCta: { label: "Resume", href: RESUME_URL },
-  label: {
-    kicker: "Current lot",
-    title: "Scooler AI",
-    subtitle: "Lead Software Engineer",
-    fields: [
-      { term: "Blend", value: "Fractional Head of Engineering, Peppermint" },
-      { term: "Variety", value: "Full Stack Software Engineer" },
-      { term: "Aged", value: "3+ years, B2B and B2C" },
-    ],
-    monoFields: [
-      { term: "Notes", value: "TypeScript · React · Node.js" },
-      { term: "Also", value: "System design · DevOps · Data analytics" },
-    ],
-  },
 };
 
 export interface RoastMilestone {

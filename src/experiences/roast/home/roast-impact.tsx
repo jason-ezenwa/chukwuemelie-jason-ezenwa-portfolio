@@ -63,7 +63,7 @@ function RoastLotRow({ story }: { story: ImpactStory }) {
 
 export default function RoastImpact() {
   return (
-    <RoastSection id="impact" labelledBy="impact-h" alt>
+    <RoastSection id="impact" labelledBy="impact-h">
       <RoastSectionHead
         kicker={ROAST_IMPACT.kicker}
         heading={ROAST_IMPACT.heading}
