@@ -275,10 +275,6 @@
     background: var(--roast-accent);
   }
 
-  :root[data-experience="roast"] .roast-lot-feature {
-    background: linear-gradient(180deg, var(--roast-surface), var(--roast-surface-2) 280%);
-  }
-
   /* ---------- Kicker bold ---------- */
   :root[data-experience="roast"] .roast-kicker b {
     color: var(--roast-accent-ink);
