@@ -40,11 +40,11 @@ export function monthsBetween(
   );
 }
 
-export function getStoryStart(story: ImpactStory): string {
+function getStoryStart(story: ImpactStory): string {
   return story.roles[0].start;
 }
 
-export function getStoryEnd(story: ImpactStory): string | null {
+function getStoryEnd(story: ImpactStory): string | null {
   return story.roles[story.roles.length - 1].end;
 }
 

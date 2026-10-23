@@ -1,7 +1,7 @@
 import type { GetStaticProps } from "next";
 import type { Experience } from "@/experiences/experience";
 
-export const EXPERIENCE_REVALIDATE_SECONDS = 60 * 60 * 24;
+const EXPERIENCE_REVALIDATE_SECONDS = 60 * 60 * 24;
 
 export interface ExperiencePageProps {
   experience: Experience;

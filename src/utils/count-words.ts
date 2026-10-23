@@ -15,7 +15,7 @@ const NUMBER_WORDS = [
 ];
 
 /** Spells out small counts ("four"); larger ones stay as digits */
-export function countWord(count: number): string {
+function countWord(count: number): string {
   return NUMBER_WORDS[count] ?? String(count);
 }
 
