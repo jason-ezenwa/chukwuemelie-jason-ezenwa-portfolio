@@ -10,7 +10,7 @@ import {
 } from "@/experiences/roast/roast-section";
 import { RoastTextLink } from "@/experiences/roast/roast-text-link";
 
-/** One ruled row per story, laid out like the steps on the story page */
+/** One unboxed lot per story: a ruled entry in a two-column grid from 768px */
 function RoastLotRow({ story }: { story: ImpactStory }) {
   const framing = ROAST_STORY_FRAMING[story.id];
   const { lotCard } = framing;
@@ -22,11 +22,11 @@ function RoastLotRow({ story }: { story: ImpactStory }) {
       aria-labelledby={headingId}
       className={cn(
         // Size and spacing
-        "gap-4 py-8 md:gap-10",
+        "gap-4 py-8",
         // Border
-        "border-b border-roast-line",
+        "border-t border-roast-line",
         // Layout
-        "grid scroll-mt-[88px] md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]",
+        "flex scroll-mt-[88px] flex-col",
       )}>
       <div>
         <RoastKicker>
@@ -58,12 +58,12 @@ function RoastLotRow({ story }: { story: ImpactStory }) {
           {lotCard.process}
         </RoastKicker>
       </div>
-      <div>
+      <div className="flex flex-1 flex-col">
         <RoastNotes items={lotCard.bullets} className="px-0 pt-0 pb-0" />
         <div
           className={cn(
             // Size and spacing
-            "mt-2 gap-3",
+            "mt-auto gap-3 pt-2",
             // Layout
             "flex flex-wrap items-center justify-between",
           )}>
@@ -86,7 +86,15 @@ export default function RoastImpact() {
         headingId="impact-h"
         lede={ROAST_IMPACT.lede}
       />
-      <ol className="border-t border-roast-line">
+      <ol
+        className={cn(
+          // Size and spacing
+          "gap-x-12",
+          // Border
+          "border-b border-roast-line",
+          // Layout
+          "grid md:grid-cols-2",
+        )}>
         {IMPACT_STORIES.map((story) => (
           <RoastLotRow key={story.id} story={story} />
         ))}
