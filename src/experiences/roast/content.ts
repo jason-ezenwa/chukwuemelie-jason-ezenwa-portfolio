@@ -130,7 +130,7 @@ export const ROAST_PROFILE = {
 
 export const ROAST_ABOUT = {
   kicker: "About",
-  heading: { strong: "Reliable products", thin: "that earn their keep." } satisfies RoastSplitHeading,
+  heading: { strong: "The roaster,", thin: "behind every lot." } satisfies RoastSplitHeading,
   paragraphs: [
     "I am a Full Stack Engineer with 3+ years of experience building reliable and revenue-generating products across B2B and B2C domains. I specialize in TypeScript, React, and Node.js, with experience spanning system design, DevOps, and data analytics.",
     "I've helped companies like LaborHack, Peppermint and Wynk turn complex business problems into scalable products that drive growth and efficiency — from AI-powered systems for blue collar workers, to external APIs for third party integrators and platforms that enable data-driven product development for top companies like Kuda.",
