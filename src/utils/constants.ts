@@ -32,15 +32,26 @@ export const WYNK_PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=ng.wynk.wynksupappsupapp&pli=1";
 
 // Projects
-export type ProjectId = "hunt-assistant" | "slack-hop" | "paprwrk";
+export type ProjectId = "hunt-assistant" | "slack-hop" | "ezenwa-grotesk" | "paprwrk";
 
-export const PROJECT_URLS: Record<ProjectId, { live?: string; repo?: string }> = {
+export interface ProjectUrls {
+  live?: string;
+  repo?: string;
+  /** A document to read in place of a live site, e.g. a font's specimen book */
+  doc?: { label: string; href: string };
+}
+
+export const PROJECT_URLS: Record<ProjectId, ProjectUrls> = {
   "hunt-assistant": {
     live: "https://hunt-assistant.vercel.app/",
     repo: "https://github.com/jason-ezenwa/hunt-assistant",
   },
   "slack-hop": {
     repo: "https://github.com/jason-ezenwa/slack-hop",
+  },
+  "ezenwa-grotesk": {
+    repo: "https://github.com/jason-ezenwa/ezenwa-grotesk",
+    doc: { label: "Font book", href: "/docs/ezenwa-grotesk-font-book.pdf" },
   },
   paprwrk: {
     live: "https://paprwrk.chukwuemelie.com/",

@@ -8,7 +8,8 @@ import {
   RoastSection,
   RoastSectionHead,
 } from "@/experiences/roast/roast-section";
-import { RoastTextLink } from "@/experiences/roast/roast-text-link";
+import { ROAST_TEXT_LINK, RoastTextLink } from "@/experiences/roast/roast-text-link";
+import { useSpecimenFont } from "@/experiences/use-specimen-font";
 
 const FEATURE_SIZES =
   "(min-width: 1280px) 700px, (min-width: 1024px) 58vw, 100vw";
@@ -17,6 +18,7 @@ const PLATE_SIZES = "(min-width: 1280px) 590px, (min-width: 768px) 50vw, 100vw";
 
 function RoastProjectCard({ project }: { project: RoastProject }) {
   const urls = PROJECT_URLS[project.id];
+  const specimen = useSpecimenFont(project.specimen);
 
   return (
     <article
@@ -80,7 +82,9 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
           <RoastKicker as="span">{project.figureNote}</RoastKicker>
         </figcaption>
       </figure>
-      <div className={cn("mt-5", project.featured && "lg:mt-0 lg:pb-9")}>
+      <div
+        data-specimen={specimen.on ? "on" : undefined}
+        className={cn("mt-5", project.featured && "lg:mt-0 lg:pb-9")}>
         <RoastKicker>{project.kicker}</RoastKicker>
         <h3
           className={cn(
@@ -113,7 +117,7 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
         <div
           className={cn(
             // Size and spacing
-            "mt-5 gap-[22px]",
+            "mt-5 gap-x-[22px] gap-y-3",
             // Layout
             "flex flex-wrap",
           )}>
@@ -126,6 +130,25 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
             <RoastTextLink href={urls.repo} external>
               GitHub
             </RoastTextLink>
+          )}
+          {urls.doc && (
+            <RoastTextLink href={urls.doc.href} external>
+              {urls.doc.label}
+            </RoastTextLink>
+          )}
+          {project.specimen && (
+            <button
+              type="button"
+              onClick={specimen.toggle}
+              aria-pressed={specimen.on}
+              disabled={specimen.loading}
+              className={cn(ROAST_TEXT_LINK, "cursor-pointer disabled:cursor-wait")}>
+              {specimen.on
+                ? "Back to site font"
+                : specimen.loading
+                  ? "Loading…"
+                  : `Render in ${project.specimen.family}`}
+            </button>
           )}
         </div>
       </div>

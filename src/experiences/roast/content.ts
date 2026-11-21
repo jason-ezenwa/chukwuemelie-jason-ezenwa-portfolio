@@ -8,6 +8,7 @@ import {
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
 import type { ProjectVideoMedia } from "@/experiences/project-video";
+import { EZENWA_GROTESK, type SpecimenFont } from "@/experiences/use-specimen-font";
 
 /** Lot count from the number of impact stories, e.g. Four lots */
 const LOT_COUNT = `${capitalisedCountWord(IMPACT_STORIES.length)} lots`;
@@ -251,6 +252,7 @@ export interface RoastProject {
   stack: string;
   featured?: boolean;
   video?: ProjectVideoMedia;
+  specimen?: SpecimenFont;
 }
 
 export const ROAST_PROJECTS = {
@@ -304,6 +306,19 @@ export const ROAST_PROJECTS = {
         },
         label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
       },
+    },
+    {
+      id: "ezenwa-grotesk",
+      name: "Ezenwa Grotesk",
+      kicker: "Single origin · Design engineering",
+      figure: "Fig. 5 — Ezenwa Grotesk",
+      figureNote: "Specimen",
+      image: "/images/ezenwa-grotesk-preview.png",
+      alt: "Ezenwa Grotesk specimen page showing the Regular weight at several sizes",
+      description:
+        "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
+      stack: "Python · fontTools · OpenType",
+      specimen: EZENWA_GROTESK,
     },
   ] satisfies RoastProject[],
 };

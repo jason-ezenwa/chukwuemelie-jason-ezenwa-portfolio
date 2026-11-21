@@ -11,6 +11,7 @@ import {
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
 import type { ProjectVideoMedia } from "@/experiences/project-video";
+import { EZENWA_GROTESK, type SpecimenFont } from "@/experiences/use-specimen-font";
 
 /* Monograph framing and home copy. Detailed story content lives in @/content/impact-stories. */
 
@@ -156,6 +157,7 @@ export interface MonographProject {
   tags: string;
   image: { src: string; alt: string; width: number; height: number };
   video?: ProjectVideoMedia;
+  specimen?: SpecimenFont;
 }
 
 const PROJECT_ITEMS = [
@@ -211,6 +213,21 @@ const PROJECT_ITEMS = [
       },
       label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
     },
+  },
+  {
+    id: "ezenwa-grotesk",
+    plate: "Pl. D — Design engineering",
+    name: "Ezenwa Grotesk",
+    blurb:
+      "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
+    tags: "Python / fontTools / OpenType",
+    image: {
+      src: "/images/ezenwa-grotesk-preview.png",
+      alt: "Ezenwa Grotesk specimen page showing the Regular weight at several sizes",
+      width: 2400,
+      height: 1600,
+    },
+    specimen: EZENWA_GROTESK,
   },
 ] satisfies MonographProject[];
 
