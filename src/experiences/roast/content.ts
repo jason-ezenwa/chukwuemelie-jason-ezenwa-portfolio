@@ -296,6 +296,12 @@ export const ROAST_PROJECTS = {
       video: {
         src: "/videos/slack-hop-demo.mp4",
         poster: "/images/slack-hop-demo-poster.jpg",
+        phone: {
+          src: "/videos/slack-hop-demo-phone.mp4",
+          poster: "/images/slack-hop-demo-phone-poster.jpg",
+          // Its own shape (760 × 720) below the sm breakpoint, where the player switches to it.
+          aspectClass: "max-sm:aspect-[19/18]",
+        },
         label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
       },
     },
