@@ -299,18 +299,6 @@ export const ROAST_PROJECTS = {
         label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
       },
     },
-    {
-      id: "zen-finance",
-      name: "Zen",
-      kicker: "Single origin · Fintech",
-      figure: "Fig. 5 — Zen",
-      figureNote: "Wallets",
-      image: "/images/zen-dashboard.jpeg",
-      alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
-      description:
-        "A fintech app with multi-currency wallets, currency exchange, and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
-      stack: "TypeScript · Next.js · Node.js · MongoDB",
-    },
   ] satisfies RoastProject[],
 };
 

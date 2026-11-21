@@ -206,20 +206,6 @@ const PROJECT_ITEMS = [
       label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
     },
   },
-  {
-    id: "zen-finance",
-    plate: "Pl. D — Fintech",
-    name: "Zen",
-    blurb:
-      "Multi-currency wallets, currency exchange and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
-    tags: "TypeScript / Next.js / Node.js / MongoDB",
-    image: {
-      src: "/images/zen-dashboard.jpeg",
-      alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
-      width: 2939,
-      height: 1673,
-    },
-  },
 ] satisfies MonographProject[];
 
 export const PROJECTS = {
