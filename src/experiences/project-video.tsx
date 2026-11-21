@@ -18,8 +18,8 @@ export const SLACK_HOP_DEMO: ProjectVideoMedia = {
   phone: {
     src: "/videos/slack-hop-demo-phone.mp4",
     poster: "/images/slack-hop-demo-phone-poster.jpg",
-    // Its own shape (760 × 640). Scoped to max-sm, so the box is right from the first paint.
-    aspectClass: "max-sm:aspect-[19/16]",
+    // Its own shape (760 × 580). Scoped to max-sm, so the box is right from the first paint.
+    aspectClass: "max-sm:aspect-[38/29]",
   },
   label:
     "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
