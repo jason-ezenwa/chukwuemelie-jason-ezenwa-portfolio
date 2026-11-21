@@ -303,8 +303,8 @@ export const ROAST_PROJECTS = {
       kicker: "Single origin · Design engineering",
       figure: "Fig. 5 — Ezenwa Grotesk",
       figureNote: "Specimen",
-      image: "/images/ezenwa-grotesk-preview.png",
-      alt: "Ezenwa Grotesk specimen page showing the Regular weight at several sizes",
+      image: "/images/ezenwa-grotesk-cover.png",
+      alt: "Cover of the Ezenwa Grotesk font book: the name set large in Bold, with its weights and licence below",
       description:
         "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
       stack: "Python · fontTools · OpenType",

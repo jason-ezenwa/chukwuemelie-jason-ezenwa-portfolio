@@ -212,10 +212,10 @@ const PROJECT_ITEMS = [
       "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
     tags: "Python / fontTools / OpenType",
     image: {
-      src: "/images/ezenwa-grotesk-preview.png",
-      alt: "Ezenwa Grotesk specimen page showing the Regular weight at several sizes",
+      src: "/images/ezenwa-grotesk-cover.png",
+      alt: "Cover of the Ezenwa Grotesk font book: the name set large in Bold, with its weights and licence below",
       width: 2400,
-      height: 1600,
+      height: 1412,
     },
     specimen: EZENWA_GROTESK,
   },
