@@ -7,6 +7,7 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
+import type { ProjectVideoMedia } from "@/experiences/project-video";
 
 /** Lot count from the number of impact stories, e.g. Four lots */
 const LOT_COUNT = `${capitalisedCountWord(IMPACT_STORIES.length)} lots`;
@@ -249,6 +250,7 @@ export interface RoastProject {
   description: string;
   stack: string;
   featured?: boolean;
+  video?: ProjectVideoMedia;
 }
 
 export const ROAST_PROJECTS = {
@@ -281,10 +283,27 @@ export const ROAST_PROJECTS = {
       stack: "TypeScript · Next.js · MongoDB · AI",
     },
     {
+      id: "slack-hop",
+      name: "slack-hop",
+      kicker: "Single origin · Dev tools",
+      figure: "Fig. 4 — slack-hop",
+      figureNote: "Terminal",
+      image: "/images/slack-hop-demo-poster.jpg",
+      alt: "slack-hop in a terminal, reading a Slack thread in which Claude answers a question, then replying in it",
+      description:
+        "A CLI that lets AI agents read and post across several Slack workspaces as you, where a built-in Slack connector only covers one. I use it every day with Claude Code.",
+      stack: "TypeScript · Node.js · Slack API",
+      video: {
+        src: "/videos/slack-hop-demo.mp4",
+        poster: "/images/slack-hop-demo-poster.jpg",
+        label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
+      },
+    },
+    {
       id: "zen-finance",
       name: "Zen",
       kicker: "Single origin · Fintech",
-      figure: "Fig. 4 — Zen",
+      figure: "Fig. 5 — Zen",
       figureNote: "Wallets",
       image: "/images/zen-dashboard.jpeg",
       alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",

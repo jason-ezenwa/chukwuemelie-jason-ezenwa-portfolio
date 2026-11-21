@@ -10,6 +10,7 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
+import type { ProjectVideoMedia } from "@/experiences/project-video";
 
 /* Monograph framing and home copy. Detailed story content lives in @/content/impact-stories. */
 
@@ -154,6 +155,7 @@ export interface MonographProject {
   blurb: string;
   tags: string;
   image: { src: string; alt: string; width: number; height: number };
+  video?: ProjectVideoMedia;
 }
 
 const PROJECT_ITEMS = [
@@ -186,8 +188,27 @@ const PROJECT_ITEMS = [
     },
   },
   {
+    id: "slack-hop",
+    plate: "Pl. C — Developer tools",
+    name: "slack-hop",
+    blurb:
+      "A CLI that lets AI agents read and post across several Slack workspaces as you, where a built-in Slack connector only covers one. I use it every day with Claude Code.",
+    tags: "TypeScript / Node.js / Slack API",
+    image: {
+      src: "/images/slack-hop-demo-poster.jpg",
+      alt: "slack-hop in a terminal, reading a Slack thread in which Claude answers a question, then replying in it",
+      width: 1400,
+      height: 520,
+    },
+    video: {
+      src: "/videos/slack-hop-demo.mp4",
+      poster: "/images/slack-hop-demo-poster.jpg",
+      label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
+    },
+  },
+  {
     id: "zen-finance",
-    plate: "Pl. C — Fintech",
+    plate: "Pl. D — Fintech",
     name: "Zen",
     blurb:
       "Multi-currency wallets, currency exchange and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",

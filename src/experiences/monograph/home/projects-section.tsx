@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { PROJECTS } from "@/experiences/monograph/content";
+import { ProjectVideo } from "@/experiences/project-video";
 import { SECTION } from "@/experiences/monograph/home/section";
 import {
   CELL,
@@ -39,21 +40,35 @@ export default function ProjectsSection() {
                   // Layout
                   "overflow-hidden lg:col-[1/span_8]",
                 )}>
-                <Image
-                  src={project.image.src}
-                  alt={project.image.alt}
-                  width={project.image.width}
-                  height={project.image.height}
-                  sizes="(min-width: 1680px) 1060px, (min-width: 1024px) 64vw, 92vw"
-                  className={cn(
-                    // Size and spacing
-                    "w-full h-auto aspect-[2939/1665]",
-                    // Layout
-                    "block object-cover object-left-top",
-                    // Effects and interactive states
-                    "transition-transform duration-1200 ease-mono-out group-hover:scale-[1.012]",
-                  )}
-                />
+                {project.video ? (
+                  <ProjectVideo
+                    video={project.video}
+                    className={cn(
+                      // Size and spacing
+                      "w-full h-auto aspect-[2939/1665]",
+                      // Background: the recording's own terminal colour, around its letterbox
+                      "bg-[#1e1e2e]",
+                      // Layout
+                      "block object-contain",
+                    )}
+                  />
+                ) : (
+                  <Image
+                    src={project.image.src}
+                    alt={project.image.alt}
+                    width={project.image.width}
+                    height={project.image.height}
+                    sizes="(min-width: 1680px) 1060px, (min-width: 1024px) 64vw, 92vw"
+                    className={cn(
+                      // Size and spacing
+                      "w-full h-auto aspect-[2939/1665]",
+                      // Layout
+                      "block object-cover object-left-top",
+                      // Effects and interactive states
+                      "transition-transform duration-1200 ease-mono-out group-hover:scale-[1.012]",
+                    )}
+                  />
+                )}
               </div>
               <figcaption className={cn(CELL, "lg:col-[9/span_4] lg:self-end")}>
                 <span className={cn(MONO, "text-mono-mid")}>
@@ -86,9 +101,11 @@ export default function ProjectsSection() {
                       GitHub
                     </TextLink>
                   )}
-                  <TextLink href={urls.live} external>
-                    Live
-                  </TextLink>
+                  {urls.live && (
+                    <TextLink href={urls.live} external>
+                      Live
+                    </TextLink>
+                  )}
                 </p>
               </figcaption>
             </figure>

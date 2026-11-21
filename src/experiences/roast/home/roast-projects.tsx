@@ -2,6 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { PROJECT_URLS } from "@/utils/constants";
 import { ROAST_PROJECTS, type RoastProject } from "@/experiences/roast/content";
+import { ProjectVideo } from "@/experiences/project-video";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import {
   RoastSection,
@@ -38,21 +39,35 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
           "bg-roast-surface-2",
         )}>
         <div className="overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.alt}
-            width={1600}
-            height={1000}
-            sizes={project.featured ? FEATURE_SIZES : PLATE_SIZES}
-            className={cn(
-              // Size and spacing
-              "aspect-[16/10] h-auto w-full",
-              // Layout
-              "block object-cover object-left-top",
-              // Effects and interactive states
-              "saturate-[.92] transition-transform duration-[600ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover/project:scale-[1.02]",
-            )}
-          />
+          {project.video ? (
+            <ProjectVideo
+              video={project.video}
+              className={cn(
+                // Size and spacing
+                "aspect-[16/10] h-auto w-full",
+                // Background: the recording's own terminal colour, around its letterbox
+                "bg-[#1e1e2e]",
+                // Layout
+                "block object-contain",
+              )}
+            />
+          ) : (
+            <Image
+              src={project.image}
+              alt={project.alt}
+              width={1600}
+              height={1000}
+              sizes={project.featured ? FEATURE_SIZES : PLATE_SIZES}
+              className={cn(
+                // Size and spacing
+                "aspect-[16/10] h-auto w-full",
+                // Layout
+                "block object-cover object-left-top",
+                // Effects and interactive states
+                "saturate-[.92] transition-transform duration-[600ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover/project:scale-[1.02]",
+              )}
+            />
+          )}
         </div>
         <figcaption
           className={cn(
@@ -102,9 +117,11 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
             // Layout
             "flex flex-wrap",
           )}>
-          <RoastTextLink href={urls.live} external>
-            Live site
-          </RoastTextLink>
+          {urls.live && (
+            <RoastTextLink href={urls.live} external>
+              Live site
+            </RoastTextLink>
+          )}
           {urls.repo && (
             <RoastTextLink href={urls.repo} external>
               GitHub
