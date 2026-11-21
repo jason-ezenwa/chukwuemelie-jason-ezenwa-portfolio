@@ -82,7 +82,8 @@ export function ProjectVideo({
         ref={ref}
         src={source.src}
         poster={source.poster}
-        aria-label={video.label}
+        // Described once, by the text below, since screen readers name <video> unreliably.
+        aria-hidden="true"
         muted
         loop
         playsInline
