@@ -6,7 +6,8 @@ import {
   RoastExternalIcon,
 } from "@/experiences/roast/roast-icons";
 
-const textLinkClassName = cn(
+/** The text-link look, shared with buttons that sit among text links */
+export const ROAST_TEXT_LINK = cn(
   // Size and spacing
   "gap-2 pb-1",
   // Text
@@ -46,7 +47,7 @@ export function RoastTextLink({
         href={href}
         target="_blank"
         rel="noopener"
-        className={cn("group/text-link", textLinkClassName, className)}>
+        className={cn("group/text-link", ROAST_TEXT_LINK, className)}>
         {children} <RoastExternalIcon className={iconClassName} />
       </a>
     );
@@ -55,7 +56,7 @@ export function RoastTextLink({
   return (
     <Link
       href={href}
-      className={cn("group/text-link", textLinkClassName, className)}>
+      className={cn("group/text-link", ROAST_TEXT_LINK, className)}>
       {children} <RoastArrowRightIcon className={iconClassName} />
     </Link>
   );
@@ -64,7 +65,7 @@ export function RoastTextLink({
 /** Text-link look for use inside a larger link, e.g. a next-card. */
 export function RoastTextLinkLabel({ children }: { children: ReactNode }) {
   return (
-    <span className={textLinkClassName}>
+    <span className={ROAST_TEXT_LINK}>
       {children} <RoastArrowRightIcon className={iconClassName} />
     </span>
   );

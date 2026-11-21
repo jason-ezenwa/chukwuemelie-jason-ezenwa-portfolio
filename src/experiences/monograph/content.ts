@@ -10,6 +10,8 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
+import { SLACK_HOP_DEMO, type ProjectVideoMedia } from "@/experiences/project-video";
+import { EZENWA_GROTESK, type SpecimenFont } from "@/experiences/use-specimen-font";
 
 /* Monograph framing and home copy. Detailed story content lives in @/content/impact-stories. */
 
@@ -154,6 +156,8 @@ export interface MonographProject {
   blurb: string;
   tags: string;
   image: { src: string; alt: string; width: number; height: number };
+  video?: ProjectVideoMedia;
+  specimen?: SpecimenFont;
 }
 
 const PROJECT_ITEMS = [
@@ -186,18 +190,34 @@ const PROJECT_ITEMS = [
     },
   },
   {
-    id: "zen-finance",
-    plate: "Pl. C — Fintech",
-    name: "Zen",
+    id: "slack-hop",
+    plate: "Pl. C — Developer tools",
+    name: "slack-hop",
     blurb:
-      "Multi-currency wallets, currency exchange and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
-    tags: "TypeScript / Next.js / Node.js / MongoDB",
+      "A CLI that lets AI agents read and post across several Slack workspaces as you, where a built-in Slack connector only covers one. I use it every day with Claude Code.",
+    tags: "TypeScript / Node.js / Slack API",
     image: {
-      src: "/images/zen-dashboard.jpeg",
-      alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
-      width: 2939,
-      height: 1673,
+      src: "/images/slack-hop-demo-poster.jpg",
+      alt: "slack-hop in a terminal, reading a Slack thread in which Claude answers a question, then replying in it",
+      width: 1400,
+      height: 520,
     },
+    video: SLACK_HOP_DEMO,
+  },
+  {
+    id: "ezenwa-grotesk",
+    plate: "Pl. D — Design engineering",
+    name: "Ezenwa Grotesk",
+    blurb:
+      "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
+    tags: "Python / fontTools / OpenType",
+    image: {
+      src: "/images/ezenwa-grotesk-cover.png",
+      alt: "Cover of the Ezenwa Grotesk font book: the name set large in Bold, with its weights and licence below",
+      width: 2400,
+      height: 1412,
+    },
+    specimen: EZENWA_GROTESK,
   },
 ] satisfies MonographProject[];
 

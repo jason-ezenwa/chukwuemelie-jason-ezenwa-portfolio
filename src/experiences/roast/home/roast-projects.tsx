@@ -2,12 +2,14 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { PROJECT_URLS } from "@/utils/constants";
 import { ROAST_PROJECTS, type RoastProject } from "@/experiences/roast/content";
+import { ProjectVideo } from "@/experiences/project-video";
 import { RoastKicker } from "@/experiences/roast/roast-kicker";
 import {
   RoastSection,
   RoastSectionHead,
 } from "@/experiences/roast/roast-section";
-import { RoastTextLink } from "@/experiences/roast/roast-text-link";
+import { ROAST_TEXT_LINK, RoastTextLink } from "@/experiences/roast/roast-text-link";
+import { useSpecimenFont } from "@/experiences/use-specimen-font";
 
 const FEATURE_SIZES =
   "(min-width: 1280px) 700px, (min-width: 1024px) 58vw, 100vw";
@@ -16,6 +18,7 @@ const PLATE_SIZES = "(min-width: 1280px) 590px, (min-width: 768px) 50vw, 100vw";
 
 function RoastProjectCard({ project }: { project: RoastProject }) {
   const urls = PROJECT_URLS[project.id];
+  const specimen = useSpecimenFont(project.specimen);
 
   return (
     <article
@@ -38,21 +41,35 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
           "bg-roast-surface-2",
         )}>
         <div className="overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.alt}
-            width={1600}
-            height={1000}
-            sizes={project.featured ? FEATURE_SIZES : PLATE_SIZES}
-            className={cn(
-              // Size and spacing
-              "aspect-[16/10] h-auto w-full",
-              // Layout
-              "block object-cover object-left-top",
-              // Effects and interactive states
-              "saturate-[.92] transition-transform duration-[600ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover/project:scale-[1.02]",
-            )}
-          />
+          {project.video ? (
+            <ProjectVideo
+              video={project.video}
+              className={cn(
+                // Size and spacing
+                "aspect-[16/10] h-auto w-full",
+                // Background: the recording's own terminal colour, around its letterbox
+                "bg-[#1e1e2e]",
+                // Layout
+                "block object-contain",
+              )}
+            />
+          ) : (
+            <Image
+              src={project.image}
+              alt={project.alt}
+              width={1600}
+              height={1000}
+              sizes={project.featured ? FEATURE_SIZES : PLATE_SIZES}
+              className={cn(
+                // Size and spacing
+                "aspect-[16/10] h-auto w-full",
+                // Layout
+                "block object-cover object-left-top",
+                // Effects and interactive states
+                "saturate-[.92] transition-transform duration-[600ms] ease-[cubic-bezier(.2,.7,.2,1)] group-hover/project:scale-[1.02]",
+              )}
+            />
+          )}
         </div>
         <figcaption
           className={cn(
@@ -65,7 +82,9 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
           <RoastKicker as="span">{project.figureNote}</RoastKicker>
         </figcaption>
       </figure>
-      <div className={cn("mt-5", project.featured && "lg:mt-0 lg:pb-9")}>
+      <div
+        data-specimen={specimen.on ? "on" : undefined}
+        className={cn("mt-5", project.featured && "lg:mt-0 lg:pb-9")}>
         <RoastKicker>{project.kicker}</RoastKicker>
         <h3
           className={cn(
@@ -98,17 +117,37 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
         <div
           className={cn(
             // Size and spacing
-            "mt-5 gap-[22px]",
+            "mt-5 gap-x-[22px] gap-y-3",
             // Layout
             "flex flex-wrap",
           )}>
-          <RoastTextLink href={urls.live} external>
-            Live site
-          </RoastTextLink>
+          {urls.live && (
+            <RoastTextLink href={urls.live} external>
+              Live site
+            </RoastTextLink>
+          )}
           {urls.repo && (
             <RoastTextLink href={urls.repo} external>
               GitHub
             </RoastTextLink>
+          )}
+          {urls.doc && (
+            <RoastTextLink href={urls.doc.href} external>
+              {urls.doc.label}
+            </RoastTextLink>
+          )}
+          {project.specimen && (
+            <button
+              type="button"
+              onClick={specimen.toggle}
+              aria-disabled={specimen.loading}
+              className={cn(ROAST_TEXT_LINK, "cursor-pointer aria-disabled:cursor-wait")}>
+              {specimen.on
+                ? "Back to site font"
+                : specimen.loading
+                  ? "Loading…"
+                  : `Render in ${project.specimen.family}`}
+            </button>
           )}
         </div>
       </div>

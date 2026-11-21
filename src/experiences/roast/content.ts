@@ -7,6 +7,8 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
+import { SLACK_HOP_DEMO, type ProjectVideoMedia } from "@/experiences/project-video";
+import { EZENWA_GROTESK, type SpecimenFont } from "@/experiences/use-specimen-font";
 
 /** Lot count from the number of impact stories, e.g. Four lots */
 const LOT_COUNT = `${capitalisedCountWord(IMPACT_STORIES.length)} lots`;
@@ -249,6 +251,8 @@ export interface RoastProject {
   description: string;
   stack: string;
   featured?: boolean;
+  video?: ProjectVideoMedia;
+  specimen?: SpecimenFont;
 }
 
 export const ROAST_PROJECTS = {
@@ -281,16 +285,32 @@ export const ROAST_PROJECTS = {
       stack: "TypeScript · Next.js · MongoDB · AI",
     },
     {
-      id: "zen-finance",
-      name: "Zen",
-      kicker: "Single origin · Fintech",
-      figure: "Fig. 4 — Zen",
-      figureNote: "Wallets",
-      image: "/images/zen-dashboard.jpeg",
-      alt: "Zen fintech dashboard with multi-currency wallets and virtual cards",
+      id: "slack-hop",
+      name: "slack-hop",
+      kicker: "Single origin · Dev tools",
+      figure: "Fig. 4 — slack-hop",
+      figureNote: "Terminal",
+      image: "/images/slack-hop-demo-poster.jpg",
+      alt: "slack-hop in a terminal, reading a Slack thread in which Claude answers a question, then replying in it",
       description:
-        "A fintech app with multi-currency wallets, currency exchange, and virtual cards you can create, fund and track. Integrates Maplerad and Paystack.",
-      stack: "TypeScript · Next.js · Node.js · MongoDB",
+        "A CLI that lets AI agents read and post across several Slack workspaces as you, where a built-in Slack connector only covers one. I use it every day with Claude Code.",
+      stack: "TypeScript · Node.js · Slack API",
+      video: SLACK_HOP_DEMO,
+    },
+    {
+      id: "ezenwa-grotesk",
+      name: "Ezenwa Grotesk",
+      kicker: "Single origin · Design engineering",
+      figure: "Fig. 5 — Ezenwa Grotesk",
+      figureNote: "Specimen",
+      image: "/images/ezenwa-grotesk-cover.png",
+      alt: "Cover of the Ezenwa Grotesk font book: the name set large in Bold, with its weights and licence below",
+      description:
+        "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
+      stack: "Python · fontTools · OpenType",
+      specimen: EZENWA_GROTESK,
+      // Wide like PaprWrk, so the grid ends on a full row and the specimen has room.
+      featured: true,
     },
   ] satisfies RoastProject[],
 };
