@@ -10,7 +10,7 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
-import type { ProjectVideoMedia } from "@/experiences/project-video";
+import { SLACK_HOP_DEMO, type ProjectVideoMedia } from "@/experiences/project-video";
 import { EZENWA_GROTESK, type SpecimenFont } from "@/experiences/use-specimen-font";
 
 /* Monograph framing and home copy. Detailed story content lives in @/content/impact-stories. */
@@ -202,17 +202,7 @@ const PROJECT_ITEMS = [
       width: 1400,
       height: 520,
     },
-    video: {
-      src: "/videos/slack-hop-demo.mp4",
-      poster: "/images/slack-hop-demo-poster.jpg",
-      phone: {
-        src: "/videos/slack-hop-demo-phone.mp4",
-        poster: "/images/slack-hop-demo-phone-poster.jpg",
-        // Its own shape (760 × 640) below the sm breakpoint, where the player switches to it.
-        aspectClass: "max-sm:aspect-[19/16]",
-      },
-      label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
-    },
+    video: SLACK_HOP_DEMO,
   },
   {
     id: "ezenwa-grotesk",

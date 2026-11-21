@@ -140,9 +140,8 @@ function RoastProjectCard({ project }: { project: RoastProject }) {
             <button
               type="button"
               onClick={specimen.toggle}
-              aria-pressed={specimen.on}
-              disabled={specimen.loading}
-              className={cn(ROAST_TEXT_LINK, "cursor-pointer disabled:cursor-wait")}>
+              aria-disabled={specimen.loading}
+              className={cn(ROAST_TEXT_LINK, "cursor-pointer aria-disabled:cursor-wait")}>
               {specimen.on
                 ? "Back to site font"
                 : specimen.loading

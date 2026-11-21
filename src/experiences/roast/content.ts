@@ -7,7 +7,7 @@ import {
   type ProjectId,
 } from "@/utils/constants";
 import { capitalisedCountWord } from "@/utils/count-words";
-import type { ProjectVideoMedia } from "@/experiences/project-video";
+import { SLACK_HOP_DEMO, type ProjectVideoMedia } from "@/experiences/project-video";
 import { EZENWA_GROTESK, type SpecimenFont } from "@/experiences/use-specimen-font";
 
 /** Lot count from the number of impact stories, e.g. Four lots */
@@ -295,17 +295,7 @@ export const ROAST_PROJECTS = {
       description:
         "A CLI that lets AI agents read and post across several Slack workspaces as you, where a built-in Slack connector only covers one. I use it every day with Claude Code.",
       stack: "TypeScript · Node.js · Slack API",
-      video: {
-        src: "/videos/slack-hop-demo.mp4",
-        poster: "/images/slack-hop-demo-poster.jpg",
-        phone: {
-          src: "/videos/slack-hop-demo-phone.mp4",
-          poster: "/images/slack-hop-demo-phone-poster.jpg",
-          // Its own shape (760 × 640) below the sm breakpoint, where the player switches to it.
-          aspectClass: "max-sm:aspect-[19/16]",
-        },
-        label: "slack-hop listing two workspaces, reading a Slack thread in which Claude answers a question, then replying in it",
-      },
+      video: SLACK_HOP_DEMO,
     },
     {
       id: "ezenwa-grotesk",
@@ -319,6 +309,8 @@ export const ROAST_PROJECTS = {
         "A grotesque sans for product interfaces: legible at 12–14px, with character at display sizes. Built to a written spec and measured targets, with automated checks for metrics, collisions and fontbakery.",
       stack: "Python · fontTools · OpenType",
       specimen: EZENWA_GROTESK,
+      // Wide like PaprWrk, so the grid ends on a full row and the specimen has room.
+      featured: true,
     },
   ] satisfies RoastProject[],
 };

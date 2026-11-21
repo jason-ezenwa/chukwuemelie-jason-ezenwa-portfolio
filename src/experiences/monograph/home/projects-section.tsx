@@ -103,9 +103,8 @@ function ProjectCard({ project }: { project: MonographProject }) {
             <button
               type="button"
               onClick={specimen.toggle}
-              aria-pressed={specimen.on}
-              disabled={specimen.loading}
-              className={cn("mono-u", "cursor-pointer disabled:cursor-wait")}>
+              aria-disabled={specimen.loading}
+              className={cn("mono-u", "cursor-pointer aria-disabled:cursor-wait")}>
               {specimen.on
                 ? "Back to site font"
                 : specimen.loading

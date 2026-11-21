@@ -15,10 +15,28 @@ export const EZENWA_GROTESK: SpecimenFont = {
   ],
 };
 
+// One load per family for the whole page, shared by every card and kept across toggles.
+const loads = new Map<string, Promise<void>>();
+
+function loadFont(font: SpecimenFont): Promise<void> {
+  let load = loads.get(font.family);
+  if (!load) {
+    load = Promise.all(
+      font.faces.map(({ src, weight }) =>
+        new FontFace(font.family, `url(${src}) format("woff2")`, { weight: String(weight) }).load(),
+      ),
+    ).then((faces) => faces.forEach((face) => document.fonts.add(face)));
+    // A failed load is forgotten, so the next click tries again.
+    load.catch(() => loads.delete(font.family));
+    loads.set(font.family, load);
+  }
+  return load;
+}
+
 type SpecimenState = "off" | "loading" | "on";
 
 // Loads a typeface only when the viewer asks to see a card in it, so no page pays for it up front.
-// Once loaded, toggling is instant; a failed load leaves the card in its own font.
+// After the first load, toggling is instant; a failed load leaves the card in its own font.
 export function useSpecimenFont(font: SpecimenFont | undefined) {
   const [state, setState] = useState<SpecimenState>("off");
 
@@ -30,10 +48,7 @@ export function useSpecimenFont(font: SpecimenFont | undefined) {
     }
     setState("loading");
     try {
-      const faces = font.faces.map(
-        ({ src, weight }) => new FontFace(font.family, `url(${src}) format("woff2")`, { weight: String(weight) }),
-      );
-      for (const face of await Promise.all(faces.map((face) => face.load()))) document.fonts.add(face);
+      await loadFont(font);
       setState("on");
     } catch {
       setState("off");
