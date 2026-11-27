@@ -273,16 +273,16 @@ export const ROAST_PROJECTS = {
       featured: true,
     },
     {
-      id: "hunt-assistant",
-      name: "Hunt Assistant",
+      id: "quarry",
+      name: "Quarry",
       kicker: "Single origin · AI",
-      figure: "Fig. 3 — Hunt Assistant",
+      figure: "Fig. 3 — Quarry",
       figureNote: "Dashboard",
       image: "/images/hunt-assistant-dashboard.jpeg",
-      alt: "Hunt Assistant dashboard showing tracked job applications and AI insights",
+      alt: "Quarry dashboard showing tracked job applications",
       description:
-        "An AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and tracks your applications — with auth, persistent tracking and AI insights.",
-      stack: "TypeScript · Next.js · MongoDB · AI",
+        "An agent manages and tailors your job applications, then helps you prepare with mock interviews. Open source, AGPL licensed.",
+      stack: "TypeScript · AI",
     },
     {
       id: "slack-hop",

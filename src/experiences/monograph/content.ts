@@ -176,15 +176,15 @@ const PROJECT_ITEMS = [
     },
   },
   {
-    id: "hunt-assistant",
+    id: "quarry",
     plate: "Pl. B — AI / Careers",
-    name: "Hunt Assistant",
+    name: "Quarry",
     blurb:
-      "An AI-powered job-hunting platform: analyses your resume against job requirements, writes tailored cover letters and tracks every application, with auth and persistent tracking.",
-    tags: "TypeScript / Next.js / MongoDB / AI",
+      "An agent manages and tailors your job applications, then helps you prepare with mock interviews. Open source, AGPL licensed.",
+    tags: "TypeScript / AI",
     image: {
       src: "/images/hunt-assistant-dashboard.jpeg",
-      alt: "Hunt Assistant dashboard showing tracked job applications and AI resume insights",
+      alt: "Quarry dashboard showing tracked job applications",
       width: 2939,
       height: 1665,
     },
