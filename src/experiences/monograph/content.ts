@@ -180,7 +180,7 @@ const PROJECT_ITEMS = [
     plate: "Pl. B — AI / Careers",
     name: "Quarry",
     blurb:
-      "An agent manages and tailors your job applications, then helps you prepare with mock interviews. Open source, AGPL licensed.",
+      "Quarry manages and tailors your job applications, then helps you prepare with mock interviews. Meet Wren, the AI agent. AGPL licensed.",
     tags: "TypeScript / NestJS / React / AI",
     image: {
       src: "/images/quarry-dashboard.jpeg",

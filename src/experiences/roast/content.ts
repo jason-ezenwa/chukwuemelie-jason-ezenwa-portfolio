@@ -281,7 +281,7 @@ export const ROAST_PROJECTS = {
       image: "/images/quarry-dashboard.jpeg",
       alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
       description:
-        "An agent manages and tailors your job applications, then helps you prepare with mock interviews. Open source, AGPL licensed.",
+        "Quarry manages and tailors your job applications, then helps you prepare with mock interviews. Meet Wren, the AI agent. AGPL licensed.",
       stack: "TypeScript · NestJS · React · AI",
     },
     {
