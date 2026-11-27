@@ -162,8 +162,22 @@ export interface MonographProject {
 
 const PROJECT_ITEMS = [
   {
+    id: "quarry",
+    plate: "Pl. A — AI / Careers",
+    name: "Quarry",
+    blurb:
+      "Quarry manages and tailors your job applications, then helps you prepare with mock interviews. Meet Wren, the AI agent.",
+    tags: "TypeScript / NestJS / React / AI",
+    image: {
+      src: "/images/quarry-dashboard.jpeg",
+      alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
+      width: 2940,
+      height: 1668,
+    },
+  },
+  {
     id: "paprwrk",
-    plate: "Pl. A — AI / Logistics",
+    plate: "Pl. B — AI / Logistics",
     name: "PaprWrk",
     blurb:
       "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what’s missing or wrong before they bill or pay. Prototype, currently testing with freight brokers.",
@@ -173,20 +187,6 @@ const PROJECT_ITEMS = [
       alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
       width: 2940,
       height: 1672,
-    },
-  },
-  {
-    id: "hunt-assistant",
-    plate: "Pl. B — AI / Careers",
-    name: "Hunt Assistant",
-    blurb:
-      "An AI-powered job-hunting platform: analyses your resume against job requirements, writes tailored cover letters and tracks every application, with auth and persistent tracking.",
-    tags: "TypeScript / Next.js / MongoDB / AI",
-    image: {
-      src: "/images/hunt-assistant-dashboard.jpeg",
-      alt: "Hunt Assistant dashboard showing tracked job applications and AI resume insights",
-      width: 2939,
-      height: 1665,
     },
   },
   {

@@ -260,29 +260,29 @@ export const ROAST_PROJECTS = {
   heading: { strong: "Single origin,", thin: "built end to end." } satisfies RoastSplitHeading,
   items: [
     {
+      id: "quarry",
+      name: "Quarry",
+      kicker: "Single origin · AI",
+      figure: "Fig. 2 — Quarry",
+      figureNote: "Dashboard",
+      image: "/images/quarry-dashboard.jpeg",
+      alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
+      description:
+        "Quarry manages and tailors your job applications, then helps you prepare with mock interviews. Meet Wren, the AI agent.",
+      stack: "TypeScript · NestJS · React · AI",
+      featured: true,
+    },
+    {
       id: "paprwrk",
       name: "PaprWrk",
       kicker: "Single origin · Logistics",
-      figure: "Fig. 2 — PaprWrk",
+      figure: "Fig. 3 — PaprWrk",
       figureNote: "Paperwork",
       image: "/images/paprwrk-dashboard.jpeg",
       alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
       description:
         "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what's missing or wrong before they bill or pay. Prototype, currently testing with freight brokers.",
       stack: "TypeScript · React · Vite",
-      featured: true,
-    },
-    {
-      id: "hunt-assistant",
-      name: "Hunt Assistant",
-      kicker: "Single origin · AI",
-      figure: "Fig. 3 — Hunt Assistant",
-      figureNote: "Dashboard",
-      image: "/images/hunt-assistant-dashboard.jpeg",
-      alt: "Hunt Assistant dashboard showing tracked job applications and AI insights",
-      description:
-        "An AI-powered job hunting platform that analyzes your resume against job requirements, generates tailored cover letters, and tracks your applications — with auth, persistent tracking and AI insights.",
-      stack: "TypeScript · Next.js · MongoDB · AI",
     },
     {
       id: "slack-hop",

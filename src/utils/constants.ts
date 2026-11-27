@@ -32,7 +32,7 @@ export const WYNK_PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=ng.wynk.wynksupappsupapp&pli=1";
 
 // Projects
-export type ProjectId = "hunt-assistant" | "slack-hop" | "ezenwa-grotesk" | "paprwrk";
+export type ProjectId = "quarry" | "slack-hop" | "ezenwa-grotesk" | "paprwrk";
 
 export interface ProjectUrls {
   live?: string;
@@ -42,9 +42,9 @@ export interface ProjectUrls {
 }
 
 export const PROJECT_URLS: Record<ProjectId, ProjectUrls> = {
-  "hunt-assistant": {
-    live: "https://hunt-assistant.vercel.app/",
-    repo: "https://github.com/jason-ezenwa/hunt-assistant",
+  quarry: {
+    live: "https://quarry.chukwuemelie.com/",
+    repo: "https://github.com/jason-ezenwa/quarry",
   },
   "slack-hop": {
     repo: "https://github.com/jason-ezenwa/slack-hop",
