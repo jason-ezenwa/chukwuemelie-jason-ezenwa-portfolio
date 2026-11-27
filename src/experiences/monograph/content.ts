@@ -181,12 +181,12 @@ const PROJECT_ITEMS = [
     name: "Quarry",
     blurb:
       "An agent manages and tailors your job applications, then helps you prepare with mock interviews. Open source, AGPL licensed.",
-    tags: "TypeScript / AI",
+    tags: "TypeScript / NestJS / React / AI",
     image: {
-      src: "/images/hunt-assistant-dashboard.jpeg",
-      alt: "Quarry dashboard showing tracked job applications",
-      width: 2939,
-      height: 1665,
+      src: "/images/quarry-dashboard.jpeg",
+      alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
+      width: 2940,
+      height: 1668,
     },
   },
   {

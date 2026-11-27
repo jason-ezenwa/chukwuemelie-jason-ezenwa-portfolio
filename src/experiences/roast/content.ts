@@ -278,11 +278,11 @@ export const ROAST_PROJECTS = {
       kicker: "Single origin · AI",
       figure: "Fig. 3 — Quarry",
       figureNote: "Dashboard",
-      image: "/images/hunt-assistant-dashboard.jpeg",
-      alt: "Quarry dashboard showing tracked job applications",
+      image: "/images/quarry-dashboard.jpeg",
+      alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
       description:
         "An agent manages and tailors your job applications, then helps you prepare with mock interviews. Open source, AGPL licensed.",
-      stack: "TypeScript · AI",
+      stack: "TypeScript · NestJS · React · AI",
     },
     {
       id: "slack-hop",
