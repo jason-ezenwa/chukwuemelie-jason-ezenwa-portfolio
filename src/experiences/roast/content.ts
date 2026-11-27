@@ -260,29 +260,29 @@ export const ROAST_PROJECTS = {
   heading: { strong: "Single origin,", thin: "built end to end." } satisfies RoastSplitHeading,
   items: [
     {
+      id: "quarry",
+      name: "Quarry",
+      kicker: "Single origin · AI",
+      figure: "Fig. 2 — Quarry",
+      figureNote: "Dashboard",
+      image: "/images/quarry-dashboard.jpeg",
+      alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
+      description:
+        "Quarry manages and tailors your job applications, then helps you prepare with mock interviews. Meet Wren, the AI agent.",
+      stack: "TypeScript · NestJS · React · AI",
+      featured: true,
+    },
+    {
       id: "paprwrk",
       name: "PaprWrk",
       kicker: "Single origin · Logistics",
-      figure: "Fig. 2 — PaprWrk",
+      figure: "Fig. 3 — PaprWrk",
       figureNote: "Paperwork",
       image: "/images/paprwrk-dashboard.jpeg",
       alt: "PaprWrk dashboard listing loads that aren't ready to bill or pay, with missing and mismatched carrier paperwork flagged",
       description:
         "Reads the carrier paperwork small freight brokerages get, matches it to loads, and flags what's missing or wrong before they bill or pay. Prototype, currently testing with freight brokers.",
       stack: "TypeScript · React · Vite",
-      featured: true,
-    },
-    {
-      id: "quarry",
-      name: "Quarry",
-      kicker: "Single origin · AI",
-      figure: "Fig. 3 — Quarry",
-      figureNote: "Dashboard",
-      image: "/images/quarry-dashboard.jpeg",
-      alt: "Quarry showing a tailored resume for a Vercel role beside a chat with the agent, with fit report, cover letter and interviews tabs",
-      description:
-        "Quarry manages and tailors your job applications, then helps you prepare with mock interviews. Meet Wren, the AI agent. AGPL licensed.",
-      stack: "TypeScript · NestJS · React · AI",
     },
     {
       id: "slack-hop",
